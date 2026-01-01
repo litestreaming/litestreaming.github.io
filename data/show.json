@@ -1,0 +1,15 @@
+{
+  "shows": [
+    {
+      "id": "ninjago",
+      "title": "LEGO Ninjago: Masters of Spinjitzu",
+      "poster": "https://image.tmdb.org/t/p/original/fqb9X4th2p2voefRLqdv1xoZQmC.jpg",
+      "banner": "https://image.tmdb.org/t/p/original/flychdbFnPuxl4SjMeODR8RmuKr.jpg",
+      "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
+      "summary": "When the fate of their world, Ninjago, is challenged by great threats, it's up to the ninja: Kai, Jay, Cole, Zane, Lloyd and Nya to save the world.",
+      "seasons": [
+        { "number": 0, "file": "data/seasons/ninjago_s0.json" }
+      ]
+    }
+  ]
+}
