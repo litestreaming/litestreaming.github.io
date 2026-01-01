@@ -1,0 +1,82 @@
+{
+    "season": 1,
+    "episodes": [{
+            "number": 1,
+            "title": "Rise of the Snakes",
+            "thumbnail": "https://image.tmdb.org/t/p/original/12e0EA0VEXfIXlWtSc0UcVm0geX.jpg",
+            "embed": "https://short.icu/DMRu3h-Hr"
+        },
+        {
+            "number": 2,
+            "title": "Home",
+            "thumbnail": "https://image.tmdb.org/t/p/original/xJHNy0u6wuxeU3KNUthcjyaG8aM.jpg",
+            "embed": "https://short.icu/y7GRtn8Mu"
+        },
+        {
+            "number": 3,
+            "title": "Snakebit",
+            "thumbnail": "https://image.tmdb.org/t/p/original/nusv2wGJhkDZrbc7zuNLJO2M4R9.jpg",
+            "embed": "https://short.icu/1X8ot0aUf"
+        },
+        {
+            "number": 4,
+            "title": "Never Trust a Snake",
+            "thumbnail": "https://image.tmdb.org/t/p/original/rDifdsObEprhs3XYFEvvuqsB2xf.jpg",
+            "embed": "https://short.icu/CcRgy-k7L"
+        },
+        {
+            "number": 5,
+            "title": "Can of Worms",
+            "thumbnail": "https://image.tmdb.org/t/p/original/7DLVwMywDeHX5dWdmQhIsYIdyNZ.jpg",
+            "embed": "https://short.icu/i-158mVle"
+        },
+        {
+            "number": 6,
+            "title": "The Snake King",
+            "thumbnail": "https://image.tmdb.org/t/p/original/mENRLMKPNQ1rGLUIYmtRhntwWgd.jpg",
+            "embed": "https://short.icu/YBwezvjRM"
+        },
+        {
+            "number": 7,
+            "title": "Tick Tock",
+            "thumbnail": "https://image.tmdb.org/t/p/original/ic4ObccYfusH93PvQkxufxaHaGC.jpg",
+            "embed": "https://short.icu/4s8EZ0x-B"
+        },
+        {
+            "number": 8,
+            "title": "Once Bitten, Twice Shy",
+            "thumbnail": "https://image.tmdb.org/t/p/original/zDMH0n7hgTiC6jEt2XYO9x5gljU.jpg",
+            "embed": "https://short.icu/CfxqMTybl"
+        },
+        {
+            "number": 9,
+            "title": "The Royal Blacksmiths",
+            "thumbnail": "https://image.tmdb.org/t/p/original/6zpW2IxzNKT8mTYC92Oy5fNMXNp.jpg",
+            "embed": "https://short.icu/Q5rRZQBbf"
+        },
+        {
+            "number": 10,
+            "title": "The Green Ninja",
+            "thumbnail": "https://image.tmdb.org/t/p/original/rFxEz2U0RwAj3G8cxeV8LeTcdQS.jpg",
+            "embed": "https://short.icu/uksUBpsqo"
+        },
+                {
+            "number": 11,
+            "title": "All of Nothing",
+            "thumbnail": "https://image.tmdb.org/t/p/original/n3L6xgYYznFuPQf7JP0M25Ldk1P.jpg",
+            "embed": "https://short.icu/jpdnodqSd"
+        },
+                {
+            "number": 12,
+            "title": "The Rise of the Great Devourer",
+            "thumbnail": "https://image.tmdb.org/t/p/original/9G4KAx5klUV0THKGBewp4qYqJBe.jpg",
+            "embed": "https://short.icu/GnrA0s7Js"
+        },
+                {
+            "number": 13,
+            "title": "Day of the Great Devourer",
+            "thumbnail": "https://image.tmdb.org/t/p/original/6r6WOi3sE2QMMueHRpjl2nIjptL.jpg",
+            "embed": "https://short.icu/wyyCryZxT"
+        }
+    ]
+}

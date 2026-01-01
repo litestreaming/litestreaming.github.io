@@ -1,0 +1,82 @@
+{
+    "season": 2,
+    "episodes": [{
+            "number": 1,
+            "title": "Darkness Shall Rise",
+            "thumbnail": "https://image.tmdb.org/t/p/original/jjtClNz0HPeIbO8FXrnJlaFHa6J.jpg",
+            "embed": ""
+        },
+        {
+            "number": 2,
+            "title": "Pirates vs. Ninja",
+            "thumbnail": "https://image.tmdb.org/t/p/original/wTnmJvk5Q4hYaCz10lxqlnzj219.jpg",
+            "embed": ""
+        },
+        {
+            "number": 3,
+            "title": "Double Trouble",
+            "thumbnail": "https://image.tmdb.org/t/p/original/fCFwLPgYN0RhQk7xidZug9KaQvI.jpg",
+            "embed": ""
+        },
+        {
+            "number": 4,
+            "title": "Ninjaball Run",
+            "thumbnail": "https://image.tmdb.org/t/p/original/jzI6q0jQ0LObU5UbeW90v4EkcYJ.jpg",
+            "embed": ""
+        },
+        {
+            "number": 5,
+            "title": "Child's Play",
+            "thumbnail": "https://image.tmdb.org/t/p/original/3lkUldonUmxodEV5t8C7A34z7Q5.jpg",
+            "embed": ""
+        },
+        {
+            "number": 6,
+            "title": "Wrong Place, Wrong Time",
+            "thumbnail": "https://image.tmdb.org/t/p/original/dtV5uJRrgmc5RD0KFvftfRFj4CP.jpg",
+            "embed": ""
+        },
+        {
+            "number": 7,
+            "title": "The Stone Army",
+            "thumbnail": "https://image.tmdb.org/t/p/original/mOiAx3wWJlbcWSymOyQbVYIMuLI.jpg",
+            "embed": ""
+        },
+        {
+            "number": 8,
+            "title": "The Day Ninjago Stood Still",
+            "thumbnail": "https://image.tmdb.org/t/p/original/9Mzu09tLENIh9MaiIZ6dQvZqu8g.jpg",
+            "embed": ""
+        },
+        {
+            "number": 9,
+            "title": "The Last Voyage",
+            "thumbnail": "https://image.tmdb.org/t/p/original/k6cKmjCvGsCYGpiifdOY6Cveptf.jpg",
+            "embed": ""
+        },
+        {
+            "number": 10,
+            "title": "Island of Darkness",
+            "thumbnail": "https://image.tmdb.org/t/p/original/wuz2VB8VImU7VufLkGcXjBfslRb.jpg",
+            "embed": ""
+        },
+                {
+            "number": 11,
+            "title": "The Last Hope",
+            "thumbnail": "https://image.tmdb.org/t/p/original/iapU6GKS7A07CKj6mBiTjA3SRoa.jpg",
+            "embed": ""
+        },
+                {
+            "number": 12,
+            "title": "Return of the Overlord",
+            "thumbnail": "https://image.tmdb.org/t/p/original/kWNFBuIIADOOiilQTLTg5r0pn46.jpg",
+            "embed": ""
+        },
+                {
+            "number": 13,
+            "title": "Rise of the Spinjitzu Master",
+            "thumbnail": "https://image.tmdb.org/t/p/original/cYnQmwXtBx50N1NdefcykFV5Gn5.jpg",
+            "embed": ""
+        }
+    ]
+}

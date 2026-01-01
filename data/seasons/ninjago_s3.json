@@ -1,0 +1,52 @@
+{
+    "season": 3,
+    "episodes": [{
+            "number": 1,
+            "title": "The Surge",
+            "thumbnail": "https://image.tmdb.org/t/p/original/2qy0SIjUR86K82l4pQIoyk1dbR.jpg",
+            "embed": ""
+        },
+        {
+            "number": 2,
+            "title": "The Art of the Silent Fist",
+            "thumbnail": "https://image.tmdb.org/t/p/original/5QLHXcrqoT4h7XIGNfS350rYDOX.jpg",
+            "embed": ""
+        },
+        {
+            "number": 3,
+            "title": "Blackout",
+            "thumbnail": "https://image.tmdb.org/t/p/original/tRszaUdiC3vX8MTwgJTpzgQecqt.jpg",
+            "embed": ""
+        },
+        {
+            "number": 4,
+            "title": "The Curse of the Golden Master",
+            "thumbnail": "https://image.tmdb.org/t/p/original/tUxxXkOnFgEf2Hicy6BdNykFyDo.jpg",
+            "embed": ""
+        },
+        {
+            "number": 5,
+            "title": "Enter the Digiverse",
+            "thumbnail": "https://image.tmdb.org/t/p/original/kt8rzY2Bc8yknUqspS7OXcuiIk7.jpg",
+            "embed": ""
+        },
+        {
+            "number": 6,
+            "title": "Codename: Arcturus",
+            "thumbnail": "https://image.tmdb.org/t/p/original/ecEzQ533sQSaT8x3sXFICGvsxlI.jpg",
+            "embed": ""
+        },
+        {
+            "number": 7,
+            "title": "The Void",
+            "thumbnail": "https://image.tmdb.org/t/p/original/qqatW6ZjHrrxWjsjeWL7bhelRpn.jpg",
+            "embed": ""
+        },
+        {
+            "number": 8,
+            "title": "The Titanium Ninja",
+            "thumbnail": "https://image.tmdb.org/t/p/original/8lIxSXh8nZ2gKnyzQ1YAJfLO0q6.jpg",
+            "embed": ""
+        }
+    ]
+}
