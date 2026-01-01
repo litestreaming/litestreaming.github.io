@@ -5,10 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Litestreaming</title>
-
-    <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <style>
         .glass {
             backdrop-filter: blur(12px);
@@ -16,17 +13,12 @@
         }
     </style>
 </head>
-
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-
-    <!-- NAV -->
     <nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <!-- Brand -->
             <span class="font-bold text-xl">Litestreaming</span>
 
-            <!-- Discord Button -->
             <a href="https://discord.gg/dEmqkmK4" target="_blank" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700
               text-white font-semibold transition
               hover:scale-105 hover:shadow-lg">
@@ -35,15 +27,10 @@
 
         </div>
     </nav>
-
-
-    <!-- POSTER GRID -->
     <main class="pt-24 max-w-7xl mx-auto px-6">
         <h1 class="text-4xl font-extrabold mb-6">Featured Shows</h1>
         <div id="posterGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
     </main>
-
-    <!-- SHOW MODAL -->
     <div id="showModal" class="fixed inset-0 hidden z-40">
         <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
 
@@ -54,12 +41,8 @@
 
             <div class="p-6 space-y-6">
                 <p id="showSummary" class="text-gray-300 max-w-3xl"></p>
-
-                <!-- SEASON SELECT -->
                 <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-64 text-white">
                 </select>
-
-                <!-- EPISODE GRID -->
                 <div id="episodeGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4
          max-h-[40vh] overflow-y-auto pr-2">
                 </div>
@@ -67,8 +50,6 @@
             </div>
         </div>
     </div>
-
-    <!-- PLAYER MODAL -->
     <div id="playerModal" class="fixed inset-0 hidden z-50">
         <div class="absolute inset-0 bg-black/80" onclick="closePlayer()"></div>
 
@@ -81,16 +62,12 @@
         let shows = [];
         let currentShow = null;
         let currentSeasonData = null;
-
-        /* LOAD SHOW LIST */
         fetch("data/show.json")
             .then(res => res.json())
             .then(data => {
                 shows = data.shows;
                 renderPosters();
             });
-
-        /* POSTERS */
         function renderPosters() {
             posterGrid.innerHTML = shows.map((show, i) => `
     <img src="${show.poster}"
@@ -98,8 +75,6 @@
       onclick="openShow(${i})" />
   `).join("");
         }
-
-        /* OPEN SHOW */
         function openShow(index) {
             currentShow = shows[index];
 
@@ -116,8 +91,6 @@
 
             showModal.classList.remove("hidden");
         }
-
-        /* LOAD SEASON JSON */
         function loadSeason(seasonIndex) {
             fetch(currentShow.seasons[seasonIndex].file)
                 .then(res => res.json())
@@ -126,8 +99,6 @@
                     renderEpisodes();
                 });
         }
-
-        /* EPISODES */
         function renderEpisodes() {
             episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
     <div onclick="openPlayer(${i})"
@@ -140,14 +111,10 @@
     </div>
   `).join("");
         }
-
-        /* PLAYER */
         function openPlayer(epIndex) {
             playerFrame.src = currentSeasonData.episodes[epIndex].embed;
             playerModal.classList.remove("hidden");
         }
-
-        /* CLOSES */
         function closeShow() {
             showModal.classList.add("hidden");
         }
