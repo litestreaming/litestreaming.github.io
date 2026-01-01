@@ -1,130 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Litestreaming</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        .glass {
-            backdrop-filter: blur(12px);
-            background: rgba(0, 0, 0, 0.6);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Litestreaming</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    .glass {
+      backdrop-filter: blur(12px);
+      background: rgba(0,0,0,0.6);
+    }
+    body.modal-open {
+      overflow: hidden;
+      height: 100vh;
+    }
+    .scroll-area {
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 </head>
+
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-    <nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <span class="font-bold text-xl">Litestreaming</span>
+<nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <span class="font-bold text-lg md:text-xl">Litestreaming</span>
+    <a href="https://discord.gg/dEmqkmK4" target="_blank"
+      class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">
+      Discord
+    </a>
+  </div>
+</nav>
 
-            <a href="https://discord.gg/dEmqkmK4" target="_blank" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700
-              text-white font-semibold transition
-              hover:scale-105 hover:shadow-lg">
-                Discord
-            </a>
+<main class="pt-20 max-w-7xl mx-auto px-4">
+  <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Featured Shows</h1>
+  <div id="posterGrid"
+    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+  </div>
+</main>
 
-        </div>
-    </nav>
-    <main class="pt-24 max-w-7xl mx-auto px-6">
-        <h1 class="text-4xl font-extrabold mb-6">Featured Shows</h1>
-        <div id="posterGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
-    </main>
-    <div id="showModal" class="fixed inset-0 hidden z-40">
-        <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
+<div id="showModal" class="fixed inset-0 hidden z-40">
+  <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
 
-        <div class="relative max-w-5xl mx-auto mt-20 glass rounded-2xl overflow-hidden shadow-2xl">
-            <div id="showHero" class="h-72 bg-cover bg-center relative">
-                <img id="showLogo" class="absolute bottom-4 left-6 h-20" />
-            </div>
+  <div
+    class="absolute bottom-0 md:relative md:bottom-auto md:mt-20
+           w-full md:max-w-5xl mx-auto
+           glass rounded-t-3xl md:rounded-2xl shadow-2xl
+           max-h-[90vh] flex flex-col">
 
-            <div class="p-6 space-y-6">
-                <p id="showSummary" class="text-gray-300 max-w-3xl"></p>
-                <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-64 text-white">
-                </select>
-                <div id="episodeGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4
-         max-h-[40vh] overflow-y-auto pr-2">
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div id="playerModal" class="fixed inset-0 hidden z-50">
-        <div class="absolute inset-0 bg-black/80" onclick="closePlayer()"></div>
-
-        <div class="relative max-w-5xl mx-auto mt-24 bg-black rounded-2xl overflow-hidden">
-            <iframe id="playerFrame" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div id="showHero"
+      class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0">
+      <img id="showLogo"
+        class="absolute bottom-3 left-4 h-12 md:h-20" />
     </div>
 
-    <script>
-        let shows = [];
-        let currentShow = null;
-        let currentSeasonData = null;
-        fetch("data/show.json")
-            .then(res => res.json())
-            .then(data => {
-                shows = data.shows;
-                renderPosters();
-            });
-        function renderPosters() {
-            posterGrid.innerHTML = shows.map((show, i) => `
+    <div
+      class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
+
+      <p id="showSummary"
+        class="text-gray-300 text-sm md:text-base max-w-3xl">
+      </p>
+
+      <select id="seasonSelect"
+        class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white">
+      </select>
+
+      <div id="episodeGrid"
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="playerModal" class="fixed inset-0 hidden z-50">
+  <div class="absolute inset-0 bg-black/80" onclick="closePlayer()"></div>
+
+  <div
+    class="absolute bottom-0 md:relative md:mt-24
+           w-full md:max-w-5xl mx-auto
+           bg-black rounded-t-3xl md:rounded-2xl overflow-hidden">
+
+    <div class="relative w-full aspect-video">
+      <iframe id="playerFrame"
+        class="absolute inset-0 w-full h-full"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+let shows = [];
+let currentShow = null;
+let currentSeasonData = null;
+
+fetch("data/show.json")
+  .then(res => res.json())
+  .then(data => {
+    shows = data.shows;
+    renderPosters();
+  });
+
+function renderPosters() {
+  posterGrid.innerHTML = shows.map((show, i) => `
     <img src="${show.poster}"
-      class="rounded-xl shadow-lg hover:scale-105 transition cursor-pointer"
+      class="rounded-xl shadow-lg cursor-pointer active:scale-95 transition"
       onclick="openShow(${i})" />
   `).join("");
-        }
-        function openShow(index) {
-            currentShow = shows[index];
+}
 
-            showHero.style.backgroundImage = `url(${currentShow.banner})`;
-            showLogo.src = currentShow.logo;
-            showSummary.textContent = currentShow.summary;
+function openShow(index) {
+  currentShow = shows[index];
+  document.body.classList.add("modal-open");
 
-            seasonSelect.innerHTML = currentShow.seasons.map((s, i) =>
-                `<option value="${i}">Season ${s.number}</option>`
-            ).join("");
+  showHero.style.backgroundImage = `url(${currentShow.banner})`;
+  showLogo.src = currentShow.logo;
+  showSummary.textContent = currentShow.summary;
 
-            seasonSelect.onchange = () => loadSeason(seasonSelect.value);
-            loadSeason(0);
+  seasonSelect.innerHTML = currentShow.seasons.map((s, i) =>
+    `<option value="${i}">Season ${s.number}</option>`
+  ).join("");
 
-            showModal.classList.remove("hidden");
-        }
-        function loadSeason(seasonIndex) {
-            fetch(currentShow.seasons[seasonIndex].file)
-                .then(res => res.json())
-                .then(data => {
-                    currentSeasonData = data;
-                    renderEpisodes();
-                });
-        }
-        function renderEpisodes() {
-            episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
+  seasonSelect.onchange = () => loadSeason(seasonSelect.value);
+  loadSeason(0);
+
+  showModal.classList.remove("hidden");
+}
+
+function loadSeason(seasonIndex) {
+  fetch(currentShow.seasons[seasonIndex].file)
+    .then(res => res.json())
+    .then(data => {
+      currentSeasonData = data;
+      renderEpisodes();
+    });
+}
+
+function renderEpisodes() {
+  episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
     <div onclick="openPlayer(${i})"
-      class="bg-gray-800 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition">
-      <img src="${ep.thumbnail}" class="w-full h-32 object-cover">
-      <div class="p-3">
+      class="bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition">
+      <img src="${ep.thumbnail}" class="w-full h-28 object-cover">
+      <div class="p-2">
         <p class="text-xs text-gray-400">Episode ${ep.number}</p>
-        <p class="font-semibold">${ep.title}</p>
+        <p class="font-semibold text-sm">${ep.title}</p>
       </div>
     </div>
   `).join("");
-        }
-        function openPlayer(epIndex) {
-            playerFrame.src = currentSeasonData.episodes[epIndex].embed;
-            playerModal.classList.remove("hidden");
-        }
-        function closeShow() {
-            showModal.classList.add("hidden");
-        }
+}
 
-        function closePlayer() {
-            playerModal.classList.add("hidden");
-            playerFrame.src = "";
-        }
-    </script>
+function openPlayer(epIndex) {
+  playerFrame.src = currentSeasonData.episodes[epIndex].embed;
+  playerModal.classList.remove("hidden");
+}
+
+function closeShow() {
+  showModal.classList.add("hidden");
+  document.body.classList.remove("modal-open");
+}
+
+function closePlayer() {
+  playerModal.classList.add("hidden");
+  playerFrame.src = "";
+}
+</script>
 
 </body>
-
 </html>
