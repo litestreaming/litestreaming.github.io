@@ -1,148 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Litestreaming</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <style>
-    .glass {
-      backdrop-filter: blur(12px);
-      background: rgba(0,0,0,0.6);
-    }
-    body.modal-open {
-      overflow: hidden;
-      height: 100vh;
-    }
-    .scroll-area {
-      -webkit-overflow-scrolling: touch;
-    }
-  </style>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HYELDYE5K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3HYELDYE5K');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Litestreaming</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://vjs.zencdn.net/8.20.0/video-js.css" rel="stylesheet" />
+
+    <style>
+        .faq-content {
+            transition: all 0.25s ease;
+        }
+
+        .glass {
+            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        body.modal-open {
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        [data-delay] {
+            animation-delay: calc(var(--delay) * 0.1s);
+        }
+
+
+        .scroll-area {
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-<nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-    <span class="font-bold text-lg md:text-xl">Litestreaming</span>
-    <a href="https://discord.gg/dEmqkmK4" target="_blank"
-      class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">
-      Discord
-    </a>
-  </div>
-</nav>
-
-<main class="pt-20 max-w-7xl mx-auto px-4">
-  <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Featured Shows</h1>
-  <div id="posterGrid"
-    class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-  </div>
-</main>
-
-<div id="showModal" class="fixed inset-0 hidden z-40">
-  <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
-
-  <div
-    class="absolute bottom-0 md:relative md:bottom-auto md:mt-20
+    <nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="font-bold text-lg md:text-xl">Litestreaming</span>
+            <a href="https://discord.gg/dEmqkmK4" target="_blank"
+                class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">
+                Discord
+            </a>
+        </div>
+    </nav>
+        <main class="pt-20 max-w-7xl mx-auto px-4">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Featured Shows</h1>
+        <div id="posterGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+    </main>
+    <div id="showModal" class="fixed inset-0 hidden z-40">
+        <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
+        <div class="absolute inset-0 md:relative md:mt-20
            w-full md:max-w-5xl mx-auto
-           glass rounded-t-3xl md:rounded-2xl shadow-2xl
-           max-h-[90vh] flex flex-col">
+           glass rounded-2xl shadow-2xl
+           max-h-[90vh] flex flex-col justify-start md:justify-start">
 
-    <div id="showHero"
-      class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0">
-      <img id="showLogo"
-        class="absolute bottom-3 left-4 h-12 md:h-20" />
+            <div id="showHero" class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0">
+                <img id="showLogo" class="absolute bottom-3 left-4 h-12 md:h-20" />
+            </div>
+
+            <div class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
+                <p id="showSummary" class="text-gray-300 text-sm md:text-base max-w-3xl fade-up" data-delay="0"></p>
+
+                <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white fade-up"
+                    data-delay="1"></select>
+
+                <div id="episodeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 fade-up"
+                    data-delay="2"></div>
+
+            </div>
+        </div>
+    </div>
     </div>
 
-    <div
-      class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
+    <div id="playerModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/80" onclick="closePlayer()"></div>
 
-      <p id="showSummary"
-        class="text-gray-300 text-sm md:text-base max-w-3xl">
-      </p>
-
-      <select id="seasonSelect"
-        class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white">
-      </select>
-
-      <div id="episodeGrid"
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-      </div>
-
+        <div class="relative w-full md:max-w-5xl mx-auto rounded-2xl overflow-hidden">
+            <video id="playerVideo" class="w-full h-full" controls playsinline preload="metadata"
+                crossorigin="anonymous">
+            </video>
+        </div>
     </div>
-  </div>
-</div>
 
-<div id="playerModal" class="fixed inset-0 hidden z-50">
-  <div class="absolute inset-0 bg-black/80" onclick="closePlayer()"></div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-  <div
-    class="absolute bottom-0 md:relative md:mt-24
-           w-full md:max-w-5xl mx-auto
-           bg-black rounded-t-3xl md:rounded-2xl overflow-hidden">
+    <script>
+        let shows = [];
+        let currentShow = null;
+        let currentSeasonData = null;
+        let hls = null;
 
-    <div class="relative w-full aspect-video">
-      <iframe id="playerFrame"
-        class="absolute inset-0 w-full h-full"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
+        fetch("data/show.json")
+            .then(res => res.json())
+            .then(data => {
+                shows = data.shows;
+                renderPosters();
+            });
+
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            const content = item.querySelector(".faq-content");
+            const icon = item.querySelector(".faq-icon");
+
+            content.classList.toggle("hidden");
+            icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+        }
+
+
+        function openComingSoon(index) {
+            const show = shows[index];
+            document.body.classList.add("modal-open");
+
+            comingSoonHero.style.backgroundImage = `url(${show.banner})`;
+            comingSoonLogo.src = show.logo || "";
+            comingSoonTitle.textContent = show.title;
+            comingSoonNote.textContent = show.comingSoonNote || "This title is coming soon.";
+
+            comingSoonModal.classList.remove("hidden");
+
+            const items = comingSoonModal.querySelectorAll(
+                ".fade-up, #comingSoonHero, #comingSoonTitle, #comingSoonNote");
+            items.forEach((el, i) => {
+                el.classList.add("fade-up");
+                el.style.animationDelay = `${i * 0.1}s`;
+            });
+        }
+
+
+        function closeComingSoon() {
+            comingSoonModal.classList.add("hidden");
+            document.body.classList.remove("modal-open");
+        }
+
+        function renderPosters() {
+            posterGrid.innerHTML = shows.map((show, i) => `
+    <div class="relative group fade-up" style="--delay:${i}">
+      <img src="${show.poster}"
+        class="rounded-xl shadow-lg transition
+               ${show.comingSoon ? 'opacity-70 cursor-pointer' : 'cursor-pointer active:scale-95'}"
+        onclick="${show.comingSoon ? `openComingSoon(${i})` : `openShow(${i})`}" />
+
+      ${show.comingSoon ? `
+        <div class="absolute inset-0 rounded-xl
+                    bg-black/60 backdrop-blur-sm
+                    flex items-center justify-center pointer-events-none">
+          <span class="px-4 py-2 rounded-full
+                       bg-indigo-600/90 text-white
+                       text-sm font-bold tracking-wide shadow-lg">
+            ${show.comingSoonText || "Coming Soon"}
+          </span>
+        </div>
+      ` : ''}
     </div>
-  </div>
-</div>
-
-<script>
-let shows = [];
-let currentShow = null;
-let currentSeasonData = null;
-
-fetch("data/show.json")
-  .then(res => res.json())
-  .then(data => {
-    shows = data.shows;
-    renderPosters();
-  });
-
-function renderPosters() {
-  posterGrid.innerHTML = shows.map((show, i) => `
-    <img src="${show.poster}"
-      class="rounded-xl shadow-lg cursor-pointer active:scale-95 transition"
-      onclick="openShow(${i})" />
   `).join("");
-}
+        }
 
-function openShow(index) {
-  currentShow = shows[index];
-  document.body.classList.add("modal-open");
 
-  showHero.style.backgroundImage = `url(${currentShow.banner})`;
-  showLogo.src = currentShow.logo;
-  showSummary.textContent = currentShow.summary;
 
-  seasonSelect.innerHTML = currentShow.seasons.map((s, i) =>
-    `<option value="${i}">Season ${s.number}</option>`
-  ).join("");
 
-  seasonSelect.onchange = () => loadSeason(seasonSelect.value);
-  loadSeason(0);
+        function openShow(index) {
+            currentShow = shows[index];
+            document.body.classList.add("modal-open");
 
-  showModal.classList.remove("hidden");
-}
+            showHero.style.backgroundImage = `url(${currentShow.banner})`;
+            showLogo.src = currentShow.logo;
+            showSummary.textContent = currentShow.summary;
 
-function loadSeason(seasonIndex) {
-  fetch(currentShow.seasons[seasonIndex].file)
-    .then(res => res.json())
-    .then(data => {
-      currentSeasonData = data;
-      renderEpisodes();
-    });
-}
+            seasonSelect.innerHTML = currentShow.seasons.map((s, i) =>
+                `<option value="${i}">Season ${s.number}</option>`
+            ).join("");
 
-function renderEpisodes() {
-  episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
+            seasonSelect.onchange = () => loadSeason(seasonSelect.value);
+            loadSeason(0);
+
+            showModal.classList.remove("hidden");
+
+            const items = showModal.querySelectorAll(".fade-up");
+            items.forEach((el, i) => {
+                el.style.animationDelay = `${i * 0.1}s`;
+                el.classList.add("fade-up");
+            });
+        }
+
+
+
+        function loadSeason(seasonIndex) {
+            fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
+                .then(res => res.json())
+                .then(data => {
+                    currentSeasonData = data;
+
+                    if (data.type === "external") {
+                        renderExternalSeason(data);
+                    } else {
+                        renderEpisodes();
+                    }
+                });
+        }
+
+        function loadSeason(seasonIndex) {
+            episodeGrid.innerHTML = ""; 
+
+            fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
+                .then(res => res.json())
+                .then(data => {
+                    currentSeasonData = data;
+
+                    if (data.type === "external") {
+                        renderExternalSeason(data);
+                    } else {
+                        renderEpisodes();
+                    }
+                });
+        }
+
+        function renderExternalSeason(data) {
+            episodeGrid.innerHTML = `
+    <div class="col-span-full flex flex-col items-center justify-center text-center py-16 space-y-4">
+      <a href="${data.button.url}" target="_blank"
+        class="px-10 py-5 text-xl font-bold rounded-2xl
+               bg-indigo-600 hover:bg-indigo-700
+               transition hover:scale-105 shadow-xl">
+        ${data.button.label}
+      </a>
+      <p class="text-sm text-gray-400 max-w-md">
+        ${data.note}
+      </p>
+    </div>
+  `;
+        }
+
+        function renderContinueWatching() {
+            const watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+            const grid = document.getElementById("continueGrid");
+
+            const items = watchData.map(item => {
+                const show = shows.find(s => s.id === item.showId);
+                if (!show) return null;
+                const season = show.seasons[item.season] || show.seasons[0];
+                const ep = season.episodes[item.episode] || season.episodes[0];
+
+                return `
+      <div class="cursor-pointer rounded-xl shadow-lg overflow-hidden relative" onclick="openShow(${shows.indexOf(show)})">
+        <img src="${show.poster}" class="w-full h-32 object-cover">
+        <div class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded">
+          S${item.season+1}E${item.episode+1} • ${Math.floor(item.time/60)}m
+        </div>
+      </div>
+    `;
+            }).filter(Boolean);
+
+            grid.innerHTML = items.join("");
+        }
+
+        fetch("data/show.json")
+            .then(res => res.json())
+            .then(data => {
+                shows = data.shows;
+                renderPosters();
+                renderContinueWatching(); 
+            });
+
+
+        function renderEpisodes() {
+            episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
     <div onclick="openPlayer(${i})"
-      class="bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition">
+      class="bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition fade-up"
+      style="--delay:${i}">
       <img src="${ep.thumbnail}" class="w-full h-28 object-cover">
       <div class="p-2">
         <p class="text-xs text-gray-400">Episode ${ep.number}</p>
@@ -150,23 +305,162 @@ function renderEpisodes() {
       </div>
     </div>
   `).join("");
-}
+        }
 
-function openPlayer(epIndex) {
-  playerFrame.src = currentSeasonData.episodes[epIndex].embed;
-  playerModal.classList.remove("hidden");
-}
 
-function closeShow() {
-  showModal.classList.add("hidden");
-  document.body.classList.remove("modal-open");
-}
+        function openPlayer(epIndex) {
+            const ep = currentSeasonData.episodes[epIndex];
+            const video = document.getElementById("playerVideo");
 
-function closePlayer() {
-  playerModal.classList.add("hidden");
-  playerFrame.src = "";
-}
-</script>
+            video.pause();
+            video.src = "";
+            while (video.firstChild) {
+                video.removeChild(video.firstChild);
+            }
+
+            if (hls) {
+                hls.destroy();
+                hls = null;
+            }
+
+            if (ep.subtitles && ep.subtitles.length > 0) {
+                ep.subtitles.forEach(track => {
+                    const t = document.createElement("track");
+                    t.kind = "subtitles";
+                    t.label = track.label;
+                    t.srclang = track.lang;
+                    t.src = track.url;
+                    if (track.default) t.default = true;
+                    video.appendChild(t);
+                });
+            }
+
+            if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = ep.embed; // 
+            } else if (Hls.isSupported()) {
+                hls = new Hls();
+                hls.loadSource(ep.embed);
+                hls.attachMedia(video);
+            } else {
+                alert("Your browser does not support HLS playback.");
+                return;
+            }
+
+            video.play();
+            playerModal.classList.remove("hidden");
+        }
+
+        function closeShow() {
+            showModal.classList.add("hidden");
+            document.body.classList.remove("modal-open");
+        }
+
+        function closePlayer() {
+            const video = document.getElementById("playerVideo");
+            video.pause();
+            video.src = "";
+            if (hls) {
+                hls.destroy();
+                hls = null;
+            }
+            playerModal.classList.add("hidden");
+        }
+    </script>
+    <div id="comingSoonModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/80" onclick="closeComingSoon()"></div>
+
+        <div class="relative w-full max-w-lg mx-4
+           glass rounded-2xl shadow-2xl
+           flex flex-col overflow-hidden">
+
+            <div id="comingSoonHero" class="h-48 bg-cover bg-center relative">
+                <img id="comingSoonLogo" class="absolute bottom-3 left-4 h-12" />
+            </div>
+
+            <div class="p-6 text-center space-y-4">
+                <h2 id="comingSoonTitle" class="text-2xl font-extrabold"></h2>
+
+                <p id="comingSoonNote" class="text-gray-300 text-sm">
+                </p>
+
+                <span class="inline-block px-4 py-2 rounded-full
+               bg-indigo-600/90 text-white
+               text-sm font-bold tracking-wide">
+                    Coming Soon
+                </span>
+            </div>
+        </div>
+    </div>
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-extrabold mb-10 text-center">
+            FAQ
+        </h2>
+
+        <div class="space-y-4">
+
+            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                    onclick="toggleFAQ(this)">
+                    <span>What is this site?</span>
+                    <span class="faq-icon text-xl">+</span>
+                </button>
+
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
+                    This site is a website you can stream most LEGO TV shows on.
+                </div>
+            </div>
+            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                    onclick="toggleFAQ(this)">
+                    <span>Why are there no subtitles?</span>
+                    <span class="faq-icon text-xl">+</span>
+                </button>
+
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
+                    Subtitles will be released in the next website update, only in English though FOR NOW. Every
+                    language audio is also planned to be added in the future.
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                    onclick="toggleFAQ(this)">
+                    <span>Where does the video content come from?</span>
+                    <span class="faq-icon text-xl">+</span>
+                </button>
+
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
+                    Videos are embedded or streamed from official sources.
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                    onclick="toggleFAQ(this)">
+                    <span>Why is some content marked as “Coming Soon”?</span>
+                    <span class="faq-icon text-xl">+</span>
+                </button>
+
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
+                    Some shows or seasons are still being prepared and will be available at a later date.
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                    onclick="toggleFAQ(this)">
+                    <span>How do I suggest a new feature to the website?</span>
+                    <span class="faq-icon text-xl">+</span>
+                </button>
+
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
+                    Join the Discord server.
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 </body>
+
 </html>
