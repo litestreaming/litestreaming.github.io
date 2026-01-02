@@ -1,0 +1,64 @@
+{
+    "season": 8,
+    "episodes": [{
+            "number": 1,
+            "title": "The Mask of Deception",
+            "thumbnail": "https://image.tmdb.org/t/p/original/cPDs8YGOYMxouWEuvGYScwav8UK.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4b/17/10369225/s10369225.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "The Jade Princess",
+            "thumbnail": "https://image.tmdb.org/t/p/original/zfKD9RUEHbX1cGqC2b4oECot8ZM.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/78/ee/10369226/s10369226.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "The Oni and the Dragon",
+            "thumbnail": "https://image.tmdb.org/t/p/original/g1JtbYU6KgiVgWzqD8tJomKTD8Y.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3d/84/10369227/s10369227.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "Snake Jaguar",
+            "thumbnail": "https://image.tmdb.org/t/p/original/dr4ifu6gSpiHe2kRUjgPTisLkmF.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/eb/84/10369228/s10369228.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "Dead Man's Squall",
+            "thumbnail": "https://image.tmdb.org/t/p/original/fahGgqzhM6QQ9KBwbzASpxAlwjl.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/eb/9e/10369229/s10369229.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "The Quiet One",
+            "thumbnail": "https://image.tmdb.org/t/p/original/ueiC1pu6hSLWO3Cx81NTHB6dXZy.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a6/eb/10369230/s10369230.m3u8"
+        },
+        {
+            "number": 7,
+            "title": "Game of Masks",
+            "thumbnail": "https://image.tmdb.org/t/p/original/kPzvqhvkpfau9CogWHVJRS2qF8D.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/41/f7/10369231/s10369231.m3u8"
+        },
+        {
+            "number": 8,
+            "title": "Dread on Arrival",
+            "thumbnail": "https://image.tmdb.org/t/p/original/xjnx0KQztQ5hACr5B3d0yjYZP8j.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/aa/6d/10369232/s10369232.m3u8"
+        },
+        {
+            "number": 9,
+            "title": "True Potential",
+            "thumbnail": "https://image.tmdb.org/t/p/original/jyQzVd7x74DXPzOsstCgWzTenJP.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/00/10369233/s10369233.m3u8"
+        },
+        {
+            "number": 10,
+            "title": "Big Trouble, Little Ninjago",
+            "thumbnail": "https://image.tmdb.org/t/p/original/wIIODP1R3v9cUoP02v06j7SHKOE.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/41/44/10369234/s10369234.m3u8"
+        }
+    ]
+}

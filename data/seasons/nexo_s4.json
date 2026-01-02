@@ -1,0 +1,64 @@
+{
+    "season": 4,
+    "episodes": [{
+            "number": 1,
+            "title": "Weekend at Halberts",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 2,
+            "title": "The Gray Knight",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 3,
+            "title": "The Good, the Bad and the Tightwad",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 4,
+            "title": "In his Majesty's Secret Service",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 5,
+            "title": "Stranger in the Halps",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 6,
+            "title": "Krakenskull",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 7,
+            "title": "Heart of Stone",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 8,
+            "title": "Between a Rock and a Hard Place",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 9,
+            "title": "March of the Colossus",
+             "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 10,
+            "title": "The Fall",
+            "thumbnail": "",
+            "embed": ""
+        }
+    ]
+}

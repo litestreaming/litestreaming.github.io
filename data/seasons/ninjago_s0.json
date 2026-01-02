@@ -1,0 +1,28 @@
+{
+  "season": 0,
+  "episodes": [{
+      "number": 1,
+      "title": "Way of the Ninja",
+      "thumbnail": "https://cdntest.futuretodayinc.com/files/a8wn4hw/im/8d/d9/51b38bb6b0474b4a5ca1830feeccf62c.jpg",
+      "embed": "https://cdntest.futuretodayinc.com/files/a8wn4hw/vi/d6/d6/10505611/s10505611.m3u8",
+      "subtitles": [{
+        "url": "https://cdntest.futuretodayinc.com/files/a8wn4hw/cc/e3/28/f81613a962c94ba2fa13cf74107bf57e.vtt",
+        "lang": "en",
+        "label": "English",
+        "default": true
+      }]
+    },
+    {
+      "number": 2,
+      "title": "King of Shadows",
+      "thumbnail": "https://cdntest.futuretodayinc.com/files/a8wn4hw/im/1c/d7/2e2bcd459e292d1dc27a6af876d01b2f.jpg",
+      "embed": "https://cdntest.futuretodayinc.com/files/a8wn4hw/vi/15/32/10505612/s10505612.m3u8",
+      "subtitles": [{
+        "url": "https://cdntest.futuretodayinc.com/files/a8wn4hw/cc/a6/59/fa7d4db964ba83d9303b330849af6cdb.vtt",
+        "lang": "en",
+        "label": "English",
+        "default": true
+      }]
+    }
+  ]
+}

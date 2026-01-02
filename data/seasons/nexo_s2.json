@@ -1,0 +1,64 @@
+{
+    "season": 2,
+    "episodes": [{
+            "number": 1,
+            "title": "Back to School",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 2,
+            "title": "Greed is Good?",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 3,
+            "title": "The Book of Obsession",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 4,
+            "title": "The King's Tournament",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 5,
+            "title": "Monster Chef",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 6,
+            "title": "Knight Out",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 7,
+            "title": "Saturday Knight Fever",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 8,
+            "title": "Open Mike Knight",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 9,
+            "title": "The Fortrex and the Furious",
+             "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 10,
+            "title": "Kingdom of Heroes",
+            "thumbnail": "",
+            "embed": ""
+        }
+    ]
+}

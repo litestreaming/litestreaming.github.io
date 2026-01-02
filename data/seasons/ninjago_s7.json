@@ -1,0 +1,64 @@
+{
+    "season": 7,
+    "episodes": [{
+            "number": 1,
+            "title": "The Hands of Time",
+            "thumbnail": "https://image.tmdb.org/t/p/original/xdNrid4AVmEFxDWbQ4Gu0BlDnkH.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/84/88/10369215/s10369215.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "The Hatching",
+            "thumbnail": "https://image.tmdb.org/t/p/original/oT4LguVDZRhsZgpkL0pm3GKzajW.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/59/6c/10369216/s10369216.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "A Time of Traitors",
+            "thumbnail": "https://image.tmdb.org/t/p/original/3jGENhGz9TSpNfI2amfwibUxFtz.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/21/28/10369217/s10369217.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "Scavengers",
+            "thumbnail": "https://image.tmdb.org/t/p/original/qlE09704s3TEUJVUKmEGiFilE4d.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5d/8d/10369218/s10369218.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "A Line in the Sand",
+            "thumbnail": "https://image.tmdb.org/t/p/original/3eDdmOTJwuXSUwpi3IL7tHSlko6.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/78/0f/10369219/s10369219.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "The Attack",
+            "thumbnail": "https://image.tmdb.org/t/p/original/dHZiUfLVEu34lOR0KBhbnAeeFCs.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6f/16/10369220/s10369220.m3u8"
+        },
+        {
+            "number": 7,
+            "title": "Secrets Discovered",
+            "thumbnail": "https://image.tmdb.org/t/p/original/8EJv0yrgblEFJMFfoSQaTs4xZrj.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/11/32/10369221/s10369221.m3u8"
+        },
+        {
+            "number": 8,
+            "title": "Pause and Effect",
+            "thumbnail": "https://image.tmdb.org/t/p/original/fW4xLnDOSHfL9ovYyoUhHesFSmb.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/72/12/10369222/s10369222.m3u8"
+        },
+        {
+            "number": 9,
+            "title": "Out of the Fire and Into the Boiling Sea",
+            "thumbnail": "https://image.tmdb.org/t/p/original/8PWh1QRjyGWKWXKPlZg2hDFkEqI.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/33/10369223/s10369223.m3u8"
+        },
+        {
+            "number": 10,
+            "title": "Lost in Time",
+            "thumbnail": "https://image.tmdb.org/t/p/original/nsnxBbrtEe1mbMM9T7cdLb7HFmM.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3c/5e/10369224/s10369224.m3u8"
+        }
+    ]
+}

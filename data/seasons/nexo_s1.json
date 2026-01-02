@@ -1,0 +1,64 @@
+{
+    "season": 1,
+    "episodes": [{
+            "number": 1,
+            "title": "The Book of Monsters, Part 1",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 2,
+            "title": "The Book of Monsters, Part 2",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 3,
+            "title": "The Power of Merlok",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 4,
+            "title": "The Knights' Code",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 5,
+            "title": "Fright Knight",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 6,
+            "title": "The Golden Castle",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 7,
+            "title": "The Maze of Amazement",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 8,
+            "title": "The Black Knight",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 9,
+            "title": "The Book of Total Badness",
+             "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 10,
+            "title": "The Might and the Magic",
+            "thumbnail": "",
+            "embed": ""
+        }
+    ]
+}

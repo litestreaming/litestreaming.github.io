@@ -1,0 +1,124 @@
+{
+    "season": 3,
+    "episodes": [{
+            "number": 1,
+            "title": "The Missing",
+            "thumbnail": "https://image.tmdb.org/t/p/original/h7YXFuy1IVlzMkmQTCWrErVyYvd.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/22/52/10679886/s10679886.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "The Ultimate Object of Admiration",
+            "thumbnail": "https://image.tmdb.org/t/p/original/qPfHcqKainSkEX596z0CcpZG2TV.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/89/7a/10679887/s10679887.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "The Spectral Lands",
+            "thumbnail": "https://image.tmdb.org/t/p/original/b9BW62OliwoI9i7SZtWOwrhlxVr.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/21/cd/10679888/s10679888.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "The Great Zane Robbery",
+            "thumbnail": "https://image.tmdb.org/t/p/original/a2sDerO3ZmlclKrTWVarIrCZGk2.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5d/5a/10679889/s10679889.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "I Alone Can Save Them",
+            "thumbnail": "https://image.tmdb.org/t/p/original/3YgSJ8Mp37ipMeeDi8WR2GSf7Qa.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/22/45/10679890/s10679890.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "Fallen Wishes",
+            "thumbnail": "https://image.tmdb.org/t/p/original/7sbGa3sVhHmP1w9HyySWxzaIaaC.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b8/8e/10679891/s10679891.m3u8"
+        },
+        {
+            "number": 7,
+            "title": "Their Draconic Majesty's Request",
+            "thumbnail": "https://image.tmdb.org/t/p/original/gF42ipbD4JFZC03lGZRpWnBxTsl.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f6/b5/10679892/s10679892.m3u8"
+        },
+        {
+            "number": 8,
+            "title": "Crashing Together",
+            "thumbnail": "https://image.tmdb.org/t/p/original/hCLMCZqC0UdjewZWvDlzWqgnWmL.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/00/10679893/s10679893.m3u8"
+        },
+        {
+            "number": 9,
+            "title": "Chaos Unchained",
+            "thumbnail": "https://image.tmdb.org/t/p/original/l8GBOb8nUgBshJKwu6tpYzQzHRa.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e8/7c/10679894/s10679894.m3u8"
+        },
+        {
+            "number": 10,
+            "title": "The Shatter Dragon",
+            "thumbnail": "https://image.tmdb.org/t/p/original/dfzeZGnjXfH9tg2FSrkHajg1Xb.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/eb/a9/10679895/s10679895.m3u8"
+        },
+        {
+            "number": 11,
+            "title": "The Hollow Ones",
+            "thumbnail": "https://image.tmdb.org/t/p/original/gduADRKeCdzpzhED9tNa6XCE5G1.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/09/cc/10715406/s10715406.m3u8"
+        },
+        {
+            "number": 12,
+            "title": "Human Resources",
+            "thumbnail": "https://image.tmdb.org/t/p/original/twgknjWbSkYbxfN42EAq8MC63qO.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f1/00/10715407/s10715407.m3u8"
+        },
+        {
+            "number": 13,
+            "title": "Between You and Lee",
+            "thumbnail": "https://image.tmdb.org/t/p/original/uAHbNfA5WfOrjygNeePkoWp5wZG.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bc/37/10715408/s10715408.m3u8"
+        },
+        {
+            "number": 14,
+            "title": "Casket of Bones",
+            "thumbnail": "https://image.tmdb.org/t/p/original/lWd4xHaY38ESQgCW5XZwiai4JsS.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/58/10715409/s10715409.m3u8"
+        },
+        {
+            "number": 15,
+            "title": "The Screaming Earth",
+            "thumbnail": "https://image.tmdb.org/t/p/original/kOPOowOtS6QPEwTdo9wXT1xD0ww.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c9/df/10715410/s10715410.m3u8"
+        },
+        {
+            "number": 16,
+            "title": "Under the Light of a Mechanical Moon",
+            "thumbnail": "https://image.tmdb.org/t/p/original/zcyaJxTGniyuSjSz9IwFD55NRgn.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cf/45/10715411/s10715411.m3u8"
+        },
+        {
+            "number": 17,
+            "title": "The Vault of Focus",
+            "thumbnail": "https://image.tmdb.org/t/p/original/4r0KMqOgPWyLOjjrUMmzkyktRGQ.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/37/db/10715412/s10715412.m3u8"
+        },
+        {
+            "number": 18,
+            "title": "For Whom the Bell Tolls",
+            "thumbnail": "https://image.tmdb.org/t/p/original/l7IqKyDjupG0t97PkVQuoQae15h.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4d/7a/10715413/s10715413.m3u8"
+        },
+        {
+            "number": 19,
+            "title": "When Doves Cry",
+            "thumbnail": "https://image.tmdb.org/t/p/original/4tlQrLIqP3R2jFzZDb4N8p37Z7w.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6c/9c/10715414/s10715414.m3u8"
+        },
+        {
+            "number": 20,
+            "title": "Chaos Reigns",
+            "thumbnail": "https://image.tmdb.org/t/p/original/lxvNFL8je4l5AQo4acXQAEUjYYH.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3e/5d/10715415/s10715415.m3u8"
+        }
+    ]
+}

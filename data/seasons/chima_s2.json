@@ -1,0 +1,40 @@
+{
+    "season": 2,
+    "episodes": [{
+            "number": 1,
+            "title": "Into the Outlands",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4f/bc/9ba0015ce3c558a1331a07d1818e8849.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e2/fb/10473909/s10473909.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "A Tangled Web",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0c/b1/714f4c7968408a7d44437997681be0eb.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c2/dd/10473910/s10473910.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "The Legend Thief",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e3/bf/ba9cf54ce63d40ba13485d2ec5f3eb79.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/47/f7/10473911/s10473911.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "The Eagle and the Bear",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/fc/29/a582a2d805be79d288d3c8a9e43938d7.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b1/f0/10473912/s10473912.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "Tooth of Consequences",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/d8/e7/4c10cddbf98d43c013d62440661ec783.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/ec/10473913/s10473913.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "This May Sting a Bit",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/34/a3/d6242e31bc800c1aedd0ba541499f8e2.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/08/0c/10473914/s10473914.m3u8"
+        }
+    ]
+}

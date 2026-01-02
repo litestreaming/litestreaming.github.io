@@ -1,0 +1,64 @@
+{
+    "season": 4,
+    "episodes": [{
+            "number": 1,
+            "title": "The Invitation",
+            "thumbnail": "https://image.tmdb.org/t/p/original/tYQJupG6699qOek5InWhcB4MTff.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/74/5f/10369185/s10369185.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "Only One Can Remain",
+            "thumbnail": "https://image.tmdb.org/t/p/original/tUCgEqFGoYIgcadu62rklI9N1sK.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cf/f2/10369186/s10369186.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "Versus",
+            "thumbnail": "https://image.tmdb.org/t/p/original/17XeMtmwekcirgabdhBUNtvzmRq.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/15/ac/10369187/s10369187.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "Ninja Roll",
+            "thumbnail": "https://image.tmdb.org/t/p/original/A4B6y1kLdBhdd1wjZRQsBz3JFat.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/83/a2/10369188/s10369188.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "Spy For a Spy",
+            "thumbnail": "https://image.tmdb.org/t/p/original/fTOhI2OEES9wRBhJG7gXGo786tu.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0a/e6/10369189/s10369189.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "Spellbound",
+            "thumbnail": "https://image.tmdb.org/t/p/original/lfxypfPk4vrkMbmjUraF72tJtFo.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d7/17/10369190/s10369190.m3u8"
+        },
+        {
+            "number": 7,
+            "title": "The Forgotten Element",
+            "thumbnail": "https://image.tmdb.org/t/p/original/mCjsFJ1BeIbvVtPkcM8fl6tNnVP.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/14/ae/10369191/s10369191.m3u8"
+        },
+        {
+            "number": 8,
+            "title": "The Day of the Dragon",
+            "thumbnail": "https://image.tmdb.org/t/p/original/6Z8CLi1bbGvPFd7OwOyjx3r6pJR.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/78/da/10369192/s10369192.m3u8"
+        },
+        {
+            "number": 9,
+            "title": "The Greatest Fear of All",
+            "thumbnail": "https://image.tmdb.org/t/p/original/hOa6ZXgGBW5sxtMJp6Zn7ldXhZB.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/39/8e/10369193/s10369193.m3u8"
+        },
+        {
+            "number": 10,
+            "title": "The Corridor of Elders",
+            "thumbnail": "https://image.tmdb.org/t/p/original/pWJ2bPmuyzKGwzXrjEA8B3iQkOl.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4c/79/10369194/s10369194.m3u8"
+        }
+    ]
+}

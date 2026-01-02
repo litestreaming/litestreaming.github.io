@@ -1,0 +1,64 @@
+{
+    "season": 5,
+    "episodes": [{
+            "number": 1,
+            "title": "Winds of Change",
+            "thumbnail": "https://image.tmdb.org/t/p/original/ifnOJNLa58qZIwTmL2IUIMpOROy.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/79/10369195/s10369195.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "Ghost Story",
+            "thumbnail": "https://image.tmdb.org/t/p/original/cYMhaBsMYH4JdVJqEoYDb1VvaHQ.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/06/10369196/s10369196.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "Stiix and Stones",
+            "thumbnail": "https://image.tmdb.org/t/p/original/60qES7GuuEPfMKQVPAC6SPFWprz.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/de/10369197/s10369197.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "The Temple on Haunted Hill",
+            "thumbnail": "https://image.tmdb.org/t/p/original/g6M03bko3JHB483ZImuDN5a3TTT.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/bf/10369198/s10369198.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "Peak-a-boo",
+            "thumbnail": "https://image.tmdb.org/t/p/original/m1dK9Kcip5mzTCcq5sSqjFM5tVy.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2a/ce/10369199/s10369199.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "Kingdom Come",
+            "thumbnail": "https://image.tmdb.org/t/p/original/vHvyhnvVUIvFJYs8pJl6o51PqMv.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/20/cc/10369200/s10369200.m3u8"
+        },
+        {
+            "number": 7,
+            "title": "The Crooked Path",
+            "thumbnail": "https://image.tmdb.org/t/p/original/q9PyvjhsjZHDl5zTqhaFhia76zj.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a3/ec/10369201/s10369201.m3u8"
+        },
+        {
+            "number": 8,
+            "title": "Grave Danger",
+            "thumbnail": "https://image.tmdb.org/t/p/original/dfYUn3p8dPNfe0zTavuW6IbTvB8.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/18/cd/10369202/s10369202.m3u8"
+        },
+        {
+            "number": 9,
+            "title": "Curseworld, Part 1",
+            "thumbnail": "https://image.tmdb.org/t/p/original/kayhb8jAdSeoNvst4MvxEi4W7QN.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ec/76/10369203/s10369203.m3u8"
+        },
+        {
+            "number": 10,
+            "title": "Curseworld, Part 2",
+            "thumbnail": "https://image.tmdb.org/t/p/original/5ElPbHLpLcZSMz4v1cxv5wIHId4.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/08/10369204/s10369204.m3u8"
+        }
+    ]
+}

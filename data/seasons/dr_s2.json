@@ -1,0 +1,124 @@
+{
+    "season": 2,
+    "episodes": [{
+            "number": 1,
+            "title": "The Blood Moon",
+            "thumbnail": "https://image.tmdb.org/t/p/original/abrcMXB1FYdjmUQckNvBcyGiXbO.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c4/2e/10590280/s10590280.m3u8"
+        },
+        {
+            "number": 2,
+            "title": "Shattered Dreams",
+            "thumbnail": "https://image.tmdb.org/t/p/original/f2V5EBafV8mPRVqzZf0ibGsSULu.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/16/ba/10590281/s10590281.m3u8"
+        },
+        {
+            "number": 3,
+            "title": "Beyond the Phantasm Cave",
+            "thumbnail": "https://image.tmdb.org/t/p/original/1vQRuZJFarimWMO3SoT8Z9GB8zY.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9d/a9/10590282/s10590282.m3u8"
+        },
+        {
+            "number": 4,
+            "title": "Force from the East",
+            "thumbnail": "https://image.tmdb.org/t/p/original/2XOOiElOnJwEF9F99bc42q2lACk.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/5f/10590283/s10590283.m3u8"
+        },
+        {
+            "number": 5,
+            "title": "The Spell at the Waterfall",
+            "thumbnail": "https://image.tmdb.org/t/p/original/5XZgd5DmXXOcBDAGnAJH9wM5YNi.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b4/af/10590284/s10590284.m3u8"
+        },
+        {
+            "number": 6,
+            "title": "To Mysterium",
+            "thumbnail": "https://image.tmdb.org/t/p/original/7YCjijZzZAQnGQYUi78WKGyK42W.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/47/43/10590285/s10590285.m3u8"
+        },
+        {
+            "number": 7,
+            "title": "Fugitives from Madness",
+            "thumbnail": "https://image.tmdb.org/t/p/original/xNbAieCKHoOD9szDtULQKtTgDiU.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/10/10590286/s10590286.m3u8"
+        },
+        {
+            "number": 8,
+            "title": "Secrets of the Wyldness",
+            "thumbnail": "https://image.tmdb.org/t/p/original/rF4WesbpNWuT9gJZLtpj4iIrWsr.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/29/b6/10590287/s10590287.m3u8"
+        },
+        {
+            "number": 9,
+            "title": "The Forest of Spirits",
+            "thumbnail": "https://image.tmdb.org/t/p/original/k9kqDitXBY6XKNMQNkTBQ60fLnD.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8d/9b/10590288/s10590288.m3u8"
+        },
+        {
+            "number": 10,
+            "title": "Rising Ninja",
+            "thumbnail": "https://image.tmdb.org/t/p/original/dllPfUDTcTRaSW6JMMvBuZSuhhF.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f5/a7/10590289/s10590289.m3u8"
+        },
+        {
+            "number": 11,
+            "title": "The Shape of Motion",
+            "thumbnail": "https://image.tmdb.org/t/p/original/zQ6v8REvaFQpnJQdkMlHNJ99uq2.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/87/10625425/s10625425.m3u8"
+        },
+        {
+            "number": 12,
+            "title": "Enter the City of Temples",
+            "thumbnail": "https://image.tmdb.org/t/p/original/ukjedUIzg2Pr44fm3u1oVIZARUF.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/a4/10625426/s10625426.m3u8"
+        },
+        {
+            "number": 13,
+            "title": "They Gather for the Feast",
+            "thumbnail": "https://image.tmdb.org/t/p/original/jafyfaZJzFd4SwliFwOJjeewoY0.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/58/10625427/s10625427.m3u8"
+        },
+        {
+            "number": 14,
+            "title": "Inside the Maze",
+            "thumbnail": "https://image.tmdb.org/t/p/original/phslaN2mIMNKMXJQS3Qd0i5xRy5.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2e/d2/10625428/s10625428.m3u8"
+        },
+        {
+            "number": 15,
+            "title": "United We Fall",
+            "thumbnail": "https://image.tmdb.org/t/p/original/hcAGKd8ueHf6td91mJPF2rvCmvF.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/43/51/10625429/s10625429.m3u8"
+        },
+        {
+            "number": 16,
+            "title": "Truth and Lies",
+            "thumbnail": "https://image.tmdb.org/t/p/original/91Az5LfBsRIcM9nNNaVAw5ZKpeb.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/98/dd/10625430/s10625430.m3u8"
+        },
+        {
+            "number": 17,
+            "title": "The Sword Shatters",
+            "thumbnail": "https://image.tmdb.org/t/p/original/iObExJM6Cg73vFwoXg3LhRkGUDL.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d0/d9/10625431/s10625431.m3u8"
+        },
+        {
+            "number": 18,
+            "title": "Clues and Suspects",
+            "thumbnail": "https://image.tmdb.org/t/p/original/j30i2KbI86aINwtfn1mdh5r9Jnc.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f2/f3/10625432/s10625432.m3u8"
+        },
+        {
+            "number": 19,
+            "title": "The Final Game",
+            "thumbnail": "https://image.tmdb.org/t/p/original/3a24OiIuGLSSTHmUp9TVsAwUOrv.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/58/10625433/s10625433.m3u8"
+        },
+        {
+            "number": 20,
+            "title": "Elements of Betrayal",
+            "thumbnail": "https://image.tmdb.org/t/p/original/rjme5Qaxz983RAYjtrGAYQOdWW9.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1a/a5/10625434/s10625434.m3u8"
+        }
+    ]
+}

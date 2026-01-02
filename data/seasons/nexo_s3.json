@@ -1,0 +1,64 @@
+{
+    "season": 3,
+    "episodes": [{
+            "number": 1,
+            "title": "The Cloud",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 2,
+            "title": "A Little Rusty",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 3,
+            "title": "Mount Thunderstrox",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 4,
+            "title": "Rotten Luck",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 5,
+            "title": "Storm Over Rock Wood",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 6,
+            "title": "Miner Setback",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 7,
+            "title": "Knight at the Museum",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 8,
+            "title": "Hot Rock Massage",
+            "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 9,
+            "title": "Rock Bottom",
+             "thumbnail": "",
+            "embed": ""
+        },
+        {
+            "number": 10,
+            "title": "In Charge",
+            "thumbnail": "",
+            "embed": ""
+        }
+    ]
+}
