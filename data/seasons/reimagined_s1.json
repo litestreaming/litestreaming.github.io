@@ -4,31 +4,61 @@
             "number": 1,
             "title": "A Day in the Life of a Golden Ninja",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c9/73/de2dd2f061f8ad2006c89d051d3ff282.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/48/7d/10433460/s10433460.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/48/7d/10433460/s10433460.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Sweatin' To The Goldies",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/20/8a/fc671c8f13ceaf5e2bcc1e8fa6c908ed.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/69/97/10433458/s10433458.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/69/97/10433458/s10433458.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Gold Rush",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/55/4b/aa7f61e15b7bf77682b06b37f5daffd9.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/95/85/10433456/s10433456.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/95/85/10433456/s10433456.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Golden Hour",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0a/39/d9f6c1d94dc46bef2d793ee7530e080e.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/8c/10433459/s10433459.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/8c/10433459/s10433459.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Golden Legend",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e9/0b/876799e8288bc052656bf72cf7174655.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/25/02/10433457/s10433457.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/25/02/10433457/s10433457.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

@@ -4,25 +4,49 @@
             "number": 1,
             "title": "The Darkness Comes",
             "thumbnail": "https://image.tmdb.org/t/p/original/n9nQsx75aGxP6M1BG1uEVZhrrrL.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/bb/10468503/s10468503.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/bb/10468503/s10468503.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/26/6b/dffd8f093f13756e63061b930086377b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Into the Breach",
             "thumbnail": "https://image.tmdb.org/t/p/original/ktLIoQAa22ufrzPzJST8bp6S4sU.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6e/ba/10468504/s10468504.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6e/ba/10468504/s10468504.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/56/45/4ae86f2904e16a93b9261ddc8200ef52.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Fall",
             "thumbnail": "https://image.tmdb.org/t/p/original/fNK9RgS3AhZxtNIJxNadePBnonv.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/df/10468505/s10468505.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/df/10468505/s10468505.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f1/d8/b197b8b8a6ee4fa9f2b110c06b23d119.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Endings",
             "thumbnail": "https://image.tmdb.org/t/p/original/ivHlAa8BhThWNQ1d2DCVjtQfvi6.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/ae/10468506/s10468506.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/ae/10468506/s10468506.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/17/1b/21c1902d6d2a6997df1081aec2c1f405.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

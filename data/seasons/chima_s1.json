@@ -4,121 +4,241 @@
             "number": 1,
             "title": "The Legends of CHIMA",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/ca/c7/a37964b2a7bc39893297dbb84251ad07.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5d/ac/10473889/s10473889.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5d/ac/10473889/s10473889.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/94/9c/e3f4cec603a7e73fc4198c7de7926b58.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Great Story",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a5/9f/740fc53ec9a8032494c8cf988b8a4ba8.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7d/8e/10473890/s10473890.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7d/8e/10473890/s10473890.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a1/87/16d249531c01f3f4b21cf60cf528fa56.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Warrior Within",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/80/3c/6740066f78dc87f9bd59266771fb045a.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/15/59/10473891/s10473891.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/15/59/10473891/s10473891.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4b/38/8c5f5b878fe762c2dcab70631bd42f1e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The Joy Ride",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/9f/5d/709fb40cc5a6ca9b7dc740a6b99be7cb.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/05/11/10473892/s10473892.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/05/11/10473892/s10473892.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7c/f0/489e042b725d671cdcdbe5491cbcbc6a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Market Day",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/99/84/918593544ca5ab11d1545013fdba449c.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/13/22/10473893/s10473893.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/13/22/10473893/s10473893.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/95/27/857090dc9b509ffdd4a2026767df8e45.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Attack on Eagle Spire",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/6c/17/02e61faa63da876ec10f0195b961e8bb.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/eb/69/10473894/s10473894.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/eb/69/10473894/s10473894.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/13/87/d505b9bbd1821e96d27f68651b619aa0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Hundred Year Moon",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/3e/52/5579b40b1730d58b236f71fdc25ea19c.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/45/0f/10473895/s10473895.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/45/0f/10473895/s10473895.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1c/f2/b25ba4296db64085647ab5e493b45b72.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Biggest Race of All",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/2b/31/85e0b5d886afb37b65e2253721a50dd9.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/71/a3/10473896/s10473896.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/71/a3/10473896/s10473896.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e0/04/c9286365391622d931f9eb4314177854.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Gorillas Gone Wild",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/51/b1/84d319b1b060ec2a9b53488a2c135cb3.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/26/77/10473897/idrm/stream.mpd"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/26/77/10473897/s10473897.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/24/90/c88610cc38132221a34ce18da4a86601.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Foxtrot",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/85/4e/c0fb81fa75bc0fe95c2fd3ec5ff397ce.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/c4/10473898/s10473898.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/c4/10473898/s10473898.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2c/57/244e171bddeee6ff0601004eb76d8570.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "The CHI Jackers",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/b3/37/69baa02c788cdf19766943cddd63abc1.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/77/d4/10473899/s10473899.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/77/d4/10473899/s10473899.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9f/81/586e159e6af2f198d9cf1bed1a595b4a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "Balancing Act",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/08/84/1c5930293f6e85cba708ca4cf305106a.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a9/98/10473900/s10473900.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a9/98/10473900/s10473900.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0e/52/82cbb3363042fdacdbe8445cda750886.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "Crocodile Tears",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/84/19/0aa2e7c6de661e823bdb37809048e112.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8c/4a/10473901/s10473901.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8c/4a/10473901/s10473901.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/8a/56/3ecffc59c9a6de64327b64f833d5fc5d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "Fake CHI, Real Trouble",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/45/bd/8b3a7fdb8a70a95e7b8b2d2f30e7d840.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/8f/10473902/s10473902.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/8f/10473902/s10473902.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/56/a8/8b33b383efef4b305c567caa9dbdbe29.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "Ravens vs. Eagles",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/45/0c/a1f1888f14482c2e1d1d7383126ec5e1.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bf/72/10473903/s10473903.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bf/72/10473903/s10473903.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1b/d2/0db01eb05258deabaefb54085e252501.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 16,
             "title": "Reunion Gone Wrong",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/27/1e/15191ffea1428fd6170cea63485220e0.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/51/69/10473904/s10473904.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/51/69/10473904/s10473904.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/50/a8/0424827905365ea0ae3bf5efc95ee6d1.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 17,
             "title": "Laval in Exile",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/5a/f9/ad84109d15178ce20e0552e827e35224.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/68/ad/10473905/s10473905.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/68/ad/10473905/s10473905.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d3/2d/0f8eba9b19dc750d06133baa91bc6a3f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 18,
             "title": "The Black Cloud",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/2d/92/d95b9c3d41ba4ed4054b0bee9b531de1.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/80/10473906/s10473906.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/80/10473906/s10473906.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/8d/35/cb0765bd0d40c10e03ec1c5c0a6125a0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 19,
             "title": "CHIMA Falls",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/b0/0f/3f3c6b28f65ea366ada34ef769ae8059.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1e/f0/10473907/s10473907.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1e/f0/10473907/s10473907.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f8/af/e6e9794b62996b5f5c30914e58abb27f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 20,
             "title": "For CHIMA!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/69/b6/d3819d1b0c70d524d432c0912196dec6.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8c/3b/10473908/s10473908.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8c/3b/10473908/s10473908.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c3/88/0721804fbb01df11358d3ae729ec0263.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

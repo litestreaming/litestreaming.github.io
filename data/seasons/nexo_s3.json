@@ -3,62 +3,122 @@
     "episodes": [{
             "number": 1,
             "title": "The Cloud",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/90/0e/5533f64e1ab470f9f3e0f2e41fb4d948.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8e/61/10369502/s10369502.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c3/2c/935c9c501618546254965e81cc267c26.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "A Little Rusty",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/be/63/540c6a176ab2c884a73ece7424799c04.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/9a/10369503/s10369503.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/bc/09/3824a44b5f2d48a9ffa45c888a03065c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Mount Thunderstrox",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7e/19/7ef055ae215a104f124ed01a0729deab.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/fd/10369504/s10369504.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/65/2d/3bcfa8ba6976995199b6d985d1af4489.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Rotten Luck",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c0/17/22236e3532834a3a8de9f7b3fc4dc820.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d9/c4/10369505/s10369505.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5e/8a/c896f2f416ebda2a92635d35691809e6.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Storm Over Rock Wood",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/94/75/045c410233762f52f529719a6829a4b9.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/d2/10369506/s10369506.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/be/a7/1c8b55acb0a09161c7cd4515bc837986.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Miner Setback",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/d6/8e/8d5fd348adf0caecd35ff122b8b4e857.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/88/8c/10369507/s10369507.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ce/be/ee2e2541d381debfd2c84792520b932e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Knight at the Museum",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/72/22/f3ae83116855f029eb7c5b7d89af2cc6.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dc/f3/10369508/s10369508.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/44/e5/88a901b362c58acb2866f7e41fc415e0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Hot Rock Massage",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a2/cb/093ba6b1b4f2a04fddb0964cdd1dabe1.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d1/8f/10369509/s10369509.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2c/08/53a13ad7759a95143f0df062cfc2917c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Rock Bottom",
-             "thumbnail": "",
-            "embed": ""
+             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/ad/c6/94c7063406746550afb46e2fc88f41b8.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ed/b3/10369510/s10369510.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5a/97/b4c0d332fb4c9e2b8126795761d21690.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "In Charge",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/92/b8/6955494141a49b708b27d4d97d5536a0.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/37/99/10369511/s10369511.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/93/04/5e5c0bfa887a2964868812c25c4e8ffa.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

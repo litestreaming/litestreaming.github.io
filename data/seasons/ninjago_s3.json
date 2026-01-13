@@ -4,49 +4,97 @@
             "number": 1,
             "title": "The Surge",
             "thumbnail": "https://image.tmdb.org/t/p/original/2qy0SIjUR86K82l4pQIoyk1dbR.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c5/d3/10369177/s10369177.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c5/d3/10369177/s10369177.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/b0/1c/b1b918ac4b512fc2004d5c685d86538e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Art of the Silent Fist",
             "thumbnail": "https://image.tmdb.org/t/p/original/5QLHXcrqoT4h7XIGNfS350rYDOX.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dc/c6/10369178/s10369178.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dc/c6/10369178/s10369178.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/24/51/cc894fb0959badd7f0b81087c1b60662.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Blackout",
             "thumbnail": "https://image.tmdb.org/t/p/original/tRszaUdiC3vX8MTwgJTpzgQecqt.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/db/de/10369179/s10369179.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/db/de/10369179/s10369179.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ed/54/527c737a46181f998ae5ec87d75f5d35.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The Curse of the Golden Master",
             "thumbnail": "https://image.tmdb.org/t/p/original/tUxxXkOnFgEf2Hicy6BdNykFyDo.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e2/ee/10369180/s10369180.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e2/ee/10369180/s10369180.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/75/3c/84b31c28b192f19b9459bc30fb0e89c8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Enter the Digiverse",
             "thumbnail": "https://image.tmdb.org/t/p/original/kt8rzY2Bc8yknUqspS7OXcuiIk7.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/82/79/10369181/s10369181.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/82/79/10369181/s10369181.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4a/2a/a8afd421c2d9f0607ffaf571e0c8bfec.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Codename: Arcturus",
             "thumbnail": "https://image.tmdb.org/t/p/original/ecEzQ533sQSaT8x3sXFICGvsxlI.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bd/fd/10369182/s10369182.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bd/fd/10369182/s10369182.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5e/b9/21058df509a60389924414ec7aded62f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Void",
             "thumbnail": "https://image.tmdb.org/t/p/original/qqatW6ZjHrrxWjsjeWL7bhelRpn.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5b/8d/10369183/s10369183.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5b/8d/10369183/s10369183.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a2/ea/5c02afd8f7acb7b591290edc6e9d7428.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Titanium Ninja",
             "thumbnail": "https://image.tmdb.org/t/p/original/8lIxSXh8nZ2gKnyzQ1YAJfLO0q6.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/09/10369184/s10369184.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/09/10369184/s10369184.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/94/81/3eef22d7cb1978634bf28fbaead04dbb.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

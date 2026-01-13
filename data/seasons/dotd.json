@@ -1,0 +1,10 @@
+{
+    "season": 1,
+    "episodes": [{
+            "number": 1,
+            "title": "Day of the Departed",
+            "thumbnail": "https://m.media-amazon.com/images/S/pv-target-images/413293aa7faca0f28efb58f8dec10de90a99a560b00746756c1d0f4c15f04ae3.jpg",
+            "embed": "https://pomf2.lain.la/f/opcvyyp1.mp4"
+        }
+    ]
+}

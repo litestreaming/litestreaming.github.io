@@ -4,61 +4,121 @@
             "number": 1,
             "title": "Firstbourne",
             "thumbnail": "https://image.tmdb.org/t/p/original/3hAfo5etS9iHeFYjJSLWt0EDYRd.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/49/98/10466342/s10466342.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/49/98/10466342/s10466342.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/11/fd/4977282f9b025a46ba43f00dc098e219.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Iron and Stone",
             "thumbnail": "https://image.tmdb.org/t/p/original/uLYcIL02x2KuL6i4puqnZuqHjVO.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b9/28/10466343/s10466343.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b9/28/10466343/s10466343.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/3a/46/52742a7b1cac31a8cfe715ffec72bb0d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Radio Free Ninjago",
             "thumbnail": "https://image.tmdb.org/t/p/original/4r3avFRs51UblTBYUTzmlqhrRkS.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/1a/10466344/s10466344.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/1a/10466344/s10466344.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5d/5c/4173ebd009fdafd5f7ad4cd529ef019a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "How to Build a Dragon",
             "thumbnail": "https://image.tmdb.org/t/p/original/sLGKUlXwaDobELmDD737Lm2Tj0M.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/00/2c/10466345/s10466345.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/00/2c/10466345/s10466345.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c2/38/ec1701927b65ed4f0bf1277b3a68460b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "The Gilded Path",
             "thumbnail": "https://image.tmdb.org/t/p/original/97GmLpZ60dSrFgj59XCwI8xKnMG.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/60/dc/10466346/s10466346.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/60/dc/10466346/s10466346.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/50/cb/5af6b5db551fd7e2f43df3a6b6ff17b9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Two Lies, One Truth",
             "thumbnail": "https://image.tmdb.org/t/p/original/jgUtTjsCrlABZh8P6uquvO265bK.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/77/61/10466347/s10466347.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/77/61/10466347/s10466347.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/da/be/caa5c1104c703b6b9d2c5dcea609aa15.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Weakest Link",
             "thumbnail": "https://image.tmdb.org/t/p/original/xpQQfVhkwlRaC7LZe4cECi6MMQn.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9f/e5/10466348/s10466348.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9f/e5/10466348/s10466348.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/bc/aa/bc9c9d82069bc5ca3427a43f777590be.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Saving Faith",
             "thumbnail": "https://image.tmdb.org/t/p/original/bEWEqKmuD7BMBXylebeDB2d6KCX.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/68/9c/10466349/s10466349.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/68/9c/10466349/s10466349.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/35/23/2d024fd6682d07ed4766969f7ab5ed3f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Lessons for a Master",
             "thumbnail": "https://image.tmdb.org/t/p/original/v2fbmkd6DW0rsO8uKo9EYCOZDMy.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/20/10466350/s10466350.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/20/10466350/s10466350.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d6/1c/66bf9e703c8d1c4744722a1211c82685.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Green Destiny",
             "thumbnail": "https://image.tmdb.org/t/p/original/n6igRBwxcTrFU7YR1SxPWnUXaIZ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/99/10466351/s10466351.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/99/10466351/s10466351.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/26/c8/175876c4cdf34d86c408cf5f323e7d15.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

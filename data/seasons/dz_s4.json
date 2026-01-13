@@ -1,0 +1,34 @@
+{
+    "season": 4,
+    "episodes": [{
+            "number": 1,
+            "title": "Croc-Star",
+            "thumbnail": "https://image.tmdb.org/t/p/original/aUaBAHmAujS50pUKLY1orH7h5rN.jpg",
+            "embed": "https://pomf2.lain.la/f/hiub9p9d.mp4"
+        },
+        {
+            "number": 2,
+            "title": "Outfoxed",
+            "thumbnail": "https://image.tmdb.org/t/p/original/gphk2ARqqpWGQ71JEquWHM14ULX.jpg",
+            "embed": "https://pomf2.lain.la/f/q5lxi5y0.mp4"
+        },
+        {
+            "number": 3,
+            "title": "Dino Dash",
+            "thumbnail": "https://image.tmdb.org/t/p/original/ukSnxRzeXHLiSUjCK0ngR8SnBwX.jpg",
+            "embed": "https://pomf2.lain.la/f/tnegh27p.mp4"
+        },
+        {
+            "number": 4,
+            "title": "Mr Sharkytank",
+            "thumbnail": "https://image.tmdb.org/t/p/original/soIJrcIEMZ8XsJ8WGPoPBHtHt8h.jpg",
+            "embed": "https://pomf2.lain.la/f/mnm1zsm7.mp4"
+        },
+        {
+            "number": 5,
+            "title": "Goodnight Nightmare King",
+            "thumbnail": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
+            "embed": "https://pomf2.lain.la/f/mtkn4q0.mp4"
+        }
+    ]
+}

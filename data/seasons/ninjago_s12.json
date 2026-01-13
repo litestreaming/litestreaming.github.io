@@ -4,97 +4,193 @@
             "number": 1,
             "title": "Would You Like to Enter Prime Empire?",
             "thumbnail": "https://image.tmdb.org/t/p/original/bcGXFPpPJ8WwapzDiCGUenNBqwG.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/8e/10468471/s10468471.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/8e/10468471/s10468471.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ff/0d/39b199faf15f8d903537f23cc77dceea.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Dyer Island",
             "thumbnail": "https://image.tmdb.org/t/p/original/8ZJCFjXiN8Cmn66SmqNkejNeHGC.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/99/10468472/s10468472.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/99/10468472/s10468472.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/52/70/2cf46ad8461877f7130609e01c9751f7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Level Thirteen",
             "thumbnail": "https://image.tmdb.org/t/p/original/uUlPrfRTxgTJYwGoSED8VGYVs2G.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/70/51/10468473/s10468473.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/70/51/10468473/s10468473.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/6e/ce/9d8a14a3b47bb614a94ae7f9e5104936.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Superstar Rockin' Jay",
             "thumbnail": "https://image.tmdb.org/t/p/original/mRn2268Y61O1tH1OtHkdVEq2I55.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/53/2d/10468474/s10468474.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/53/2d/10468474/s10468474.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9c/2a/964f00e1c394f4378f18c81340ac2888.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "I am Okino",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BODIwYzZlMzktZjE3ZS00Yjk0LWJkNGYtMWQwMTcxN2ZkNGIxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/69/3a/10468475/s10468475.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/69/3a/10468475/s10468475.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7e/dd/1e8f4e21870e6f06a4053701090d7e65.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "The Glitch",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZjIzY2RhODEtYzUwMC00MTBmLTk2ODgtZjZhMDI2NGY2ZDNhXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/e6/10468476/s10468476.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/e6/10468476/s10468476.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/90/6b/4944f044f39bceb7ef0fd6e1fa0c53c7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Cliffs of Hysteria",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTdiNWUxMzMtZjUyMC00ZmExLTlkNmYtYmE0M2YzODcxZTE4XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/55/c6/10468477/s10468477.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/55/c6/10468477/s10468477.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d4/29/0679ff858acf6498679db9641ee812e0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Maze of the Red Dragon",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjMyYmJjYWQtN2U4Yi00N2UyLTg0ZGUtZDQ4NDk4NTYwYzY2XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ad/47/10468478/s10468478.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ad/47/10468478/s10468478.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/90/ea/f0a0ce761e2676ab6c6140c8bcfd6c1c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "One Step Forward, Two Steps Back",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDhjZmEyY2ItOGI4Yi00MmYzLTkyMzctMTkzYWM3NTZmYWI5XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/31/fd/10468479/s10468479.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/31/fd/10468479/s10468479.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4d/46/e3e5805a16ae055758205efeea33c436.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Racer Seven",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2I1NjI4MTAtMjhlNi00ZWU3LTk3OWItODhjYTgxNmNmNmU5XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e7/de/10468480/s10468480.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e7/de/10468480/s10468480.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f2/5e/53cc90c71197a6e83ee664d1aecd1639.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "The Speedway Five-Billion",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BOGJiYzQ3ZjUtMDNiNi00YzZlLTgwZTktNWNlM2E5MjQ3OWNkXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/97/07/10468481/s10468481.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/97/07/10468481/s10468481.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/af/85/deec07f4723daf1b0f9e53de1aa9570b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "Stop, Drop and Side Scroll",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNWYwZTFiOGMtZDFiZi00MDUyLWI1YTEtZmM0ZjgwMzJjNWQwXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/ed/10468482/s10468482.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/ed/10468482/s10468482.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/02/7d/cc93cb3096bee19cd211867211103fd7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "Ninjago Confidential",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTU0NmQxMGQtNzg5NC00ZTQ1LTkzMDQtYWJkZmI5ODA3MTU1XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a1/0d/10468483/s10468483.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a1/0d/10468483/s10468483.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4d/ab/c8768c4afbb975f8acc1e9a9282348fe.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "The Prodigal Father",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGRjYTIyNjMtYmUzMi00NjM3LThiMjItYzZiODI5NmJlOTJjXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/59/10468484/s10468484.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/59/10468484/s10468484.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/39/62/40abbbc7ae17d7ab2de46778fae50066.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "The Temple of Madness",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDBlNTYyZjQtNTYzMi00NWE0LWI4OWYtZGE0ZWRiNzE3ZjgxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/87/10468485/s10468485.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/87/10468485/s10468485.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/90/7a/dd8b8e298b7dc6a8128bf888ca617a7c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 16,
             "title": "Game Over",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMWY2ZTFmNWItZjU1ZC00ZTFiLTljYzQtNTBmZjllNzUxMjlhXkEyXkFqcGc@.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3c/88/10468486/s10468486.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3c/88/10468486/s10468486.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/42/32/4547c09aaae0e5464319a3f18be73b35.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

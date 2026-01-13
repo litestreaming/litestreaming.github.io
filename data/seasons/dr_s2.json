@@ -4,121 +4,241 @@
             "number": 1,
             "title": "The Blood Moon",
             "thumbnail": "https://image.tmdb.org/t/p/original/abrcMXB1FYdjmUQckNvBcyGiXbO.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c4/2e/10590280/s10590280.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c4/2e/10590280/s10590280.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/80/fb/10a02a621abc5ec4cee2d889f14c236b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Shattered Dreams",
             "thumbnail": "https://image.tmdb.org/t/p/original/f2V5EBafV8mPRVqzZf0ibGsSULu.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/16/ba/10590281/s10590281.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/16/ba/10590281/s10590281.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1a/2b/a26632c4badcb0e0646fedb7c30d3e3d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Beyond the Phantasm Cave",
             "thumbnail": "https://image.tmdb.org/t/p/original/1vQRuZJFarimWMO3SoT8Z9GB8zY.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9d/a9/10590282/s10590282.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9d/a9/10590282/s10590282.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0c/e3/5fa787982343078269b3ce39ea4a02e5.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Force from the East",
             "thumbnail": "https://image.tmdb.org/t/p/original/2XOOiElOnJwEF9F99bc42q2lACk.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/5f/10590283/s10590283.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/5f/10590283/s10590283.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ca/2b/36c2f7909ab93a1d7cc97cf62cf70444.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "The Spell at the Waterfall",
             "thumbnail": "https://image.tmdb.org/t/p/original/5XZgd5DmXXOcBDAGnAJH9wM5YNi.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b4/af/10590284/s10590284.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b4/af/10590284/s10590284.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d9/c8/2e84a796738e1377ffc271082d65191c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "To Mysterium",
             "thumbnail": "https://image.tmdb.org/t/p/original/7YCjijZzZAQnGQYUi78WKGyK42W.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/47/43/10590285/s10590285.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/47/43/10590285/s10590285.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/59/92/fc46f35b297d98ac9c65332f88177ac0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Fugitives from Madness",
             "thumbnail": "https://image.tmdb.org/t/p/original/xNbAieCKHoOD9szDtULQKtTgDiU.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/10/10590286/s10590286.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/10/10590286/s10590286.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/03/02/8c0dc36d2db95ce64971486467a74e70.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Secrets of the Wyldness",
             "thumbnail": "https://image.tmdb.org/t/p/original/rF4WesbpNWuT9gJZLtpj4iIrWsr.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/29/b6/10590287/s10590287.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/29/b6/10590287/s10590287.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f6/99/807e20526db872d99551eb5272ebf79a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "The Forest of Spirits",
             "thumbnail": "https://image.tmdb.org/t/p/original/k9kqDitXBY6XKNMQNkTBQ60fLnD.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8d/9b/10590288/s10590288.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8d/9b/10590288/s10590288.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a2/c5/42f78d4a7176f1b9e127f4a02de50eef.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Rising Ninja",
             "thumbnail": "https://image.tmdb.org/t/p/original/dllPfUDTcTRaSW6JMMvBuZSuhhF.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f5/a7/10590289/s10590289.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f5/a7/10590289/s10590289.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7c/36/a2f3af2f5018331cd309cd75464c24bd.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "The Shape of Motion",
             "thumbnail": "https://image.tmdb.org/t/p/original/zQ6v8REvaFQpnJQdkMlHNJ99uq2.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/87/10625425/s10625425.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/87/10625425/s10625425.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/04/d7/e8dba5bd48e99d68f28044985b9900a4.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "Enter the City of Temples",
             "thumbnail": "https://image.tmdb.org/t/p/original/ukjedUIzg2Pr44fm3u1oVIZARUF.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/a4/10625426/s10625426.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/a4/10625426/s10625426.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7a/97/4571fe6893ba60d8f241e5c4950dbae7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "They Gather for the Feast",
             "thumbnail": "https://image.tmdb.org/t/p/original/jafyfaZJzFd4SwliFwOJjeewoY0.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/58/10625427/s10625427.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/58/10625427/s10625427.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/99/d0/b82d513d6a6aaa603c738acc47ab035c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "Inside the Maze",
             "thumbnail": "https://image.tmdb.org/t/p/original/phslaN2mIMNKMXJQS3Qd0i5xRy5.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2e/d2/10625428/s10625428.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2e/d2/10625428/s10625428.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f8/df/9aa20eb643c5626df76063f7f56e6d77.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "United We Fall",
             "thumbnail": "https://image.tmdb.org/t/p/original/hcAGKd8ueHf6td91mJPF2rvCmvF.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/43/51/10625429/s10625429.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/43/51/10625429/s10625429.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a5/ff/cd8c79242aed396869dde2bc2f268503.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 16,
             "title": "Truth and Lies",
             "thumbnail": "https://image.tmdb.org/t/p/original/91Az5LfBsRIcM9nNNaVAw5ZKpeb.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/98/dd/10625430/s10625430.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/98/dd/10625430/s10625430.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/97/a1/561bc7a0e99edf748c445bad00a7aeec.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 17,
             "title": "The Sword Shatters",
             "thumbnail": "https://image.tmdb.org/t/p/original/iObExJM6Cg73vFwoXg3LhRkGUDL.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d0/d9/10625431/s10625431.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d0/d9/10625431/s10625431.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9d/78/57e88d25d14660161bb45bd9334ee998.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 18,
             "title": "Clues and Suspects",
             "thumbnail": "https://image.tmdb.org/t/p/original/j30i2KbI86aINwtfn1mdh5r9Jnc.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f2/f3/10625432/s10625432.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f2/f3/10625432/s10625432.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/be/0c/f0739e423a1466980251aae3e7980427.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 19,
             "title": "The Final Game",
             "thumbnail": "https://image.tmdb.org/t/p/original/3a24OiIuGLSSTHmUp9TVsAwUOrv.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/58/10625433/s10625433.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/58/10625433/s10625433.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ac/3b/59512684d2bc3261c9343bfa03ce208e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 20,
             "title": "Elements of Betrayal",
             "thumbnail": "https://image.tmdb.org/t/p/original/rjme5Qaxz983RAYjtrGAYQOdWW9.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1a/a5/10625434/s10625434.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1a/a5/10625434/s10625434.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/84/ca/d5dcf32ccfa13e621c9cd93b487c1a81.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

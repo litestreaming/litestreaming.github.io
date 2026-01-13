@@ -4,181 +4,361 @@
             "number": 1,
             "title": "Farewell the Sea",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGYzYTYyOTItZDJiZS00OGExLWE0YzYtMDFlNjEzN2M3YTRhXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ef/97/10482566/s10482566.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ef/97/10482566/s10482566.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/be/7e/12fda0a179be5950046ea02bd83042b1.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Call of Home",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGM3OTIyM2MtMzM0NC00ZTcxLWFlOTgtM2IzZjMzMWJlYzRjXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/59/10483072/s10483072.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/59/10483072/s10483072.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/fe/1d/8f2ffe29ecf80ef4cb15fb54bf96b9ff.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Shape of Nya",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDZhZWE4ODctNTA0ZS00OWI4LTk1MDktMDlhYjQ0M2JjZjQyXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d1/f4/10483059/s10483059.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d1/f4/10483059/s10483059.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/16/15/4ffa1a020ad1e4f1ab73f1c78f48bb33.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "A Mayor Problem",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWM5MmE1M2MtZTYyMC00MDkwLTk0NTktYjk0NmY0M2VjMzA0XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b8/30/10483058/s10483058.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b8/30/10483058/s10483058.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/83/53/6cb87a24adb8d6429e72e1a5284759d2.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Public Enemies, 1, 2, 3, 4 and 5!",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmNmNWI5MDYtYjUxZi00Y2Q4LThiMWUtNDU0MWE1MmE2MTM1XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8b/e3/10483056/s10483056.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8b/e3/10483056/s10483056.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/83/92/f64f218a20cbc30c00d47c05672063e3.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "A Painful Promise",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDhiYTJiMTItZmRjMC00NWQ3LWIwMGYtMzdlMzU3ZGI1NzA0XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/20/47/10483054/s10483054.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/20/47/10483054/s10483054.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/8f/f7/baa1f75e695fa8b9b974149685021a6b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Ninjago City vs. Ninja",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjhlNGRhNGQtZDliNS00NTRmLThkY2UtZTAzZjhmNGU0MjAxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/0f/10483280/s10483280.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/0f/10483280/s10483280.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e7/06/fe877712e61786857e326107a6c7ae90.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Kryptarium Prison Blues",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjQ4YzFjYWEtY2EwYy00MjY0LTkwYTYtMmNhM2U5ODRlY2E2XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9a/e6/10483279/s10483279.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9a/e6/10483279/s10483279.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/58/d7/c3d8957866fdfe519b5ae05d0c756cb8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Hounddog McBrag",
             "thumbnail": "https://image.tmdb.org/t/p/original/1ab0aED96RdzHD4YsirLhNlfXDg.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/52/00/10483278/s10483278.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/52/00/10483278/s10483278.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/b6/0c/b4bba053fd7b14dd2f88ea481cf808db.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "The Benefit of Grief",
             "thumbnail": "https://image.tmdb.org/t/p/original/fdZfAAsF866f5BDdSM5OYVXVsqT.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/41/7f/10483277/s10483277.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/41/7f/10483277/s10483277.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1e/7e/94cc57d0af298cce89c38568a4f1ade2.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "The Fifth Villain",
             "thumbnail": "https://image.tmdb.org/t/p/original/tmpVJOJcOHwOIJhWhDry2dtdYcT.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ee/23/10483276/s10483276.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ee/23/10483276/s10483276.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/eb/b5/5a36c309d3ebbed10d74309f9e4aecea.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "The Council of the Crystal King",
             "thumbnail": "https://image.tmdb.org/t/p/original/jHthI4BcvGqDbmslRlC2asJWZpu.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/8d/10483055/s10483055.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/8d/10483055/s10483055.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4c/d5/bb4900bede577f0d915358847e9856c0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "A Sinister Shadow",
             "thumbnail": "https://image.tmdb.org/t/p/original/3wyL9PsMg6YaybZGhQojiE1adcI.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fc/8b/10494661/s10494661.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fc/8b/10494661/s10494661.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "The Spider's Design",
             "thumbnail": "https://image.tmdb.org/t/p/original/mkpo1uzaz5ZGATIrcaowSMMiCit.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/94/10494662/s10494662.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/94/10494662/s10494662.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "The Fall of the Monastery",
             "thumbnail": "https://image.tmdb.org/t/p/original/gApihsLe23jzBSyXH3Y3dkXW9RJ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a6/69/10494663/s10494663.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a6/69/10494663/s10494663.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 16,
             "title": "Darkness Within",
             "thumbnail": "https://image.tmdb.org/t/p/original/aZAb2aXaR6oHPcnMIjpC1n6oYLA.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c8/26/10494664/s10494664.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c8/26/10494664/s10494664.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 17,
             "title": "The Coming of the King",
             "thumbnail": "https://image.tmdb.org/t/p/original/kxcJRRxVQQHUUJkFG3SiAy1ugdw.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/4e/10494665/s10494665.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/4e/10494665/s10494665.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 18,
             "title": "Return to Primeval's Eye",
             "thumbnail": "https://image.tmdb.org/t/p/original/dVT65uMBoc6zEGx2EX4QN9KQ0I1.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d0/8e/10494666/s10494666.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d0/8e/10494666/s10494666.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 19,
             "title": "Crystastrophe",
             "thumbnail": "https://image.tmdb.org/t/p/original/8FM7Y1Bx3DelSpqvR6GzpICCcMU.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b9/4c/10494667/s10494667.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b9/4c/10494667/s10494667.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 20,
             "title": "Christofern",
             "thumbnail": "https://image.tmdb.org/t/p/original/acPJB8B5CZb1Em59TBPqVc1s2Z8.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f1/47/10494668/s10494668.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f1/47/10494668/s10494668.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 21,
             "title": "A Lesson in Anger",
             "thumbnail": "https://image.tmdb.org/t/p/original/3RZedVP2Nz2ktptBZpXaprJLwYU.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/61/10494669/s10494669.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/61/10494669/s10494669.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 22,
             "title": "Brave but Foolish",
             "thumbnail": "https://image.tmdb.org/t/p/original/A4uLylRrVWMUvpsvMxY7k0rq7qy.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/0a/10494670/s10494670.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/0a/10494670/s10494670.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 23,
             "title": "Quittin' Time!",
             "thumbnail": "https://image.tmdb.org/t/p/original/6NQpCPYe5DdgvOpRh4GImCxNGkU.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/92/da/10494671/s10494671.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/92/da/10494671/s10494671.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 24,
             "title": "Return of the Ice Emperor",
             "thumbnail": "https://image.tmdb.org/t/p/original/wF1B0RTkE8vBqGs1DFWKiJl9Cz3.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/87/10494672/s10494672.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/87/10494672/s10494672.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 25,
             "title": "Safe Haven",
             "thumbnail": "https://image.tmdb.org/t/p/original/p35tp3S6qIUswzXgeaTW9dwplNh.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/58/10494673/s10494673.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/58/10494673/s10494673.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 26,
             "title": "Compatible",
             "thumbnail": "https://image.tmdb.org/t/p/original/yPC1tQrDZn2awaoeITO2v2qHloq.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/43/d9/10494674/s10494674.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/43/d9/10494674/s10494674.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 27,
             "title": "Distress Calls",
             "thumbnail": "https://image.tmdb.org/t/p/original/fuBifzbGdklrwjK6QqVsLZ8tNTa.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/a9/10494675/s10494675.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/a9/10494675/s10494675.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 28,
             "title": "An Issue of Trust",
             "thumbnail": "https://image.tmdb.org/t/p/original/z1GVfdMc6hyeOKKr75OCnnsaeVI.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/87/ea/10494676/s10494676.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/87/ea/10494676/s10494676.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 29,
             "title": "Dragon Form",
             "thumbnail": "https://image.tmdb.org/t/p/original/rVzSPm4AjEyRINjWsfx0XHqa8Q2.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/37/f2/10494677/s10494677.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/37/f2/10494677/s10494677.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 30,
             "title": "Roots",
             "thumbnail": "https://image.tmdb.org/t/p/original/boa9Yzl2H8GHedIkX2RD1Rzj16w.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/61/51/10494678/s10494678.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/61/51/10494678/s10494678.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

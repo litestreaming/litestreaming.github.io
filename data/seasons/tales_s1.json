@@ -4,43 +4,85 @@
             "number": 1,
             "title": "Green and Gold",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a7/9b/2231e7a6a4c3c6eddf768a1137e49f2f.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/55/10367479/s10367479.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/55/10367479/s10367479.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Ninja Master Class",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/00/14/a6811b77f37ac1fd6eb64b1243d5d00d.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/97/10367480/s10367480.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/97/10367480/s10367480.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Samurai X-Treme",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/14/93/5de353de347cc8249716ea56b3eaf42b.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f5/46/10367481/s10367481.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f5/46/10367481/s10367481.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Blue Lightning",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/8e/35/00e710b49364aa82626208e7f91d179c.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/54/10367482/s10367482.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/54/10367482/s10367482.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Elemental Rider",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/b3/2e/fe6536ea1f05f7708c08b666c02c1af8.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4a/24/10367483/s10367483.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4a/24/10367483/s10367483.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "The Weekend Drill",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/df/3d/a8f27f63c16686cfa93b83a2ee9a86fb.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/26/bf/10367484/s10367484.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/26/bf/10367484/s10367484.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "We Are Ninjago!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/19/e4/1ac6cc37ce37384d9e8688b82626cb59.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/87/10367485/s10367485.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/87/10367485/s10367485.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

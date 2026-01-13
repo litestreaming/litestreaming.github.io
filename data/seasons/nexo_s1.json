@@ -3,62 +3,122 @@
     "episodes": [{
             "number": 1,
             "title": "The Book of Monsters, Part 1",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/dd/7a/b8aff5e2947ccb8496694a8e256bc56e.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ec/d9/10369482/s10369482.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0d/73/e93b188421e7f6052bb2ec97f5956a69.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Book of Monsters, Part 2",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c6/d6/7d5fbcc2c64cd6084ef067e3b3a6907c.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/84/10369483/s10369483.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/76/6c/2f9fe506f63c45586896f23d4824992d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Power of Merlok",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/41/6c/2c664e7b72ab1ca93a394f2ec0feabd1.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/45/10369484/s10369484.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f1/12/fbdc2c88555ae5c0216722e1ae5233e9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The Knights' Code",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/2e/07/773e202a5399f6fc50b6b7bf204571d6.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f7/f4/10369485/s10369485.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/91/bd/1e7a08dd0b052f0db07cbd36b8b9c79b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Fright Knight",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a4/e4/01f3b904e2cc8dc29e2341db46033a9b.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ba/bb/10369486/s10369486.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/72/fc/b92198487f24c7c005ca4a6178c22e2c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "The Golden Castle",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/51/f8/016cace7d45cb448682a22cb3305903a.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/d0/10369487/s10369487.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/00/ac/31a4f5711c3b186af374f39e045d861e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Maze of Amazement",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/32/36/6a92d2956f36fd9e7220adc797d809b9.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4d/b5/10369488/s10369488.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d3/f0/5b64862cf63583ce9bd4809e955b6204.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Black Knight",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/89/13/eb1d30b6e7b12a226a3486efa856c43b.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/19/4a/10369489/s10369489.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ee/e3/ec0a770a5ef492bdba82d7c2b5bb8c69.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "The Book of Total Badness",
-             "thumbnail": "",
-            "embed": ""
+             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/76/2d/101a20d9dab713c8ff526366be9c016e.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/95/4b/10369490/s10369490.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/be/e7/76b640ef5e830e81b9220426d60d304e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "The Might and the Magic",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c5/44/ac897b309a32f2ee561fe3dca3f30044.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/77/10369491/s10369491.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/07/70/68b5e8a55e036a57e87a9d6597ad3fd8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

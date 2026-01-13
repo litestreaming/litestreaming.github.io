@@ -4,121 +4,241 @@
             "number": 1,
             "title": "Uncharted",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjcyMmNiODgtOGZmZi00ODA4LTk1NGEtZWI3Yzg2M2UzMDk5XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1e/0e/10460900/s10460900.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1e/0e/10460900/s10460900.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5e/bd/8e785b61936aa4b7f2c86bc01fb47fa9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Keepers of the Amulet",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMmI0MmJjOTUtOGUyNS00YTMzLWJjMTEtZWU3NmNlMjY0YjFmXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ed/0c/10460901/s10460901.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ed/0c/10460901/s10460901.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0a/6c/117deeb9f9c2521e92e69680d827c6be.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Gift of Jay",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzFlYmUyOTktYTk3Yy00ZTM4LTk0ODMtNTUxNzNjOTA4MzUxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/56/8d/10460902/s10460902.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/56/8d/10460902/s10460902.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/81/fd/fde4159325df4afe518a1c06f86db5bc.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The Tooth of Wojira",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjNjMDE0YzYtMzg0MC00YzhkLTkwYjUtODFiMWE1YTZiNWEzXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/15/6e/10460903/s10460903.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/15/6e/10460903/s10460903.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/be/04/09aa6d5b50d774c0b32efbae52bc83a9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "A Big Splash",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYmY4ZWYzYjAtYTA1My00MmIyLWJmMDktZWNjNWVhYjU5ODlmXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/09/8c/10460904/s10460904.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/09/8c/10460904/s10460904.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d7/57/7523d3f5a3dc843f0d337971ee0e36bb.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "The Call of the Deep",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTM1MTVmNzUtMjYwNy00ZWIwLThiMDUtOWQ1YmY2OTVhODlhXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/38/62/10460905/s10460905.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/38/62/10460905/s10460905.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4c/1e/3c7862f8436e2f5208cac04828a94768.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Unsinkable",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BODZiODIzZmUtYTA4Yi00Nzc5LThjZTQtMDViNTAwOTMzNTRlXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/87/6e/10460906/s10460906.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/87/6e/10460906/s10460906.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/43/60/cae8cebd2bf513783aa5f821e34e244c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Five Thousand Fathoms Down",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2I0ZjRhNzUtN2VlMS00ZjA2LTg4NWMtYjc1YTg3NmYwZjMwXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/73/c5/10460907/s10460907.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/73/c5/10460907/s10460907.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/99/1d/57e222eb7fd738eaa2d466e8fb1e2ce3.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "The Wrath of Kalmaar",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmY0OTg3MTYtNmI1OS00N2E2LWEzMTEtMjQyNjYxOWUwOTkwXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/02/23/10460908/s10460908.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/02/23/10460908/s10460908.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7c/39/5b2c7811c0db61d487ad6ec6bc2aa732.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Long Live the King",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWQwNWU2OGItZDRkNS00MDM0LWIyMGUtODFjZWY3MjRmMTZlXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4d/07/10460909/s10460909.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4d/07/10460909/s10460909.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e8/85/52aae8df3aacc2ed196c003da662b184.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "Escape from Merlopia",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BOTVjMmVjNGQtZTAxZi00Y2NlLWIyN2YtMGZlZDVkNGFmYzllXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fa/16/10460910/s10460910.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fa/16/10460910/s10460910.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/23/76/d2167c3453fe04410d76c3428511ec5f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "The Tale of Benthomaar",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTY3NmJlNzYtNjFkZC00MGIzLThmZDYtMzQ1MzI0N2I1YmYzXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d6/2a/10460911/s10460911.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d6/2a/10460911/s10460911.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c6/1e/b489400f27183dcf6940f8d84acd1c0e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "The Storm Amulet",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTAyODQ5ZmItZDA0MC00N2NjLTg4M2MtYzYxNWZlMWRjM2QwXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6a/a2/10460912/s10460912.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6a/a2/10460912/s10460912.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/47/7b/63c5e197b30aa689bbbf5e8b56c70339.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "Riddle of the Sphinx",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjI1YmRlZmMtYTYxMi00NDUwLTlhZjItNzMwNjRjOWRjNDY1XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/50/10460913/s10460913.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/50/10460913/s10460913.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/95/6f/3a6b72a110405b2d2c5b968086babfb0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "Papergirl",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMWY0NWI0MjMtNjY3Yy00ZWUxLTg3YjEtZWQ3NmJjMzVlNWJiXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/33/10460914/s10460914.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/33/10460914/s10460914.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ba/66/67fa7257295d0e561a117c39cb93160a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 16,
             "title": "Master of the Sea",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZDAwMGQzOTEtYjdmMi00NjU5LTgxYmItYTZmOTY2YzI1YzE3XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c1/66/10460915/s10460915.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c1/66/10460915/s10460915.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f9/67/75efbd9bba9edbffb6b32daa0e318518.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 17,
             "title": "The Calm Before the Storm",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTUzN2FjZDktZDBmMy00M2NhLTlmZDUtNDA3MGFhOGQwMWNkXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/00/0b/10460916/s10460916.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/00/0b/10460916/s10460916.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/43/a6/cf89f0640b8cb4f8a5d42fc51934355c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 18,
             "title": "Assault on Ninjago City",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzY3OTRiOGQtZDUwMi00YjZiLWFhNjctMTYxYmI2Y2ViYjZiXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5a/2c/10460917/s10460917.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5a/2c/10460917/s10460917.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/dc/af/a77f2d33f6685a66e2ddb9a600eece95.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 19,
             "title": "Nyad",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BODdkZDkyZTktNzIwMi00OTU1LThmZTYtOGNmOTVhOTVjMTE0XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/55/3d/10460918/s10460918.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/55/3d/10460918/s10460918.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/3d/45/2e501fff54233e8dfce6942928807864.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 20,
             "title": "The Turn of the Tide",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2M0NDkwM2MtZDU5MS00NDVjLThmMjAtZmE2MmQxZTBkYzBjXkEyXkFqcGc@.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/74/b9/10460919/s10460919.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/74/b9/10460919/s10460919.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/10/1d/1a0650c3fcf461f546d54caf9a05815b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

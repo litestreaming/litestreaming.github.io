@@ -1,0 +1,100 @@
+{
+    "season": 1,
+    "episodes": [{
+            "number": 1,
+            "title": "Pilot Shorts",
+            "thumbnail": "https://img.youtube.com/vi/2TjEawUQiCw/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/alpjqzeq.mp4"
+        },
+        {
+            "number": 2,
+            "title": "Chen's Chair",
+            "thumbnail": "https://img.youtube.com/vi/ERZbsu0zUoo/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/dzrezrkt.mp4"
+        },
+        {
+            "number": 3,
+            "title": "Tall Tales",
+            "thumbnail": "https://img.youtube.com/vi/Jkl90xY6usk/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/e6vcd1ln.mp4"
+        },
+        {
+            "number": 4,
+            "title": "Villain Throwbacks",
+            "thumbnail": "https://img.youtube.com/vi/PIN5bxYBB8Q/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/sizq31f2.mp4"
+        },
+        {
+            "number": 5,
+            "title": "Samurai X Rising",
+            "thumbnail": "https://img.youtube.com/vi/c7oWvw-sXPI/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/xq55wpp.mp4"
+        },
+        {
+            "number": 6,
+            "title": "Operation Heavy Metal",
+            "thumbnail": "https://img.youtube.com/vi/YWN3cjmof2w/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/pwkhtlt.mp4"
+        },
+        {
+            "number": 7,
+            "title": "Wu's Teas",
+            "thumbnail": "https://img.youtube.com/vi/8PZ8UdoDC5c/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/jppiotun.mp4"
+        },
+        {
+            "number": 8,
+            "title": "Decoded",
+            "thumbnail": "https://ovp.itv.com/v2/images/programme/vc9ktbw/itv_hub/01_Hero_DesktopCTV/16x9?distributionPartner=itv_hub&fallback=standard",
+            "embed": "https://pomf2.lain.la/f/lupel886.mp4"
+        },
+        {
+            "number": 9,
+            "title": "Meet the Ninja",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/7/75/Meet_the_Ninja_group.png",
+            "embed": "https://pomf2.lain.la/f/d8s2d322.mp4"
+        },
+        {
+            "number": 10,
+            "title": "Tales from the Monastery of Spinjitzu",
+            "thumbnail": "https://img.youtube.com/vi/yWbPTpTjcvA/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/kgy36ke.mp4"
+        },
+        {
+            "number": 11,
+            "title": "Prime Empire Original Shorts",
+            "thumbnail": "https://img.youtube.com/vi/xi_2h5c55Bc/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/y0gyjps3.mp4"
+        },
+        {
+            "number": 12,
+            "title": "Reimagined",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e9/0b/876799e8288bc052656bf72cf7174655.jpg",
+            "embed": "https://pomf2.lain.la/f/4r0tlc6n.mp4"
+        },
+        {
+            "number": 13,
+            "title": "The Virtues of Spinjitzu",
+            "thumbnail": "https://img.youtube.com/vi/C7rSPfsvpoQ/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/vhfvjuhr.mp4"
+        },
+        {
+            "number": 14,
+            "title": "Will you enter the Dream World?",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/4/4e/New_lego_series_cs.png",
+            "embed": "https://pomf2.lain.la/f/b63i5lb.mp4"
+        },
+        {
+            "number": 15,
+            "title": "Dream Team",
+            "thumbnail": "https://img.youtube.com/vi/B9Kuk9z_yFg/maxresdefault.jpg",
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/3e2a4b2a-48b7-41f2-bef3-8aa09c7e76c1/6009942c-161c-41d1-949d-b05a00855e2a/1080p.mp4"
+        },
+        {
+            "number": 16,
+            "title": "The Elemental Mechs",
+            "thumbnail": "https://img.youtube.com/vi/qJZBJEq47Gk/maxresdefault.jpg",
+            "embed": "https://pomf2.lain.la/f/bddmvmrj.mp4"
+        }
+    ]
+}

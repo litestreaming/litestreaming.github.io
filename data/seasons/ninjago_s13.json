@@ -4,97 +4,193 @@
             "number": 1,
             "title": "Shintaro",
             "thumbnail": "https://image.tmdb.org/t/p/original/1ibBpHf1sykPgUoBtqmZatsjdIU.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/94/ea/10468487/s10468487.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/94/ea/10468487/s10468487.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c7/d1/3ace0d74e87c48f6925d95bca325b962.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Into the Dark",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGFjNDBiYjgtZWE1ZC00ZGI5LWFlZDUtYjY0MjRkMmY1YTZkXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/05/10468488/s10468488.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/05/10468488/s10468488.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f3/ae/a9affcfc3a820586b3b42a56a6fafdb2.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Worst Rescue Ever",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZWM1ZjNmMjQtNmM0Ny00ODhhLThjNmEtY2M4MTQ0ZTQyN2Y4XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/b2/10468489/s10468489.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/b2/10468489/s10468489.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/51/ae/194796f69b8b441707e2a571cad31143.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The Two Blades",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2UwYTI2MzctYzliYi00MTU4LWIwYWUtN2JmNWRmMmNlNWYxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/9b/10468490/s10468490.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/9b/10468490/s10468490.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/85/97/aa81ee7954579f25dc64017c77987afb.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Queen of the Munce",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZWUyZjMwNzctMmRmNi00MWI3LTkzMjctNDUwZTQ1MTBmZjRlXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/ef/10468491/s10468491.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/ef/10468491/s10468491.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/80/97/bc45d9800b355a1448473ea5caf69ff3.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Trial by Mino",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAxOGY0ODctZmUzMS00YTJiLThkMzktZjMxZDE2YTU2MzA2XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2d/fd/10468492/s10468492.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2d/fd/10468492/s10468492.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/71/7f/6b4d6eb39ea860149054272201870369.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Skull Sorcerer",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BOTM2YmMzNmYtMGE5NC00MjQ2LTgzN2EtYjM5ZjdiZGZlMzU5XkEyXkFqcGc@.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/51/61/10468493/s10468493.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/51/61/10468493/s10468493.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/6a/95/80189e2e1135959de3477837933308c8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Real Fall",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTdjM2JlMzEtZjQ3MS00Mjk4LTk1ZDctZmNjMDAzNmI0N2UyXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/e5/10468494/s10468494.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/e5/10468494/s10468494.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a5/5f/74a13eb1bc39abc7a42623af13ab52cb.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Dungeon Party!",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmU5N2Y1NTctZWM1Yi00M2RjLTljMDUtMGI4ZTQ3NzlmYjkxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/84/10468495/s10468495.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/84/10468495/s10468495.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/47/32/949ed646a8c988fa9ce17b395de70c99.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Dungeon Crawl!",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjg4NmUzMzgtYzRjNS00YjA2LWE1NTMtMzlhZjllMWY5ZjgxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e7/f3/10468496/s10468496.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e7/f3/10468496/s10468496.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ad/7d/83497ea1e170e5d3bf76f2099f012d51.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "Grief-Bringer",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU0NDlkNjktMmIyZS00ZTYwLWE5Y2UtY2Y1ZWJmNzE5M2NmXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/83/10468497/s10468497.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/83/10468497/s10468497.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/76/a3/92324285ff1de5b1595ed4a4e4bf07a4.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "Masters Never Quit",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzBjYWI0OTEtNjk3Mi00ZThlLTg0NzUtNGZiNjk3NzJlNjYxXkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/08/0d/10468498/s10468498.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/08/0d/10468498/s10468498.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/07/ed/ceb13aee510dcf154a0b2dda32071a66.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "The Darkest Hour",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWI3OTQ1Y2MtNDMyNi00ZGI1LTg0MWUtMWFlN2UwMmQ3OWU5XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/9f/10468499/s10468499.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/9f/10468499/s10468499.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/bc/61/756a7e9d58a90f7f7ffcac607aa0b215.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "The Ascent",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGZjMmU0ZTQtMjAwNi00NmUzLTllMGItZjhiZTE0ZTA5OWY1XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/85/a5/10468500/s10468500.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/85/a5/10468500/s10468500.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d9/1f/a1712fdc342085bb797d3dcbd8e70d77.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "The Upply Strike Back!",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmM5YTUxMjktNjJkNC00ZDc2LWFkMjYtY2QzYTE1NDM1OTI4XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a2/8c/10468501/s10468501.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a2/8c/10468501/s10468501.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/44/ab/5d458b6892ba78b380b701ab015b2a1c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 16,
             "title": "The Son of Lilly",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2UwOTViYmYtOTIwNC00NDU4LTgxNDMtMGQyNWViMWJhMDM5XkEyXkFqcGc@._V1_.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/83/10468502/s10468502.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/83/10468502/s10468502.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/dc/27/aaaf94ced1732c186d6781c121d4f99e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

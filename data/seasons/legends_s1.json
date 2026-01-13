@@ -4,31 +4,61 @@
             "number": 1,
             "title": "Monstrosity",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/50/e3/e7e74da59ee40a2ac3ec5bff70572616.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/95/f0/10705763/s10705763.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/95/f0/10705763/s10705763.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Forest of Teeth",
             "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/blt852c464b78fc8296/1/01._Publishing_-_AID254GL0b21a944_Monstrous_Journey_Episode_01_Forest_of_Teeth_THUMBNAIL.png",
-            "embed": "https://videoprocessingpipeline.services.lego.com/assets/1b3ff55e-47a6-4fdd-9e35-a7097647a374/2397634a-f7bd-4615-a8bd-b31c0087f07e/1080p.mp4"
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/1b3ff55e-47a6-4fdd-9e35-a7097647a374/2397634a-f7bd-4615-a8bd-b31c0087f07e/1080p.mp4",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Ruins",
             "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/blt12a1bc2192cea7d4/1/AID254GL92edceeb_Ninjago_KaiMonstrosity_HEROIMAGE-EP002_16x9.jpg",
-            "embed": "https://videoprocessingpipeline.services.lego.com/assets/daf2743f-daed-47e7-a8a4-e2d57ee02ccc/f1ee0d80-04c4-44ca-9b2f-b324009a6e64/1080p.mp4"
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/daf2743f-daed-47e7-a8a4-e2d57ee02ccc/f1ee0d80-04c4-44ca-9b2f-b324009a6e64/1080p.mp4",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Queen of Monsters",
             "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/blt3cccbbb1ce6d03ea/1/AID254GL1439b9d4_Monstrous_Journey_Episode_03_THUMBNAIL.jpg",
-            "embed": "https://videoprocessingpipeline.services.lego.com/assets/91527aa0-3a77-44a9-a502-5838046d2556/41169f09-11b4-4a5d-952f-b32b008d9334/1080p.mp4"
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/91527aa0-3a77-44a9-a502-5838046d2556/41169f09-11b4-4a5d-952f-b32b008d9334/1080p.mp4",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "back at it!!!!!!!",
             "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/bltf2bbe79345906923/1/AID254GLce8a441e_Monstrosity_NPC_Video_04_Wyldfyre_Training_THUMBNAIL.jpg",
-            "embed": "https://videoprocessingpipeline.services.lego.com/assets/217c1be7-c215-42a5-bf1c-dfe65dce85be/10caff35-7f65-4834-a297-b32b008d4601/1080p.mp4"
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/217c1be7-c215-42a5-bf1c-dfe65dce85be/10caff35-7f65-4834-a297-b32b008d4601/1080p.mp4",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

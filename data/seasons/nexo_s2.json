@@ -3,62 +3,122 @@
     "episodes": [{
             "number": 1,
             "title": "Back to School",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/5a/ac/8bf14310de9351d866af467024bef9f7.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a0/4a/10369492/s10369492.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/07/79/b6a76034e0daa7ac44826d23f17b8ecc.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Greed is Good?",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/6f/ba/0e1d5225851fbcc9c92ab6d9b10c3eab.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/91/13/10369493/s10369493.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2c/34/8c309cf0627b67a1d8fda5c3a0779652.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Book of Obsession",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/2c/f8/d4615626ccd798368cf090c0762b07e6.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c7/73/10369494/s10369494.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0f/10/e147b3442aefc76086930e720facc0ee.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The King's Tournament",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0d/51/95acc19a16147f1eeb5c87ee0329e370.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/29/25/10369495/s10369495.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/95/f4/63d30f15fd3048bd6f5dfae20e4a3157.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Monster Chef",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/cf/1b/41a37321c4e4a272ea2b6416776372b7.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/0c/10369496/s10369496.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ef/f8/41f426f36addefd5540681e8c72a7b0c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Knight Out",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7c/f0/558a988aafae016b57aaf8ee8cd0a8c6.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ea/87/10369497/s10369497.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9e/5a/a14959b23fed8a0ddfabc93254d5d74d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Saturday Knight Fever",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/57/3e/7d68498adffc90dc597721f9f839adec.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/5d/10369498/s10369498.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/93/b7/dd9329396d8fd337e5c98c71e3ce7ca1.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Open Mike Knight",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/f2/c3/70cf87bfb3cc10e9c2db0f5700ba473c.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6d/01/10369499/s10369499.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7f/c9/84aeb4aaf55159c70e058fce694f234d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "The Fortrex and the Furious",
-             "thumbnail": "",
-            "embed": ""
+             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/89/c4/69048ebd8faf32073e1281251007fe7b.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/41/10369500/s10369500.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/b9/54/06f736500cdc920ae0e7055cd75fd7d8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Kingdom of Heroes",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/bd/96/5ab36ef5b3490fce262536dd739d6171.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/e0/10369501/s10369501.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/fc/33/4e9ae550a69859d6d9663f10b8faffe0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

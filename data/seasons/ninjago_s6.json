@@ -4,61 +4,121 @@
             "number": 1,
             "title": "Infamous",
             "thumbnail": "https://image.tmdb.org/t/p/original/peZPscli0iIIz2e9NfhNOIzhbww.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d8/35/10369205/s10369205.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d8/35/10369205/s10369205.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d4/a6/efbb179618c0484a7886db3b966f224e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Public Enemy Number One",
             "thumbnail": "https://image.tmdb.org/t/p/original/haK0MuNj3rE15HdzZbeNtgX6RR9.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/13/79/10369206/s10369206.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/13/79/10369206/s10369206.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e1/f1/e1ed2aa971a539ccccc2391ff3b0c1b5.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Enkrypted",
             "thumbnail": "https://image.tmdb.org/t/p/original/sWpyNjVLxVZekZ7q5e5TXjjHFrZ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c7/d7/10369207/s10369207.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c7/d7/10369207/s10369207.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/47/a9/a4ed567c2762f6ea5b38cc35cb713fc2.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Misfortune Rising",
             "thumbnail": "https://image.tmdb.org/t/p/original/aylqvBOfiJj3v1i9D8tqRQlFQbD.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d3/d3/10369208/s10369208.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d3/d3/10369208/s10369208.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a0/90/17c7080b6de564eb621f4f30de9cd2e6.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "On a Wish and a Prayer",
             "thumbnail": "https://image.tmdb.org/t/p/original/yrNgEllHQtLkkhOHDHMX12Ca681.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ff/0d/10369209/s10369209.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ff/0d/10369209/s10369209.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d5/10/3471e1568e76d49450774800b2a808e2.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "My Dinner with Nadakhan",
             "thumbnail": "https://image.tmdb.org/t/p/original/oSQ7RY9Ph7IDpDlMU18ewNfkpRX.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/9e/10369210/s10369210.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/9e/10369210/s10369210.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c6/f1/4d93aab94469f793d3c2034f516bf764.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Wishmasters",
             "thumbnail": "https://image.tmdb.org/t/p/original/ljbboYytaQ5BqOKWfWC6ScuSCBW.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6f/cc/10369211/s10369211.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6f/cc/10369211/s10369211.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a3/e2/dc8bf9bcbe0c3266a901bf5907b9bcd7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Last Resort",
             "thumbnail": "https://image.tmdb.org/t/p/original/i5czkgqFnPpbKYJSZ3sSLLXKJyw.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8c/45/10369212/s10369212.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8c/45/10369212/s10369212.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/de/dd/3222754c70d2d1fe46febb26981ea30f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Operation Land Ho!",
             "thumbnail": "https://image.tmdb.org/t/p/original/jU2QT32KczqUAGjgTEVgt29biHJ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/be/f2/10369213/s10369213.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/be/f2/10369213/s10369213.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/3a/95/9f86888d9fd1b7d8970a798c9da25254.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "The Way Back",
             "thumbnail": "https://image.tmdb.org/t/p/original/3eZu2iRWYyzZCCuQkVwwe2PG4FJ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/76/e8/10369214/s10369214.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/76/e8/10369214/s10369214.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/8d/74/eec33c0f539147429ea78754e86228f0.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

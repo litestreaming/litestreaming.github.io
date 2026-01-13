@@ -49,6 +49,25 @@
         .scroll-area {
             -webkit-overflow-scrolling: touch;
         }
+
+        
+        :focus-visible {
+            outline: 1px solid #6366f1; 
+            outline-offset: 2px;
+            z-index: 50;
+            border-radius: 0.5rem;
+        }
+
+        button.reset-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            display: block;
+        }
     </style>
 </head>
 
@@ -58,30 +77,39 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <span class="font-bold text-lg md:text-xl">Litestreaming</span>
             <a href="https://discord.gg/dEmqkmK4" target="_blank"
-                class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">
+                class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold focus:ring-4 focus:ring-indigo-300 outline-none">
                 Discord
             </a>
         </div>
     </nav>
-        <main class="pt-20 max-w-7xl mx-auto px-4">
+    
+    <main class="pt-20 max-w-7xl mx-auto px-4">
         <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Featured Shows</h1>
         <div id="posterGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+
+        <h2 id="continueHeader" class="text-2xl md:text-3xl font-bold mt-12 mb-4 hidden">Continue Watching</h2>
+        <div id="continueGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12"></div>
     </main>
+
     <div id="showModal" class="fixed inset-0 hidden z-40">
         <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
         <div class="absolute inset-0 md:relative md:mt-20
-           w-full md:max-w-5xl mx-auto
-           glass rounded-2xl shadow-2xl
-           max-h-[90vh] flex flex-col justify-start md:justify-start">
+            w-full md:max-w-5xl mx-auto
+            glass rounded-2xl shadow-2xl
+            max-h-[90vh] flex flex-col justify-start md:justify-start">
 
             <div id="showHero" class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0">
                 <img id="showLogo" class="absolute bottom-3 left-4 h-12 md:h-20" />
+                
+                <button onclick="closeShow()" class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-bold focus:bg-red-600 outline-none">
+                    Close ✕
+                </button>
             </div>
 
             <div class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
                 <p id="showSummary" class="text-gray-300 text-sm md:text-base max-w-3xl fade-up" data-delay="0"></p>
 
-                <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white fade-up"
+                <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white fade-up focus:ring-4 focus:ring-indigo-500 outline-none"
                     data-delay="1"></select>
 
                 <div id="episodeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 fade-up"
@@ -90,15 +118,48 @@
             </div>
         </div>
     </div>
-    </div>
 
     <div id="playerModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/80" onclick="closePlayer()"></div>
+        <div class="absolute inset-0 bg-black/95" onclick="closePlayer()"></div>
 
-        <div class="relative w-full md:max-w-5xl mx-auto rounded-2xl overflow-hidden">
-            <video id="playerVideo" class="w-full h-full" controls playsinline preload="metadata"
-                crossorigin="anonymous">
-            </video>
+        <div class="relative w-full md:max-w-6xl mx-auto h-full md:h-auto flex flex-col items-center justify-center p-4">
+             <button onclick="closePlayer()" class="self-end mb-2 px-6 py-2 bg-red-600 text-white font-bold rounded-lg z-50 focus:ring-4 focus:ring-white outline-none">
+                Close Player
+            </button>
+
+            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+                <video id="playerVideo" class="w-full h-full" controls playsinline preload="metadata">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div id="comingSoonModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/80" onclick="closeComingSoon()"></div>
+
+        <div class="relative w-full max-w-lg mx-4
+            glass rounded-2xl shadow-2xl
+            flex flex-col overflow-hidden">
+
+            <div id="comingSoonHero" class="h-48 bg-cover bg-center relative">
+                <img id="comingSoonLogo" class="absolute bottom-3 left-4 h-12" />
+                <button onclick="closeComingSoon()" class="absolute top-2 right-2 bg-black/50 text-white rounded-full p-2 text-xs">✕</button>
+            </div>
+
+            <div class="p-6 text-center space-y-4">
+                <h2 id="comingSoonTitle" class="text-2xl font-extrabold"></h2>
+
+                <p id="comingSoonNote" class="text-gray-300 text-sm">
+                </p>
+
+                <span class="inline-block px-4 py-2 rounded-full
+               bg-indigo-600/90 text-white
+               text-sm font-bold tracking-wide">
+                    Coming Soon
+                </span>
+                
+                <button onclick="closeComingSoon()" class="block w-full mt-4 py-3 bg-gray-700 hover:bg-gray-600 rounded-xl font-bold">Close</button>
+            </div>
         </div>
     </div>
 
@@ -109,12 +170,14 @@
         let currentShow = null;
         let currentSeasonData = null;
         let hls = null;
+        let lastFocusedElement = null; 
 
-        fetch("data/show.json")
+        fetch("data/show.json?v=" + Date.now())
             .then(res => res.json())
             .then(data => {
                 shows = data.shows;
                 renderPosters();
+                renderContinueWatching();
             });
 
         function toggleFAQ(button) {
@@ -128,6 +191,7 @@
 
 
         function openComingSoon(index) {
+            lastFocusedElement = document.activeElement;
             const show = shows[index];
             document.body.classList.add("modal-open");
 
@@ -144,21 +208,35 @@
                 el.classList.add("fade-up");
                 el.style.animationDelay = `${i * 0.1}s`;
             });
+
+            setTimeout(() => {
+                const closeBtn = comingSoonModal.querySelector('button:last-child');
+                if(closeBtn) closeBtn.focus();
+            }, 100);
         }
 
 
         function closeComingSoon() {
             comingSoonModal.classList.add("hidden");
             document.body.classList.remove("modal-open");
+            if(lastFocusedElement) lastFocusedElement.focus();
         }
 
         function renderPosters() {
             posterGrid.innerHTML = shows.map((show, i) => `
-    <div class="relative group fade-up" style="--delay:${i}">
+    <button class="reset-btn relative group fade-up rounded-xl transition-transform active:scale-95 focus:scale-105" 
+        style="--delay:${i}"
+        onclick="${show.comingSoon ? `openComingSoon(${i})` : `openShow(${i})`}">
+      
+      ${show.newEpisodes ? `
+        <div class="absolute top-2 right-2 z-10 bg-red-600 text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded shadow-md pointer-events-none">
+            NEW EPISODES
+        </div>
+      ` : ''}
+
       <img src="${show.poster}"
-        class="rounded-xl shadow-lg transition
-               ${show.comingSoon ? 'opacity-70 cursor-pointer' : 'cursor-pointer active:scale-95'}"
-        onclick="${show.comingSoon ? `openComingSoon(${i})` : `openShow(${i})`}" />
+        class="rounded-xl shadow-lg w-full h-auto object-cover
+               ${show.comingSoon ? 'opacity-70' : ''}" />
 
       ${show.comingSoon ? `
         <div class="absolute inset-0 rounded-xl
@@ -171,14 +249,13 @@
           </span>
         </div>
       ` : ''}
-    </div>
+    </button>
   `).join("");
         }
 
 
-
-
         function openShow(index) {
+            lastFocusedElement = document.activeElement;
             currentShow = shows[index];
             document.body.classList.add("modal-open");
 
@@ -200,26 +277,15 @@
                 el.style.animationDelay = `${i * 0.1}s`;
                 el.classList.add("fade-up");
             });
+
+            setTimeout(() => {
+                seasonSelect.focus();
+            }, 150);
         }
 
 
-
         function loadSeason(seasonIndex) {
-            fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
-                .then(res => res.json())
-                .then(data => {
-                    currentSeasonData = data;
-
-                    if (data.type === "external") {
-                        renderExternalSeason(data);
-                    } else {
-                        renderEpisodes();
-                    }
-                });
-        }
-
-        function loadSeason(seasonIndex) {
-            episodeGrid.innerHTML = ""; 
+            episodeGrid.innerHTML = "<p class='text-gray-400 p-2'>Loading...</p>";
 
             fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
                 .then(res => res.json())
@@ -239,8 +305,8 @@
     <div class="col-span-full flex flex-col items-center justify-center text-center py-16 space-y-4">
       <a href="${data.button.url}" target="_blank"
         class="px-10 py-5 text-xl font-bold rounded-2xl
-               bg-indigo-600 hover:bg-indigo-700
-               transition hover:scale-105 shadow-xl">
+               bg-indigo-600 hover:bg-indigo-700 text-white
+               transition hover:scale-105 shadow-xl inline-block focus:ring-4 focus:ring-white">
         ${data.button.label}
       </a>
       <p class="text-sm text-gray-400 max-w-md">
@@ -253,53 +319,83 @@
         function renderContinueWatching() {
             const watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
             const grid = document.getElementById("continueGrid");
+            const header = document.getElementById("continueHeader");
+
+            if (!grid) return;
+
+            if(watchData.length === 0) {
+                header.classList.add("hidden");
+                grid.innerHTML = "";
+                return;
+            } else {
+                header.classList.remove("hidden");
+            }
 
             const items = watchData.map(item => {
                 const show = shows.find(s => s.id === item.showId);
                 if (!show) return null;
-                const season = show.seasons[item.season] || show.seasons[0];
-                const ep = season.episodes[item.episode] || season.episodes[0];
+
+                const minutes = Math.floor(item.time / 60);
+                const progressText = minutes > 0 ? `${minutes}m watched` : 'Just started';
 
                 return `
-      <div class="cursor-pointer rounded-xl shadow-lg overflow-hidden relative" onclick="openShow(${shows.indexOf(show)})">
+      <button class="reset-btn rounded-xl shadow-lg overflow-hidden relative group transition-transform active:scale-95 focus:scale-105" 
+              onclick="openShow(${shows.indexOf(show)})">
         <img src="${show.poster}" class="w-full h-32 object-cover">
-        <div class="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded">
-          S${item.season+1}E${item.episode+1} • ${Math.floor(item.time/60)}m
+        
+        <div class="absolute bottom-0 w-full bg-black/80 backdrop-blur-md p-2 flex justify-between items-center">
+            <span class="text-white text-xs font-medium">S${item.season + 1} E${item.episode + 1}</span>
+            <span class="text-gray-300 text-[10px]">${progressText}</span>
         </div>
-      </div>
+
+        <div class="absolute top-2 left-2 bg-indigo-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+            RESUME
+        </div>
+      </button>
     `;
             }).filter(Boolean);
 
             grid.innerHTML = items.join("");
         }
 
-        fetch("data/show.json")
-            .then(res => res.json())
-            .then(data => {
-                shows = data.shows;
-                renderPosters();
-                renderContinueWatching(); 
-            });
-
 
         function renderEpisodes() {
             episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
-    <div onclick="openPlayer(${i})"
-      class="bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition fade-up"
+    <button onclick="openPlayer(${i})" 
+      class="reset-btn bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition fade-up flex flex-col focus:ring-4 focus:ring-indigo-500"
       style="--delay:${i}">
       <img src="${ep.thumbnail}" class="w-full h-28 object-cover">
-      <div class="p-2">
+      <div class="p-2 w-full">
         <p class="text-xs text-gray-400">Episode ${ep.number}</p>
-        <p class="font-semibold text-sm">${ep.title}</p>
+        <p class="font-semibold text-sm truncate">${ep.title}</p>
       </div>
-    </div>
+    </button>
   `).join("");
         }
-
 
         function openPlayer(epIndex) {
             const ep = currentSeasonData.episodes[epIndex];
             const video = document.getElementById("playerVideo");
+            const videoSrc = ep.embed;
+
+            let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+            const currentShowId = currentShow.id;
+            const currentSeasonNum = parseInt(seasonSelect.value);
+
+            const existingEntry = watchData.find(item =>
+                item.showId === currentShowId &&
+                item.season === currentSeasonNum &&
+                item.episode === epIndex
+            );
+
+            let startTime = existingEntry ? existingEntry.time : 0;
+
+            video.ontimeupdate = () => {
+                const currentTime = video.currentTime;
+                if (currentTime > 0) {
+                    saveProgress(currentShowId, currentSeasonNum, epIndex, currentTime);
+                }
+            };
 
             video.pause();
             video.src = "";
@@ -324,28 +420,70 @@
                 });
             }
 
-            if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = ep.embed; // 
-            } else if (Hls.isSupported()) {
+            const onVideoReady = () => {
+                if (startTime > 0) {
+                    video.currentTime = startTime;
+                }
+                video.play().catch(e => console.log("Auto-play prevented:", e));
+            };
+
+            if (videoSrc.includes('.mp4') || videoSrc.includes('.webm') || videoSrc.includes('.ogg')) {
+                video.src = videoSrc;
+                video.addEventListener('loadedmetadata', onVideoReady, { once: true });
+            }
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = videoSrc;
+                video.addEventListener('loadedmetadata', onVideoReady, { once: true });
+            }
+            else if (Hls.isSupported()) {
                 hls = new Hls();
-                hls.loadSource(ep.embed);
+                hls.loadSource(videoSrc);
                 hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                   onVideoReady();
+                });
             } else {
                 alert("Your browser does not support HLS playback.");
                 return;
             }
 
-            video.play();
+            saveProgress(currentShowId, currentSeasonNum, epIndex, startTime);
+
             playerModal.classList.remove("hidden");
+            
+            setTimeout(() => video.focus(), 200);
+        }
+
+        function saveProgress(showId, season, episode, time) {
+            let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+            
+            watchData = watchData.filter(item => item.showId !== showId);
+
+            watchData.unshift({
+                showId: showId,
+                season: season,
+                episode: episode,
+                time: time,
+                lastUpdated: Date.now()
+            });
+
+            if(watchData.length > 10) watchData.pop();
+
+            localStorage.setItem("continueWatching", JSON.stringify(watchData));
         }
 
         function closeShow() {
             showModal.classList.add("hidden");
             document.body.classList.remove("modal-open");
+            renderContinueWatching(); 
+            if(lastFocusedElement) lastFocusedElement.focus();
         }
 
         function closePlayer() {
             const video = document.getElementById("playerVideo");
+            
+            video.ontimeupdate = null; 
+
             video.pause();
             video.src = "";
             if (hls) {
@@ -353,33 +491,16 @@
                 hls = null;
             }
             playerModal.classList.add("hidden");
+            
+            renderContinueWatching();
+            
+            setTimeout(() => {
+                const buttons = episodeGrid.querySelectorAll('button');
+                if (buttons.length > 0) buttons[0].focus();
+            }, 100);
         }
     </script>
-    <div id="comingSoonModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/80" onclick="closeComingSoon()"></div>
-
-        <div class="relative w-full max-w-lg mx-4
-           glass rounded-2xl shadow-2xl
-           flex flex-col overflow-hidden">
-
-            <div id="comingSoonHero" class="h-48 bg-cover bg-center relative">
-                <img id="comingSoonLogo" class="absolute bottom-3 left-4 h-12" />
-            </div>
-
-            <div class="p-6 text-center space-y-4">
-                <h2 id="comingSoonTitle" class="text-2xl font-extrabold"></h2>
-
-                <p id="comingSoonNote" class="text-gray-300 text-sm">
-                </p>
-
-                <span class="inline-block px-4 py-2 rounded-full
-               bg-indigo-600/90 text-white
-               text-sm font-bold tracking-wide">
-                    Coming Soon
-                </span>
-            </div>
-        </div>
-    </div>
+    
     <section class="max-w-6xl mx-auto px-6 py-24">
         <h2 class="text-4xl font-extrabold mb-10 text-center">
             FAQ
@@ -388,7 +509,7 @@
         <div class="space-y-4">
 
             <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
                     onclick="toggleFAQ(this)">
                     <span>What is this site?</span>
                     <span class="faq-icon text-xl">+</span>
@@ -398,21 +519,10 @@
                     This site is a website you can stream most LEGO TV shows on.
                 </div>
             </div>
-            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
-                    onclick="toggleFAQ(this)">
-                    <span>Why are there no subtitles?</span>
-                    <span class="faq-icon text-xl">+</span>
-                </button>
 
-                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
-                    Subtitles will be released in the next website update, only in English though FOR NOW. Every
-                    language audio is also planned to be added in the future.
-                </div>
-            </div>
 
             <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
                     onclick="toggleFAQ(this)">
                     <span>Where does the video content come from?</span>
                     <span class="faq-icon text-xl">+</span>
@@ -424,7 +534,7 @@
             </div>
 
             <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
                     onclick="toggleFAQ(this)">
                     <span>Why is some content marked as “Coming Soon”?</span>
                     <span class="faq-icon text-xl">+</span>
@@ -436,7 +546,7 @@
             </div>
 
             <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg"
+                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
                     onclick="toggleFAQ(this)">
                     <span>How do I suggest a new feature to the website?</span>
                     <span class="faq-icon text-xl">+</span>

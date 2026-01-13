@@ -4,91 +4,181 @@
             "number": 1,
             "title": "Fire Dreaming",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/d8/85/2663e38857c450ce74dfb4e90cc4b03c.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/bb/10473915/s10473915.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/bb/10473915/s10473915.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/35/13/8ca551164be688428e479986f83ec308.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Attack of the Ice Clan",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7c/e5/d9c75429947859faf3c5d3a56f937f43.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d4/e1/10473916/s10473916.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d4/e1/10473916/s10473916.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/df/6e/c7ef2f54c40a7eade4ec816e037b5d72.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Call of CAVORA",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/f9/42/ae21ca4cbe3ae1006948f2bf2eb4919b.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1a/e6/10473917/s10473917.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1a/e6/10473917/s10473917.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/6e/a9/82dfba1141823893a07cde08adc9ccfd.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Trial by Fire",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/13/f2/1134921730c9f9f7e788b05a171efa6e.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5b/9d/10473918/s10473918.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5b/9d/10473918/s10473918.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c0/6b/9299ede984cd518bd14ed99dfdcd3ea8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "The Crescent",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4d/15/986e8ef2ad302151d9d38be63dd73045.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ba/f2/10473919/s10473919.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ba/f2/10473919/s10473919.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2f/48/7ce0a15df47abc535e88f540b5d2f417.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Fired Up!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/cf/5d/2b3b394960c4584e6327785e4f8e33fa.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fc/f3/10473920/s10473920.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fc/f3/10473920/s10473920.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d1/fa/07a36c9701ead4a7765d5f34561f4f17.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Cool and Collected",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/17/ed/3d355413998597ea19535a547c3bf31d.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/97/c0/10473921/s10473921.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/97/c0/10473921/s10473921.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/af/1e/91228dcee7221b7118899a251214e314.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Snowball Effect",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4f/83/b4bca7c69ff04f481e63ac2d118095cd.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/85/39/10473922/s10473922.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/85/39/10473922/s10473922.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/6b/b3/ae62a99aabe88149071f5b4e13565d92.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "The King Thing",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/92/b2/5d3bd568644c838799ee86973c902e3c.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1b/59/10473923/s10473923.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1b/59/10473923/s10473923.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5d/d4/648e37cc3dcb8307910688ede6a63dfa.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "A Very Slippery Slope",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7b/54/88d4dc8e4f80101d09aa1964515f24bc.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9a/31/10473924/s10473924.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9a/31/10473924/s10473924.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/69/19/fc0d2d9425957ca15419b74872e7a3e7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 11,
             "title": "The Artifact",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4b/35/4ca433a1acf23d7e23f492aa0542eafd.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c6/03/10473925/s10473925.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c6/03/10473925/s10473925.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/71/03/2585d205db53a0b3a083a55e72afe3a1.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 12,
             "title": "The Phoenix Has Landed",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/15/c6/e29f2c064b546d22a67d8e22bae566f0.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/1b/10473926/s10473926.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/1b/10473926/s10473926.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f0/e4/125dc0d0c5c81ca445bed4421d083900.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 13,
             "title": "A Spark of Hope",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0b/14/2942914608f30aca5b380621c56f42fa.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8b/d5/10473927/s10473927.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8b/d5/10473927/s10473927.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9f/0a/506c2e44acde5a833e7da0bf505f2e38.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 14,
             "title": "Wings of Fire",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/ef/4b/f337de5127cb08cce488fb3519de75d9.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a5/5a/10473928/s10473928.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a5/5a/10473928/s10473928.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a3/1f/c0c030e76f7786ef9de20c232d276511.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 15,
             "title": "The Heart of Cavora",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/fd/f3/f48479a2142f68b8f625407e8af6ca28.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/cc/10473929/s10473929.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/cc/10473929/s10473929.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f9/13/3a807430498a2d27097b7d94673c6f0f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

@@ -4,61 +4,121 @@
             "number": 1,
             "title": "Winds of Change",
             "thumbnail": "https://image.tmdb.org/t/p/original/ifnOJNLa58qZIwTmL2IUIMpOROy.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/79/10369195/s10369195.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/79/10369195/s10369195.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/91/69/77dff912455116f71f02378c5d4c667e.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Ghost Story",
             "thumbnail": "https://image.tmdb.org/t/p/original/cYMhaBsMYH4JdVJqEoYDb1VvaHQ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/06/10369196/s10369196.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1c/06/10369196/s10369196.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d3/63/c534107d3bbef4a6ce3d450148986838.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Stiix and Stones",
             "thumbnail": "https://image.tmdb.org/t/p/original/60qES7GuuEPfMKQVPAC6SPFWprz.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/de/10369197/s10369197.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/de/10369197/s10369197.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e2/03/a7b69a60ffc95f79377b4d15a214186c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "The Temple on Haunted Hill",
             "thumbnail": "https://image.tmdb.org/t/p/original/g6M03bko3JHB483ZImuDN5a3TTT.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/bf/10369198/s10369198.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/bf/10369198/s10369198.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c5/52/bce74e387eb49c26fb2771f30ebc479f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Peak-a-boo",
             "thumbnail": "https://image.tmdb.org/t/p/original/m1dK9Kcip5mzTCcq5sSqjFM5tVy.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2a/ce/10369199/s10369199.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2a/ce/10369199/s10369199.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/b2/aa/2c1728b025021ff0a3efc9d1577d94d3.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Kingdom Come",
             "thumbnail": "https://image.tmdb.org/t/p/original/vHvyhnvVUIvFJYs8pJl6o51PqMv.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/20/cc/10369200/s10369200.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/20/cc/10369200/s10369200.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e8/7f/de537fc38f0cedcd3c08e2139b5539b9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Crooked Path",
             "thumbnail": "https://image.tmdb.org/t/p/original/q9PyvjhsjZHDl5zTqhaFhia76zj.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a3/ec/10369201/s10369201.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a3/ec/10369201/s10369201.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/24/25/7304f10a2ad74c85a454efc00e9b58e9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Grave Danger",
             "thumbnail": "https://image.tmdb.org/t/p/original/dfYUn3p8dPNfe0zTavuW6IbTvB8.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/18/cd/10369202/s10369202.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/18/cd/10369202/s10369202.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/48/18/99faac54dfbdfc46c438a554c3755ce8.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "Curseworld, Part 1",
             "thumbnail": "https://image.tmdb.org/t/p/original/kayhb8jAdSeoNvst4MvxEi4W7QN.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ec/76/10369203/s10369203.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ec/76/10369203/s10369203.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f2/b7/87b10b50ce2a5c785cf38b93b87b378d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Curseworld, Part 2",
             "thumbnail": "https://image.tmdb.org/t/p/original/5ElPbHLpLcZSMz4v1cxv5wIHId4.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/08/10369204/s10369204.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/08/10369204/s10369204.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/a2/66/168e9b9138d8cd0e6b5233fb8a98cbdf.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

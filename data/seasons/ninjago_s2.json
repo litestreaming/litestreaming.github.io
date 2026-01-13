@@ -4,79 +4,157 @@
             "number": 1,
             "title": "Darkness Shall Rise",
             "thumbnail": "https://image.tmdb.org/t/p/original/jjtClNz0HPeIbO8FXrnJlaFHa6J.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/57/82/10369164/s10369164.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/57/82/10369164/s10369164.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/d8/2e/fab3c75c972681a3ad04137fe06d331b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Pirates vs. Ninja",
             "thumbnail": "https://image.tmdb.org/t/p/original/wTnmJvk5Q4hYaCz10lxqlnzj219.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e4/dc/10369165/s10369165.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e4/dc/10369165/s10369165.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1e/5a/fa3683aba7557828374e88f5ad5729d7.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Double Trouble",
             "thumbnail": "https://image.tmdb.org/t/p/original/fCFwLPgYN0RhQk7xidZug9KaQvI.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2d/f9/10369166/s10369166.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2d/f9/10369166/s10369166.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1c/ad/7138169d6425664f3278944141474ec6.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "Ninjaball Run",
             "thumbnail": "https://image.tmdb.org/t/p/original/jzI6q0jQ0LObU5UbeW90v4EkcYJ.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/93/f7/10369167/s10369167.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/93/f7/10369167/s10369167.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7c/d4/545a292a104e9bd562fda4983ceb3c96.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Child's Play",
             "thumbnail": "https://image.tmdb.org/t/p/original/3lkUldonUmxodEV5t8C7A34z7Q5.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8e/11/10369168/s10369168.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8e/11/10369168/s10369168.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/8e/38/e2939f8aca382d2d4d764d35047a8e8f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Wrong Place, Wrong Time",
             "thumbnail": "https://image.tmdb.org/t/p/original/dtV5uJRrgmc5RD0KFvftfRFj4CP.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d9/f7/10369169/s10369169.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d9/f7/10369169/s10369169.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f0/ab/74dd25a7b67cbafbf524bd74a2be1c33.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "The Stone Army",
             "thumbnail": "https://image.tmdb.org/t/p/original/mOiAx3wWJlbcWSymOyQbVYIMuLI.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/f6/10369170/s10369170.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/f6/10369170/s10369170.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/55/58/412b8ccf708307ef3a2f5ef9174c1477.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "The Day Ninjago Stood Still",
             "thumbnail": "https://image.tmdb.org/t/p/original/9Mzu09tLENIh9MaiIZ6dQvZqu8g.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/83/ad/10369171/s10369171.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/83/ad/10369171/s10369171.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/6c/99/e359bd4dff79da07c3a72123bc657198.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "The Last Voyage",
             "thumbnail": "https://image.tmdb.org/t/p/original/k6cKmjCvGsCYGpiifdOY6Cveptf.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/f7/10369172/s10369172.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/f7/10369172/s10369172.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ec/5f/9606ff4f5f96271617de4c8883ec69ea.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "Island of Darkness",
             "thumbnail": "https://image.tmdb.org/t/p/original/wuz2VB8VImU7VufLkGcXjBfslRb.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/27/04/10369173/s10369173.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/27/04/10369173/s10369173.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9b/20/3925001e5ab0036aeb0ba9d2fd2eb06a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
-                {
+        {
             "number": 11,
             "title": "The Last Hope",
             "thumbnail": "https://image.tmdb.org/t/p/original/iapU6GKS7A07CKj6mBiTjA3SRoa.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6a/1a/10369174/s10369174.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6a/1a/10369174/s10369174.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0b/ec/486fd166e4395b374d11f0177701e568.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
-                {
+        {
             "number": 12,
             "title": "Return of the Overlord",
             "thumbnail": "https://image.tmdb.org/t/p/original/kWNFBuIIADOOiilQTLTg5r0pn46.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ef/26/10369175/s10369175.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ef/26/10369175/s10369175.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ad/fd/5edcc30fcda530de162c016d96cd36bb.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
-                {
+        {
             "number": 13,
             "title": "Rise of the Spinjitzu Master",
             "thumbnail": "https://image.tmdb.org/t/p/original/cYnQmwXtBx50N1NdefcykFV5Gn5.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/a9/10369176/s10369176.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/a9/10369176/s10369176.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/6c/9d/4fd543ba7bf8c5453761580bbb3b9c6c.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

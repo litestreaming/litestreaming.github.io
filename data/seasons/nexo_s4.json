@@ -3,62 +3,122 @@
     "episodes": [{
             "number": 1,
             "title": "Weekend at Halberts",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/96/9c/afd31847ad0ced752e06dea9ff911217.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0a/a7/10369512/s10369512.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/63/1b/5373f59ce45435f7c26f0f7bdd815a13.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "The Gray Knight",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c4/5b/4fd01dbcdcd1765a5b945abf77849145.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7d/47/10369513/s10369513.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "The Good, the Bad and the Tightwad",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/1f/ac/9882bc0f783456e7adda684060a028de.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/24/e3/10369514/s10369514.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0f/9b/09d580f99fa1142f8d13554f403304d1.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
             "title": "In his Majesty's Secret Service",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/8e/ca/d2033e5d8335b75fd145b61e95a243a5.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3e/bc/10369515/s10369515.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/8a/3d/9dc1b52347a6d6ee2ed89e680566153a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
             "title": "Stranger in the Halps",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/cd/66/159903f886c37dc42f70a55224b3034b.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8e/01/10369516/s10369516.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/40/09/09a3f7356cf96198ab36a4f02083bbc5.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 6,
             "title": "Krakenskull",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/44/f2/355f65943a0576ccb32f67cb27b5895e.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/e1/10369517/s10369517.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/18/67/349c46bd9bec20c158673492b249b04f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 7,
             "title": "Heart of Stone",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/be/1a/b1787280b2b825789874e26e0f8f6f97.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/76/1d/10369518/s10369518.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/57/34/a407ec25fd92d1d8d6faa093a6179740.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 8,
             "title": "Between a Rock and a Hard Place",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/ff/cf/cc73d8589b9629ff3714acd482dd6256.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e1/18/10369519/s10369519.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7f/89/215d9e00329f55f47530a123cf5c7e82.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 9,
             "title": "March of the Colossus",
-             "thumbnail": "",
-            "embed": ""
+             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/09/78/ca3773e496ee2ea29edfbaa92c855e71.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/86/b6/10369520/s10369520.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5e/da/72554afcdfbf537b04a030f4aa99138d.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 10,
             "title": "The Fall",
-            "thumbnail": "",
-            "embed": ""
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/84/25/6ac1cd424a18060d197a67349fc79ea8.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ff/0d/10369521/s10369521.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/de/6d/d8b5e31018b6a35d930817b86a01714a.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

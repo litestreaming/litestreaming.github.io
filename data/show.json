@@ -98,39 +98,15 @@
             ]
         },
         {
-            "id": "ninjagodecoded",
-            "title": "LEGO Ninjago: Decoded",
-            "poster": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/eb/07/71278f0a99bf323e95a76504a4ccf603.jpg",
+            "id": "ninjagoshorts",
+            "title": "LEGO Ninjago: Shorts",
+            "poster": "https://image.tmdb.org/t/p/original/wcmb846ZOXi0FRO6XcdkT1RkCOe.jpg",
             "banner": "https://ovp.itv.com/v2/images/programme/vc9ktbw/itv_hub/01_Hero_DesktopCTV/16x9?distributionPartner=itv_hub&fallback=standard",
-            "logo": "https://ovp.itv.com/v2/images/programme/vc9ktbw/itv_hub/09_TitleLogo/default?distributionPartner=&fallback=none&treatment=none",
-            "summary": "Nya helps Zane backup memories of their adventures to the Samurai X Cave computer, but Zane encounters a mysterious puzzle buried deep within his code.",
-            "seasons": [{
-                "number": 1,
-                "file": "data/seasons/decoded_s1.json"
-            }]
-        },
-        {
-            "id": "ninjagotales",
-            "title": "LEGO Ninjago: Tales from the Monastery",
-            "poster": "images/tales.jpg",
-            "banner": "images/BANNERTALES.webp",
             "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
-            "summary": "Master Wu oversees rebuilding the monastery, including creation of a mural to commemorate history that triggers reminiscing and fantasizing among the ninjas.",
+            "summary": "Every LEGO Ninjago: Masters of Spinjitzu mini-series and short. Wyldfyre shorts will be added soon. Legends is listed separately.",
             "seasons": [{
                 "number": 1,
-                "file": "data/seasons/tales_s1.json"
-            }]
-        },
-        {
-            "id": "ninjagoreimagined",
-            "title": "LEGO Ninjago: Reimagined",
-            "poster": "images/reimagined.jpg",
-            "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e9/0b/876799e8288bc052656bf72cf7174655.jpg",
-            "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
-            "summary": "Master Wu oversees rebuilding the monastery, including creation of a mural to commemorate history that triggers reminiscing and fantasizing among the ninjas.",
-            "seasons": [{
-                "number": 1,
-                "file": "data/seasons/reimagined_s1.json"
+                "file": "data/seasons/shorts.json"
             }]
         },
         {
@@ -146,10 +122,11 @@
             }]
         },
         {
+            "newEpisodes": true,
             "id": "dreamzzz",
             "title": "LEGO DREAMZzz",
             "poster": "https://image.tmdb.org/t/p/original/bksnhr6slfT2mIcCTglGYD3pI9A.jpg",
-            "banner": "https://image.tmdb.org/t/p/original/1PvKuwmxxW5K6eGefoucAeAg0sK.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
             "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
             "summary": "A group of kids join a secret agency where they learn to use the power of imagination to journey into the Dream World and create fantastic creations in order to help sleeping children being terrorized by the evil Nightmare King who is bent on conquering the Dream World and invading the Waking World.",
             "seasons": [{
@@ -163,6 +140,10 @@
                 {
                     "number": 3,
                     "file": "data/seasons/dz_s3.json"
+                },
+                {
+                    "number": 4,
+                    "file": "data/seasons/dz_s4.json"
                 }
             ]
         },
@@ -191,11 +172,8 @@
             "id": "nexo",
             "title": "LEGO NEXO Knights",
             "poster": "https://image.tmdb.org/t/p/original/d0e5dJ2FQhlwEhFX4cB0ijp5SMd.jpg",
-            "banner": "https://image.tmdb.org/t/p/original/atqgxVmrojZMO6YHFfPVcXyQkdc.jpg",
+            "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/cf/1b/41a37321c4e4a272ea2b6416776372b7.jpg",
             "logo": "https://image.tmdb.org/t/p/original/hHcgKp2XomRDVs9XSlQJT6tq060.png",
-            "comingSoon": true,
-            "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This series will be added in the next website update.",
             "summary": "The adventure takes place in the futuristic Kingdom of Knighton. It focuses on the Nexo Knights as they journey to defeat Jestro the evil jester, the Book of Monsters, and their lava monster army. Clay leads the Nexo Knights, which include Macy, Lance, Aaron, and Axl. Together, under their mentor Merlok 2.0, they band together to defeat Jestro.",
             "seasons": [{
                     "number": 1,
@@ -215,6 +193,18 @@
                 }
             ]
         },
+        {
+            "id": "dotd",
+            "title": "LEGO Ninjago: Day of the Departed",
+            "poster": "https://image.tmdb.org/t/p/original/dZM1tYuARngZdZMHSYPdU6zuA5N.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/5Mx9bOqNN1aXokwwzKam2qiw2cY.jpg",
+            "logo": "https://image.tmdb.org/t/p/original/xiXPiWwAuI4JGUDFWiUzx73oaBW.png",
+            "summary": "When Cole returns to Yang's haunted temple to seek revenge on a former Airjitzu Master, he accidentally uses a powerful Dark Magic blade that unleashes the spectral forms of Ninjago's greatest villains and traps himself in the temple. The Ninja must return the ghosts to the Departed Realm before it's too late.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/dotd.json"
+            }]
+        },
                 {
             "id": "lmk",
             "title": "LEGO Monkie Kid",
@@ -223,7 +213,7 @@
             "logo": "https://image.tmdb.org/t/p/original/6xrbLNUSisGPHYfpGMI2VNKuEhe.png",
             "comingSoon": true,
             "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This series will be added in the next website update.",
+            "comingSoonNote": "This series will be added soon.",
             "summary": "Centuries ago, the beloved Chinese Monkey King used his magical staff to capture and trap the evil Demon Bull King deep inside a mountain. Flash-forward to modern-day China, when fate leads MK (aka Monkie Kid), a young noodle shop delivery boy, to find the long-lost staff. Soon, MK and his best friends find themselves entangled in adventures packed full of action, mystery, imagination and magic.",
             "seasons": [{
                     "number": 1,
@@ -241,57 +231,25 @@
                     "number": 4,
                     "file": "data/seasons/lmk_s4.json"
                 },
-                                {
+                {
                     "number": 5,
                     "file": "data/seasons/lmk_s5.json"
                 }
             ]
         },
                         {
-            "id": "dotd",
-            "title": "LEGO Ninjago: Day of the Departed",
-            "poster": "https://image.tmdb.org/t/p/original/dZM1tYuARngZdZMHSYPdU6zuA5N.jpg",
-            "banner": "https://image.tmdb.org/t/p/original/5Mx9bOqNN1aXokwwzKam2qiw2cY.jpg",
-            "logo": "https://image.tmdb.org/t/p/original/xiXPiWwAuI4JGUDFWiUzx73oaBW.png",
+            "id": "dreamzzzshorts",
+            "title": "LEGO DREAMZzz Shorts",
+            "poster": "https://image.tmdb.org/t/p/original/uhu2i400KaFTSGif5zdHIwMKGu4.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
+            "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
             "comingSoon": true,
             "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This special will be added in the next website update.",
-            "summary": "When Cole returns to Yang's haunted temple to seek revenge on a former Airjitzu Master, he accidentally uses a powerful Dark Magic blade that unleashes the spectral forms of Ninjago's greatest villains and traps himself in the temple. The Ninja must return the ghosts to the Departed Realm before it's too late.",
-            "seasons": [{
-                    "number": 0,
-                    "file": "data/seasons/dotd.json"
-                }
-            ]
-        },
-                                {
-            "id": "wusteas",
-            "title": "LEGO Ninjago: Wu's Teas",
-            "poster": "https://image.tmdb.org/t/p/original/53wDhYPTMISbHxBAoj2jjDLPOfa.jpg",
-            "banner": "https://image.tmdb.org/t/p/original/nom9eeF55KkYOE92CtEoHG4G2v2.jpg",
-            "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
-            "comingSoon": true,
-            "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This shorts series will be added soon.",
-            "summary": "Sensei Wu owns a new tea shop called Steeper Wisdom, and the shop is being rivaled by a coffee shop across the street that is managed by a robot.",
+            "comingSoonNote": "This series will be added in the next website update.",
+            "summary": "A group of kids join a secret agency where they learn to use the power of imagination to journey into the Dream World and create fantastic creations in order to help sleeping children being terrorized by the evil Nightmare King who is bent on conquering the Dream World and invading the Waking World.",
             "seasons": [{
                     "number": 1,
-                    "file": "data/seasons/wusteas.json"
-                }
-            ]
-        },
-                                        {
-            "id": "operationheavymetal",
-            "title": "LEGO Ninjago: Operation Heavy Metal",
-            "poster": "https://image.tmdb.org/t/p/original/ifs1U1KivpTURgnXHDXjZCemQQI.jpg",
-            "banner": "https://static.wikia.nocookie.net/ninjago/images/4/47/Снимок_экрана_2020-10-21_в_1.59.21.png",
-            "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
-            "comingSoon": true,
-            "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This shorts series will be added soon.",
-            "summary": "Placeholder",
-            "seasons": [{
-                    "number": 1,
-                    "file": "data/seasons/heavymetal.json"
+                    "file": "data/seasons/dz_shorts.json"
                 }
             ]
         }
