@@ -408,17 +408,23 @@
                 hls = null;
             }
 
-            if (ep.subtitles && ep.subtitles.length > 0) {
-                ep.subtitles.forEach(track => {
-                    const t = document.createElement("track");
-                    t.kind = "subtitles";
-                    t.label = track.label;
-                    t.srclang = track.lang;
-                    t.src = track.url;
-                    if (track.default) t.default = true;
-                    video.appendChild(t);
-                });
-            }
+if (ep.subtitles && ep.subtitles.length > 0) {
+    ep.subtitles.forEach(track => {
+        fetch(track.url)
+            .then(response => response.blob())
+            .then(blob => {
+                const blobUrl = URL.createObjectURL(blob);
+                const t = document.createElement("track");
+                t.kind = "subtitles";
+                t.label = track.label;
+                t.srclang = track.lang;
+                t.src = blobUrl; 
+                if (track.default) t.default = true;
+                video.appendChild(t);
+            })
+            .catch(err => console.error("Subtitle fetch failed:", err));
+    });
+}
 
             const onVideoReady = () => {
                 if (startTime > 0) {
