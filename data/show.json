@@ -77,7 +77,7 @@
             "title": "LEGO Ninjago: Dragons Rising",
             "poster": "https://image.tmdb.org/t/p/original/4F4Ig81UpZ5mzeyZwVR2zc5t5D7.jpg",
             "banner": "https://image.tmdb.org/t/p/original/cbiW4uYJ1sx4P4HFnOFkpH3Ut2E.jpg",
-            "logo": "https://image.tmdb.org/t/p/original/y1QuOohNf7cd2PwCUQPU0wFFcxT.png",
+            "logo": "https://image.tmdb.org/t/p/original/syIS6UQl4UhELTtu1ZWQcMSgR91.png",
             "summary": "Many legendary realms have suddenly combined into one, but their union is unstable. A Spinjitzu Ninja Master must train a new generation of heroes to help find Elemental Dragons who can save the planet before the forces of evil use the same dragon energy to destroy this new world.",
             "seasons": [{
                     "number": 1,
@@ -122,7 +122,6 @@
             }]
         },
         {
-            "newEpisodes": true,
             "id": "dreamzzz",
             "title": "LEGO DREAMZzz",
             "poster": "https://image.tmdb.org/t/p/original/bksnhr6slfT2mIcCTglGYD3pI9A.jpg",
