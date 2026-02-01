@@ -373,10 +373,35 @@
   `).join("");
         }
 
-        function openPlayer(epIndex) {
+  function openPlayer(epIndex) {
             const ep = currentSeasonData.episodes[epIndex];
             const video = document.getElementById("playerVideo");
+            const videoContainer = video.parentElement; 
             const videoSrc = ep.embed;
+
+            const oldError = videoContainer.querySelector('.unavailable-msg');
+            if (oldError) oldError.remove();
+            
+            video.classList.remove("hidden");
+
+            if (!videoSrc || videoSrc.trim() === "") {
+                video.classList.add("hidden");
+
+                const msgDiv = document.createElement("div");
+                msgDiv.className = "unavailable-msg absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-2 fade-up";
+                msgDiv.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p class="text-white text-lg font-bold">Currently unavailable</p>
+                    <p class="text-gray-400 text-sm">Please try again later.</p>
+                `;
+                
+                videoContainer.appendChild(msgDiv);
+                
+                playerModal.classList.remove("hidden");
+                return; 
+            }
 
             let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
             const currentShowId = currentShow.id;
@@ -408,23 +433,23 @@
                 hls = null;
             }
 
-if (ep.subtitles && ep.subtitles.length > 0) {
-    ep.subtitles.forEach(track => {
-        fetch(track.url)
-            .then(response => response.blob())
-            .then(blob => {
-                const blobUrl = URL.createObjectURL(blob);
-                const t = document.createElement("track");
-                t.kind = "subtitles";
-                t.label = track.label;
-                t.srclang = track.lang;
-                t.src = blobUrl; 
-                if (track.default) t.default = true;
-                video.appendChild(t);
-            })
-            .catch(err => console.error("Subtitle fetch failed:", err));
-    });
-}
+            if (ep.subtitles && ep.subtitles.length > 0) {
+                ep.subtitles.forEach(track => {
+                    fetch(track.url)
+                        .then(response => response.blob())
+                        .then(blob => {
+                            const blobUrl = URL.createObjectURL(blob);
+                            const t = document.createElement("track");
+                            t.kind = "subtitles";
+                            t.label = track.label;
+                            t.srclang = track.lang;
+                            t.src = blobUrl;
+                            if (track.default) t.default = true;
+                            video.appendChild(t);
+                        })
+                        .catch(err => console.error("Subtitle fetch failed:", err));
+                });
+            }
 
             const onVideoReady = () => {
                 if (startTime > 0) {
@@ -436,17 +461,15 @@ if (ep.subtitles && ep.subtitles.length > 0) {
             if (videoSrc.includes('.mp4') || videoSrc.includes('.webm') || videoSrc.includes('.ogg')) {
                 video.src = videoSrc;
                 video.addEventListener('loadedmetadata', onVideoReady, { once: true });
-            }
-            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = videoSrc;
                 video.addEventListener('loadedmetadata', onVideoReady, { once: true });
-            }
-            else if (Hls.isSupported()) {
+            } else if (Hls.isSupported()) {
                 hls = new Hls();
                 hls.loadSource(videoSrc);
                 hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                   onVideoReady();
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    onVideoReady();
                 });
             } else {
                 alert("Your browser does not support HLS playback.");
@@ -456,9 +479,10 @@ if (ep.subtitles && ep.subtitles.length > 0) {
             saveProgress(currentShowId, currentSeasonNum, epIndex, startTime);
 
             playerModal.classList.remove("hidden");
-            
+
             setTimeout(() => video.focus(), 200);
         }
+
 
         function saveProgress(showId, season, episode, time) {
             let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
@@ -487,8 +511,14 @@ if (ep.subtitles && ep.subtitles.length > 0) {
 
         function closePlayer() {
             const video = document.getElementById("playerVideo");
+            const videoContainer = video.parentElement;
+
+            const errorMsg = videoContainer.querySelector('.unavailable-msg');
+            if (errorMsg) errorMsg.remove();
             
-            video.ontimeupdate = null; 
+            video.classList.remove("hidden");
+
+            video.ontimeupdate = null;
 
             video.pause();
             video.src = "";
@@ -497,9 +527,9 @@ if (ep.subtitles && ep.subtitles.length > 0) {
                 hls = null;
             }
             playerModal.classList.add("hidden");
-            
+
             renderContinueWatching();
-            
+
             setTimeout(() => {
                 const buttons = episodeGrid.querySelectorAll('button');
                 if (buttons.length > 0) buttons[0].focus();
