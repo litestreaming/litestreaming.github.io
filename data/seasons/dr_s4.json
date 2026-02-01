@@ -1,8 +1,124 @@
 {
-  "type": "external",
-  "button": {
-    "label": "COMING IN 2026",
-    "url": ""
-  },
-  "note": ""
+    "season": 4,
+    "episodes": [{
+            "number": 1,
+            "title": "Episode 1",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/5/59/DR_S4_Shot_5.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 2,
+            "title": "Episode 2",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/9/9b/DR_S4_Teaser_Good_Quality_10.png",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 3,
+            "title": "Episode 3",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/0/0f/DR_S4_Shot_1.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 4,
+            "title": "Episode 4",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 5,
+            "title": "Episode 5",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 6,
+            "title": "Episode 6",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 7,
+            "title": "Episode 7",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 8,
+            "title": "Episode 8",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 9,
+            "title": "Episode 9",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 10,
+            "title": "Episode 10",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/f/fd/DR_S4_Shot_3.PNG",
+            "embed": "",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        }
+    ]
 }
