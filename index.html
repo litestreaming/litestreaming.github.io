@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="referrer" content="same-origin" />
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,12 +50,12 @@
         }
 
         
-        :focus-visible {
-            outline: 1px solid #6366f1; 
-            outline-offset: 2px;
-            z-index: 50;
-            border-radius: 0.5rem;
-        }
+:focus-visible {
+    outline: 1px solid #6366f1; 
+    outline-offset: 2px;
+    z-index: 10; 
+    border-radius: 0.5rem;
+}
 
         button.reset-btn {
             background: none;
@@ -73,16 +72,25 @@
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-    <nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <span class="font-bold text-lg md:text-xl">Litestreaming</span>
+<nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
+            <span class="font-bold text-lg md:text-xl shrink-0">Litestreaming</span>
+            
+            <input type="text" id="searchInput" placeholder="Search shows..." 
+                class="flex-1 max-w-md px-4 py-1.5 rounded-xl bg-white/20 dark:bg-black/20 border border-gray-400/20 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+
             <a href="https://discord.gg/jmeYYbBcsN" target="_blank"
-                class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold focus:ring-4 focus:ring-indigo-300 outline-none">
+                class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold focus:ring-4 focus:ring-indigo-300 outline-none shrink-0">
                 Discord
             </a>
         </div>
     </nav>
     
+<section id="heroSection" class="pt-20 max-w-7xl mx-auto px-4 hidden">
+    <div id="heroContainer" class="relative w-full h-[300px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl bg-gray-800">
+        </div>
+</section>
+
     <main class="pt-20 max-w-7xl mx-auto px-4">
         <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Featured Shows</h1>
         <div id="posterGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
@@ -98,38 +106,87 @@
             glass rounded-2xl shadow-2xl
             max-h-[90vh] flex flex-col justify-start md:justify-start">
 
-            <div id="showHero" class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0">
-                <img id="showLogo" class="absolute bottom-3 left-4 h-12 md:h-20" />
-                
-                <button onclick="closeShow()" class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-bold focus:bg-red-600 outline-none">
-                    Close ✕
-                </button>
-            </div>
+<div id="showHero" class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0 overflow-hidden">
+    <video id="showPreviewVideo" class="absolute inset-0 w-full h-full object-cover hidden opacity-0 transition-opacity duration-1000" muted playsinline loop></video>
+    
+    <img id="showLogo" class="absolute bottom-3 left-4 h-12 md:h-20 z-10" />
+    
+    <button onclick="closeShow()" class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-bold focus:bg-red-600 outline-none z-10">
+        Close ✕
+    </button>
+</div>
 
             <div class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
-                <p id="showSummary" class="text-gray-300 text-sm md:text-base max-w-3xl fade-up" data-delay="0"></p>
+<div class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
+    <div id="seasonComingSoon" class="hidden flex flex-wrap gap-2 fade-up"></div>
 
-                <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white fade-up focus:ring-4 focus:ring-indigo-500 outline-none"
-                    data-delay="1"></select>
+    <p id="showSummary" class="text-gray-300 text-sm md:text-base max-w-3xl fade-up" data-delay="0"></p>
 
-                <div id="episodeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 fade-up"
-                    data-delay="2"></div>
+    <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white fade-up focus:ring-4 focus:ring-indigo-500 outline-none" data-delay="1"></select>
+
+    <div id="episodeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 fade-up" data-delay="2"></div>
+</div>
 
             </div>
         </div>
     </div>
-
-    <div id="playerModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
+<div id="playerModal" class="fixed inset-0 hidden z-[100] flex items-center justify-center">
         <div class="absolute inset-0 bg-black/95" onclick="closePlayer()"></div>
 
         <div class="relative w-full md:max-w-6xl mx-auto h-full md:h-auto flex flex-col items-center justify-center p-4">
              <button onclick="closePlayer()" class="self-end mb-2 px-6 py-2 bg-red-600 text-white font-bold rounded-lg z-50 focus:ring-4 focus:ring-white outline-none">
                 Close Player
             </button>
+<div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl group">
+<video id="playerVideo" class="w-full h-full hidden" controls playsinline preload="metadata"></video>
+    
+    <iframe id="playerYoutube" class="hidden absolute inset-0 w-full h-full" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
 
-            <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
-                <video id="playerVideo" class="w-full h-full" controls playsinline preload="metadata">
-                </video>
+    <button id="nextEpOverlay" onclick="playNextEpisode()"
+                    class="hidden absolute bottom-20 right-8 z-50 flex items-center gap-3 p-1 pr-6 bg-indigo-600/90 hover:bg-indigo-500 text-white rounded-xl backdrop-blur-md transition-all transform hover:scale-105 border border-white/20 shadow-2xl fade-up">
+                    <img id="nextEpPreview" src="" class="w-20 h-12 object-cover rounded-lg">
+                    <div class="text-left">
+                        <p class="text-[10px] font-bold opacity-70 uppercase tracking-widest">Next Episode</p>
+                        <p id="nextEpTitle" class="text-sm font-bold truncate max-w-[150px]"></p>
+                    </div>
+                    <span class="ml-2">❯</span>
+                </button>
+            </div>
+        </div>
+    </div> <div id="epInfoModal" class="fixed inset-0 hidden z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80" onclick="closeEpInfo()"></div>
+        <div class="relative w-full max-w-2xl glass rounded-2xl overflow-hidden shadow-2xl flex flex-col fade-up">
+            
+            <div class="relative h-48 md:h-64 bg-black">
+                <img id="epInfoThumb" class="w-full h-full object-cover opacity-80" src="" alt="">
+                <button onclick="closeEpInfo()" class="absolute top-4 right-4 bg-black/60 text-white p-2 rounded-full hover:bg-red-600 transition">✕</button>
+            </div>
+
+            <div class="p-6 space-y-4">
+                <div>
+                    <h3 id="epInfoTitle" class="text-2xl font-bold text-white"></h3>
+                    <p id="epInfoMeta" class="text-indigo-400 text-sm font-semibold uppercase tracking-wider"></p>
+                </div>
+                
+                <p id="epInfoSynopsis" class="text-gray-300 text-sm leading-relaxed"></p>
+                
+                <div class="flex items-center gap-6 pt-4 border-t border-white/10 text-xs font-mono text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <span>LENGTH:</span>
+                        <span id="epInfoLength" class="text-white">Calculating...</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span>QUALITY:</span>
+                        <span class="text-white">HD</span>
+                    </div>
+                </div>
+
+                <button id="epInfoPlayBtn" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all active:scale-95">
+                    Play Episode
+                </button>
             </div>
         </div>
     </div>
@@ -171,6 +228,7 @@
         let currentSeasonData = null;
         let hls = null;
         let lastFocusedElement = null; 
+        let previewTimer = null;
 
         fetch("data/show.json?v=" + Date.now())
             .then(res => res.json())
@@ -222,67 +280,132 @@
             if(lastFocusedElement) lastFocusedElement.focus();
         }
 
-        function renderPosters() {
-            posterGrid.innerHTML = shows.map((show, i) => `
-    <button class="reset-btn relative group fade-up rounded-xl transition-transform active:scale-95 focus:scale-105" 
-        style="--delay:${i}"
-        onclick="${show.comingSoon ? `openComingSoon(${i})` : `openShow(${i})`}">
-      
-      ${show.newEpisodes ? `
-        <div class="absolute top-2 right-2 z-10 bg-red-600 text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded shadow-md pointer-events-none">
-            NEW EPISODES
-        </div>
-      ` : ''}
+        function renderPosters(list = shows) {
+            const grid = document.getElementById("posterGrid");
+            
+            if (list.length === 0) {
+                grid.innerHTML = `<p class="col-span-full text-center py-10 text-gray-500">No shows found.</p>`;
+                return;
+            }
 
-      <img src="${show.poster}"
-        class="rounded-xl shadow-lg w-full h-auto object-cover
-               ${show.comingSoon ? 'opacity-70' : ''}" />
+            grid.innerHTML = list.map((show) => {
+                const originalIndex = shows.indexOf(show);
+                
+                return `
+                <button class="reset-btn relative group fade-up rounded-xl transition-transform active:scale-95 focus:scale-105" 
+                    style="--delay:${list.indexOf(show)}"
+                    onclick="${show.comingSoon ? `openComingSoon(${originalIndex})` : `openShow(${originalIndex})`}">
+                  
+                  ${show.newEpisodes ? `
+                    <div class="absolute top-2 right-2 z-10 bg-red-600 text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded shadow-md pointer-events-none">
+                        NEW EPISODES
+                    </div>
+                  ` : ''}
 
-      ${show.comingSoon ? `
-        <div class="absolute inset-0 rounded-xl
-                    bg-black/60 backdrop-blur-sm
-                    flex items-center justify-center pointer-events-none">
-          <span class="px-4 py-2 rounded-full
-                       bg-indigo-600/90 text-white
-                       text-sm font-bold tracking-wide shadow-lg">
-            ${show.comingSoonText || "Coming Soon"}
-          </span>
-        </div>
-      ` : ''}
-    </button>
-  `).join("");
+                  <img src="${show.poster}"
+                    class="rounded-xl shadow-lg w-full h-auto object-cover
+                           ${show.comingSoon ? 'opacity-70' : ''}" />
+
+                  ${show.comingSoon ? `
+                    <div class="absolute inset-0 rounded-xl
+                                bg-black/60 backdrop-blur-sm
+                                flex items-center justify-center pointer-events-none">
+                      <span class="px-4 py-2 rounded-full
+                                   bg-indigo-600/90 text-white
+                                   text-sm font-bold tracking-wide shadow-lg">
+                        ${show.comingSoonText || "Coming Soon"}
+                      </span>
+                    </div>
+                  ` : ''}
+                </button>
+              `;
+            }).join("");
         }
 
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = shows.filter(show => 
+                show.title.toLowerCase().includes(term)
+            );
+            renderPosters(filtered);
+        });
 
-        function openShow(index) {
-            lastFocusedElement = document.activeElement;
-            currentShow = shows[index];
-            document.body.classList.add("modal-open");
+function openShow(index) {
+    lastFocusedElement = document.activeElement;
+    currentShow = shows[index];
+    document.body.classList.add("modal-open");
 
-            showHero.style.backgroundImage = `url(${currentShow.banner})`;
-            showLogo.src = currentShow.logo;
-            showSummary.textContent = currentShow.summary;
+    const videoEl = document.getElementById("showPreviewVideo");
+    
+    // Reset video state
+    clearTimeout(previewTimer);
+    videoEl.pause();
+    videoEl.src = "";
+    videoEl.classList.add("hidden");
+    videoEl.style.opacity = "0";
 
-            seasonSelect.innerHTML = currentShow.seasons.map((s, i) =>
-                `<option value="${i}">Season ${s.number}</option>`
-            ).join("");
+    showHero.style.backgroundImage = `url(${currentShow.banner})`;
+    showLogo.src = currentShow.logo;
+    showSummary.textContent = currentShow.summary;
 
-            seasonSelect.onchange = () => loadSeason(seasonSelect.value);
-            loadSeason(0);
+    // --- PREVIEW LOGIC ---
+    if (currentShow.preview) {
+        previewTimer = setTimeout(() => {
+            videoEl.src = currentShow.preview;
+            videoEl.classList.remove("hidden");
+            videoEl.play().then(() => {
+                videoEl.style.opacity = "1"; // Smooth fade in
+            }).catch(e => console.log("Preview autoplay blocked"));
+        }, 5000); // 5 second delay
+    }
+    // ---------------------
 
-            showModal.classList.remove("hidden");
+    const comingSoonArea = document.getElementById("seasonComingSoon");
+    comingSoonArea.innerHTML = ""; 
+    comingSoonArea.classList.add("hidden");
 
-            const items = showModal.querySelectorAll(".fade-up");
-            items.forEach((el, i) => {
-                el.style.animationDelay = `${i * 0.1}s`;
-                el.classList.add("fade-up");
-            });
+    const comingSoonSeasons = currentShow.seasons.filter(s => s.comingSoonText);
+    if (comingSoonSeasons.length > 0) {
+        comingSoonArea.classList.remove("hidden");
+        comingSoonArea.innerHTML = comingSoonSeasons.map(s => `
+            <span class="px-3 py-1 bg-indigo-600/30 border border-indigo-500/50 text-indigo-300 text-xs font-bold rounded-lg">
+                ${s.comingSoonText}
+            </span>
+        `).join("");
+    }
 
-            setTimeout(() => {
-                seasonSelect.focus();
-            }, 150);
-        }
+    const playableSeasons = currentShow.seasons.filter(s => s.file);
+    
+    if (playableSeasons.length > 0) {
+        seasonSelect.classList.remove("hidden");
+        seasonSelect.innerHTML = playableSeasons.map((s, i) =>
+            `<option value="${i}">Season ${s.number}</option>`
+        ).join("");
 
+        seasonSelect.onchange = () => {
+            const actualIndexInShow = currentShow.seasons.indexOf(playableSeasons[seasonSelect.value]);
+            loadSeason(actualIndexInShow);
+        };
+        
+        const firstSeasonIndex = currentShow.seasons.indexOf(playableSeasons[0]);
+        loadSeason(firstSeasonIndex);
+    } else {
+        seasonSelect.classList.add("hidden");
+        episodeGrid.innerHTML = "<p class='text-gray-500 p-4'>No episodes currently available.</p>";
+    }
+
+    showModal.classList.remove("hidden");
+
+    const items = showModal.querySelectorAll(".fade-up");
+    items.forEach((el, i) => {
+        el.style.animationDelay = `${i * 0.1}s`;
+        el.classList.add("fade-up");
+    });
+
+    setTimeout(() => {
+        if (!seasonSelect.classList.contains("hidden")) seasonSelect.focus();
+    }, 150);
+}
 
         function loadSeason(seasonIndex) {
             episodeGrid.innerHTML = "<p class='text-gray-400 p-2'>Loading...</p>";
@@ -359,130 +482,282 @@
         }
 
 
-        function renderEpisodes() {
-            episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
-    <button onclick="openPlayer(${i})" 
-      class="reset-btn bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition fade-up flex flex-col focus:ring-4 focus:ring-indigo-500"
-      style="--delay:${i}">
-      <img src="${ep.thumbnail}" class="w-full h-28 object-cover">
-      <div class="p-2 w-full">
-        <p class="text-xs text-gray-400">Episode ${ep.number}</p>
-        <p class="font-semibold text-sm truncate">${ep.title}</p>
-      </div>
-    </button>
-  `).join("");
+function renderEpisodes() {
+    episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
+        <div class="relative group fade-up" style="--delay:${i}">
+            <button onclick="openPlayer(${i})" 
+                class="reset-btn bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition flex flex-col focus:ring-4 focus:ring-indigo-500">
+                <img src="${ep.thumbnail}" class="w-full h-28 object-cover">
+                <div class="p-2 w-full">
+                    <p class="text-xs text-gray-400">Episode ${ep.number}</p>
+                    <p class="font-semibold text-sm truncate">${ep.title}</p>
+                </div>
+            </button>
+
+            <button onclick="event.stopPropagation(); openEpisodeInfo(${i})" 
+                class="absolute top-2 right-2 p-1.5 bg-black/60 hover:bg-indigo-600 text-white rounded-full backdrop-blur-md transition-colors shadow-lg"
+                title="Episode Info">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </button>
+        </div>
+    `).join("");
+}
+
+function openEpisodeInfo(epIndex) {
+    const ep = currentSeasonData.episodes[epIndex];
+    
+    document.getElementById("epInfoThumb").src = ep.thumbnail;
+    document.getElementById("epInfoTitle").textContent = ep.title;
+    document.getElementById("epInfoSynopsis").textContent = ep.description || "No synopsis available for this episode.";
+    document.getElementById("epInfoMeta").textContent = `Season ${currentShow.seasons[seasonSelect.value].number} • Episode ${ep.number}`;
+    document.getElementById("epInfoLength").textContent = "Calculating...";
+
+    document.getElementById("epInfoPlayBtn").onclick = () => {
+        closeEpInfo();
+        openPlayer(epIndex);
+    };
+
+    document.getElementById("epInfoModal").classList.remove("hidden");
+
+    getDuration(ep.embed, (duration) => {
+        document.getElementById("epInfoLength").textContent = duration;
+    });
+}
+
+function closeEpInfo() {
+    document.getElementById("epInfoModal").classList.add("hidden");
+}
+
+function getDuration(url, callback) {
+    if (!url) return callback("Unknown");
+
+    const tempVideo = document.createElement('video');
+    
+    const formatTime = (duration) => {
+        if (!duration || !isFinite(duration)) return "N/A";
+        const mins = Math.floor(duration / 60);
+        const secs = Math.floor(duration % 60);
+        return `${mins}m ${secs}s`;
+    };
+
+    if (url.includes('.m3u8') && Hls.isSupported()) {
+        const hlsTemp = new Hls();
+        hlsTemp.loadSource(url);
+        hlsTemp.attachMedia(tempVideo);
+        
+        hlsTemp.on(Hls.Events.MANIFEST_PARSED, function() {
+            setTimeout(() => {
+                callback(formatTime(tempVideo.duration));
+                hlsTemp.destroy();
+                tempVideo.remove();
+            }, 600);
+        });
+
+        hlsTemp.on(Hls.Events.ERROR, function() {
+            callback("N/A");
+            hlsTemp.destroy();
+            tempVideo.remove();
+        });
+    } 
+    else {
+        tempVideo.preload = 'metadata';
+        tempVideo.src = url;
+        
+        tempVideo.onloadedmetadata = () => {
+            callback(formatTime(tempVideo.duration));
+            tempVideo.remove();
+        };
+
+        tempVideo.onerror = () => {
+            callback("N/A");
+            tempVideo.remove();
+        };
+    }
+}
+
+let currentEpisodeIndex = -1; 
+
+function playNextEpisode() {
+    if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
+        openPlayer(currentEpisodeIndex + 1);
+    } else {
+        alert("You've reached the end of the season!");
+        closePlayer();
+    }
+}
+
+function playPreviousEpisode() {
+    if (currentEpisodeIndex > 0) {
+        openPlayer(currentEpisodeIndex - 1);
+    }
+}
+
+function openPlayer(epIndex) {
+    currentEpisodeIndex = epIndex; 
+    const ep = currentSeasonData.episodes[epIndex];
+    const video = document.getElementById("playerVideo");
+    const ytPlayer = document.getElementById("playerYoutube"); 
+    const videoContainer = video.parentElement; 
+    const videoSrc = ep.embed;
+
+    const oldError = videoContainer.querySelector('.unavailable-msg');
+    if (oldError) oldError.remove();
+    
+    video.classList.add("hidden");
+    ytPlayer.classList.add("hidden");
+    
+    video.pause();
+    video.src = "";
+    video.load();
+    if (hls) { hls.destroy(); hls = null; }
+
+    ytPlayer.src = "";
+
+    if (!videoSrc || videoSrc.trim() === "") {
+        showPlayerError(videoContainer);
+        return; 
+    }
+
+    const isEmbed = videoSrc.includes("youtube.com") || videoSrc.includes("youtu.be") || videoSrc.includes("embed");
+
+    if (isEmbed) {
+        ytPlayer.classList.remove("hidden");
+        
+        let finalUrl = videoSrc;
+        if (videoSrc.includes("watch?v=")) {
+            const id = videoSrc.split("v=")[1].split("&")[0];
+            finalUrl = `https://www.youtube.com/embed/${id}`;
         }
+        
+        const separator = finalUrl.includes("?") ? "&" : "?";
+        ytPlayer.src = `${finalUrl}${separator}autoplay=1&modestbranding=1&rel=0&t=${Date.now()}`;
 
-  function openPlayer(epIndex) {
-            const ep = currentSeasonData.episodes[epIndex];
-            const video = document.getElementById("playerVideo");
-            const videoContainer = video.parentElement; 
-            const videoSrc = ep.embed;
+    } else {
+        video.classList.remove("hidden");
+        setupStandardVideo(video, videoSrc, ep, epIndex);
+    }
 
-            const oldError = videoContainer.querySelector('.unavailable-msg');
-            if (oldError) oldError.remove();
-            
-            video.classList.remove("hidden");
+    playerModal.classList.remove("hidden");
+}
 
-            if (!videoSrc || videoSrc.trim() === "") {
-                video.classList.add("hidden");
-
-                const msgDiv = document.createElement("div");
-                msgDiv.className = "unavailable-msg absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-2 fade-up";
-                msgDiv.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <p class="text-white text-lg font-bold">Currently unavailable</p>
-                    <p class="text-gray-400 text-sm">Please try again later.</p>
-                `;
-                
-                videoContainer.appendChild(msgDiv);
-                
-                playerModal.classList.remove("hidden");
-                return; 
-            }
-
-            let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
-            const currentShowId = currentShow.id;
-            const currentSeasonNum = parseInt(seasonSelect.value);
-
-            const existingEntry = watchData.find(item =>
-                item.showId === currentShowId &&
-                item.season === currentSeasonNum &&
-                item.episode === epIndex
-            );
-
-            let startTime = existingEntry ? existingEntry.time : 0;
-
-            video.ontimeupdate = () => {
-                const currentTime = video.currentTime;
-                if (currentTime > 0) {
-                    saveProgress(currentShowId, currentSeasonNum, epIndex, currentTime);
-                }
-            };
-
-            video.pause();
-            video.src = "";
-            while (video.firstChild) {
-                video.removeChild(video.firstChild);
-            }
-
-            if (hls) {
-                hls.destroy();
-                hls = null;
-            }
-
-            if (ep.subtitles && ep.subtitles.length > 0) {
-                ep.subtitles.forEach(track => {
-                    fetch(track.url)
-                        .then(response => response.blob())
-                        .then(blob => {
-                            const blobUrl = URL.createObjectURL(blob);
-                            const t = document.createElement("track");
-                            t.kind = "subtitles";
-                            t.label = track.label;
-                            t.srclang = track.lang;
-                            t.src = blobUrl;
-                            if (track.default) t.default = true;
-                            video.appendChild(t);
-                        })
-                        .catch(err => console.error("Subtitle fetch failed:", err));
-                });
-            }
-
-            const onVideoReady = () => {
-                if (startTime > 0) {
-                    video.currentTime = startTime;
-                }
-                video.play().catch(e => console.log("Auto-play prevented:", e));
-            };
-
-            if (videoSrc.includes('.mp4') || videoSrc.includes('.webm') || videoSrc.includes('.ogg')) {
-                video.src = videoSrc;
-                video.addEventListener('loadedmetadata', onVideoReady, { once: true });
-            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = videoSrc;
-                video.addEventListener('loadedmetadata', onVideoReady, { once: true });
-            } else if (Hls.isSupported()) {
-                hls = new Hls();
-                hls.loadSource(videoSrc);
-                hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                    onVideoReady();
-                });
-            } else {
-                alert("Your browser does not support HLS playback.");
-                return;
-            }
-
-            saveProgress(currentShowId, currentSeasonNum, epIndex, startTime);
-
+        function showPlayerError(container) {
+            const msgDiv = document.createElement("div");
+            msgDiv.className = "unavailable-msg absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-2 fade-up bg-black";
+            msgDiv.innerHTML = `
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl">
+                    <p class="text-white text-lg font-bold">Video Error</p>
+                    <p class="text-gray-400 text-sm mb-4">Please contact me in the Discord server and I will fix the episode.</p>
+                    <a href="https://discord.gg/jmeYYbBcsN" target="_blank" class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-xs font-bold"> Discord</a>
+                </div>
+            `;
+            container.appendChild(msgDiv);
             playerModal.classList.remove("hidden");
-
-            setTimeout(() => video.focus(), 200);
         }
 
+function getYouTubeId(url) {
+    if (!url) return null;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
+
+function setupStandardVideo(video, videoSrc, ep, epIndex) {
+    let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+    const currentShowId = currentShow.id;
+    const currentSeasonNum = parseInt(seasonSelect.value);
+    const existingEntry = watchData.find(item =>
+        item.showId === currentShowId && item.season === currentSeasonNum && item.episode === epIndex
+    );
+    let startTime = existingEntry ? existingEntry.time : 0;
+
+    while (video.firstChild) {
+        video.removeChild(video.firstChild);
+    }
+
+    if (ep.subtitles && ep.subtitles.length > 0) {
+        ep.subtitles.forEach(track => {
+            fetch(track.url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const blobUrl = URL.createObjectURL(blob);
+                    const t = document.createElement("track");
+                    t.kind = "subtitles";
+                    t.label = track.label;
+                    t.srclang = track.lang;
+                    t.src = blobUrl;
+                    if (track.default) t.default = true;
+                    video.appendChild(t);
+                })
+                .catch(err => console.error("Subtitle fetch failed:", err));
+        });
+    }
+
+    video.ontimeupdate = () => {
+        const currentTime = video.currentTime;
+        const duration = video.duration;
+        const nextBtn = document.getElementById("nextEpOverlay");
+
+        if (currentTime > 0) saveProgress(currentShowId, currentSeasonNum, epIndex, currentTime);
+
+        if (nextBtn && duration > 0 && (duration - currentTime) <= 15) {
+            if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
+                const nextEp = currentSeasonData.episodes[currentEpisodeIndex + 1];
+                document.getElementById("nextEpPreview").src = nextEp.thumbnail;
+                document.getElementById("nextEpTitle").textContent = nextEp.title;
+                nextBtn.classList.remove("hidden");
+            }
+        } else if (nextBtn) {
+            nextBtn.classList.add("hidden");
+        }
+    };
+
+    video.onended = () => playNextEpisode();
+
+    const onVideoReady = () => {
+        if (startTime > 0) video.currentTime = startTime;
+        video.play().catch(e => console.log("Auto-play prevented"));
+    };
+
+    if (videoSrc.includes('.m3u8') && Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, onVideoReady);
+    } else {
+        video.src = videoSrc;
+        video.addEventListener('loadedmetadata', onVideoReady, { once: true });
+    }
+}
+
+        function playNextEpisode() {
+            if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
+                openPlayer(currentEpisodeIndex + 1);
+            } else {
+                closePlayer();
+            }
+        }
+
+        function playPreviousEpisode() {
+            if (currentEpisodeIndex > 0) {
+                openPlayer(currentEpisodeIndex - 1);
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById("playerModal").classList.contains('hidden')) return;
+
+            if (e.shiftKey && e.key.toLowerCase() === 'n') {
+                e.preventDefault();
+                playNextEpisode();
+            }
+            if (e.shiftKey && e.key.toLowerCase() === 'p') {
+                e.preventDefault();
+                playPreviousEpisode();
+            }
+        });
 
         function saveProgress(showId, season, episode, time) {
             let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
@@ -502,12 +777,72 @@
             localStorage.setItem("continueWatching", JSON.stringify(watchData));
         }
 
-        function closeShow() {
-            showModal.classList.add("hidden");
-            document.body.classList.remove("modal-open");
-            renderContinueWatching(); 
-            if(lastFocusedElement) lastFocusedElement.focus();
+let heroData = [];
+let currentHeroIndex = 0;
+
+fetch("data/hero.json?v=" + Date.now())
+    .then(res => res.json())
+    .then(data => {
+        heroData = data.featured;
+        if (heroData.length > 0) {
+            document.getElementById('heroSection').classList.remove('hidden');
+            renderHero();
+            setInterval(nextHero, 8000);
         }
+    });
+
+function renderHero() {
+    const container = document.getElementById("heroContainer");
+    const item = heroData[currentHeroIndex];
+    
+    const showIndex = shows.findIndex(s => s.id === item.showId);
+
+    container.innerHTML = `
+        <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000" 
+             style="background-image: url('${item.heroBanner}')">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+        </div>
+        
+        <div class="relative h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl space-y-4 fade-up">
+            <h2 class="text-3xl md:text-5xl font-black text-white">${item.title}</h2>
+            <p class="text-gray-200 text-sm md:text-base line-clamp-3">${item.description}</p>
+            
+            <div class="flex gap-4 pt-2">
+                <button onclick="openShow(${showIndex})" 
+                        class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg">
+                    View Details
+                </button>
+                
+                <div class="flex gap-2">
+                    <button onclick="prevHero()" class="p-3 glass rounded-xl text-white hover:bg-white/20">❮</button>
+                    <button onclick="nextHero()" class="p-3 glass rounded-xl text-white hover:bg-white/20">❯</button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function nextHero() {
+    currentHeroIndex = (currentHeroIndex + 1) % heroData.length;
+    renderHero();
+}
+
+function prevHero() {
+    currentHeroIndex = (currentHeroIndex - 1 + heroData.length) % heroData.length;
+    renderHero();
+}
+
+function closeShow() {
+    clearTimeout(previewTimer); 
+    const videoEl = document.getElementById("showPreviewVideo");
+    videoEl.pause();
+    videoEl.src = ""; 
+
+    showModal.classList.add("hidden");
+    document.body.classList.remove("modal-open");
+    renderContinueWatching(); 
+    if(lastFocusedElement) lastFocusedElement.focus();
+}
 
         function closePlayer() {
             const video = document.getElementById("playerVideo");
@@ -597,5 +932,4 @@
     </section>
 
 </body>
-
 </html>

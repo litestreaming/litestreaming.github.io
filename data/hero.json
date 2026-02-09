@@ -1,0 +1,39 @@
+{
+    "featured": [{
+            "showId": "ninjagodr",
+            "heroBanner": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABbq_IzABTIwPa8W4Jfrz9Elc2_xKF0Cw4SRiR7yZousi8T6pVTJjo4G0JrGURf4irP01Tq2Yt2d1xrIcN5R4cGVHJIUkDEoJ-lKL.jpg",
+            "title": "LEGO Ninjago: Dragons Rising",
+            "description": "Ninja Master Lloyd guides Arin, a young Spinjitzu adept, and his friend Sora, who has an unusual Elemental Power, as a hidden enemy unleashes Elemental Monsters across the Merged Lands."
+        },
+        {
+            "showId": "ninjago",
+            "heroBanner": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZk44-SYoXlNcgmGmppXVAqAfjdO7IB6LGF4sGRjrjw6Wyve156ZX6CPVoa89pvU1vHeWQwv99v_JWfSqSW2xlocmkJIF8vjv4gW.jpg",
+            "title": "LEGO Ninjago: Masters of Spinjitzu",
+            "description": "The ninjas gear up to save Ninjago City from a seemingly invincible foe — and find help from the most unexpected sources."
+        },
+        {
+            "showId": "dreamzzz",
+            "heroBanner": "https://occ-0-8407-2218.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABRovkH8T6aOrg1JmPQiIL4WDv8q6OOnr-gHRc66b_79WlCmY1E4-McFZpiM1nQtEkU_NErilDilIxxmQSQrE06lbdOig-cV5wUgS.jpg?r=9e1",
+            "title": "LEGO DREAMZzz",
+            "description": "Mateo is a normal boy who realises that he must assert himself as the defender of dreams against the machinations of the Nightmare King."
+        },
+        {
+            "showId": "nexo",
+            "heroBanner": "https://occ-0-1500-1501.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbaI4mRfj6o8Na5CL0DBnQLwRHFlBoDVfzNTBgPxkCRD7XOhokX0YhcLoyuezI9h2dSn3vzEQ3t486JPMo3YAP5FVU937ZhA0Q-8.webp?r=294",
+            "title": "LEGO NEXO KNIGHTS",
+            "description": "Aided by digi-mage Merlok 2.0, knights Aaron, Lance, Axl, Macy and Clay bravely defend the kingdom of Knighton against Jestro and other evil foes."
+        },
+        {
+            "showId": "chima",
+            "heroBanner": "https://occ-0-1500-1501.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSoSjh2gCwj8SLQiayD-kVHNfJNr1LJtaCN0S7WhWKJdp-Qj7BP302l4W43CryOu17GJfmM33g6pApe80oTW_UIr5C_Kx4sciAi-.webp?r=ea8",
+            "title": "LEGO LEGENDS OF CHIMA",
+            "description": "In the once-peaceful land of Chima, conflict breaks out between eight animal tribes over Chi, a substance that can both sustain life and destroy it."
+        },
+                {
+            "showId": "lmk",
+            "heroBanner": "https://image.tmdb.org/t/p/original/9XdI3OWp1O5AYMV5e7J1mmNNNsp.jpg",
+            "title": "LEGO Monkie Kid",
+            "description": "Teenage hero MK and his friends must save their city from the Demon Bull King, in the LEGO adventure inspired by classic Chinese stories."
+        }
+    ]
+}

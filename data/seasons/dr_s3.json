@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "The Missing",
+            "description": "The Ninja follow a clue to Arin's location but find a new threat, while Nya, Kai and Wyldfyre spark old grudges in their search for Jay.",
             "thumbnail": "https://image.tmdb.org/t/p/original/h7YXFuy1IVlzMkmQTCWrErVyYvd.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/22/52/10679886/s10679886.m3u8",
             "subtitles": [{
@@ -15,6 +16,7 @@
         {
             "number": 2,
             "title": "The Ultimate Object of Admiration",
+            "description": "Arin nurses Ras back to health as they continue his training, meanwhile their trail leads the Ninja into more danger.",
             "thumbnail": "https://image.tmdb.org/t/p/original/qPfHcqKainSkEX596z0CcpZG2TV.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/89/7a/10679887/s10679887.m3u8",
             "subtitles": [{
@@ -27,6 +29,7 @@
         {
             "number": 3,
             "title": "The Spectral Lands",
+            "description": "Arin ventures into a dangerous new land to heal Ras while Nya and Kai come up with a plan to make Jay come to them.",
             "thumbnail": "https://image.tmdb.org/t/p/original/b9BW62OliwoI9i7SZtWOwrhlxVr.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/21/cd/10679888/s10679888.m3u8",
             "subtitles": [{
@@ -39,8 +42,9 @@
         {
             "number": 4,
             "title": "The Great Zane Robbery",
+            "description": "Zane's search for Arin leads to an old friend but lands him in the middle of the Forbidden Five's hunt for the Prismatic Blades.",
             "thumbnail": "https://image.tmdb.org/t/p/original/a2sDerO3ZmlclKrTWVarIrCZGk2.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5d/5a/10679889/s10679889.m3u8",
+            "embed": "https://www.youtube.com/embed/F1eOEvRIqTs",
             "subtitles": [{
                 "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/b3/e4/dfa50538bdcd7b2d50845c2a478ddd1c.vtt",
                 "lang": "en",
@@ -51,6 +55,7 @@
         {
             "number": 5,
             "title": "I Alone Can Save Them",
+            "description": "The Ninja learn of the Forbidden Five's quest to collect the Prismatic Blades, meanwhile Ras finally leads Arin to his parents.",
             "thumbnail": "https://image.tmdb.org/t/p/original/3YgSJ8Mp37ipMeeDi8WR2GSf7Qa.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/22/45/10679890/s10679890.m3u8",
             "subtitles": [{
@@ -63,6 +68,7 @@
         {
             "number": 6,
             "title": "Fallen Wishes",
+            "description": "Sora, Nya and Riyu are summoned to New Djinjago to help a friend, and the mystery bounty hunter receives a new mission.",
             "thumbnail": "https://image.tmdb.org/t/p/original/7sbGa3sVhHmP1w9HyySWxzaIaaC.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b8/8e/10679891/s10679891.m3u8",
             "subtitles": [{
@@ -75,6 +81,7 @@
         {
             "number": 7,
             "title": "Their Draconic Majesty's Request",
+            "description": "The mystery bounty hunter tracks Ras and Arin to the World Forest, while the Ninja search for the last Prismatic Blade.",
             "thumbnail": "https://image.tmdb.org/t/p/original/gF42ipbD4JFZC03lGZRpWnBxTsl.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f6/b5/10679892/s10679892.m3u8",
             "subtitles": [{
@@ -87,6 +94,7 @@
         {
             "number": 8,
             "title": "Crashing Together",
+            "description": "Arin must choose between Ras and the Ninja as the battle for the Prismatic Blades rages across the World Forest.",
             "thumbnail": "https://image.tmdb.org/t/p/original/hCLMCZqC0UdjewZWvDlzWqgnWmL.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/00/10679893/s10679893.m3u8",
             "subtitles": [{
@@ -99,6 +107,7 @@
         {
             "number": 9,
             "title": "Chaos Unchained",
+            "description": "The Ninja hurry to the First Land to stop the Forbidden Five from freeing ThunderFang, and Wyldfyre discovers a drastic cure to Roby's decay.",
             "thumbnail": "https://image.tmdb.org/t/p/original/l8GBOb8nUgBshJKwu6tpYzQzHRa.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e8/7c/10679894/s10679894.m3u8",
             "subtitles": [{
@@ -111,6 +120,7 @@
         {
             "number": 10,
             "title": "The Shatter Dragon",
+            "description": "ThunderFang is freed, and only the Ninja stand between the Shatter Dragon of Chaos and his revenge.",
             "thumbnail": "https://image.tmdb.org/t/p/original/dfzeZGnjXfH9tg2FSrkHajg1Xb.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/eb/a9/10679895/s10679895.m3u8",
             "subtitles": [{
@@ -123,6 +133,7 @@
         {
             "number": 11,
             "title": "The Hollow Ones",
+            "description": "Ras leads Arin and Sora into unexpected chaos in Mysterium while the Ninja recruit Jay for a special mission.",
             "thumbnail": "https://image.tmdb.org/t/p/original/gduADRKeCdzpzhED9tNa6XCE5G1.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/09/cc/10715406/s10715406.m3u8",
             "subtitles": [{
@@ -135,6 +146,7 @@
         {
             "number": 12,
             "title": "Human Resources",
+            "description": "With Mysterium under attack, Ras, Arin and Sora rely on the Sorceress for help, while Jay leads the Ninja to the Administration on their way to Lee.",
             "thumbnail": "https://image.tmdb.org/t/p/original/twgknjWbSkYbxfN42EAq8MC63qO.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f1/00/10715407/s10715407.m3u8",
             "subtitles": [{
@@ -147,6 +159,7 @@
         {
             "number": 13,
             "title": "Between You and Lee",
+            "description": "Lloyd, Jay, Nya and Wyldfyre go undercover in the strange Land of Lee, while Riyu's training under Rontu is off to a bumpy start.",
             "thumbnail": "https://image.tmdb.org/t/p/original/uAHbNfA5WfOrjygNeePkoWp5wZG.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bc/37/10715408/s10715408.m3u8",
             "subtitles": [{
@@ -159,6 +172,7 @@
         {
             "number": 14,
             "title": "Casket of Bones",
+            "description": "The Underworld tests Arin and Sora's commitment to Ras, while Nya and Jay work together to expose Lee's secret.",
             "thumbnail": "https://image.tmdb.org/t/p/original/lWd4xHaY38ESQgCW5XZwiai4JsS.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e0/58/10715409/s10715409.m3u8",
             "subtitles": [{
@@ -171,6 +185,7 @@
         {
             "number": 15,
             "title": "The Screaming Earth",
+            "description": "Cole, Frak and Kai unearth a shocking discovery outside the Land of Lost Things, while the Ninja reunite to liberate Lee.",
             "thumbnail": "https://image.tmdb.org/t/p/original/kOPOowOtS6QPEwTdo9wXT1xD0ww.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c9/df/10715410/s10715410.m3u8",
             "subtitles": [{
@@ -183,6 +198,7 @@
         {
             "number": 16,
             "title": "Under the Light of a Mechanical Moon",
+            "description": "The Ninja escape Lee and head for the source of the threat, while Ras plans his next move.",
             "thumbnail": "https://image.tmdb.org/t/p/original/zcyaJxTGniyuSjSz9IwFD55NRgn.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cf/45/10715411/s10715411.m3u8",
             "subtitles": [{
@@ -195,6 +211,7 @@
         {
             "number": 17,
             "title": "The Vault of Focus",
+            "description": "In the City of Temples, the Ninja find guidance from an unlikely source, while Cole, Kai and Frak battle the Hollow Ones in Imperium.",
             "thumbnail": "https://image.tmdb.org/t/p/original/4r0KMqOgPWyLOjjrUMmzkyktRGQ.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/37/db/10715412/s10715412.m3u8",
             "subtitles": [{
@@ -207,6 +224,7 @@
         {
             "number": 18,
             "title": "For Whom the Bell Tolls",
+            "description": "The Ninja embark on their separate journeys to awaken the Arc Dragon of Focus but deal with unexpected - and annoying - interruptions.",
             "thumbnail": "https://image.tmdb.org/t/p/original/l7IqKyDjupG0t97PkVQuoQae15h.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4d/7a/10715413/s10715413.m3u8",
             "subtitles": [{
@@ -219,6 +237,7 @@
         {
             "number": 19,
             "title": "When Doves Cry",
+            "description": "The Ninja reach the Caves of Bells while Lloyd and Arin fight their way through the Spectral Lands to summon the Arc Dragon.",
             "thumbnail": "https://image.tmdb.org/t/p/original/4tlQrLIqP3R2jFzZDb4N8p37Z7w.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6c/9c/10715414/s10715414.m3u8",
             "subtitles": [{
@@ -231,6 +250,7 @@
         {
             "number": 20,
             "title": "Chaos Reigns",
+            "description": "ThunderFang gathers the last of his power in the Spectral Lands and only the Ninja can stop him - but at what cost?",
             "thumbnail": "https://image.tmdb.org/t/p/original/lxvNFL8je4l5AQo4acXQAEUjYYH.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3e/5d/10715415/s10715415.m3u8",
             "subtitles": [{

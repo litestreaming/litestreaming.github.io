@@ -1,0 +1,170 @@
+{
+  "season": 4,
+  "episodes": [
+    {
+      "number": 1,
+      "title": "Familiar Tales",
+      "description": "MK is living that hero lifestyle, busting bad guys and saving the day, until he opens a cursed scroll and his world is flipped upside down once again!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/48/6d/b59f21e58bd1a6011a5974234280bccb.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e2/3d/10508435/s10508435.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/c2/24/7db5cef1f975802162170f6f4eaef7d0.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "New Adventures",
+      "description": "Unable to reseal the scroll, MK's friends become trapped inside! Luckily, a mysterious new hero arrives in time to save Mei and MK from the same fate!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/af/de/9d0fe9009c1055435b709af73e9b59a8.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0f/cf/10508436/s10508436.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/88/05/299aee4b07a375d252b8dfb80c538c85.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "The Great Tang Man",
+      "description": "In order to find Tang, our heroes must start their Journey where Monkey King began his! In the company of the great monk Tang Sanzang.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/ee/3a/59e78c9636d07106010405f79bf7350f.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ff/c2/10508437/s10508437.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/06/23/b68b76605ab92396890e60c4d263ed6a.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Pig Napped!",
+      "description": "Kidnapped by Pigsy in the body of his demonic ancestor, Zhu Ganglie, Tang must help Pigsy remember who he is before he's turned into demon-dinner!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/93/05/c3a7205600aece43be4543881df29ff6.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cf/05/10508438/s10508438.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9f/98/628989ce7a3ff1a35609fee63ffa3d56.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Court of the Yellow Robed Demon",
+      "description": "When our heroes are scattered to different memories, Mei is captured by a powerful demon, and her family sword is broken!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/dc/b5/5407eec5685664ea09fa4035f994739b.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f3/25/10508439/s10508439.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/36/be/28a8ec100aa0c85334ce857e73a943a5.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Show Me the Monster",
+      "description": "Trapped in the body of his ancestor, Sandy challenges Pigsy to a fight! Meanwhile, MK meets the wise master who taught Monkey King all he knows.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/26/b2/e0146e59d68ef8453396e7f08562c840.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/56/dd/10508440/s10508440.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/35/1d/269f95c85d520765584befa5c6a6d74b.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Pitiful Creatures",
+      "description": "As MK faces off with the scroll's curse, he's forced to confront his mysterious past and his ominous future.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/da/89/5cf8b3bd5f71685c76080ee5bcc0deb6.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/26/c3/10508441/s10508441.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/0e/cf/25398ae5f4fd527447c2835647608a01.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "The Brotherhood",
+      "description": "Pulled from the scroll, the gang find themselves facing a new threat. This time, they are totally outclassed.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/29/fd/66675f63aaabd9423772e2b051cce4f5.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2e/ae/10508442/s10508442.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/99/2f/6567fe70fef4a1f955f8b9db5cd9ec14.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Roast of the Monkie kids",
+      "description": "As the Brotherhood prepare their assault on the Celestial Realm, the heroes must train if they have any chance of saving the world!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/df/bd/605cc8033db6222c526acfb7dcaba42a.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6e/19/10508443/s10508443.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/39/fe/711bf349e3a16a90bae325f837c67c4f.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "The Jade Emperor",
+      "description": "Things aren't looking good as the Brotherhood overwhelms the Celestial Armies. Desperate to act, Mei leads the charge in a rescue mission.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4a/3c/423988d2f15858fe5a738230ad018c54.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c6/28/10508444/s10508444.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/25/e3/857aae7606ea1d484d32c4d771449edc.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "The Emperor's Wrath",
+      "description": "MK and the other heroes must embrace their ancestral powers if they've any hope to stop the New Jade Emperor before he tears the whole universe apart!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e3/0f/51b12ff7fb1a41221f0a9c4c864a2de5.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/91/f7/10518539/s10518539.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f1/65/10ca7186f4c637a06fd0b59ed6e0d6c5.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

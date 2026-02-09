@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "Shintaro",
+            "description": "The ninja are invited to attend the birthday party of Princess Vania in the Kingdom of Shintaro. They bring along Master Wu who is feeling his age.",
             "thumbnail": "https://image.tmdb.org/t/p/original/1ibBpHf1sykPgUoBtqmZatsjdIU.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/94/ea/10468487/s10468487.m3u8",
             "subtitles": [{
@@ -15,6 +16,7 @@
         {
             "number": 2,
             "title": "Into the Dark",
+            "description": "Princess Vania reveals a secret entrance that leads to an underground mine beneath Shintaro where the city’s dark secrets are held.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGFjNDBiYjgtZWE1ZC00ZGI5LWFlZDUtYjY0MjRkMmY1YTZkXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/05/10468488/s10468488.m3u8",
             "subtitles": [{
@@ -27,6 +29,7 @@
         {
             "number": 3,
             "title": "The Worst Rescue Ever",
+            "description": "The ninja attempt to rescue Cole, but the bickering of his fellow prisoners  alerts the Skull Sorcerer, and soon the ninja are prisoners too.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZWM1ZjNmMjQtNmM0Ny00ODhhLThjNmEtY2M4MTQ0ZTQyN2Y4XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cc/b2/10468489/s10468489.m3u8",
             "subtitles": [{
@@ -39,6 +42,7 @@
         {
             "number": 4,
             "title": "The Two Blades",
+            "description": "In order to escape the Skull Sorcerer’s chain-gang, the ninja must convince the Munce and Geckles to put aside their distrust and work together.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2UwYTI2MzctYzliYi00MTU4LWIwYWUtN2JmNWRmMmNlNWYxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/9b/10468490/s10468490.m3u8",
             "subtitles": [{
@@ -51,6 +55,7 @@
         {
             "number": 5,
             "title": "Queen of the Munce",
+            "description": "Jay, Nya and Lloyd are led into the Mines of Shintaro by Murt who brings them back to the Munce “Home-Cave”. The Munce Queen takes a liking to Jay.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZWUyZjMwNzctMmRmNi00MWI3LTkzMjctNDUwZTQ1MTBmZjRlXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/ef/10468491/s10468491.m3u8",
             "subtitles": [{
@@ -63,6 +68,7 @@
         {
             "number": 6,
             "title": "Trial by Mino",
+            "description": "A party of Geckles suspect Kai and Zane of being in league with the Skull Sorcerer and bring them to their leader who subjects them to a Trial-By-Mino",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTAxOGY0ODctZmUzMS00YTJiLThkMzktZjMxZDE2YTU2MzA2XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2d/fd/10468492/s10468492.m3u8",
             "subtitles": [{
@@ -75,6 +81,7 @@
         {
             "number": 7,
             "title": "The Skull Sorcerer",
+            "description": "Separated from the others, Cole must find his way to the surface to alert King Vangelis of the dangerous Skull Sorcerer.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BOTM2YmMzNmYtMGE5NC00MjQ2LTgzN2EtYjM5ZjdiZGZlMzU5XkEyXkFqcGc@.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/51/61/10468493/s10468493.m3u8",
             "subtitles": [{
@@ -87,6 +94,7 @@
         {
             "number": 8,
             "title": "The Real Fall",
+            "description": "An entire episode chronicles how Cole, Princess Vania and Master Wu fall down a seemingly endless tunnel, into the bowels of Shintaro Mountain.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTdjM2JlMzEtZjQ3MS00Mjk4LTk1ZDctZmNjMDAzNmI0N2UyXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/e5/10468494/s10468494.m3u8",
             "subtitles": [{
@@ -99,6 +107,7 @@
         {
             "number": 9,
             "title": "Dungeon Party!",
+            "description": "Cole, Wu and Princess Vania befriend a motley group of survivors, called the Lowly, and are told the story of how they too ended up at “Rock-Bottom.”",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmU5N2Y1NTctZWM1Yi00M2RjLTljMDUtMGI4ZTQ3NzlmYjkxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/84/10468495/s10468495.m3u8",
             "subtitles": [{
@@ -111,6 +120,7 @@
         {
             "number": 10,
             "title": "Dungeon Crawl!",
+            "description": "Having joined forces with the Lowly in their quest to defeat King Vangelis, Cole, Wu, and Vania have to find a way out of the bottom of the mountain.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjg4NmUzMzgtYzRjNS00YjA2LWE1NTMtMzlhZjllMWY5ZjgxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e7/f3/10468496/s10468496.m3u8",
             "subtitles": [{
@@ -123,6 +133,7 @@
         {
             "number": 11,
             "title": "Grief-Bringer",
+            "description": "Nya and Kai, who have become the leaders of the Munce and Geckles, try to unite the tribes and defeat their mutual enemy, the Skull Sorcerer.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTU0NDlkNjktMmIyZS00ZTYwLWE5Y2UtY2Y1ZWJmNzE5M2NmXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/83/10468497/s10468497.m3u8",
             "subtitles": [{
@@ -135,6 +146,7 @@
         {
             "number": 12,
             "title": "Masters Never Quit",
+            "description": "Cole, Princess Vania, Wu & the Lowly arrive at a temple in Shintaro Mountain which was once a training ground for Earth Elementals incl. Cole’s mother",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNzBjYWI0OTEtNjk3Mi00ZThlLTg0NzUtNGZiNjk3NzJlNjYxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/08/0d/10468498/s10468498.m3u8",
             "subtitles": [{
@@ -147,6 +159,7 @@
         {
             "number": 13,
             "title": "The Darkest Hour",
+            "description": "The ninja, the Munce and the Geckles take refuge in the Geckle Strong-Cave about to confront the Skull Sorcerer and Grief-Bringer.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWI3OTQ1Y2MtNDMyNi00ZGI1LTg0MWUtMWFlN2UwMmQ3OWU5XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/9f/10468499/s10468499.m3u8",
             "subtitles": [{
@@ -159,6 +172,7 @@
         {
             "number": 14,
             "title": "The Ascent",
+            "description": "Cole, the Lowly, Princess Vania and Wu blast their way out of the mountain to confront the evil Skull Sorcerer!",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMGZjMmU0ZTQtMjAwNi00NmUzLTllMGItZjhiZTE0ZTA5OWY1XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/85/a5/10468500/s10468500.m3u8",
             "subtitles": [{
@@ -171,6 +185,7 @@
         {
             "number": 15,
             "title": "The Upply Strike Back!",
+            "description": "Cole and the Upply arrive to rescue Lloyd and the ninja. To do so, Cole will need to retrieve his mother’s fabled swords, the Blades of Deliverance.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmM5YTUxMjktNjJkNC00ZDc2LWFkMjYtY2QzYTE1NDM1OTI4XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a2/8c/10468501/s10468501.m3u8",
             "subtitles": [{
@@ -183,6 +198,7 @@
         {
             "number": 16,
             "title": "The Son of Lilly",
+            "description": "The battle for the fate of Shintaro Mountain concludes!",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2UwOTViYmYtOTIwNC00NDU4LTgxNDMtMGQyNWViMWJhMDM5XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/40/83/10468502/s10468502.m3u8",
             "subtitles": [{

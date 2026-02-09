@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "The Darkness Comes",
+            "description": "The ninja race back to the Monastery of Spinjitzu. This is the last stand. The final battle against the Oni is now. Will their joined Spinjitzu powers defeat the Oni for good or tear apart Ninjago itself?",
             "thumbnail": "https://image.tmdb.org/t/p/original/n9nQsx75aGxP6M1BG1uEVZhrrrL.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/bb/10468503/s10468503.m3u8",
             "subtitles": [{
@@ -15,6 +16,7 @@
         {
             "number": 2,
             "title": "Into the Breach",
+            "description": "As NINJAGO City rebuilds, Faith arrives with a dire warning: the Oni have returned and are destroying the realms, one by one. NINJAGO must prepare, and Lloyd must face the possibility that to defeat this foe, he may need the help of another enemy.",
             "thumbnail": "https://image.tmdb.org/t/p/original/ktLIoQAa22ufrzPzJST8bp6S4sU.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6e/ba/10468504/s10468504.m3u8",
             "subtitles": [{
@@ -27,6 +29,7 @@
         {
             "number": 3,
             "title": "The Fall",
+            "description": "Having freed Lord Garmadon from Kryptarium Prison, the ninja are beset by doubts, particularly Lloyd. Lord Garmadon and Lloyd journey into the cloud of darkness in an effort to stop the Oni’s invasion.",
             "thumbnail": "https://image.tmdb.org/t/p/original/fNK9RgS3AhZxtNIJxNadePBnonv.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/96/df/10468505/s10468505.m3u8",
             "subtitles": [{
@@ -39,6 +42,7 @@
         {
             "number": 4,
             "title": "Endings",
+            "description": "The Oni in Ninjago City are stronger than anyone could have imagined, and the ninja must risk a daring rescue of Lloyd and Garmadon. Though there is still a slight hope, one ninja will pay a terrible price.",
             "thumbnail": "https://image.tmdb.org/t/p/original/ivHlAa8BhThWNQ1d2DCVjtQfvi6.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/ae/10468506/s10468506.m3u8",
             "subtitles": [{

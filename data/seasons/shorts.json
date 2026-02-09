@@ -3,86 +3,87 @@
     "episodes": [{
             "number": 1,
             "title": "Pilot Shorts",
-            "thumbnail": "https://img.youtube.com/vi/2TjEawUQiCw/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/alpjqzeq.mp4"
+            "description": "Video of all those classic mini movies masters of Spinjitzu episodes 1 to 6 from 2011 with Zane, Master Wu, Jay, Kai, Nya Cole and Lord Garmadon as he is cast in the Underworld! With the following full episodes: Secrets of the Blacksmith, Flight of the Dragon Ninja, The New Masters of Spinjitzu, An Underworldly Takeover, Return to the Fire Temple and Battle Between Brothers.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/2d/56/5273a99749a4269b1ad23253dd0f7543.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7b/6d/10370859/s10370859.m3u8"
         },
         {
             "number": 2,
             "title": "Chen's Chair",
             "thumbnail": "https://img.youtube.com/vi/ERZbsu0zUoo/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/dzrezrkt.mp4"
+            "embed": ""
         },
         {
             "number": 3,
             "title": "Tall Tales",
             "thumbnail": "https://img.youtube.com/vi/Jkl90xY6usk/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/e6vcd1ln.mp4"
+            "embed": "https://www.youtube.com/embed/Jkl90xY6usk"
         },
         {
             "number": 4,
             "title": "Villain Throwbacks",
             "thumbnail": "https://img.youtube.com/vi/PIN5bxYBB8Q/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/sizq31f2.mp4"
+            "embed": "https://www.youtube.com/embed/PIN5bxYBB8Q"
         },
         {
             "number": 5,
             "title": "Samurai X Rising",
             "thumbnail": "https://img.youtube.com/vi/c7oWvw-sXPI/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/xq55wpp.mp4"
+            "embed": "https://www.youtube.com/embed/c7oWvw-sXPI"
         },
         {
             "number": 6,
             "title": "Operation Heavy Metal",
             "thumbnail": "https://img.youtube.com/vi/YWN3cjmof2w/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/pwkhtlt.mp4"
+            "embed": ""
         },
         {
             "number": 7,
             "title": "Wu's Teas",
             "thumbnail": "https://img.youtube.com/vi/8PZ8UdoDC5c/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/jppiotun.mp4"
+            "embed": "https://www.youtube.com/embed/8PZ8UdoDC5c"
         },
         {
             "number": 8,
             "title": "Decoded",
             "thumbnail": "https://ovp.itv.com/v2/images/programme/vc9ktbw/itv_hub/01_Hero_DesktopCTV/16x9?distributionPartner=itv_hub&fallback=standard",
-            "embed": "https://pomf2.lain.la/f/lupel886.mp4"
+            "embed": ""
         },
         {
             "number": 9,
             "title": "Meet the Ninja",
             "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/7/75/Meet_the_Ninja_group.png",
-            "embed": "https://pomf2.lain.la/f/d8s2d322.mp4"
+            "embed": ""
         },
         {
             "number": 10,
             "title": "Tales from the Monastery of Spinjitzu",
             "thumbnail": "https://img.youtube.com/vi/yWbPTpTjcvA/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/kgy36ke.mp4"
+            "embed": ""
         },
         {
             "number": 11,
             "title": "Prime Empire Original Shorts",
             "thumbnail": "https://img.youtube.com/vi/xi_2h5c55Bc/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/y0gyjps3.mp4"
+            "embed": ""
         },
         {
             "number": 12,
             "title": "Reimagined",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e9/0b/876799e8288bc052656bf72cf7174655.jpg",
-            "embed": "https://pomf2.lain.la/f/4r0tlc6n.mp4"
+            "embed": "https://www.youtube.com/embed/UlL4tpcf6SM"
         },
         {
             "number": 13,
             "title": "The Virtues of Spinjitzu",
             "thumbnail": "https://img.youtube.com/vi/C7rSPfsvpoQ/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/vhfvjuhr.mp4"
+            "embed": "https://www.youtube.com/embed/C7rSPfsvpoQ"
         },
         {
             "number": 14,
             "title": "Will you enter the Dream World?",
             "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/4/4e/New_lego_series_cs.png",
-            "embed": "https://pomf2.lain.la/f/b63i5lb.mp4"
+            "embed": ""
         },
         {
             "number": 15,
@@ -94,7 +95,7 @@
             "number": 16,
             "title": "The Elemental Mechs",
             "thumbnail": "https://img.youtube.com/vi/qJZBJEq47Gk/maxresdefault.jpg",
-            "embed": "https://pomf2.lain.la/f/bddmvmrj.mp4"
+            "embed": ""
         }
     ]
 }

@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "Farewell the Sea",
+            "description": "A year after Nya's sacrifice, the Ninja reunite to investigate vengestone smuggling and the appearance of a team of New Ninja",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGYzYTYyOTItZDJiZS00OGExLWE0YzYtMDFlNjEzN2M3YTRhXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ef/97/10482566/s10482566.m3u8",
             "subtitles": [{
@@ -15,6 +16,7 @@
         {
             "number": 2,
             "title": "The Call of Home",
+            "description": "After rescuing a drowning sailor, Nya meets a fellow water-elemental and comes up with a plan to regain her humanity.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZGM3OTIyM2MtMzM0NC00ZTcxLWFlOTgtM2IzZjMzMWJlYzRjXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0d/59/10483072/s10483072.m3u8",
             "subtitles": [{
@@ -27,6 +29,7 @@
         {
             "number": 3,
             "title": "The Shape of Nya",
+            "description": "The Ninja investigate the vengestone operation but end up fighting each other after a humiliating rescue by the New Ninja.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDZhZWE4ODctNTA0ZS00OWI4LTk1MDktMDlhYjQ0M2JjZjQyXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d1/f4/10483059/s10483059.m3u8",
             "subtitles": [{
@@ -39,6 +42,7 @@
         {
             "number": 4,
             "title": "A Mayor Problem",
+            "description": "When the Mayor refuses to release Aspheera from Kryptarium Prison, the Ninja go undercover to free the villain themselves.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWM5MmE1M2MtZTYyMC00MDkwLTk0NTktYjk0NmY0M2VjMzA0XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b8/30/10483058/s10483058.m3u8",
             "subtitles": [{
@@ -51,6 +55,7 @@
         {
             "number": 5,
             "title": "Public Enemies, 1, 2, 3, 4 and 5!",
+            "description": "The Ninja attempt an incognito highspeed heist to retrieve Aspheera's magical staff, but another run-in with the New Ninja exposes their secret.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmNmNWI5MDYtYjUxZi00Y2Q4LThiMWUtNDU0MWE1MmE2MTM1XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8b/e3/10483056/s10483056.m3u8",
             "subtitles": [{
@@ -63,6 +68,7 @@
         {
             "number": 6,
             "title": "A Painful Promise",
+            "description": "The Ninja ward off the New Ninja to buy time while Aspheera returns Nya to human form, and a new villain plots trouble for Ninjago.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDhiYTJiMTItZmRjMC00NWQ3LWIwMGYtMzdlMzU3ZGI1NzA0XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/20/47/10483054/s10483054.m3u8",
             "subtitles": [{
@@ -75,6 +81,7 @@
         {
             "number": 7,
             "title": "Ninjago City vs. Ninja",
+            "description": "The Ninja are imprisoned, and lloyd receives a mysterious masked visitor with a cryptic warning from the Crystal King.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjhlNGRhNGQtZDliNS00NTRmLThkY2UtZTAzZjhmNGU0MjAxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/0f/10483280/s10483280.m3u8",
             "subtitles": [{
@@ -87,6 +94,7 @@
         {
             "number": 8,
             "title": "Kryptarium Prison Blues",
+            "description": "The Ninja run into an old enemy in prison and attempt to thwart his escape, while Nya finds new hope in an old mech.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjQ4YzFjYWEtY2EwYy00MjY0LTkwYTYtMmNhM2U5ODRlY2E2XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9a/e6/10483279/s10483279.m3u8",
             "subtitles": [{
@@ -99,6 +107,7 @@
         {
             "number": 9,
             "title": "Hounddog McBrag",
+            "description": "Nya, as Samurai X, helps the Ninja escape, but Ninjago's toughest marshal, Hounddog McBrag, is hot on their trail.",
             "thumbnail": "https://image.tmdb.org/t/p/original/1ab0aED96RdzHD4YsirLhNlfXDg.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/52/00/10483278/s10483278.m3u8",
             "subtitles": [{
@@ -111,6 +120,7 @@
         {
             "number": 10,
             "title": "The Benefit of Grief",
+            "description": "A hopeful singer headed to Ninjago City helps Kai, Zane and Dareth evade Hounddog McBrag, and Zane learns the value of emotions.",
             "thumbnail": "https://image.tmdb.org/t/p/original/fdZfAAsF866f5BDdSM5OYVXVsqT.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/41/7f/10483277/s10483277.m3u8",
             "subtitles": [{
@@ -123,6 +133,7 @@
         {
             "number": 11,
             "title": "The Fifth Villain",
+            "description": "The Ninja regroup at Twitchy's gas station and escape Hounddog McBrag's capture with a plan to infiltrate the Council of the Crystal King.",
             "thumbnail": "https://image.tmdb.org/t/p/original/tmpVJOJcOHwOIJhWhDry2dtdYcT.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ee/23/10483276/s10483276.m3u8",
             "subtitles": [{
@@ -135,6 +146,7 @@
         {
             "number": 12,
             "title": "The Council of the Crystal King",
+            "description": "Lloyd travels in disguise to a hidden temple where he joins the Council of the Crystal King and learns Kabuki Mask's true identity.",
             "thumbnail": "https://image.tmdb.org/t/p/original/jHthI4BcvGqDbmslRlC2asJWZpu.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/8d/10483055/s10483055.m3u8",
             "subtitles": [{
@@ -147,6 +159,7 @@
         {
             "number": 13,
             "title": "A Sinister Shadow",
+            "description": "Harumi tells Lloyd how she survived and became the herald of the Crystal King. Lloyd learns her plan for Ninjago but is powerless to stop her.",
             "thumbnail": "https://image.tmdb.org/t/p/original/3wyL9PsMg6YaybZGhQojiE1adcI.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fc/8b/10494661/s10494661.m3u8",
             "subtitles": [{
@@ -159,6 +172,7 @@
         {
             "number": 14,
             "title": "The Spider's Design",
+            "description": "The Ninja search for Lloyd and walk right into Harumi's trap as Lloyd falls victim to her manipulation.",
             "thumbnail": "https://image.tmdb.org/t/p/original/mkpo1uzaz5ZGATIrcaowSMMiCit.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/94/10494662/s10494662.m3u8",
             "subtitles": [{
@@ -171,6 +185,7 @@
         {
             "number": 15,
             "title": "The Fall of the Monastery",
+            "description": "The Ninja search for escape while Master Wu and the others defend the Weapons of Spinjitzu from the Council of the Crystal King.",
             "thumbnail": "https://image.tmdb.org/t/p/original/gApihsLe23jzBSyXH3Y3dkXW9RJ.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a6/69/10494663/s10494663.m3u8",
             "subtitles": [{
@@ -183,6 +198,7 @@
         {
             "number": 16,
             "title": "Darkness Within",
+            "description": "Nya, as Samurai X, rescues the Ninja, but Harumi's plan for the Weapons of Spinjitzu is already in motion.",
             "thumbnail": "https://image.tmdb.org/t/p/original/aZAb2aXaR6oHPcnMIjpC1n6oYLA.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c8/26/10494664/s10494664.m3u8",
             "subtitles": [{
@@ -195,6 +211,7 @@
         {
             "number": 17,
             "title": "The Coming of the King",
+            "description": "Lloyd escapes from the Crystal Temple with the help of an unlikely ally, as both the Crystal King and the Ninja prepare for battle.",
             "thumbnail": "https://image.tmdb.org/t/p/original/kxcJRRxVQQHUUJkFG3SiAy1ugdw.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7c/4e/10494665/s10494665.m3u8",
             "subtitles": [{
@@ -207,6 +224,7 @@
         {
             "number": 18,
             "title": "Return to Primeval's Eye",
+            "description": "The Ninja retrieve the Destiny's Bounty and race to rescue Lloyd as he evades capture in the jungle below the Crystal Temple.",
             "thumbnail": "https://image.tmdb.org/t/p/original/dVT65uMBoc6zEGx2EX4QN9KQ0I1.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d0/8e/10494666/s10494666.m3u8",
             "subtitles": [{
@@ -219,6 +237,7 @@
         {
             "number": 19,
             "title": "Crystastrophe",
+            "description": "The Ninja fight back the Crystal King's army as Lloyd and Master Wu trace a clue back to an unlikely ally.",
             "thumbnail": "https://image.tmdb.org/t/p/original/8FM7Y1Bx3DelSpqvR6GzpICCcMU.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b9/4c/10494667/s10494667.m3u8",
             "subtitles": [{
@@ -231,6 +250,7 @@
         {
             "number": 20,
             "title": "Christofern",
+            "description": "Lloyd and Master Wu listen to Garmadon's recent journey of self-improvement and find the clue they need in the fight against the Crystal King.",
             "thumbnail": "https://image.tmdb.org/t/p/original/acPJB8B5CZb1Em59TBPqVc1s2Z8.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f1/47/10494668/s10494668.m3u8",
             "subtitles": [{
@@ -243,6 +263,7 @@
         {
             "number": 21,
             "title": "A Lesson in Anger",
+            "description": "Garmadon trains Lloyd to use Oni Form, but the Ninja resort to another strategy as the Crystal King's forces reach Ninjago.",
             "thumbnail": "https://image.tmdb.org/t/p/original/3RZedVP2Nz2ktptBZpXaprJLwYU.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/65/61/10494669/s10494669.m3u8",
             "subtitles": [{
@@ -255,6 +276,7 @@
         {
             "number": 22,
             "title": "Brave but Foolish",
+            "description": "The Ninja launch an assault through Ninjago City in their upgraded vehicles, but the Crystal King unleashes a new source of power to stop them.",
             "thumbnail": "https://image.tmdb.org/t/p/original/A4uLylRrVWMUvpsvMxY7k0rq7qy.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/0a/10494670/s10494670.m3u8",
             "subtitles": [{
@@ -267,6 +289,7 @@
         {
             "number": 23,
             "title": "Quittin' Time!",
+            "description": "Master Wu takes shelter with an unlikely resistance while Nya and Jay escape the wreckage of the Destiny's Bounty with a plan to find help.",
             "thumbnail": "https://image.tmdb.org/t/p/original/6NQpCPYe5DdgvOpRh4GImCxNGkU.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/92/da/10494671/s10494671.m3u8",
             "subtitles": [{
@@ -279,6 +302,7 @@
         {
             "number": 24,
             "title": "Return of the Ice Emperor",
+            "description": "Pixal the broken Zane to Borg Tower for repairs with the help of unlikely allies, and Lloyd shows an old adversary what it means to be a hero.",
             "thumbnail": "https://image.tmdb.org/t/p/original/wF1B0RTkE8vBqGs1DFWKiJl9Cz3.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/87/10494672/s10494672.m3u8",
             "subtitles": [{
@@ -291,6 +315,7 @@
         {
             "number": 25,
             "title": "Safe Haven",
+            "description": "Kai and Cole avoid capture and bring new hope to the resistance, while Lloyd and Garmadon search for the missing Serpentine.",
             "thumbnail": "https://image.tmdb.org/t/p/original/p35tp3S6qIUswzXgeaTW9dwplNh.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4e/58/10494673/s10494673.m3u8",
             "subtitles": [{
@@ -303,6 +328,7 @@
         {
             "number": 26,
             "title": "Compatible",
+            "description": "The Ninja reach out to allies across Ninjago, while at Borg Tower Pixal prepares for the coming battle.",
             "thumbnail": "https://image.tmdb.org/t/p/original/yPC1tQrDZn2awaoeITO2v2qHloq.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/43/d9/10494674/s10494674.m3u8",
             "subtitles": [{
@@ -315,6 +341,7 @@
         {
             "number": 27,
             "title": "Distress Calls",
+            "description": "Racer 7 escorts Cole across Ninjago City to send for help, and Lloyd gives Garmadon a chance to prove he has changed.",
             "thumbnail": "https://image.tmdb.org/t/p/original/fuBifzbGdklrwjK6QqVsLZ8tNTa.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/a9/10494675/s10494675.m3u8",
             "subtitles": [{
@@ -327,6 +354,7 @@
         {
             "number": 28,
             "title": "An Issue of Trust",
+            "description": "The Ninja prepare to make their last stand as the crystal army closes in, while Lloyd and Garmadon take the fight to the Crystal King.",
             "thumbnail": "https://image.tmdb.org/t/p/original/z1GVfdMc6hyeOKKr75OCnnsaeVI.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/87/ea/10494676/s10494676.m3u8",
             "subtitles": [{
@@ -339,6 +367,7 @@
         {
             "number": 29,
             "title": "Dragon Form",
+            "description": "Lloyd and Garmadon face the Crystal King as the Ninja strike back at the enemy with old allies and new powers.",
             "thumbnail": "https://image.tmdb.org/t/p/original/rVzSPm4AjEyRINjWsfx0XHqa8Q2.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/37/f2/10494677/s10494677.m3u8",
             "subtitles": [{
@@ -351,6 +380,7 @@
         {
             "number": 30,
             "title": "Roots",
+            "description": "The Ninja show their true potential and perform a selfless act to save Ninjago from the Crystal King.",
             "thumbnail": "https://image.tmdb.org/t/p/original/boa9Yzl2H8GHedIkX2RD1Rzj16w.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/61/51/10494678/s10494678.m3u8",
             "subtitles": [{

@@ -3,120 +3,140 @@
     "episodes": [{
             "number": 1,
             "title": "Everything's Changed",
+            "description": "The dream chaser’s jobs are on the line now that the dream world is under the guardianship of a mysterious new hero called “Dreamsmasher.”",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/84/c1/a6ca3b319879f7cd3d5b8960a8d608f9.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0c/9a/10692558/s10692558.m3u8"
         },
         {
             "number": 2,
             "title": "Join the Club",
+            "description": "After an argument, Z-Blob refuses to follow Mateo back into the waking world, inspiring them to take two very different journeys of self-discovery.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/3f/14/6f7a66870c45f6a1921d485a52eb4744.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fd/46/10692559/s10692559.m3u8"
         },
         {
             "number": 3,
             "title": "Whack Race 2025",
+            "description": "Being bored in the waking world, Mateo spices things up by organizing an off-road dream vehicle race in the dream world.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/61/e8/7dbb4eaf06b4f5f4441fd7d34b423841.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dc/ae/10692560/s10692560.m3u8"
         },
         {
             "number": 4,
             "title": "Dreamocracy",
+            "description": "In order to consolidate his power within the dream world, Izzie suggests that Dreamsmasher holds an election to become the legendary dream keeper!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/43/c1/bd29f9088c86be2cdc1a8ca8d549619d.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/0f/3d/10692561/s10692561.m3u8"
         },
         {
             "number": 5,
             "title": "Freak-quencies",
+            "description": "After discovering the identity of Dreamsmasher, the dream chasers must figure out a way to stop him before he changes the dream world permanently.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7b/b2/7000e07d956be256c43c16801d7eaf0b.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5b/b5/10692562/s10692562.m3u8"
         },
         {
             "number": 6,
             "title": "InterFEARence",
+            "description": "The dream splitter has an unexpected effect as it throws our dream chasers in different dream frequencies!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/12/06/7ba8d9029d033a8968f1c26849292cfd.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3c/5e/10692563/s10692563.m3u8"
         },
         {
             "number": 7,
             "title": "Lunia",
+            "description": "When Lunia’s true identity is revealed, she regales the dream chasers with the epic story of how she became the legendary dream keeper.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/03/09/9e429eb1c13bb173dfa9d8eecf35bb8d.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fa/26/10692564/s10692564.m3u8"
         },
         {
             "number": 8,
             "title": "Moving On Up",
+            "description": "The dream chasers hunt for Lunia’s hourglass, which they believe will help them defeat the evil Dreamsmasher.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0d/96/42b4d8f41333b3c28566b53c3ff94913.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/74/76/10692565/s10692565.m3u8"
         },
         {
             "number": 9,
             "title": "Brainstorm",
+            "description": "After locating Lunia’s hourglass, the team heads to the dream world’s sun, which holds more secrets than the object they’re searching for!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/63/95/42862d8a89d042c797df158e125b6c65.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/12/37/10692566/s10692566.m3u8"
         },
         {
             "number": 10,
             "title": "Boxed In",
+            "description": "Z-Blob returns in a daring rescue to break Mateo out of Dreamsmasher’s “box” and helps him find Lunia’s hourglass!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0e/36/dd2f9bed00d22e2bcedf5b0d1cf7067e.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/8c/10692567/s10692567.m3u8"
         },
         {
             "number": 11,
             "title": "The Happy App Trap",
+            "description": "The Berlin Bright Bureau receives a mysterious package with new “goggles” to help them become more efficient dream chasers, but at what cost?",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/08/05/522755ee3d1d57e3c296d808ae0af8ce.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/08/05/522755ee3d1d57e3c296d808ae0af8ce.jpg"
         },
         {
             "number": 12,
             "title": "Mission: Ungoggle-Able",
+            "description": "Mateo, Izzie, Zoey, and Cooper are unwilling participants in a sleep study at Happy App Headquarters, and it’s up to the others to break them out!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/5b/c8/cc3875b0b19b6cbfb13286795bcc52ad.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cd/37/10715417/s10715417.m3u8"
         },
         {
             "number": 13,
             "title": "D-Shock",
+            "description": "The gang flees to the wilds of Central Park where they plan their next move against the Brain, and also receive an unexpected visitor.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/63/7a/88c43eb801c489ae9ee4942f252bc8d4.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/42/bb/10715418/s10715418.m3u8"
         },
         {
             "number": 14,
             "title": "Robot Fight Club",
+            "description": "When our heroes infiltrate the Happy App building to disrupt production they find themselves thrust into a robot fight club where they must compete!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a4/a1/81ddee1a0645fba2818ac474509e6cb8.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/52/10715419/s10715419.m3u8"
         },
         {
             "number": 15,
             "title": "Fish Out of Water",
+            "description": "As the team goes to investigate an area of the dream world that scares the Brain, Zoey falls into a strange dimension and an even stranger adventure.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/f9/c2/8a100c88d8c709292f09cc29bb01e2e8.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/1f/e9/10715420/s10715420.m3u8"
         },
         {
             "number": 16,
             "title": "Cyber Drain",
+            "description": "After playing a video game that mimics their lives, the dream chasers visit the Cyber Realm to learn how to beat the final boss and defeat Happy App.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a5/1b/22cd4d404514fffc8bf55a670d20e2c6.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/63/63/10715421/s10715421.m3u8"
         },
         {
             "number": 17,
             "title": "School Spirit",
+            "description": "Nova sends out an S.O.S. that has the dream chasers rushing to her rescue and straight into a trap!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/3f/6d/968c95caa7145c22be834e957f9bb738.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/83/5e/10715422/s10715422.m3u8"
         },
         {
             "number": 18,
             "title": "The Undreamt",
+            "description": "Our heroes have no choice but to ask The Undreamnt to help them in their fight against D-Shock and the Happy App.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/31/84/cb253d8c93142830de752322153d4cc1.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fa/bb/10715423/s10715423.m3u8"
         },
         {
             "number": 19,
             "title": "Missing Pieces",
+            "description": "Working with the dangerous UNDREAMT, our heroes must use its creative chaotic energy to try and bring life back to the unsaturated dream world.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/75/86/77e767ef06fc121633e1beeef22eab1e.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/75/97/10715424/s10715424.m3u8"
         },
         {
             "number": 20,
             "title": "Outside the Box",
+            "description": "The dream chasers are faced with the Brain’s Final Protocol, to box the dream world for all of eternity.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/87/89/9989d2492d33abdf0a95829ed0cec3fb.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/36/6b/10715425/s10715425.m3u8"
         }

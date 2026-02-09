@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "Would You Like to Enter Prime Empire?",
+            "description": "While investigating a heist, the ninja discover Prime Empire, an unreleased arcade game that suddenly takes control of all other games in Ninjago",
             "thumbnail": "https://image.tmdb.org/t/p/original/bcGXFPpPJ8WwapzDiCGUenNBqwG.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/8e/10468471/s10468471.m3u8",
             "subtitles": [{
@@ -15,6 +16,7 @@
         {
             "number": 2,
             "title": "Dyer Island",
+            "description": "When the ninja connect Jay’s disappearance to Prime Empire, they set out to Dyer Island to seek answers from the game’s designer, Milton Dyer.",
             "thumbnail": "https://image.tmdb.org/t/p/original/8ZJCFjXiN8Cmn66SmqNkejNeHGC.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dd/99/10468472/s10468472.m3u8",
             "subtitles": [{
@@ -27,6 +29,7 @@
         {
             "number": 3,
             "title": "Level Thirteen",
+            "description": "Cyrus Borg discovers a secret about Prime Empire while the ninja battle an escaped Mechanic in an attempt to reach Level Thirteen and enter the game.",
             "thumbnail": "https://image.tmdb.org/t/p/original/uUlPrfRTxgTJYwGoSED8VGYVs2G.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/70/51/10468473/s10468473.m3u8",
             "subtitles": [{
@@ -39,6 +42,7 @@
         {
             "number": 4,
             "title": "Superstar Rockin' Jay",
+            "description": "Inside Prime Empire, the ninja are in unfamiliar territory, ignorant of the rules, as they try to find Zane and escape Unagami’s Red Visors.",
             "thumbnail": "https://image.tmdb.org/t/p/original/mRn2268Y61O1tH1OtHkdVEq2I55.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/53/2d/10468474/s10468474.m3u8",
             "subtitles": [{
@@ -51,6 +55,7 @@
         {
             "number": 5,
             "title": "I am Okino",
+            "description": "Inside one of the game zones, a Samurai named Okino faces a crisis of faith when he  fails to lead a series of Masters to victory.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BODIwYzZlMzktZjE3ZS00Yjk0LWJkNGYtMWQwMTcxN2ZkNGIxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/69/3a/10468475/s10468475.m3u8",
             "subtitles": [{
@@ -63,6 +68,7 @@
         {
             "number": 6,
             "title": "The Glitch",
+            "description": "In order to stop Unagami, the ninja must obtain 3 Key-tanas, the first of which is hidden in Terra Karana–one of the most dangerous game environments.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BZjIzY2RhODEtYzUwMC00MTBmLTk2ODgtZjZhMDI2NGY2ZDNhXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/e6/10468476/s10468476.m3u8",
             "subtitles": [{
@@ -75,6 +81,7 @@
         {
             "number": 7,
             "title": "The Cliffs of Hysteria",
+            "description": "The ninja climb the ‘Cliffs of Hysteria and discover that Unagami is converting players into energy cubes to build a portal into the real world.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTdiNWUxMzMtZjUyMC00ZmExLTlkNmYtYmE0M2YzODcxZTE4XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/55/c6/10468477/s10468477.m3u8",
             "subtitles": [{
@@ -87,6 +94,7 @@
         {
             "number": 8,
             "title": "The Maze of the Red Dragon",
+            "description": "Still in the game zone Terra Karana, Okino has to choose between helping his allies the ninja, or obeying the evil orders of his Master, Unagami.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjMyYmJjYWQtN2U4Yi00N2UyLTg0ZGUtZDQ4NDk4NTYwYzY2XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ad/47/10468478/s10468478.m3u8",
             "subtitles": [{
@@ -99,6 +107,7 @@
         {
             "number": 9,
             "title": "One Step Forward, Two Steps Back",
+            "description": "The ninja learn that the only way to acquire the 2nd Key-tana is by winning a race in Terra Technica and have to find racing cars in unexpected ways",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDhjZmEyY2ItOGI4Yi00MmYzLTkyMzctMTkzYWM3NTZmYWI5XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/31/fd/10468479/s10468479.m3u8",
             "subtitles": [{
@@ -111,6 +120,7 @@
         {
             "number": 10,
             "title": "Racer Seven",
+            "description": "As the ninja prepare for the brutal Speedway Five-Billion race, Lloyd meets a race driver named Seven who may hold the key to victory.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2I1NjI4MTAtMjhlNi00ZWU3LTk3OWItODhjYTgxNmNmNmU5XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e7/de/10468480/s10468480.m3u8",
             "subtitles": [{
@@ -123,6 +133,7 @@
         {
             "number": 11,
             "title": "The Speedway Five-Billion",
+            "description": "Unagami’s soldiers, the Red Visors, finally discover the secret location of Scott’s garage and attack the ninja.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BOGJiYzQ3ZjUtMDNiNi00YzZlLTgwZTktNWNlM2E5MjQ3OWNkXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/97/07/10468481/s10468481.m3u8",
             "subtitles": [{
@@ -135,6 +146,7 @@
         {
             "number": 12,
             "title": "Stop, Drop and Side Scroll",
+            "description": "Our ninja barely have time to mourn the loss of their fallen ninja friends before being thrust into the madness of Terra Domina.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNWYwZTFiOGMtZDFiZi00MDUyLWI1YTEtZmM0ZjgwMzJjNWQwXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/ed/10468482/s10468482.m3u8",
             "subtitles": [{
@@ -147,6 +159,7 @@
         {
             "number": 13,
             "title": "Ninjago Confidential",
+            "description": "Back in Ninjago City, Zane and Pixal hit the mean streets to track down Milton Dyer, only to discover that things are not what they seem…",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTU0NmQxMGQtNzg5NC00ZTQ1LTkzMDQtYWJkZmI5ODA3MTU1XkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a1/0d/10468483/s10468483.m3u8",
             "subtitles": [{
@@ -159,6 +172,7 @@
         {
             "number": 14,
             "title": "The Prodigal Father",
+            "description": "Zane, kidnapped by the Mechanic, faces Unagami while Pixal questions Milton Dyer for information on how to shut down Prime Empire.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGRjYTIyNjMtYmUzMi00NjM3LThiMjItYzZiODI5NmJlOTJjXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3b/59/10468484/s10468484.m3u8",
             "subtitles": [{
@@ -171,6 +185,7 @@
         {
             "number": 15,
             "title": "The Temple of Madness",
+            "description": "Jay must stand alone against Unagami in the end-game, yet Unagami has a bigger battle in facing the truth about his own identity.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDBlNTYyZjQtNTYzMi00NWE0LWI4OWYtZGE0ZWRiNzE3ZjgxXkEyXkFqcGc@._V1_.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/6b/87/10468485/s10468485.m3u8",
             "subtitles": [{
@@ -183,6 +198,7 @@
         {
             "number": 16,
             "title": "Game Over",
+            "description": "Unagami breaks into the real world and terrorizes Ninjago City while Jay, Zane and Pixal attempt to prevent disaster by reuniting Unagami with Dyer.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BMWY2ZTFmNWItZjU1ZC00ZTFiLTljYzQtNTBmZjllNzUxMjlhXkEyXkFqcGc@.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3c/88/10468486/s10468486.m3u8",
             "subtitles": [{

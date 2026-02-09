@@ -1,0 +1,155 @@
+{
+  "season": 5,
+  "episodes": [
+    {
+      "number": 1,
+      "title": "Strings That Bind",
+      "description": "Monkie Kid is tormented by visions of the past and future. Monkey King and Macaque brace for the impending storm, facing the unknown.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/37/b8/222a6af7ced804bf2d10c7c047965578.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c6/8d/10604417/s10604417.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/15/5e/70f2dca01bc91ced5845f6df04fac938.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Collar the King",
+      "description": "Monkey King and Macaque are called to the underworld to stand trial for their 'crimes,' confronting their past misdeeds.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/5b/e8/d7e100b61cefef4bacc8ad1e81bf2d58.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/64/89/10604418/s10604418.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/91/be/10a968034023137fb6e2b20b74bd9e2c.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Temple of the Goddess",
+      "description": "On the run from the celestial realm, our heroes seek the five color stones to save the universe! Their first destination: Burning Mountain!",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/92/81/cf0dda2e9af5e0c44683bd63a9528adb.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/71/7e/10604419/s10604419.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/b1/6b/a5a70ff34781928fde2dc330d98eb3ff.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "The Storm Within",
+      "description": "Sandy demands a one-on-one training session with Monkie Kid. To his dismay, Sandy’s technique is not combat but meditation.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/47/55/d06271ae6231e31299066c806fd22a78.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b4/a0/10604420/s10604420.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2c/54/69d8c2fae2f67846d4e483c70846a200.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Claim to Flame",
+      "description": "The team splits up to locate the next stone. Pigsy and Tang encounter trouble, while Mei runs into a familiar face from her past.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/f9/53/181eae4d2845d0d357832372e139d659.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/06/03/10604421/s10604421.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2e/c8/6db7addaed0ecb131ce23fe4aca81b6d.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Festival Fugitives",
+      "description": "At a food festival, the heroes search for the next stone but instead find Ne Zha and the celestial host blocking their path.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/bb/25/da45a88a7326ae1c6466e2c45242db39.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c0/b8/10604422/s10604422.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/e9/ec/a8f5335c14746828207b16011d48eab0.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Into the Pagoda",
+      "description": "Inside Li Jing’s Pagoda, a demon traps the heroes in memories. Monkie Kid is shown memories he never knew existed.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a7/e7/2823e0f553912ce45a25ad33aad29851.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/de/4b/10604423/s10604423.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/9f/32/cef2e633e90c0ef19fc637db835799e4.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "The Cage",
+      "description": "It's time to save the world! However, when the secret enemy reveals himself, their trials have only just begun.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/46/59/c9469e0c9f17183d4d2fff96b05a6ee6.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2b/65/10604424/s10604424.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/fc/c7/aeb89d72e85f67d451d6b70f59c104da.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Sacrifice",
+      "description": "As the enemy fights the heroes, Monkie Kid must confront his mentor! Monkie Kid knows what he must do, but Monkey King tries to stop him.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/96/55/db5888146ea23d2839461edfeacc9b9b.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e3/34/10604425/s10604425.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/7b/ef/41a1fc2e59d65776aec6ec00341dc2fb.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Harbinger",
+      "description": "Amid the chaos beyond the world, Monkie Kid encounters the goddess Nüwa and uncovers a secret so devastating it could alter everything.",
+      "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/55/80/9e52875d85dca4f8bcabd66d8107f229.jpg",
+      "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/af/51/10604426/s10604426.m3u8",
+      "subtitles": [
+        {
+          "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/1c/b6/49275eb2774216d0aaa9296eb2960c29.vtt",
+          "lang": "en",
+          "label": "English",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

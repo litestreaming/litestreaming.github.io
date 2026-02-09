@@ -3,120 +3,140 @@
     "episodes": [{
             "number": 1,
             "title": "Awakening",
+            "description": "When Mateo’s comic creation, Z-Blob, follows him from a dream back to Brooklyn, Mateo and his sister realize the Dream World is real, and in danger!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/37/7f/a472bb25545ae221762f9711c1a7a2d4.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/c7/10510357/s10510357.m3u8"
         },
         {
             "number": 2,
             "title": "Dream Chasers",
+            "description": "After a daring mission to save their friend in the Dream World, Mateo and Izzie find the nightmare has followed them back to the Waking World.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/79/5f/29e2dcb41d3cd4ba3d0187a381b23160.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8d/35/10510358/s10510358.m3u8"
         },
         {
             "number": 3,
             "title": "Chased Dreamers",
+            "description": "To craft their own hourglasses and become official Dream Chasers for the Night Bureau, Mateo and his friends must defeat the Dream Forge guardian.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/1c/18/7b3dd63c5e2188d78f7a8034fe9656ba.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8f/5e/10510359/s10510359.m3u8"
         },
         {
             "number": 4,
             "title": "The Dream Forge",
+            "description": "As time runs out to face the Dream Forge and become official Dream Chasers, Mateo and his friends enlist the help of the mysterious Dream Bandit.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/81/26/9ada14ce1e25d7a2af17f4cb90050af2.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/29/cf/10510360/s10510360.m3u8"
         },
         {
             "number": 5,
             "title": "Peak Performance",
+            "description": "The search for the Sandman leads Mateo and the others to the tallest mountain in the Dream World, but Lunia's hourglass puts a target on their backs.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/45/90/488d40ba13bd724558a6a98755bd8501.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fb/c9/10510361/s10510361.m3u8"
         },
         {
             "number": 6,
             "title": "The Anomaly",
+            "description": "A surprise visit from the Chief Inspector of the Night Bureau forces Mateo to hide Z-Blob, who goes on an adventure in the heart of Brooklyn.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/14/ca/49e5786920d78b98933637c32b6e1e55.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/95/52/10510362/s10510362.m3u8"
         },
         {
             "number": 7,
             "title": "Cheat Code",
+            "description": "Competing over who can ask Zoey to join their Sheep Week team, Logan cheats and unwittingly endangers the video game based Cyber Realm.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4b/22/c1bc6cae689fba24475b4d17252e48f5.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b7/c9/10510363/s10510363.m3u8"
         },
         {
             "number": 8,
             "title": "The Bigger Picture",
+            "description": "When the kids meddle in their teacher’s dream to find test answers, they realize that in dreams, sweet little Ms. Putnam isn’t so sweet... or little!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/f9/24/4cb0c8624f4a13956414c26084cc5859.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/74/a9/10510364/s10510364.m3u8"
         },
         {
             "number": 9,
             "title": "Short Sheeped",
+            "description": "Logan’s desperation to prove himself leads to his capture by the Nightmare King, which leaves his friends to face the Sheep Week finals alone.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/40/9e/8df48838e4350837accfecb3c18dee48.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/5e/84/10510365/s10510365.m3u8"
         },
         {
             "number": 10,
             "title": "The Grim Escape",
+            "description": "The Dream Chasers rush to save Logan from the Shadowkeep’s dungeon, but the liberators soon become the prisoners in a nightmarish twist of fate.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/21/26/e5cf9a85717bd0002dc5e9c9b0288d8e.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/ce/10510366/s10510366.m3u8"
         },
         {
             "number": 11,
             "title": "Dreamer's Block",
+            "description": "A mysterious dome blocks Mateo and the others from leaving their dream landing, and Zoey and Albert are their only hope of escape.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/3c/04/a3939e822f37a16ea36c8151fe0f2467.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9f/8d/10518205/s10518205.m3u8"
         },
         {
             "number": 12,
             "title": "Monkey and the Bandit",
+            "description": "With Albert captured by the Night Hunter and Z-Blob detained by Agent Strick, it’s time for a dual rescue in the Waking World and the Dream World!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/9f/3e/9e33f79f36be8526a7839f585aea9c73.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/bc/e0/10518206/s10518206.m3u8"
         },
         {
             "number": 13,
             "title": "Private Eye",
+            "description": "Detective Izzie takes the case of Mateo’s missing comic book while Nova, the head of the Insomniacs, probes into a mystery of her own.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7c/80/ee513ca0585961891c4204ec3bd0cd86.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a7/cd/10518207/s10518207.m3u8"
         },
         {
             "number": 14,
             "title": "Songs of the Mist",
+            "description": "The hunt for the Sandman, the only one who can repair Lunia’s hourglass, brings the kids to the dangerous Murky Realm, where memories go to die!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/eb/f4/c0f98608f5d376e1ec9fe51423fd0857.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fc/e9/10518208/s10518208.m3u8"
         },
         {
             "number": 15,
             "title": "Sweet Dreams",
+            "description": "Determined to give the Insomniac’s a night of good dreams, Izzie and friends bring them to the Candy Realm; but nowhere is safe from Nightmare King.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/99/b4/ec4a6aff339590b78beaa59fbfba1e8f.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/26/ae/10518209/s10518209.m3u8"
         },
         {
             "number": 16,
             "title": "The Worthy Dreamer",
+            "description": "The Dream Chasers arrive at Castle Nocturnia hoping to find the key to defeating the Nightmare King, but the castle won’t reveal its secrets easily.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/e4/fd/3de1429e6234be6e917669a5d85ccd77.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/ef/d9/10518210/s10518210.m3u8"
         },
         {
             "number": 17,
             "title": "The Light of Nocturnia",
+            "description": "The Dream Chasers rush to crack the code to reveal Lunia’s secrets while the Nightmare King presses a full-scale assault on Castle Nocturnia.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/4f/20/99ee042e97a9087a1ad981234cdf57d5.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c8/c9/10518211/s10518211.m3u8"
         },
         {
             "number": 18,
             "title": "Night Hunted",
+            "description": "The Nightmare King begins to open a rift to the Waking World while Mateo presses Oz for the truth about Lunia’s battle with the Nightmare King.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/29/23/b9c2e5439919082d6987adff1bae7cb1.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/4f/aa/10518212/s10518212.m3u8"
         },
         {
             "number": 19,
             "title": "The Rift",
+            "description": "A night terror is on the hunt at the fall festival and so is the Night Hunter, who appears in the Waking World with a brand-new threat for Mateo.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/04/42/ea87572ff63d215bf993fbf8eef414e2.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/90/49/10518213/s10518213.m3u8"
         },
         {
             "number": 20,
             "title": "Enter the Nightmare",
+            "description": "The barrier to the Waking World has been torn and the Nightmare King invades Brooklyn, where the Dream Chasers must make their final stand!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/d0/86/f4d1586f247ef25fe8f70f2d8862efeb.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e1/b9/10518214/s10518214.m3u8"
         }

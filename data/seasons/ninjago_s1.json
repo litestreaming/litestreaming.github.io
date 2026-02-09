@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "Rise of the Snakes",
+            "description": "The four Ninja are snapped out of their post-hero complacency when Lord Garmadon’s young son Lloyd shows up and tries to pick up where his father left off.  The Ninja dismiss him as a threat, but regret that choice after Lloyd wakes up the evil snake tribe.  A prophecy is revealed that states a green ninja will ultimately defeat Lord Garmadon.",
             "thumbnail": "https://image.tmdb.org/t/p/original/12e0EA0VEXfIXlWtSc0UcVm0geX.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f5/92/10369151/s10369151.m3u8",
             "subtitles": [{
@@ -16,6 +17,7 @@
         {
             "number": 2,
             "title": "Home",
+            "description": "Back in training mode with the looming threat of Lloyd and the Hypnobrai, Zane wanders after a Falcon and lands himself in a heap of trouble.  The rest of the Ninja leave the training dojo to help him and return to find that the snakes have burned it to the ground. ",
             "thumbnail": "https://image.tmdb.org/t/p/original/xJHNy0u6wuxeU3KNUthcjyaG8aM.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/2f/e1/10369152/s10369152.m3u8",
             "subtitles": [{
@@ -28,6 +30,7 @@
         {
             "number": 3,
             "title": "Snakebit",
+            "description": "Lloyd, having been kicked out of the Hynobrai snake tribe unlocks a second tribe – The Fangpyres – to help him regain control.  The Ninja are busy setting up their new HQ that Zane discovered, but are called to duty when the Fangpyres attack the village where Jay’s family lives.",
             "thumbnail": "https://image.tmdb.org/t/p/original/nusv2wGJhkDZrbc7zuNLJO2M4R9.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f9/a3/10369153/s10369153.m3u8",
             "subtitles": [{
@@ -40,6 +43,7 @@
         {
             "number": 4,
             "title": "Never Trust a Snake",
+            "description": "After the Fangpyres join forces with the Hypnobrai, Lloyd awakens Pythor – the last remaining snake of the Anacondrai tribe.  Pythor lures Lloyd under his spell and steals a map from him that will show him where the remaining two snakes tribes dwell and Uncle Sensei saves Lloyd from doom.",
             "thumbnail": "https://image.tmdb.org/t/p/original/rDifdsObEprhs3XYFEvvuqsB2xf.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/44/53/10369154/s10369154.m3u8",
             "subtitles": [{
@@ -52,6 +56,7 @@
         {
             "number": 5,
             "title": "Can of Worms",
+            "description": "Lloyd moves in and tries to make nice by helping out with chores, but he just gets in the way.  Pythor has awoken the Vipoids and the Constrictaurs and an all out snake war has taken over Ninjago.   The Ninja are not faring well, when a mysterious Samurai shows up and saves the day.",
             "thumbnail": "https://image.tmdb.org/t/p/original/7DLVwMywDeHX5dWdmQhIsYIdyNZ.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e6/01/10369155/s10369155.m3u8",
             "subtitles": [{
@@ -64,6 +69,7 @@
         {
             "number": 6,
             "title": "The Snake King",
+            "description": "Pythor declares himself to be the destined leader who will reawaken The Great Devourer – an ancient beast who can’t be killed and will consume all of Ninjago.  We find out Nya is the Samurai and Lloyd is taken prisoner by the snake tribes.",
             "thumbnail": "https://image.tmdb.org/t/p/original/mENRLMKPNQ1rGLUIYmtRhntwWgd.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/35/2f/10369156/s10369156.m3u8",
             "subtitles": [{
@@ -76,6 +82,7 @@
         {
             "number": 7,
             "title": "Tick Tock",
+            "description": "When the four ninja follow the mysterious falcon into the woods, they stumble on a hidden work shop where Zane learns the secret about his past and in the process, finally knowing who he is, he is the first ninja to unlock his true potential.",
             "thumbnail": "https://image.tmdb.org/t/p/original/ic4ObccYfusH93PvQkxufxaHaGC.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/23/1a/10369157/s10369157.m3u8",
             "subtitles": [{
@@ -88,6 +95,7 @@
         {
             "number": 8,
             "title": "Once Bitten, Twice Shy",
+            "description": "Jay and Nya have to cut their first date in Mega-Monster Amusement Park short as the Serpentine are on their way to retrieve the first or four fang blades to be used to awaken the Great Devourer.",
             "thumbnail": "https://image.tmdb.org/t/p/original/zDMH0n7hgTiC6jEt2XYO9x5gljU.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/d7/45/10369158/s10369158.m3u8",
             "subtitles": [{
@@ -100,6 +108,7 @@
         {
             "number": 9,
             "title": "The Royal Blacksmiths",
+            "description": "The four ninja go undercover as a dance troupe and enter a talent contest in their quest to win “The Blade Cup” where one of the fang blades is hidden.",
             "thumbnail": "https://image.tmdb.org/t/p/original/6zpW2IxzNKT8mTYC92Oy5fNMXNp.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/53/7a/10369159/s10369159.m3u8",
             "subtitles": [{
@@ -112,6 +121,7 @@
         {
             "number": 10,
             "title": "The Green Ninja",
+            "description": "The ninjas are suspicious when their arch enemy Lord Garmadon moves in to help searching for his missing son Lloyd - but realize they have to work together in their attempt to rescue Lloyd from the snakes inside the unstable Fire Temple that is built on a volcano.",
             "thumbnail": "https://image.tmdb.org/t/p/original/rFxEz2U0RwAj3G8cxeV8LeTcdQS.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/d9/10369160/s10369160.m3u8",
             "subtitles": [{
@@ -124,6 +134,7 @@
         {
             "number": 11,
             "title": "All of Nothing",
+            "description": "The ninja and Sensei Wu try to infiltrate the Serpentines’ inner sanctum and walk right into a trap, and when Lloyd’s rescue mission fails, there is only one person who can help them, namely the evil Lord Garmadon – but can they trust him?",
             "thumbnail": "https://image.tmdb.org/t/p/original/n3L6xgYYznFuPQf7JP0M25Ldk1P.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e9/7b/10369161/s10369161.m3u8",
             "subtitles": [{
@@ -136,6 +147,7 @@
         {
             "number": 12,
             "title": "The Rise of the Great Devourer",
+            "description": "The ninja haste to the lost city of Ouroboros to try to stop Pythor from awaking The Great Devourer but it is a race against time.",
             "thumbnail": "https://image.tmdb.org/t/p/original/9G4KAx5klUV0THKGBewp4qYqJBe.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/3f/b3/10369162/s10369162.m3u8",
             "subtitles": [{
@@ -148,6 +160,7 @@
         {
             "number": 13,
             "title": "Day of the Great Devourer",
+            "description": "Disaster threatens as the ninja must fight to defeat the all consuming Great Devourer in a desperate attempt to save Ninjago.",
             "thumbnail": "https://image.tmdb.org/t/p/original/6r6WOi3sE2QMMueHRpjl2nIjptL.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e6/df/10369163/s10369163.m3u8",
             "subtitles": [{

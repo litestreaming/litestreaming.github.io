@@ -3,30 +3,35 @@
     "episodes": [{
             "number": 1,
             "title": "Croc-Star",
+            "description": "In episode 1 of Dream Guardians Unleashed, Logan and Zoey stumble upon a strange glowing crystal in the forest, only to be confronted by the Nightmare King and his menacing scorpion. But what’s hidden inside this mysterious crystal could change everything.",
             "thumbnail": "https://image.tmdb.org/t/p/original/aUaBAHmAujS50pUKLY1orH7h5rN.jpg",
             "embed": "https://pomf2.lain.la/f/hiub9p9d.mp4"
         },
         {
             "number": 2,
             "title": "Outfoxed",
+            "description": "In episode 2 of Dream Guardians Unleashed, the Nightmare King uncovers a strange glowing crystal! Mateo creates a distraction while Izzie goes for it, but things go wrong and the Nightmare King’s forces close in. When the crystal breaks, it hatches a critter that is then dream crafted into a mighty FOX GUARDIAN MECH! How will this change everything?",
             "thumbnail": "https://image.tmdb.org/t/p/original/gphk2ARqqpWGQ71JEquWHM14ULX.jpg",
             "embed": "https://pomf2.lain.la/f/q5lxi5y0.mp4"
         },
         {
             "number": 3,
             "title": "Dino Dash",
+            "description": "In episode 3 of Dream Guardians Unleashed, Cooper gets a warning from Logan on his Dreamie Screamie that the Nightmare King is coming and must protect a strange glowing egg. When the egg hatches, a critter emerges, and Cooper dream crafts a DINO JET. How will this change everything?",
             "thumbnail": "https://image.tmdb.org/t/p/original/ukSnxRzeXHLiSUjCK0ngR8SnBwX.jpg",
             "embed": "https://pomf2.lain.la/f/tnegh27p.mp4"
         },
         {
             "number": 4,
             "title": "Mr Sharkytank",
+            "description": "In episode 4 of Dream Guardians Unleashed, Mateo and Izzie follow a critter to a faintly glowing crystal, but the Nightmare King and his minions are close behind. When the crystal hatches, a new critter inspires Izzie to dream craft a mighty Tiger Shark Tank. How will this play out in battle?",
             "thumbnail": "https://image.tmdb.org/t/p/original/soIJrcIEMZ8XsJ8WGPoPBHtHt8h.jpg",
             "embed": "https://pomf2.lain.la/f/mnm1zsm7.mp4"
         },
         {
             "number": 5,
             "title": "Goodnight Nightmare King",
+            "description": "In episode 5 of Dream Guardians Unleashed, the dream chasers unite, summoned by the roar of Izzie’s Tiger Shark Tank. They dream craft their guardians, including the Fox Guardian Mech, Dino Jet, Crocodile Submarine, and Nightmare Scorpion Digger, to stop the Nightmare King from claiming any more eggs. Can they finally say goodnight to him once and for all?",
             "thumbnail": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
             "embed": "https://pomf2.lain.la/f/mtkn4q0.mp4"
         }

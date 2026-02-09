@@ -2,8 +2,9 @@
     "shows": [{
             "id": "ninjago",
             "title": "LEGO Ninjago: Masters of Spinjitzu",
-            "poster": "https://image.tmdb.org/t/p/original/fqb9X4th2p2voefRLqdv1xoZQmC.jpg",
+            "poster": "https://image.tmdb.org/t/p/original/beKgqwruOGmVAvRwRvfuOcXwl2Z.jpg",
             "banner": "https://image.tmdb.org/t/p/original/flychdbFnPuxl4SjMeODR8RmuKr.jpg",
+            "preview": "https://files.catbox.moe/27euoe.mp4",
             "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
             "summary": "When the fate of their world, Ninjago, is challenged by great threats, it's up to the ninja: Kai, Jay, Cole, Zane, Lloyd and Nya to save the world.",
             "seasons": [{
@@ -76,7 +77,8 @@
             "id": "ninjagodr",
             "title": "LEGO Ninjago: Dragons Rising",
             "poster": "https://litestreaming.github.io/images/drs4posterv3.jpg",
-            "banner": "https://litestreaming.github.io/images/drs4banner.jpg",
+            "preview": "https://files.catbox.moe/6ddjfk.mp4",
+            "banner": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABbq_IzABTIwPa8W4Jfrz9Elc2_xKF0Cw4SRiR7yZousi8T6pVTJjo4G0JrGURf4irP01Tq2Yt2d1xrIcN5R4cGVHJIUkDEoJ-lKL.jpg",
             "logo": "https://image.tmdb.org/t/p/original/syIS6UQl4UhELTtu1ZWQcMSgR91.png",
             "summary": "Many legendary realms have suddenly combined into one, but their union is unstable. A Spinjitzu Ninja Master must train a new generation of heroes to help find Elemental Dragons who can save the planet before the forces of evil use the same dragon energy to destroy this new world.",
             "seasons": [{
@@ -92,8 +94,7 @@
                     "file": "data/seasons/dr_s3.json"
                 },
                 {
-                    "number": 4,
-                    "file": "data/seasons/dr_s4.json"
+                    "comingSoonText": "Season 4 coming April"
                 }
             ]
         },
@@ -114,6 +115,7 @@
             "title": "LEGO Ninjago: Legends",
             "poster": "https://m.media-amazon.com/images/M/MV5BMDZjNzEyYTQtZWZlYS00MWUyLTg1MjEtZmUzMmNlMDYwZGRkXkEyXkFqcGc@._V1_.jpg",
             "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/fe/fd/869a4ea8be974e6094f9a1df0396de7a.jpg",
+            "preview": "https://videoprocessingpipeline.services.lego.com/assets/e7f58409-f3f2-4f90-a190-12499a96c961/46d704ca-a82f-4ee3-a889-b310009576d6/720p.mp4",
             "logo": "https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/4660cfec-ee29-4ef2-b15e-9966aa101eac/4c39771b-aa52-11f0-abb1-0afffd029469?host=wbd-images.prod-vod.h264.io&partner=beamcom",
             "summary": "Kai, the Ninja of Fire, is lost in a Land of Monsters, where he must face a series of vicious, bizarre creatures if he has any hope of getting home.",
             "seasons": [{
@@ -126,6 +128,7 @@
             "title": "LEGO DREAMZzz",
             "poster": "https://image.tmdb.org/t/p/original/bksnhr6slfT2mIcCTglGYD3pI9A.jpg",
             "banner": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
+            "preview": "https://files.catbox.moe/4l0tbp.mp4",
             "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
             "summary": "A group of kids join a secret agency where they learn to use the power of imagination to journey into the Dream World and create fantastic creations in order to help sleeping children being terrorized by the evil Nightmare King who is bent on conquering the Dream World and invading the Waking World.",
             "seasons": [{
@@ -151,6 +154,7 @@
             "title": "LEGO LEGENDS OF CHIMA",
             "poster": "https://image.tmdb.org/t/p/original/rn1Bnam0yBolJPMhR4VJAeCxM0Y.jpg",
             "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/fd/f3/f48479a2142f68b8f625407e8af6ca28.jpg",
+            "preview": "https://files.catbox.moe/68pad9.mp4",
             "logo": "https://image.tmdb.org/t/p/original/xTXGm0PSCbtEsKG7KzAqXLBJMXQ.png",
             "summary": "Laval the Lion and Cragger the Crocodile are best friends who live in the mystical land of Chima. This all changes after an innocent escapade when Cragger gets his first experience with chi, a sacred resource important to Chima's delicate balance which gives its user awesome power.",
             "seasons": [{
@@ -172,7 +176,8 @@
             "title": "LEGO NEXO Knights",
             "poster": "https://image.tmdb.org/t/p/original/d0e5dJ2FQhlwEhFX4cB0ijp5SMd.jpg",
             "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/cf/1b/41a37321c4e4a272ea2b6416776372b7.jpg",
-            "logo": "https://image.tmdb.org/t/p/original/hHcgKp2XomRDVs9XSlQJT6tq060.png",
+            "preview": "https://files.catbox.moe/r15zyq.mp4",
+            "logo": "https://occ-0-1500-1501.1.nflxso.net/dnm/api/v6/beuYL-MTCxPyt5oTOhVnWNGfZug/AAAABdIb8htG1RzUAKeNB5peevMi4_IFBFjCm_4wJ8hhYevIyp_i4ccKlqTUHOfOW2SrlCt1uebXaiJs0f-u7GY6l1annSd9FHz20gRT5amZKio.webp?r=d63",
             "summary": "The adventure takes place in the futuristic Kingdom of Knighton. It focuses on the Nexo Knights as they journey to defeat Jestro the evil jester, the Book of Monsters, and their lava monster army. Clay leads the Nexo Knights, which include Macy, Lance, Aaron, and Axl. Together, under their mentor Merlok 2.0, they band together to defeat Jestro.",
             "seasons": [{
                     "number": 1,
@@ -197,6 +202,7 @@
             "title": "LEGO Ninjago: Day of the Departed",
             "poster": "https://image.tmdb.org/t/p/original/dZM1tYuARngZdZMHSYPdU6zuA5N.jpg",
             "banner": "https://image.tmdb.org/t/p/original/5Mx9bOqNN1aXokwwzKam2qiw2cY.jpg",
+            "preview": "https://files.catbox.moe/psx5zo.mp4",
             "logo": "https://image.tmdb.org/t/p/original/xiXPiWwAuI4JGUDFWiUzx73oaBW.png",
             "summary": "When Cole returns to Yang's haunted temple to seek revenge on a former Airjitzu Master, he accidentally uses a powerful Dark Magic blade that unleashes the spectral forms of Ninjago's greatest villains and traps himself in the temple. The Ninja must return the ghosts to the Departed Realm before it's too late.",
             "seasons": [{
@@ -204,25 +210,15 @@
                 "file": "data/seasons/dotd.json"
             }]
         },
-                {
+        {
             "id": "lmk",
             "title": "LEGO Monkie Kid",
-            "poster": "https://image.tmdb.org/t/p/original/mwkdJncS60B1QMjK2BdyDG4Bs8L.jpg",
+            "poster": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a0/96/f01ea63d0855f1d9b5b44d00ee634bac.jpg",
             "banner": "https://image.tmdb.org/t/p/original/9XdI3OWp1O5AYMV5e7J1mmNNNsp.jpg",
+            "preview": "https://videoprocessingpipeline.services.lego.com/assets/1a2266d3-af8b-4341-bd41-76e88d2e8a07/24e7c908-f56d-42ff-add0-af83000d22dd/720p.mp4",
             "logo": "https://image.tmdb.org/t/p/original/6xrbLNUSisGPHYfpGMI2VNKuEhe.png",
-            "comingSoon": true,
-            "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This series will be added soon.",
             "summary": "Centuries ago, the beloved Chinese Monkey King used his magical staff to capture and trap the evil Demon Bull King deep inside a mountain. Flash-forward to modern-day China, when fate leads MK (aka Monkie Kid), a young noodle shop delivery boy, to find the long-lost staff. Soon, MK and his best friends find themselves entangled in adventures packed full of action, mystery, imagination and magic.",
             "seasons": [{
-                    "number": 1,
-                    "file": "data/seasons/lmk_s1.json"
-                },
-                {
-                    "number": 2,
-                    "file": "data/seasons/lmk_s2.json"
-                },
-                {
                     "number": 3,
                     "file": "data/seasons/lmk_s3.json"
                 },
@@ -233,10 +229,13 @@
                 {
                     "number": 5,
                     "file": "data/seasons/lmk_s5.json"
+                },
+                {
+                    "comingSoonText": "Season 1 and 2 coming soon"
                 }
             ]
         },
-                        {
+        {
             "id": "dreamzzzshorts",
             "title": "LEGO DREAMZzz Shorts",
             "poster": "https://image.tmdb.org/t/p/original/uhu2i400KaFTSGif5zdHIwMKGu4.jpg",
@@ -244,13 +243,12 @@
             "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
             "comingSoon": true,
             "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This series will be added in the next website update.",
+            "comingSoonNote": "This series will be added soon.",
             "summary": "A group of kids join a secret agency where they learn to use the power of imagination to journey into the Dream World and create fantastic creations in order to help sleeping children being terrorized by the evil Nightmare King who is bent on conquering the Dream World and invading the Waking World.",
             "seasons": [{
-                    "number": 1,
-                    "file": "data/seasons/dz_shorts.json"
-                }
-            ]
+                "number": 1,
+                "file": "data/seasons/dz_shorts.json"
+            }]
         }
     ]
 }
