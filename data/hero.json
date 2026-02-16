@@ -1,7 +1,7 @@
 {
     "featured": [{
             "showId": "ninjagodr",
-            "heroBanner": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABbq_IzABTIwPa8W4Jfrz9Elc2_xKF0Cw4SRiR7yZousi8T6pVTJjo4G0JrGURf4irP01Tq2Yt2d1xrIcN5R4cGVHJIUkDEoJ-lKL.jpg",
+            "heroBanner": "https://www.lego.com/cdn/cs/kids-lego-com/assets/bltbdabe1629e7416bd/SEO_Image.png",
             "title": "LEGO Ninjago: Dragons Rising",
             "description": "Ninja Master Lloyd guides Arin, a young Spinjitzu adept, and his friend Sora, who has an unusual Elemental Power, as a hidden enemy unleashes Elemental Monsters across the Merged Lands."
         },
@@ -36,4 +36,5 @@
             "description": "Teenage hero MK and his friends must save their city from the Demon Bull King, in the LEGO adventure inspired by classic Chinese stories."
         }
     ]
+
 }
