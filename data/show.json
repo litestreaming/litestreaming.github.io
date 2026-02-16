@@ -78,7 +78,7 @@
             "title": "LEGO Ninjago: Dragons Rising",
             "poster": "https://litestreaming.github.io/images/drs4posterv3.jpg",
             "preview": "https://files.catbox.moe/6ddjfk.mp4",
-            "banner": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABbq_IzABTIwPa8W4Jfrz9Elc2_xKF0Cw4SRiR7yZousi8T6pVTJjo4G0JrGURf4irP01Tq2Yt2d1xrIcN5R4cGVHJIUkDEoJ-lKL.jpg",
+            "banner": "https://www.lego.com/cdn/cs/kids-lego-com/assets/bltbdabe1629e7416bd/SEO_Image.png",
             "logo": "https://image.tmdb.org/t/p/original/syIS6UQl4UhELTtu1ZWQcMSgR91.png",
             "summary": "Many legendary realms have suddenly combined into one, but their union is unstable. A Spinjitzu Ninja Master must train a new generation of heroes to help find Elemental Dragons who can save the planet before the forces of evil use the same dragon energy to destroy this new world.",
             "seasons": [{
@@ -251,4 +251,5 @@
             }]
         }
     ]
+
 }
