@@ -142,10 +142,6 @@
                 {
                     "number": 3,
                     "file": "data/seasons/dz_s3.json"
-                },
-                {
-                    "number": 4,
-                    "file": "data/seasons/dz_s4.json"
                 }
             ]
         },
