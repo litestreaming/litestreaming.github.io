@@ -76,6 +76,7 @@
         {
             "id": "ninjagodr",
             "title": "LEGO Ninjago: Dragons Rising",
+            "newEpisodes": false,
             "poster": "https://pbs.twimg.com/media/HBYTqSjbcAUZoij?format=jpg&name=4096x4096",
             "preview": "https://files.catbox.moe/fscx2q.mp4",
             "banner": "https://www.lego.com/cdn/cs/kids-lego-com/assets/bltbdabe1629e7416bd/SEO_Image.png",
@@ -92,10 +93,6 @@
                 {
                     "number": 3,
                     "file": "data/seasons/dr_s3.json"
-                },
-                                {
-                    "number": 4,
-                    "file": "data/seasons/dr_s4.json"
                 },
                 {
                     "comingSoonText": "Season 4 coming April 2 (will stream it in my discord server tho before adding it here)"
