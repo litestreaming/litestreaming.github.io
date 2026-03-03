@@ -2,8 +2,9 @@
     "season": 4,
     "episodes": [{
             "number": 1,
-            "title": "Episode 1",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/4/4d/DR_S4_Okoo_Teaser_7.png",
+            "title": "The Whispering Wood",
+            "description": "The Ninja are scattered throughout the Merged Lands. They try to get back to Ninjago, but they face new enemies",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BM2FlMTg1ZTMtZGI0ZS00ZmMwLWEwNGItMDUzNThhOGFjOTYzXkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -14,8 +15,9 @@
         },
         {
             "number": 2,
-            "title": "Episode 2",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/8/86/DRS4_Official_trailer_%281%29.png",
+            "title": "The Ritual of Unrooting",
+            "description": "The young ninja try to leave a paradise, while Lloyd and Jay try to find out, on their own, who they truly are.",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGNiOGM1NDMtN2U2OS00MTU3LWI1NjMtYWVlOWRlN2YzOTRlXkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -27,7 +29,7 @@
         {
             "number": 3,
             "title": "Episode 3",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/f/f0/DRS4_Official_trailer_%2838%29.png",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTdmNGNkZDMtOWNkYS00YWUwLWFmYjYtM2YxMjlmZjkxNTEwXkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -39,7 +41,7 @@
         {
             "number": 4,
             "title": "Episode 4",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/c/c8/DRS4_Official_trailer_%288%29.png",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZWY5N2M4MmEtOGZhNy00OTI3LWEzNDEtZDllN2JiOTk0ZjM3XkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -51,7 +53,7 @@
         {
             "number": 5,
             "title": "Episode 5",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/8/8e/DR_S4_Teaser_Good_Quality_13.png",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNTU0ZmY3NDUtMjNiOC00M2Y3LWFkMDUtMTM3NWEwNmUwNTdiXkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -63,7 +65,7 @@
         {
             "number": 6,
             "title": "Episode 6",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/4/45/DR_S4_Teaser_Good_Quality_23.png",
+            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/36/DR_S4_Shot_2.PNG",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -75,7 +77,7 @@
         {
             "number": 7,
             "title": "Episode 7",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/0/0f/DR_S4_Shot_1.PNG",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmRkMDI1ZDYtMjBhMC00ZTg5LWI2NzUtZDM4NDAxZjE5MmE0XkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -87,7 +89,7 @@
         {
             "number": 8,
             "title": "Episode 8",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/2/2f/DRS4_Official_trailer_%2847%29.png",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjBmODExZjAtMjJmMS00OGVjLWEyYmItNDIxYzVjNDRmZDc0XkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -99,7 +101,7 @@
         {
             "number": 9,
             "title": "Episode 9",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/e/e8/DRS4_Official_trailer_%2854%29.png",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTBjZjJhOTUtZjE5Mi00MzcxLWE5M2YtMjc5OTZhZDAwNTg5XkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
@@ -111,7 +113,7 @@
         {
             "number": 10,
             "title": "Episode 10",
-            "thumbnail": "https://static.wikia.nocookie.net/ninjago/images/3/39/DRS4_Official_trailer_%2861%29.png",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTA3ZDNmMjAtYjY4MS00MjQ5LWJmOTEtODE2MmVkZWMzZGM4XkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
                 "url": "",
