@@ -1,935 +1,1412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Litestreaming</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <link href="https://vjs.zencdn.net/8.20.0/video-js.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     <style>
-        .faq-content {
-            transition: all 0.25s ease;
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a26;
+            --bg-elevated: #22222e;
+            --accent: #e50914;
+            --accent-hover: #ff1a25;
+            --accent-glow: rgba(229, 9, 20, 0.35);
+            --text-primary: #f0f0f5;
+            --text-secondary: #8a8a9a;
+            --text-muted: #55556a;
+            --border: rgba(255,255,255,0.06);
+            --glass: rgba(10, 10, 15, 0.85);
+            --glass-light: rgba(255,255,255,0.04);
+            --radius: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
         }
 
-        .glass {
-            backdrop-filter: blur(12px);
-            background: rgba(0, 0, 0, 0.6);
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        body.modal-open { overflow: hidden; height: 100vh; }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: var(--radius);
         }
 
-        body.modal-open {
+        .navbar {
+            position: fixed; top: 0; width: 100%; z-index: 50;
+            background: linear-gradient(180deg, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.7) 70%, transparent 100%);
+            padding: 0 0 20px 0;
+            transition: background var(--transition);
+        }
+        .navbar.scrolled { background: rgba(10,10,15,0.97); backdrop-filter: blur(20px); padding-bottom: 0; }
+        .navbar-inner {
+            max-width: 1400px; margin: 0 auto;
+            padding: 14px 24px;
+            display: flex; align-items: center; gap: 20px;
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 28px; letter-spacing: 3px;
+            color: var(--accent);
+            text-transform: uppercase;
+            user-select: none;
+            flex-shrink: 0;
+        }
+        .search-box {
+            flex: 1; max-width: 400px;
+            position: relative;
+        }
+        .search-box svg {
+            position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+            width: 16px; height: 16px; color: var(--text-muted);
+            pointer-events: none;
+        }
+        .search-box input {
+            width: 100%; padding: 10px 16px 10px 38px;
+            background: var(--glass-light);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-primary);
+            font-size: 14px; font-family: var(--font-body);
+            transition: all var(--transition);
+        }
+        .search-box input::placeholder { color: var(--text-muted); }
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(229, 9, 20, 0.05);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+        .discord-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 18px;
+            background: #5865F2; color: #fff;
+            border-radius: 100px; font-size: 13px; font-weight: 600;
+            text-decoration: none; transition: all var(--transition);
+            flex-shrink: 0;
+        }
+        .discord-btn:hover { background: #6c78ff; transform: translateY(-1px); }
+
+        .hero-section { position: relative; width: 100%; height: 85vh; min-height: 500px; max-height: 800px; overflow: hidden; }
+        .hero-section.hidden { display: none; }
+        .hero-slide {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center top;
+            transition: opacity 1s ease;
+        }
+        .hero-slide::after {
+            content: ''; position: absolute; inset: 0;
+            background:
+                linear-gradient(to right, rgba(10,10,15,0.9) 0%, rgba(10,10,15,0.4) 50%, transparent 100%),
+                linear-gradient(to top, var(--bg-primary) 0%, transparent 40%);
+        }
+        .hero-content {
+            position: absolute; bottom: 15%; left: 0;
+            padding: 0 5%; max-width: 600px; z-index: 2;
+        }
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 6vw, 72px);
+            line-height: 1; letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .hero-content p {
+            color: var(--text-secondary); font-size: 15px;
+            line-height: 1.6; margin-bottom: 24px;
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .hero-btns { display: flex; gap: 12px; align-items: center; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 28px;
+            background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius);
+            font-family: var(--font-body); font-size: 15px; font-weight: 600;
+            cursor: pointer; transition: all var(--transition);
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: scale(1.03); box-shadow: 0 8px 30px var(--accent-glow); }
+        .btn-glass {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.08); color: #fff;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius);
+            font-family: var(--font-body); font-size: 14px; font-weight: 500;
+            cursor: pointer; transition: all var(--transition);
+        }
+        .btn-glass:hover { background: rgba(255,255,255,0.15); }
+        .hero-nav {
+            position: absolute; bottom: 8%; right: 5%; z-index: 2;
+            display: flex; gap: 8px;
+        }
+        .hero-nav button {
+            width: 42px; height: 42px;
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%; color: #fff; font-size: 16px;
+            cursor: pointer; transition: all var(--transition);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .hero-nav button:hover { background: var(--accent); border-color: var(--accent); }
+        .hero-dots {
+            position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); z-index: 2;
+            display: flex; gap: 8px;
+        }
+        .hero-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: rgba(255,255,255,0.3); border: none;
+            cursor: pointer; transition: all var(--transition);
+        }
+        .hero-dot.active { background: var(--accent); width: 24px; border-radius: 4px; }
+
+        .content-section {
+            max-width: 1400px; margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 28px; letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .section-title::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(to right, var(--border), transparent);
+        }
+        .no-hero-padding { padding-top: 100px; }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .poster-card {
+            position: relative; border-radius: var(--radius-lg);
+            overflow: hidden; cursor: pointer;
+            background: var(--bg-card);
+            border: none; padding: 0; text-align: left;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            aspect-ratio: 2/3;
+        }
+        .poster-card:hover {
+            transform: scale(1.08); z-index: 10;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 2px var(--accent);
+        }
+        .poster-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        .poster-card:hover img { filter: brightness(0.6); }
+        .poster-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+            opacity: 0; transition: opacity var(--transition);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 16px;
+        }
+        .poster-card:hover .poster-overlay { opacity: 1; }
+        .poster-overlay .title {
+            font-weight: 700; font-size: 14px; margin-bottom: 4px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .poster-overlay .meta { font-size: 11px; color: var(--text-secondary); }
+        .badge-new {
+            position: absolute; top: 10px; right: 10px; z-index: 3;
+            background: var(--accent); color: #fff;
+            font-size: 10px; font-weight: 700; letter-spacing: 1px;
+            padding: 4px 8px; border-radius: 4px;
+        }
+        .badge-coming {
+            position: absolute; inset: 0; z-index: 3;
+            background: rgba(10,10,15,0.7); backdrop-filter: blur(4px);
+            display: flex; align-items: center; justify-content: center;
+            border-radius: var(--radius-lg);
+        }
+        .badge-coming span {
+            padding: 8px 20px; background: var(--accent);
+            border-radius: 100px; font-size: 12px; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase;
+        }
+        .empty-msg {
+            grid-column: 1 / -1; text-align: center;
+            padding: 60px 20px; color: var(--text-muted); font-size: 15px;
+        }
+
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .continue-card {
+            position: relative; border-radius: var(--radius-lg);
+            overflow: hidden; cursor: pointer;
+            background: var(--bg-card); border: none; padding: 0; text-align: left;
+            transition: all var(--transition);
+        }
+        .continue-card:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+        .continue-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+        .continue-info {
+            padding: 10px 14px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .continue-info .ep { font-size: 13px; font-weight: 600; }
+        .continue-info .time { font-size: 11px; color: var(--text-muted); }
+        .continue-badge {
+            position: absolute; top: 8px; left: 8px;
+            background: var(--accent); color: #fff;
+            font-size: 9px; font-weight: 700; letter-spacing: 1px;
+            padding: 3px 8px; border-radius: 4px;
+        }
+        .continue-progress {
+            position: absolute; bottom: 42px; left: 0; width: 100%; height: 3px;
+            background: rgba(255,255,255,0.1);
+        }
+        .continue-progress-bar {
+            height: 100%; background: var(--accent);
+            border-radius: 0 2px 2px 0;
+        }
+
+        .modal-backdrop {
+            position: fixed; inset: 0; z-index: 100;
+            display: none; align-items: flex-start; justify-content: center;
+            padding: 40px 20px;
+            overflow-y: auto;
+        }
+        .modal-backdrop.active { display: flex; }
+        .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
+        .modal-panel {
+            position: relative; z-index: 1;
+            width: 100%; max-width: 900px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl);
             overflow: hidden;
-            height: 100vh;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+            animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes modalIn {
+            0% { opacity: 0; transform: translateY(30px) scale(0.97); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-hero {
+            position: relative; width: 100%; height: 320px;
+            background-size: cover; background-position: center;
+            overflow: hidden;
+        }
+        .modal-hero::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, var(--bg-secondary) 0%, transparent 60%);
+        }
+        .modal-hero video {
+            position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+            opacity: 0; transition: opacity 1.2s ease;
+        }
+        .modal-hero video.visible { opacity: 1; }
+        .modal-hero .logo-img {
+            position: absolute; bottom: 20px; left: 24px; height: 56px; z-index: 2;
+        }
+        .modal-close {
+            position: absolute; top: 16px; right: 16px; z-index: 10;
+            width: 36px; height: 36px;
+            background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%; color: #fff; font-size: 18px;
+            cursor: pointer; transition: all var(--transition);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .modal-close:hover { background: var(--accent); border-color: var(--accent); }
+        .modal-body { padding: 24px; }
+        .modal-body .summary {
+            color: var(--text-secondary); font-size: 14px;
+            line-height: 1.7; margin-bottom: 20px; max-width: 700px;
+        }
+        .coming-soon-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .coming-soon-tag {
+            padding: 4px 12px;
+            background: rgba(229, 9, 20, 0.12); border: 1px solid rgba(229, 9, 20, 0.25);
+            border-radius: 100px; font-size: 11px; font-weight: 600;
+            color: var(--accent); letter-spacing: 0.5px;
+        }
+        .season-select {
+            padding: 10px 16px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); color: var(--text-primary);
+            font-family: var(--font-body); font-size: 14px;
+            cursor: pointer; transition: all var(--transition);
+            margin-bottom: 20px;
+        }
+        .season-select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); outline: none; }
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 14px;
+        }
+        .ep-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden; cursor: pointer;
+            border: 1px solid transparent;
+            transition: all var(--transition);
+            position: relative;
+        }
+        .ep-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .ep-card img { width: 100%; height: 110px; object-fit: cover; display: block; }
+        .ep-card .ep-info { padding: 10px 12px; }
+        .ep-card .ep-num { font-size: 11px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.5px; }
+        .ep-card .ep-title { font-size: 13px; font-weight: 600; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ep-play-icon {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -80%);
+            width: 40px; height: 40px;
+            background: var(--accent); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: all var(--transition);
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+        .ep-card:hover .ep-play-icon { opacity: 1; transform: translate(-50%, -80%) scale(1.1); }
+        .ep-info-btn {
+            position: absolute; top: 8px; right: 8px;
+            width: 28px; height: 28px;
+            background: rgba(0,0,0,0.6); border: none;
+            border-radius: 50%; color: #fff; font-size: 14px;
+            cursor: pointer; transition: all var(--transition);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0;
+        }
+        .ep-card:hover .ep-info-btn { opacity: 1; }
+        .ep-info-btn:hover { background: var(--accent); }
+
+        .player-modal {
+            position: fixed; inset: 0; z-index: 200;
+            background: #000; display: none;
+            flex-direction: column;
+        }
+        .player-modal.active { display: flex; }
+        .player-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 20px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+            position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+            opacity: 1; transition: opacity 0.3s ease;
+        }
+        .player-modal.controls-hidden .player-header { opacity: 0; }
+        .player-title-info { display: flex; flex-direction: column; }
+        .player-title-info .show-name { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+        .player-title-info .ep-name { font-size: 16px; font-weight: 700; }
+        .player-close {
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius); color: #fff;
+            font-family: var(--font-body); font-size: 13px; font-weight: 600;
+            cursor: pointer; transition: all var(--transition);
+        }
+        .player-close:hover { background: var(--accent); border-color: var(--accent); }
+        .player-video-wrap {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .player-video-wrap video {
+            width: 100%; height: 100%; object-fit: contain;
+        }
+        .player-video-wrap iframe {
+            position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+        }
+        .custom-controls {
+            position: absolute; bottom: 0; left: 0; right: 0; z-index: 10;
+            padding: 0 20px 16px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+            opacity: 1; transition: opacity 0.3s ease;
+        }
+        .player-modal.controls-hidden .custom-controls { opacity: 0; pointer-events: none; }
+        .progress-container {
+            width: 100%; height: 20px;
+            display: flex; align-items: center;
+            cursor: pointer; position: relative;
+            margin-bottom: 8px;
+        }
+        .progress-bar {
+            width: 100%; height: 4px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 2px; overflow: visible;
+            position: relative;
+            transition: height 0.15s ease;
+        }
+        .progress-container:hover .progress-bar { height: 6px; }
+        .progress-buffered {
+            position: absolute; top: 0; left: 0; height: 100%;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+        }
+        .progress-filled {
+            position: absolute; top: 0; left: 0; height: 100%;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .progress-thumb {
+            position: absolute; top: 50%; transform: translate(-50%, -50%);
+            width: 14px; height: 14px;
+            background: var(--accent); border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-glow);
+            opacity: 0; transition: opacity 0.15s ease;
+        }
+        .progress-container:hover .progress-thumb { opacity: 1; }
+        .controls-row {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .ctrl-btn {
+            background: none; border: none; color: #fff;
+            cursor: pointer; padding: 4px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all var(--transition); font-size: 20px;
+            opacity: 0.85;
+        }
+        .ctrl-btn:hover { opacity: 1; transform: scale(1.12); }
+        .ctrl-btn svg { width: 24px; height: 24px; fill: currentColor; }
+        .time-display { font-size: 13px; color: var(--text-secondary); font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .volume-wrap { display: flex; align-items: center; gap: 6px; }
+        .volume-slider {
+            width: 80px; height: 4px;
+            -webkit-appearance: none; appearance: none;
+            background: rgba(255,255,255,0.2); border-radius: 2px;
+            outline: none; cursor: pointer;
+        }
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none; appearance: none;
+            width: 12px; height: 12px;
+            background: #fff; border-radius: 50%; cursor: pointer;
+        }
+        .ctrl-btn.cc-active { color: var(--accent); opacity: 1; }
+        .ctrl-btn#btnCC svg { fill: none; stroke: currentColor; width: 22px; height: 22px; }
+        .ctrl-spacer { flex: 1; }
+        .next-ep-toast {
+            position: absolute; bottom: 80px; right: 20px; z-index: 15;
+            display: none; align-items: center; gap: 12px;
+            padding: 6px 20px 6px 6px;
+            background: var(--accent); border-radius: var(--radius-lg);
+            cursor: pointer; transition: all var(--transition);
+            box-shadow: 0 10px 40px var(--accent-glow);
+            animation: slideIn 0.4s ease;
+        }
+        .next-ep-toast.visible { display: flex; }
+        .next-ep-toast:hover { transform: scale(1.03); }
+        .next-ep-toast img { width: 64px; height: 40px; object-fit: cover; border-radius: var(--radius); }
+        .next-ep-toast .label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+        .next-ep-toast .name { font-size: 13px; font-weight: 700; }
+        @keyframes slideIn { 0% { opacity: 0; transform: translateX(30px); } 100% { opacity: 1; transform: translateX(0); } }
+
+        .ep-info-modal {
+            position: fixed; inset: 0; z-index: 150;
+            display: none; align-items: center; justify-content: center;
+            padding: 20px;
+        }
+        .ep-info-modal.active { display: flex; }
+        .ep-info-panel {
+            position: relative; z-index: 1;
+            width: 100%; max-width: 580px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+            animation: modalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .ep-info-panel .thumb { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .ep-info-content { padding: 24px; }
+        .ep-info-content h3 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+        .ep-info-content .meta { font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+        .ep-info-content .synopsis { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+        .ep-info-content .stats {
+            display: flex; gap: 24px; padding: 16px 0; border-top: 1px solid var(--border);
+            font-size: 11px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .ep-info-content .stats span { color: var(--text-primary); }
+        .btn-play-full {
+            width: 100%; padding: 14px;
+            background: var(--accent); color: #fff; border: none;
+            border-radius: var(--radius); font-family: var(--font-body);
+            font-size: 15px; font-weight: 700; cursor: pointer;
+            transition: all var(--transition);
+        }
+        .btn-play-full:hover { background: var(--accent-hover); box-shadow: 0 8px 30px var(--accent-glow); }
+
+        .cs-modal {
+            position: fixed; inset: 0; z-index: 120;
+            display: none; align-items: center; justify-content: center;
+            padding: 20px;
+        }
+        .cs-modal.active { display: flex; }
+        .cs-panel {
+            position: relative; z-index: 1;
+            width: 100%; max-width: 480px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl); overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+            animation: modalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .cs-hero { width: 100%; height: 200px; background-size: cover; background-position: center; position: relative; }
+        .cs-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-secondary) 0%, transparent 60%); }
+        .cs-hero .logo-img { position: absolute; bottom: 12px; left: 20px; height: 40px; z-index: 1; }
+        .cs-body { padding: 24px; text-align: center; }
+        .cs-body h2 { font-family: var(--font-display); font-size: 32px; letter-spacing: 2px; margin-bottom: 12px; }
+        .cs-body p { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; }
+        .cs-badge {
+            display: inline-block; padding: 8px 24px;
+            background: var(--accent); border-radius: 100px;
+            font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .cs-close {
+            width: 100%; padding: 12px;
+            background: var(--bg-elevated); border: 1px solid var(--border);
+            border-radius: var(--radius); color: var(--text-primary);
+            font-family: var(--font-body); font-size: 14px; font-weight: 600;
+            cursor: pointer; transition: all var(--transition);
+        }
+        .cs-close:hover { background: var(--bg-card); }
+
+        .external-season {
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; padding: 60px 20px; text-align: center;
+            grid-column: 1 / -1;
+        }
+        .external-season a {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 16px 40px;
+            background: var(--accent); color: #fff;
+            border-radius: var(--radius); font-size: 18px; font-weight: 700;
+            text-decoration: none; transition: all var(--transition);
+        }
+        .external-season a:hover { transform: scale(1.05); box-shadow: 0 8px 30px var(--accent-glow); }
+        .external-season p { color: var(--text-muted); font-size: 13px; margin-top: 16px; max-width: 400px; }
+
+        .faq-section { max-width: 800px; margin: 80px auto; padding: 0 24px; }
+        .faq-section h2 {
+            font-family: var(--font-display);
+            font-size: 36px; letter-spacing: 2px;
+            text-align: center; margin-bottom: 40px;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-item button {
+            width: 100%; padding: 20px 0;
+            background: none; border: none;
+            color: var(--text-primary);
+            font-family: var(--font-body); font-size: 16px; font-weight: 600;
+            cursor: pointer; text-align: left;
+            display: flex; justify-content: space-between; align-items: center;
+            transition: color var(--transition);
+        }
+        .faq-item button:hover { color: var(--accent); }
+        .faq-item .icon {
+            width: 28px; height: 28px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: var(--text-muted);
+            transition: transform var(--transition);
+        }
+        .faq-item.open .icon { transform: rotate(45deg); color: var(--accent); }
+        .faq-answer {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 20px; }
+        .faq-answer p { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+
+        footer {
+            text-align: center; padding: 40px 20px;
+            color: var(--text-muted); font-size: 12px;
+            border-top: 1px solid var(--border);
+            max-width: 1400px; margin: 0 auto;
         }
 
         @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(16px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
-
-        .fade-up {
-            animation: fadeUp 0.6s ease forwards;
+        .anim-in {
+            animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             opacity: 0;
         }
 
-        [data-delay] {
-            animation-delay: calc(var(--delay) * 0.1s);
+        .player-error {
+            position: absolute; inset: 0;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 40px; background: #000;
         }
-
-
-        .scroll-area {
-            -webkit-overflow-scrolling: touch;
+        .player-error h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .player-error p { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; }
+        .player-error a {
+            padding: 10px 24px; background: #5865F2; color: #fff;
+            border-radius: var(--radius); font-size: 13px; font-weight: 600;
+            text-decoration: none; transition: all var(--transition);
         }
+        .player-error a:hover { background: #6c78ff; }
 
-        
-:focus-visible {
-    outline: 1px solid #6366f1; 
-    outline-offset: 2px;
-    z-index: 10; 
-    border-radius: 0.5rem;
-}
-
-        button.reset-btn {
-            background: none;
-            border: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-            width: 100%;
-            cursor: pointer;
-            display: block;
+        @media (max-width: 768px) {
+            .hero-section { height: 70vh; min-height: 400px; }
+            .hero-content { bottom: 20%; padding: 0 20px; }
+            .hero-content h1 { font-size: 32px; }
+            .hero-nav { bottom: 12%; right: 20px; }
+            .poster-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+            .episode-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+            .modal-hero { height: 220px; }
+            .navbar-inner { padding: 10px 16px; }
+            .logo { font-size: 22px; }
+            .discord-btn span { display: none; }
+            .volume-slider { display: none; }
         }
     </style>
 </head>
+<body>
 
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-
-<nav class="fixed top-0 w-full z-20 backdrop-blur bg-white/30 dark:bg-gray-800/30 border-b border-gray-300/20">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
-            <span class="font-bold text-lg md:text-xl shrink-0">Litestreaming</span>
-            
-            <input type="text" id="searchInput" placeholder="Search shows..." 
-                class="flex-1 max-w-md px-4 py-1.5 rounded-xl bg-white/20 dark:bg-black/20 border border-gray-400/20 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
-
-            <a href="https://discord.gg/jmeYYbBcsN" target="_blank"
-                class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold focus:ring-4 focus:ring-indigo-300 outline-none shrink-0">
-                Discord
-            </a>
+<nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+        <div class="logo">Litestreaming</div>
+        <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" id="searchInput" placeholder="Search shows...">
         </div>
-    </nav>
-    
-<section id="heroSection" class="pt-20 max-w-7xl mx-auto px-4 hidden">
-    <div id="heroContainer" class="relative w-full h-[300px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl bg-gray-800">
-        </div>
+        <a href="https://discord.gg/jmeYYbBcsN" target="_blank" class="discord-btn">
+            <svg width="16" height="12" viewBox="0 0 71 55" fill="currentColor"><path d="M60.1 4.9A58.5 58.5 0 0045.4.2a.2.2 0 00-.2.1 40.8 40.8 0 00-1.8 3.7 54 54 0 00-16.2 0A37.4 37.4 0 0025.4.3a.2.2 0 00-.2-.1A58.4 58.4 0 0010.5 5 59.6 59.6 0 00.4 45a.3.3 0 00.1.2 58.8 58.8 0 0017.7 9 .2.2 0 00.3-.1 42 42 0 003.6-5.9.2.2 0 00-.1-.3 38.8 38.8 0 01-5.5-2.6.2.2 0 01 0-.4l1.1-.9a.2.2 0 01.2 0 42 42 0 0035.6 0 .2.2 0 01.2 0l1.1.9a.2.2 0 010 .3 36.4 36.4 0 01-5.5 2.7.2.2 0 00-.1.3 47.2 47.2 0 003.6 5.8.2.2 0 00.3.1A58.6 58.6 0 0070 45.2a.2.2 0 00.1-.2c1.6-16.7-2.7-31.2-11.5-40.1zM23.7 37c-3.5 0-6.3-3.2-6.3-7s2.8-7 6.3-7 6.4 3.2 6.3 7-2.8 7-6.3 7zm23.3 0c-3.5 0-6.3-3.2-6.3-7s2.8-7 6.3-7 6.4 3.2 6.3 7-2.8 7-6.3 7z"/></svg>
+            <span>Discord</span>
+        </a>
+    </div>
+</nav>
+
+<section class="hero-section hidden" id="heroSection">
+    <div id="heroContainer"></div>
+    <div class="hero-dots" id="heroDots"></div>
+    <div class="hero-nav">
+        <button onclick="prevHero()" aria-label="Previous">&#10094;</button>
+        <button onclick="nextHero()" aria-label="Next">&#10095;</button>
+    </div>
 </section>
 
-    <main class="pt-20 max-w-7xl mx-auto px-4">
-        <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Featured Shows</h1>
-        <div id="posterGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+<main class="content-section" id="mainContent">
+    <div id="continueSection" style="display:none; margin-bottom: 48px;">
+        <h2 class="section-title">Continue Watching</h2>
+        <div class="continue-grid" id="continueGrid"></div>
+    </div>
 
-        <h2 id="continueHeader" class="text-2xl md:text-3xl font-bold mt-12 mb-4 hidden">Continue Watching</h2>
-        <div id="continueGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12"></div>
-    </main>
+    <h2 class="section-title">Featured Shows</h2>
+    <div class="poster-grid" id="posterGrid"></div>
+</main>
 
-    <div id="showModal" class="fixed inset-0 hidden z-40">
-        <div class="absolute inset-0 bg-black/70" onclick="closeShow()"></div>
-        <div class="absolute inset-0 md:relative md:mt-20
-            w-full md:max-w-5xl mx-auto
-            glass rounded-2xl shadow-2xl
-            max-h-[90vh] flex flex-col justify-start md:justify-start">
-
-<div id="showHero" class="h-48 md:h-72 bg-cover bg-center relative flex-shrink-0 overflow-hidden">
-    <video id="showPreviewVideo" class="absolute inset-0 w-full h-full object-cover hidden opacity-0 transition-opacity duration-1000" muted playsinline loop></video>
-    
-    <img id="showLogo" class="absolute bottom-3 left-4 h-12 md:h-20 z-10" />
-    
-    <button onclick="closeShow()" class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-bold focus:bg-red-600 outline-none z-10">
-        Close ✕
-    </button>
+<div class="modal-backdrop" id="showModal">
+    <div class="modal-bg" onclick="closeShow()"></div>
+    <div class="modal-panel">
+        <div class="modal-hero" id="showHero">
+            <video id="showPreviewVideo" muted playsinline loop></video>
+            <img class="logo-img" id="showLogo" src="" alt="">
+            <button class="modal-close" onclick="closeShow()">✕</button>
+        </div>
+        <div class="modal-body">
+            <div class="coming-soon-tags" id="seasonComingSoon"></div>
+            <p class="summary" id="showSummary"></p>
+            <select class="season-select" id="seasonSelect"></select>
+            <div class="episode-grid" id="episodeGrid"></div>
+        </div>
+    </div>
 </div>
 
-            <div class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
-<div class="p-4 md:p-6 space-y-4 overflow-y-auto scroll-area">
-    <div id="seasonComingSoon" class="hidden flex flex-wrap gap-2 fade-up"></div>
-
-    <p id="showSummary" class="text-gray-300 text-sm md:text-base max-w-3xl fade-up" data-delay="0"></p>
-
-    <select id="seasonSelect" class="bg-gray-800 p-3 rounded-xl w-full md:w-64 text-white fade-up focus:ring-4 focus:ring-indigo-500 outline-none" data-delay="1"></select>
-
-    <div id="episodeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 fade-up" data-delay="2"></div>
-</div>
-
+<div class="player-modal" id="playerModal">
+    <div class="player-header">
+        <div class="player-title-info">
+            <span class="show-name" id="playerShowName"></span>
+            <span class="ep-name" id="playerEpName"></span>
+        </div>
+        <button class="player-close" onclick="closePlayer()">Close</button>
+    </div>
+    <div class="player-video-wrap" id="playerVideoWrap">
+        <video id="playerVideo"></video>
+        <iframe id="playerYoutube" style="display:none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="next-ep-toast" id="nextEpToast" onclick="playNextEpisode()">
+            <img id="nextEpPreview" src="">
+            <div>
+                <div class="label">Next Episode</div>
+                <div class="name" id="nextEpTitle"></div>
             </div>
         </div>
     </div>
-<div id="playerModal" class="fixed inset-0 hidden z-[100] flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/95" onclick="closePlayer()"></div>
-
-        <div class="relative w-full md:max-w-6xl mx-auto h-full md:h-auto flex flex-col items-center justify-center p-4">
-             <button onclick="closePlayer()" class="self-end mb-2 px-6 py-2 bg-red-600 text-white font-bold rounded-lg z-50 focus:ring-4 focus:ring-white outline-none">
-                Close Player
+    <div class="custom-controls" id="customControls">
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar">
+                <div class="progress-buffered" id="progressBuffered"></div>
+                <div class="progress-filled" id="progressFilled"></div>
+                <div class="progress-thumb" id="progressThumb"></div>
+            </div>
+        </div>
+        <div class="controls-row">
+            <button class="ctrl-btn" id="btnPlay" title="Play/Pause" onclick="togglePlay()">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </button>
-<div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl group">
-<video id="playerVideo" class="w-full h-full hidden" controls playsinline preload="metadata"></video>
-    
-    <iframe id="playerYoutube" class="hidden absolute inset-0 w-full h-full" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen></iframe>
-
-    <button id="nextEpOverlay" onclick="playNextEpisode()"
-                    class="hidden absolute bottom-20 right-8 z-50 flex items-center gap-3 p-1 pr-6 bg-indigo-600/90 hover:bg-indigo-500 text-white rounded-xl backdrop-blur-md transition-all transform hover:scale-105 border border-white/20 shadow-2xl fade-up">
-                    <img id="nextEpPreview" src="" class="w-20 h-12 object-cover rounded-lg">
-                    <div class="text-left">
-                        <p class="text-[10px] font-bold opacity-70 uppercase tracking-widest">Next Episode</p>
-                        <p id="nextEpTitle" class="text-sm font-bold truncate max-w-[150px]"></p>
-                    </div>
-                    <span class="ml-2">❯</span>
-                </button>
-            </div>
-        </div>
-    </div> <div id="epInfoModal" class="fixed inset-0 hidden z-[100] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/80" onclick="closeEpInfo()"></div>
-        <div class="relative w-full max-w-2xl glass rounded-2xl overflow-hidden shadow-2xl flex flex-col fade-up">
-            
-            <div class="relative h-48 md:h-64 bg-black">
-                <img id="epInfoThumb" class="w-full h-full object-cover opacity-80" src="" alt="">
-                <button onclick="closeEpInfo()" class="absolute top-4 right-4 bg-black/60 text-white p-2 rounded-full hover:bg-red-600 transition">✕</button>
-            </div>
-
-            <div class="p-6 space-y-4">
-                <div>
-                    <h3 id="epInfoTitle" class="text-2xl font-bold text-white"></h3>
-                    <p id="epInfoMeta" class="text-indigo-400 text-sm font-semibold uppercase tracking-wider"></p>
-                </div>
-                
-                <p id="epInfoSynopsis" class="text-gray-300 text-sm leading-relaxed"></p>
-                
-                <div class="flex items-center gap-6 pt-4 border-t border-white/10 text-xs font-mono text-gray-400">
-                    <div class="flex items-center gap-2">
-                        <span>LENGTH:</span>
-                        <span id="epInfoLength" class="text-white">Calculating...</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span>QUALITY:</span>
-                        <span class="text-white">HD</span>
-                    </div>
-                </div>
-
-                <button id="epInfoPlayBtn" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all active:scale-95">
-                    Play Episode
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="comingSoonModal" class="fixed inset-0 hidden z-50 flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/80" onclick="closeComingSoon()"></div>
-
-        <div class="relative w-full max-w-lg mx-4
-            glass rounded-2xl shadow-2xl
-            flex flex-col overflow-hidden">
-
-            <div id="comingSoonHero" class="h-48 bg-cover bg-center relative">
-                <img id="comingSoonLogo" class="absolute bottom-3 left-4 h-12" />
-                <button onclick="closeComingSoon()" class="absolute top-2 right-2 bg-black/50 text-white rounded-full p-2 text-xs">✕</button>
-            </div>
-
-            <div class="p-6 text-center space-y-4">
-                <h2 id="comingSoonTitle" class="text-2xl font-extrabold"></h2>
-
-                <p id="comingSoonNote" class="text-gray-300 text-sm">
-                </p>
-
-                <span class="inline-block px-4 py-2 rounded-full
-               bg-indigo-600/90 text-white
-               text-sm font-bold tracking-wide">
-                    Coming Soon
-                </span>
-                
-                <button onclick="closeComingSoon()" class="block w-full mt-4 py-3 bg-gray-700 hover:bg-gray-600 rounded-xl font-bold">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-    <script>
-        let shows = [];
-        let currentShow = null;
-        let currentSeasonData = null;
-        let hls = null;
-        let lastFocusedElement = null; 
-        let previewTimer = null;
-
-        fetch("data/show.json?v=" + Date.now())
-            .then(res => res.json())
-            .then(data => {
-                shows = data.shows;
-                renderPosters();
-                renderContinueWatching();
-            });
-
-        function toggleFAQ(button) {
-            const item = button.parentElement;
-            const content = item.querySelector(".faq-content");
-            const icon = item.querySelector(".faq-icon");
-
-            content.classList.toggle("hidden");
-            icon.textContent = content.classList.contains("hidden") ? "+" : "−";
-        }
-
-
-        function openComingSoon(index) {
-            lastFocusedElement = document.activeElement;
-            const show = shows[index];
-            document.body.classList.add("modal-open");
-
-            comingSoonHero.style.backgroundImage = `url(${show.banner})`;
-            comingSoonLogo.src = show.logo || "";
-            comingSoonTitle.textContent = show.title;
-            comingSoonNote.textContent = show.comingSoonNote || "This title is coming soon.";
-
-            comingSoonModal.classList.remove("hidden");
-
-            const items = comingSoonModal.querySelectorAll(
-                ".fade-up, #comingSoonHero, #comingSoonTitle, #comingSoonNote");
-            items.forEach((el, i) => {
-                el.classList.add("fade-up");
-                el.style.animationDelay = `${i * 0.1}s`;
-            });
-
-            setTimeout(() => {
-                const closeBtn = comingSoonModal.querySelector('button:last-child');
-                if(closeBtn) closeBtn.focus();
-            }, 100);
-        }
-
-
-        function closeComingSoon() {
-            comingSoonModal.classList.add("hidden");
-            document.body.classList.remove("modal-open");
-            if(lastFocusedElement) lastFocusedElement.focus();
-        }
-
-        function renderPosters(list = shows) {
-            const grid = document.getElementById("posterGrid");
-            
-            if (list.length === 0) {
-                grid.innerHTML = `<p class="col-span-full text-center py-10 text-gray-500">No shows found.</p>`;
-                return;
-            }
-
-            grid.innerHTML = list.map((show) => {
-                const originalIndex = shows.indexOf(show);
-                
-                return `
-                <button class="reset-btn relative group fade-up rounded-xl transition-transform active:scale-95 focus:scale-105" 
-                    style="--delay:${list.indexOf(show)}"
-                    onclick="${show.comingSoon ? `openComingSoon(${originalIndex})` : `openShow(${originalIndex})`}">
-                  
-                  ${show.newEpisodes ? `
-                    <div class="absolute top-2 right-2 z-10 bg-red-600 text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded shadow-md pointer-events-none">
-                        NEW EPISODES
-                    </div>
-                  ` : ''}
-
-                  <img src="${show.poster}"
-                    class="rounded-xl shadow-lg w-full h-auto object-cover
-                           ${show.comingSoon ? 'opacity-70' : ''}" />
-
-                  ${show.comingSoon ? `
-                    <div class="absolute inset-0 rounded-xl
-                                bg-black/60 backdrop-blur-sm
-                                flex items-center justify-center pointer-events-none">
-                      <span class="px-4 py-2 rounded-full
-                                   bg-indigo-600/90 text-white
-                                   text-sm font-bold tracking-wide shadow-lg">
-                        ${show.comingSoonText || "Coming Soon"}
-                      </span>
-                    </div>
-                  ` : ''}
-                </button>
-              `;
-            }).join("");
-        }
-
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = shows.filter(show => 
-                show.title.toLowerCase().includes(term)
-            );
-            renderPosters(filtered);
-        });
-
-function openShow(index) {
-    lastFocusedElement = document.activeElement;
-    currentShow = shows[index];
-    document.body.classList.add("modal-open");
-
-    const videoEl = document.getElementById("showPreviewVideo");
-    
-    // Reset video state
-    clearTimeout(previewTimer);
-    videoEl.pause();
-    videoEl.src = "";
-    videoEl.classList.add("hidden");
-    videoEl.style.opacity = "0";
-
-    showHero.style.backgroundImage = `url(${currentShow.banner})`;
-    showLogo.src = currentShow.logo;
-    showSummary.textContent = currentShow.summary;
-
-    // --- PREVIEW LOGIC ---
-    if (currentShow.preview) {
-        previewTimer = setTimeout(() => {
-            videoEl.src = currentShow.preview;
-            videoEl.classList.remove("hidden");
-            videoEl.play().then(() => {
-                videoEl.style.opacity = "1"; // Smooth fade in
-            }).catch(e => console.log("Preview autoplay blocked"));
-        }, 5000); // 5 second delay
-    }
-    // ---------------------
-
-    const comingSoonArea = document.getElementById("seasonComingSoon");
-    comingSoonArea.innerHTML = ""; 
-    comingSoonArea.classList.add("hidden");
-
-    const comingSoonSeasons = currentShow.seasons.filter(s => s.comingSoonText);
-    if (comingSoonSeasons.length > 0) {
-        comingSoonArea.classList.remove("hidden");
-        comingSoonArea.innerHTML = comingSoonSeasons.map(s => `
-            <span class="px-3 py-1 bg-indigo-600/30 border border-indigo-500/50 text-indigo-300 text-xs font-bold rounded-lg">
-                ${s.comingSoonText}
-            </span>
-        `).join("");
-    }
-
-    const playableSeasons = currentShow.seasons.filter(s => s.file);
-    
-    if (playableSeasons.length > 0) {
-        seasonSelect.classList.remove("hidden");
-        seasonSelect.innerHTML = playableSeasons.map((s, i) =>
-            `<option value="${i}">Season ${s.number}</option>`
-        ).join("");
-
-        seasonSelect.onchange = () => {
-            const actualIndexInShow = currentShow.seasons.indexOf(playableSeasons[seasonSelect.value]);
-            loadSeason(actualIndexInShow);
-        };
-        
-        const firstSeasonIndex = currentShow.seasons.indexOf(playableSeasons[0]);
-        loadSeason(firstSeasonIndex);
-    } else {
-        seasonSelect.classList.add("hidden");
-        episodeGrid.innerHTML = "<p class='text-gray-500 p-4'>No episodes currently available.</p>";
-    }
-
-    showModal.classList.remove("hidden");
-
-    const items = showModal.querySelectorAll(".fade-up");
-    items.forEach((el, i) => {
-        el.style.animationDelay = `${i * 0.1}s`;
-        el.classList.add("fade-up");
-    });
-
-    setTimeout(() => {
-        if (!seasonSelect.classList.contains("hidden")) seasonSelect.focus();
-    }, 150);
-}
-
-        function loadSeason(seasonIndex) {
-            episodeGrid.innerHTML = "<p class='text-gray-400 p-2'>Loading...</p>";
-
-            fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
-                .then(res => res.json())
-                .then(data => {
-                    currentSeasonData = data;
-
-                    if (data.type === "external") {
-                        renderExternalSeason(data);
-                    } else {
-                        renderEpisodes();
-                    }
-                });
-        }
-
-        function renderExternalSeason(data) {
-            episodeGrid.innerHTML = `
-    <div class="col-span-full flex flex-col items-center justify-center text-center py-16 space-y-4">
-      <a href="${data.button.url}" target="_blank"
-        class="px-10 py-5 text-xl font-bold rounded-2xl
-               bg-indigo-600 hover:bg-indigo-700 text-white
-               transition hover:scale-105 shadow-xl inline-block focus:ring-4 focus:ring-white">
-        ${data.button.label}
-      </a>
-      <p class="text-sm text-gray-400 max-w-md">
-        ${data.note}
-      </p>
-    </div>
-  `;
-        }
-
-        function renderContinueWatching() {
-            const watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
-            const grid = document.getElementById("continueGrid");
-            const header = document.getElementById("continueHeader");
-
-            if (!grid) return;
-
-            if(watchData.length === 0) {
-                header.classList.add("hidden");
-                grid.innerHTML = "";
-                return;
-            } else {
-                header.classList.remove("hidden");
-            }
-
-            const items = watchData.map(item => {
-                const show = shows.find(s => s.id === item.showId);
-                if (!show) return null;
-
-                const minutes = Math.floor(item.time / 60);
-                const progressText = minutes > 0 ? `${minutes}m watched` : 'Just started';
-
-                return `
-      <button class="reset-btn rounded-xl shadow-lg overflow-hidden relative group transition-transform active:scale-95 focus:scale-105" 
-              onclick="openShow(${shows.indexOf(show)})">
-        <img src="${show.poster}" class="w-full h-32 object-cover">
-        
-        <div class="absolute bottom-0 w-full bg-black/80 backdrop-blur-md p-2 flex justify-between items-center">
-            <span class="text-white text-xs font-medium">S${item.season + 1} E${item.episode + 1}</span>
-            <span class="text-gray-300 text-[10px]">${progressText}</span>
-        </div>
-
-        <div class="absolute top-2 left-2 bg-indigo-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
-            RESUME
-        </div>
-      </button>
-    `;
-            }).filter(Boolean);
-
-            grid.innerHTML = items.join("");
-        }
-
-
-function renderEpisodes() {
-    episodeGrid.innerHTML = currentSeasonData.episodes.map((ep, i) => `
-        <div class="relative group fade-up" style="--delay:${i}">
-            <button onclick="openPlayer(${i})" 
-                class="reset-btn bg-gray-800 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition flex flex-col focus:ring-4 focus:ring-indigo-500">
-                <img src="${ep.thumbnail}" class="w-full h-28 object-cover">
-                <div class="p-2 w-full">
-                    <p class="text-xs text-gray-400">Episode ${ep.number}</p>
-                    <p class="font-semibold text-sm truncate">${ep.title}</p>
-                </div>
+            <button class="ctrl-btn" title="Previous (Shift+P)" onclick="playPreviousEpisode()">
+                <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
             </button>
-
-            <button onclick="event.stopPropagation(); openEpisodeInfo(${i})" 
-                class="absolute top-2 right-2 p-1.5 bg-black/60 hover:bg-indigo-600 text-white rounded-full backdrop-blur-md transition-colors shadow-lg"
-                title="Episode Info">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <button class="ctrl-btn" title="Next (Shift+N)" onclick="playNextEpisode()">
+                <svg viewBox="0 0 24 24"><path d="M16 18h2V6h-2zM5.5 12l8.5 6V6z" transform="scale(-1,1) translate(-24,0)"/></svg>
+            </button>
+            <div class="volume-wrap">
+                <button class="ctrl-btn" id="btnMute" onclick="toggleMute()">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+            </div>
+            <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+            <div class="ctrl-spacer"></div>
+            <button class="ctrl-btn" id="btnCC" title="Subtitles (C)" onclick="toggleSubtitles()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="3"/>
+                    <path d="M10 9.5a1.5 1.5 0 00-1.5-1.5H7a1.5 1.5 0 00-1.5 1.5v5A1.5 1.5 0 007 16h1.5A1.5 1.5 0 0010 14.5"/>
+                    <path d="M19 9.5a1.5 1.5 0 00-1.5-1.5H16a1.5 1.5 0 00-1.5 1.5v5A1.5 1.5 0 0016 16h1.5a1.5 1.5 0 001.5-1.5"/>
                 </svg>
             </button>
+            <button class="ctrl-btn" title="Fullscreen" onclick="toggleFullscreen()">
+                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+            </button>
         </div>
-    `).join("");
-}
+    </div>
+</div>
 
-function openEpisodeInfo(epIndex) {
-    const ep = currentSeasonData.episodes[epIndex];
-    
-    document.getElementById("epInfoThumb").src = ep.thumbnail;
-    document.getElementById("epInfoTitle").textContent = ep.title;
-    document.getElementById("epInfoSynopsis").textContent = ep.description || "No synopsis available for this episode.";
-    document.getElementById("epInfoMeta").textContent = `Season ${currentShow.seasons[seasonSelect.value].number} • Episode ${ep.number}`;
-    document.getElementById("epInfoLength").textContent = "Calculating...";
+<div class="ep-info-modal" id="epInfoModal">
+    <div class="modal-bg" onclick="closeEpInfo()"></div>
+    <div class="ep-info-panel">
+        <img class="thumb" id="epInfoThumb" src="" alt="">
+        <button class="modal-close" onclick="closeEpInfo()" style="position:absolute;top:12px;right:12px;">✕</button>
+        <div class="ep-info-content">
+            <h3 id="epInfoTitle"></h3>
+            <div class="meta" id="epInfoMeta"></div>
+            <p class="synopsis" id="epInfoSynopsis"></p>
+            <div class="stats">
+                <div>Length: <span id="epInfoLength">Calculating...</span></div>
+                <div>Quality: <span>HD</span></div>
+            </div>
+            <button class="btn-play-full" id="epInfoPlayBtn">▶ Play Episode</button>
+        </div>
+    </div>
+</div>
 
-    document.getElementById("epInfoPlayBtn").onclick = () => {
-        closeEpInfo();
-        openPlayer(epIndex);
-    };
+<div class="cs-modal" id="comingSoonModal">
+    <div class="modal-bg" onclick="closeComingSoon()"></div>
+    <div class="cs-panel">
+        <div class="cs-hero" id="csHero">
+            <img class="logo-img" id="csLogo" src="" alt="">
+            <button class="modal-close" onclick="closeComingSoon()" style="position:absolute;top:12px;right:12px;z-index:2;">✕</button>
+        </div>
+        <div class="cs-body">
+            <h2 id="csTitle"></h2>
+            <p id="csNote"></p>
+            <div class="cs-badge">Coming Soon</div><br>
+            <button class="cs-close" onclick="closeComingSoon()">Close</button>
+        </div>
+    </div>
+</div>
 
-    document.getElementById("epInfoModal").classList.remove("hidden");
+<section class="faq-section">
+    <h2>FAQ</h2>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <button><span>What is this site?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>This site is a website you can stream most LEGO TV shows on.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <button><span>Where does the video content come from?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Videos are embedded or streamed from official sources.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <button><span>Why is some content marked as "Coming Soon"?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Some shows or seasons are still being prepared and will be available at a later date.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <button><span>How do I suggest a new feature?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Join the Discord server to make suggestions.</p></div>
+    </div>
+</section>
 
-    getDuration(ep.embed, (duration) => {
-        document.getElementById("epInfoLength").textContent = duration;
-    });
-}
+<footer>
+    <p>&copy; 2026 Litestreaming. All content belongs to its respective owners.</p>
+</footer>
 
-function closeEpInfo() {
-    document.getElementById("epInfoModal").classList.add("hidden");
-}
-
-function getDuration(url, callback) {
-    if (!url) return callback("Unknown");
-
-    const tempVideo = document.createElement('video');
-    
-    const formatTime = (duration) => {
-        if (!duration || !isFinite(duration)) return "N/A";
-        const mins = Math.floor(duration / 60);
-        const secs = Math.floor(duration % 60);
-        return `${mins}m ${secs}s`;
-    };
-
-    if (url.includes('.m3u8') && Hls.isSupported()) {
-        const hlsTemp = new Hls();
-        hlsTemp.loadSource(url);
-        hlsTemp.attachMedia(tempVideo);
-        
-        hlsTemp.on(Hls.Events.MANIFEST_PARSED, function() {
-            setTimeout(() => {
-                callback(formatTime(tempVideo.duration));
-                hlsTemp.destroy();
-                tempVideo.remove();
-            }, 600);
-        });
-
-        hlsTemp.on(Hls.Events.ERROR, function() {
-            callback("N/A");
-            hlsTemp.destroy();
-            tempVideo.remove();
-        });
-    } 
-    else {
-        tempVideo.preload = 'metadata';
-        tempVideo.src = url;
-        
-        tempVideo.onloadedmetadata = () => {
-            callback(formatTime(tempVideo.duration));
-            tempVideo.remove();
-        };
-
-        tempVideo.onerror = () => {
-            callback("N/A");
-            tempVideo.remove();
-        };
-    }
-}
-
-let currentEpisodeIndex = -1; 
-
-function playNextEpisode() {
-    if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
-        openPlayer(currentEpisodeIndex + 1);
-    } else {
-        alert("You've reached the end of the season!");
-        closePlayer();
-    }
-}
-
-function playPreviousEpisode() {
-    if (currentEpisodeIndex > 0) {
-        openPlayer(currentEpisodeIndex - 1);
-    }
-}
-
-function openPlayer(epIndex) {
-    currentEpisodeIndex = epIndex; 
-    const ep = currentSeasonData.episodes[epIndex];
-    const video = document.getElementById("playerVideo");
-    const ytPlayer = document.getElementById("playerYoutube"); 
-    const videoContainer = video.parentElement; 
-    const videoSrc = ep.embed;
-
-    const oldError = videoContainer.querySelector('.unavailable-msg');
-    if (oldError) oldError.remove();
-    
-    video.classList.add("hidden");
-    ytPlayer.classList.add("hidden");
-    
-    video.pause();
-    video.src = "";
-    video.load();
-    if (hls) { hls.destroy(); hls = null; }
-
-    ytPlayer.src = "";
-
-    if (!videoSrc || videoSrc.trim() === "") {
-        showPlayerError(videoContainer);
-        return; 
-    }
-
-    const isEmbed = videoSrc.includes("youtube.com") || videoSrc.includes("youtu.be") || videoSrc.includes("embed");
-
-    if (isEmbed) {
-        ytPlayer.classList.remove("hidden");
-        
-        let finalUrl = videoSrc;
-        if (videoSrc.includes("watch?v=")) {
-            const id = videoSrc.split("v=")[1].split("&")[0];
-            finalUrl = `https://www.youtube.com/embed/${id}`;
-        }
-        
-        const separator = finalUrl.includes("?") ? "&" : "?";
-        ytPlayer.src = `${finalUrl}${separator}autoplay=1&modestbranding=1&rel=0&t=${Date.now()}`;
-
-    } else {
-        video.classList.remove("hidden");
-        setupStandardVideo(video, videoSrc, ep, epIndex);
-    }
-
-    playerModal.classList.remove("hidden");
-}
-
-        function showPlayerError(container) {
-            const msgDiv = document.createElement("div");
-            msgDiv.className = "unavailable-msg absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-2 fade-up bg-black";
-            msgDiv.innerHTML = `
-                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl">
-                    <p class="text-white text-lg font-bold">Video Error</p>
-                    <p class="text-gray-400 text-sm mb-4">Please contact me in the Discord server and I will fix the episode.</p>
-                    <a href="https://discord.gg/jmeYYbBcsN" target="_blank" class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-xs font-bold"> Discord</a>
-                </div>
-            `;
-            container.appendChild(msgDiv);
-            playerModal.classList.remove("hidden");
-        }
-
-function getYouTubeId(url) {
-    if (!url) return null;
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
-}
-
-
-function setupStandardVideo(video, videoSrc, ep, epIndex) {
-    let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
-    const currentShowId = currentShow.id;
-    const currentSeasonNum = parseInt(seasonSelect.value);
-    const existingEntry = watchData.find(item =>
-        item.showId === currentShowId && item.season === currentSeasonNum && item.episode === epIndex
-    );
-    let startTime = existingEntry ? existingEntry.time : 0;
-
-    while (video.firstChild) {
-        video.removeChild(video.firstChild);
-    }
-
-    if (ep.subtitles && ep.subtitles.length > 0) {
-        ep.subtitles.forEach(track => {
-            fetch(track.url)
-                .then(response => response.blob())
-                .then(blob => {
-                    const blobUrl = URL.createObjectURL(blob);
-                    const t = document.createElement("track");
-                    t.kind = "subtitles";
-                    t.label = track.label;
-                    t.srclang = track.lang;
-                    t.src = blobUrl;
-                    if (track.default) t.default = true;
-                    video.appendChild(t);
-                })
-                .catch(err => console.error("Subtitle fetch failed:", err));
-        });
-    }
-
-    video.ontimeupdate = () => {
-        const currentTime = video.currentTime;
-        const duration = video.duration;
-        const nextBtn = document.getElementById("nextEpOverlay");
-
-        if (currentTime > 0) saveProgress(currentShowId, currentSeasonNum, epIndex, currentTime);
-
-        if (nextBtn && duration > 0 && (duration - currentTime) <= 15) {
-            if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
-                const nextEp = currentSeasonData.episodes[currentEpisodeIndex + 1];
-                document.getElementById("nextEpPreview").src = nextEp.thumbnail;
-                document.getElementById("nextEpTitle").textContent = nextEp.title;
-                nextBtn.classList.remove("hidden");
-            }
-        } else if (nextBtn) {
-            nextBtn.classList.add("hidden");
-        }
-    };
-
-    video.onended = () => playNextEpisode();
-
-    const onVideoReady = () => {
-        if (startTime > 0) video.currentTime = startTime;
-        video.play().catch(e => console.log("Auto-play prevented"));
-    };
-
-    if (videoSrc.includes('.m3u8') && Hls.isSupported()) {
-        hls = new Hls();
-        hls.loadSource(videoSrc);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, onVideoReady);
-    } else {
-        video.src = videoSrc;
-        video.addEventListener('loadedmetadata', onVideoReady, { once: true });
-    }
-}
-
-        function playNextEpisode() {
-            if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
-                openPlayer(currentEpisodeIndex + 1);
-            } else {
-                closePlayer();
-            }
-        }
-
-        function playPreviousEpisode() {
-            if (currentEpisodeIndex > 0) {
-                openPlayer(currentEpisodeIndex - 1);
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (document.getElementById("playerModal").classList.contains('hidden')) return;
-
-            if (e.shiftKey && e.key.toLowerCase() === 'n') {
-                e.preventDefault();
-                playNextEpisode();
-            }
-            if (e.shiftKey && e.key.toLowerCase() === 'p') {
-                e.preventDefault();
-                playPreviousEpisode();
-            }
-        });
-
-        function saveProgress(showId, season, episode, time) {
-            let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
-            
-            watchData = watchData.filter(item => item.showId !== showId);
-
-            watchData.unshift({
-                showId: showId,
-                season: season,
-                episode: episode,
-                time: time,
-                lastUpdated: Date.now()
-            });
-
-            if(watchData.length > 10) watchData.pop();
-
-            localStorage.setItem("continueWatching", JSON.stringify(watchData));
-        }
-
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+let shows = [];
+let currentShow = null;
+let currentSeasonData = null;
+let hls = null;
+let lastFocusedElement = null;
+let previewTimer = null;
+let currentEpisodeIndex = -1;
 let heroData = [];
 let currentHeroIndex = 0;
+let heroInterval = null;
+let controlsTimer = null;
+
+fetch("data/show.json?v=" + Date.now())
+    .then(r => r.json())
+    .then(data => {
+        shows = data.shows;
+        renderPosters();
+        renderContinueWatching();
+    });
 
 fetch("data/hero.json?v=" + Date.now())
-    .then(res => res.json())
+    .then(r => r.json())
     .then(data => {
         heroData = data.featured;
         if (heroData.length > 0) {
             document.getElementById('heroSection').classList.remove('hidden');
+            document.getElementById('mainContent').style.paddingTop = '40px';
             renderHero();
-            setInterval(nextHero, 8000);
+            renderHeroDots();
+            heroInterval = setInterval(nextHero, 8000);
+        } else {
+            document.getElementById('mainContent').classList.add('no-hero-padding');
         }
+    })
+    .catch(() => {
+        document.getElementById('mainContent').classList.add('no-hero-padding');
     });
 
+window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+document.getElementById('searchInput').addEventListener('input', e => {
+    const term = e.target.value.toLowerCase();
+    renderPosters(term ? shows.filter(s => s.title.toLowerCase().includes(term)) : shows);
+});
+
 function renderHero() {
-    const container = document.getElementById("heroContainer");
+    const container = document.getElementById('heroContainer');
     const item = heroData[currentHeroIndex];
-    
     const showIndex = shows.findIndex(s => s.id === item.showId);
 
     container.innerHTML = `
-        <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000" 
-             style="background-image: url('${item.heroBanner}')">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
-        </div>
-        
-        <div class="relative h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl space-y-4 fade-up">
-            <h2 class="text-3xl md:text-5xl font-black text-white">${item.title}</h2>
-            <p class="text-gray-200 text-sm md:text-base line-clamp-3">${item.description}</p>
-            
-            <div class="flex gap-4 pt-2">
-                <button onclick="openShow(${showIndex})" 
-                        class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg">
-                    View Details
-                </button>
-                
-                <div class="flex gap-2">
-                    <button onclick="prevHero()" class="p-3 glass rounded-xl text-white hover:bg-white/20">❮</button>
-                    <button onclick="nextHero()" class="p-3 glass rounded-xl text-white hover:bg-white/20">❯</button>
+        <div class="hero-slide" style="background-image:url('${item.heroBanner}')">
+            <div class="hero-content anim-in">
+                <h1>${item.title}</h1>
+                <p>${item.description}</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="openShow(${showIndex})">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        View Details
+                    </button>
                 </div>
             </div>
         </div>
     `;
+    updateHeroDots();
+}
+
+function renderHeroDots() {
+    const container = document.getElementById('heroDots');
+    container.innerHTML = heroData.map((_, i) =>
+        `<button class="hero-dot${i === 0 ? ' active' : ''}" onclick="goToHero(${i})"></button>`
+    ).join('');
+}
+
+function updateHeroDots() {
+    document.querySelectorAll('.hero-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === currentHeroIndex);
+    });
 }
 
 function nextHero() {
     currentHeroIndex = (currentHeroIndex + 1) % heroData.length;
     renderHero();
 }
-
 function prevHero() {
     currentHeroIndex = (currentHeroIndex - 1 + heroData.length) % heroData.length;
     renderHero();
 }
-
-function closeShow() {
-    clearTimeout(previewTimer); 
-    const videoEl = document.getElementById("showPreviewVideo");
-    videoEl.pause();
-    videoEl.src = ""; 
-
-    showModal.classList.add("hidden");
-    document.body.classList.remove("modal-open");
-    renderContinueWatching(); 
-    if(lastFocusedElement) lastFocusedElement.focus();
+function goToHero(i) {
+    currentHeroIndex = i;
+    renderHero();
+    clearInterval(heroInterval);
+    heroInterval = setInterval(nextHero, 8000);
 }
 
-        function closePlayer() {
-            const video = document.getElementById("playerVideo");
-            const videoContainer = video.parentElement;
-
-            const errorMsg = videoContainer.querySelector('.unavailable-msg');
-            if (errorMsg) errorMsg.remove();
-            
-            video.classList.remove("hidden");
-
-            video.ontimeupdate = null;
-
-            video.pause();
-            video.src = "";
-            if (hls) {
-                hls.destroy();
-                hls = null;
-            }
-            playerModal.classList.add("hidden");
-
-            renderContinueWatching();
-
-            setTimeout(() => {
-                const buttons = episodeGrid.querySelectorAll('button');
-                if (buttons.length > 0) buttons[0].focus();
-            }, 100);
-        }
-    </script>
-    
-    <section class="max-w-6xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-extrabold mb-10 text-center">
-            FAQ
-        </h2>
-
-        <div class="space-y-4">
-
-            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
-                    onclick="toggleFAQ(this)">
-                    <span>What is this site?</span>
-                    <span class="faq-icon text-xl">+</span>
-                </button>
-
-                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
-                    This site is a website you can stream most LEGO TV shows on.
+function renderPosters(list = shows) {
+    const grid = document.getElementById('posterGrid');
+    if (!list.length) {
+        grid.innerHTML = '<p class="empty-msg">No shows found.</p>';
+        return;
+    }
+    grid.innerHTML = list.map(show => {
+        const idx = shows.indexOf(show);
+        return `
+            <button class="poster-card anim-in" style="animation-delay:${list.indexOf(show) * 0.04}s"
+                onclick="${show.comingSoon ? `openComingSoon(${idx})` : `openShow(${idx})`}">
+                ${show.newEpisodes ? '<div class="badge-new">NEW</div>' : ''}
+                <img src="${show.poster}" alt="${show.title}" loading="lazy">
+                ${show.comingSoon ? `<div class="badge-coming"><span>${show.comingSoonText || 'COMING SOON'}</span></div>` : ''}
+                <div class="poster-overlay">
+                    <div class="title">${show.title}</div>
+                    <div class="meta">${show.comingSoon ? 'Coming Soon' : 'Watch Now'}</div>
                 </div>
-            </div>
+            </button>`;
+    }).join('');
+}
 
+function renderContinueWatching() {
+    const watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+    const section = document.getElementById('continueSection');
+    const grid = document.getElementById('continueGrid');
 
-            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
-                    onclick="toggleFAQ(this)">
-                    <span>Where does the video content come from?</span>
-                    <span class="faq-icon text-xl">+</span>
-                </button>
+    if (!watchData.length) { section.style.display = 'none'; return; }
+    section.style.display = 'block';
 
-                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
-                    Videos are embedded or streamed from official sources.
+    grid.innerHTML = watchData.map(item => {
+        const show = shows.find(s => s.id === item.showId);
+        if (!show) return '';
+        const mins = Math.floor(item.time / 60);
+        const progress = Math.min((item.time / (25 * 60)) * 100, 95);
+        return `
+            <button class="continue-card" onclick="openShow(${shows.indexOf(show)})">
+                <img src="${show.poster}" alt="${show.title}">
+                <div class="continue-badge">RESUME</div>
+                <div class="continue-progress"><div class="continue-progress-bar" style="width:${progress}%"></div></div>
+                <div class="continue-info">
+                    <span class="ep">S${item.season + 1} E${item.episode + 1}</span>
+                    <span class="time">${mins > 0 ? mins + 'm' : 'Just started'}</span>
                 </div>
-            </div>
+            </button>`;
+    }).filter(Boolean).join('');
+}
 
-            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
-                    onclick="toggleFAQ(this)">
-                    <span>Why is some content marked as “Coming Soon”?</span>
-                    <span class="faq-icon text-xl">+</span>
-                </button>
+function openComingSoon(index) {
+    lastFocusedElement = document.activeElement;
+    const show = shows[index];
+    document.body.classList.add('modal-open');
+    document.getElementById('csHero').style.backgroundImage = `url(${show.banner})`;
+    document.getElementById('csLogo').src = show.logo || '';
+    document.getElementById('csTitle').textContent = show.title;
+    document.getElementById('csNote').textContent = show.comingSoonNote || 'This title is coming soon.';
+    document.getElementById('comingSoonModal').classList.add('active');
+}
+function closeComingSoon() {
+    document.getElementById('comingSoonModal').classList.remove('active');
+    document.body.classList.remove('modal-open');
+    if (lastFocusedElement) lastFocusedElement.focus();
+}
 
-                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
-                    Some shows or seasons are still being prepared and will be available at a later date.
+function openShow(index) {
+    lastFocusedElement = document.activeElement;
+    currentShow = shows[index];
+    document.body.classList.add('modal-open');
+
+    const videoEl = document.getElementById('showPreviewVideo');
+    clearTimeout(previewTimer);
+    videoEl.pause(); videoEl.src = '';
+    videoEl.classList.remove('visible'); videoEl.style.display = 'none';
+
+    document.getElementById('showHero').style.backgroundImage = `url(${currentShow.banner})`;
+    document.getElementById('showLogo').src = currentShow.logo;
+    document.getElementById('showSummary').textContent = currentShow.summary;
+
+    if (currentShow.preview) {
+        previewTimer = setTimeout(() => {
+            videoEl.src = currentShow.preview;
+            videoEl.style.display = 'block';
+            videoEl.play().then(() => videoEl.classList.add('visible')).catch(() => {});
+        }, 5000);
+    }
+
+    const csArea = document.getElementById('seasonComingSoon');
+    csArea.innerHTML = '';
+    const csSeasons = currentShow.seasons.filter(s => s.comingSoonText);
+    if (csSeasons.length) {
+        csArea.innerHTML = csSeasons.map(s =>
+            `<span class="coming-soon-tag">${s.comingSoonText}</span>`
+        ).join('');
+    }
+
+    const playable = currentShow.seasons.filter(s => s.file);
+    const sel = document.getElementById('seasonSelect');
+    if (playable.length) {
+        sel.style.display = 'block';
+        sel.innerHTML = playable.map((s, i) => `<option value="${i}">Season ${s.number}</option>`).join('');
+        sel.onchange = () => {
+            const actual = currentShow.seasons.indexOf(playable[sel.value]);
+            loadSeason(actual);
+        };
+        loadSeason(currentShow.seasons.indexOf(playable[0]));
+    } else {
+        sel.style.display = 'none';
+        document.getElementById('episodeGrid').innerHTML = '<p class="empty-msg">No episodes currently available.</p>';
+    }
+
+    document.getElementById('showModal').classList.add('active');
+}
+
+function loadSeason(seasonIndex) {
+    document.getElementById('episodeGrid').innerHTML = '<p style="color:var(--text-muted);padding:12px;">Loading...</p>';
+    fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
+        .then(r => r.json())
+        .then(data => {
+            currentSeasonData = data;
+            if (data.type === 'external') renderExternalSeason(data);
+            else renderEpisodes();
+        });
+}
+
+function renderExternalSeason(data) {
+    document.getElementById('episodeGrid').innerHTML = `
+        <div class="external-season">
+            <a href="${data.button.url}" target="_blank">${data.button.label}</a>
+            <p>${data.note}</p>
+        </div>`;
+}
+
+function renderEpisodes() {
+    document.getElementById('episodeGrid').innerHTML = currentSeasonData.episodes.map((ep, i) => `
+        <div class="ep-card anim-in" style="animation-delay:${i * 0.05}s">
+            <button style="all:unset;cursor:pointer;display:block;width:100%;" onclick="openPlayer(${i})">
+                <img src="${ep.thumbnail}" alt="${ep.title}" loading="lazy">
+                <div class="ep-play-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-            </div>
-
-            <div class="faq-item rounded-xl bg-white/70 dark:bg-gray-800/70 backdrop-blur shadow-md">
-                <button class="w-full px-6 py-5 flex justify-between items-center text-left font-semibold text-lg focus:ring-4 focus:ring-indigo-500 rounded-xl outline-none"
-                    onclick="toggleFAQ(this)">
-                    <span>How do I suggest a new feature to the website?</span>
-                    <span class="faq-icon text-xl">+</span>
-                </button>
-
-                <div class="faq-content hidden px-6 pb-5 text-gray-600 dark:text-gray-300">
-                    Join the Discord server.
+                <div class="ep-info">
+                    <div class="ep-num">EP ${ep.number}</div>
+                    <div class="ep-title">${ep.title}</div>
                 </div>
-            </div>
-
+            </button>
+            <button class="ep-info-btn" onclick="event.stopPropagation();openEpisodeInfo(${i})" title="More info">i</button>
         </div>
-    </section>
+    `).join('');
+}
 
+function openEpisodeInfo(idx) {
+    const ep = currentSeasonData.episodes[idx];
+    document.getElementById('epInfoThumb').src = ep.thumbnail;
+    document.getElementById('epInfoTitle').textContent = ep.title;
+    document.getElementById('epInfoSynopsis').textContent = ep.description || 'No synopsis available.';
+    document.getElementById('epInfoMeta').textContent = `Season ${currentShow.seasons[document.getElementById('seasonSelect').value].number} · Episode ${ep.number}`;
+    document.getElementById('epInfoLength').textContent = 'Calculating...';
+    document.getElementById('epInfoPlayBtn').onclick = () => { closeEpInfo(); openPlayer(idx); };
+    document.getElementById('epInfoModal').classList.add('active');
+    getDuration(ep.embed, d => document.getElementById('epInfoLength').textContent = d);
+}
+function closeEpInfo() { document.getElementById('epInfoModal').classList.remove('active'); }
+
+function getDuration(url, cb) {
+    if (!url) return cb('Unknown');
+    const fmt = d => (!d || !isFinite(d)) ? 'N/A' : `${Math.floor(d/60)}m ${Math.floor(d%60)}s`;
+    const tmp = document.createElement('video');
+    if (url.includes('.m3u8') && Hls.isSupported()) {
+        const h = new Hls(); h.loadSource(url); h.attachMedia(tmp);
+        h.on(Hls.Events.MANIFEST_PARSED, () => { setTimeout(() => { cb(fmt(tmp.duration)); h.destroy(); tmp.remove(); }, 600); });
+        h.on(Hls.Events.ERROR, () => { cb('N/A'); h.destroy(); tmp.remove(); });
+    } else {
+        tmp.preload = 'metadata'; tmp.src = url;
+        tmp.onloadedmetadata = () => { cb(fmt(tmp.duration)); tmp.remove(); };
+        tmp.onerror = () => { cb('N/A'); tmp.remove(); };
+    }
+}
+
+function openPlayer(epIndex) {
+    currentEpisodeIndex = epIndex;
+    const ep = currentSeasonData.episodes[epIndex];
+    const video = document.getElementById('playerVideo');
+    const yt = document.getElementById('playerYoutube');
+    const wrap = document.getElementById('playerVideoWrap');
+    const controls = document.getElementById('customControls');
+    const src = ep.embed;
+
+    wrap.querySelectorAll('.player-error').forEach(e => e.remove());
+    video.style.display = 'none'; yt.style.display = 'none';
+    video.pause(); video.src = ''; video.load();
+    if (hls) { hls.destroy(); hls = null; }
+    yt.src = '';
+
+    document.getElementById('playerShowName').textContent = currentShow.title;
+    document.getElementById('playerEpName').textContent = `S${currentShow.seasons[document.getElementById('seasonSelect').value].number} · E${ep.number} — ${ep.title}`;
+
+    if (!src || !src.trim()) {
+        controls.style.display = 'none';
+        showPlayerError(wrap);
+        document.getElementById('playerModal').classList.add('active');
+        return;
+    }
+
+    const isEmbed = src.includes('youtube.com') || src.includes('youtu.be') || src.includes('embed');
+    if (isEmbed) {
+        controls.style.display = 'none';
+        yt.style.display = 'block';
+        let finalUrl = src;
+        if (src.includes('watch?v=')) {
+            const id = src.split('v=')[1].split('&')[0];
+            finalUrl = `https://www.youtube.com/embed/${id}`;
+        }
+        yt.src = `${finalUrl}${finalUrl.includes('?') ? '&' : '?'}autoplay=1&modestbranding=1&rel=0`;
+    } else {
+        controls.style.display = 'block';
+        video.style.display = 'block';
+        video.removeAttribute('controls');
+        setupStandardVideo(video, src, ep, epIndex);
+    }
+
+    document.getElementById('playerModal').classList.add('active');
+    document.body.classList.add('modal-open');
+    resetControlsTimer();
+}
+
+function showPlayerError(container) {
+    const div = document.createElement('div');
+    div.className = 'player-error';
+    div.innerHTML = `
+        <h3>Video Unavailable</h3>
+        <p>This episode could not be loaded. Report it on Discord and it will be fixed.</p>
+        <a href="https://discord.gg/jmeYYbBcsN" target="_blank">Open Discord</a>`;
+    container.appendChild(div);
+    document.getElementById('playerModal').classList.add('active');
+}
+
+function setupStandardVideo(video, videoSrc, ep, epIndex) {
+    let watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+    const showId = currentShow.id;
+    const seasonNum = parseInt(document.getElementById('seasonSelect').value);
+    const existing = watchData.find(i => i.showId === showId && i.season === seasonNum && i.episode === epIndex);
+    let startTime = existing ? existing.time : 0;
+
+    while (video.firstChild) video.removeChild(video.firstChild);
+
+    if (ep.subtitles && ep.subtitles.length) {
+        ep.subtitles.forEach(track => {
+            fetch(track.url).then(r => r.blob()).then(blob => {
+                const t = document.createElement('track');
+                t.kind = 'subtitles'; t.label = track.label; t.srclang = track.lang;
+                t.src = URL.createObjectURL(blob);
+                video.appendChild(t);
+                setTimeout(() => { t.track.mode = 'disabled'; }, 100);
+            }).catch(() => {});
+        });
+    }
+    updateCCButton();
+
+    video.ontimeupdate = () => {
+        const ct = video.currentTime, dur = video.duration;
+        if (ct > 0) saveProgress(showId, seasonNum, epIndex, ct);
+        updateProgressUI(ct, dur);
+        updateTimeDisplay(ct, dur);
+
+        const toast = document.getElementById('nextEpToast');
+        if (dur > 0 && (dur - ct) <= 15 && currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
+            const next = currentSeasonData.episodes[currentEpisodeIndex + 1];
+            document.getElementById('nextEpPreview').src = next.thumbnail;
+            document.getElementById('nextEpTitle').textContent = next.title;
+            toast.classList.add('visible');
+        } else {
+            toast.classList.remove('visible');
+        }
+    };
+    video.onended = () => playNextEpisode();
+    video.onplay = () => updatePlayBtn(true);
+    video.onpause = () => updatePlayBtn(false);
+
+    const onReady = () => {
+        if (startTime > 0) video.currentTime = startTime;
+        video.play().catch(() => {});
+    };
+
+    if (videoSrc.includes('.m3u8') && Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(videoSrc); hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, onReady);
+    } else {
+        video.src = videoSrc;
+        video.addEventListener('loadedmetadata', onReady, { once: true });
+    }
+}
+
+function togglePlay() {
+    const v = document.getElementById('playerVideo');
+    v.paused ? v.play() : v.pause();
+}
+function updatePlayBtn(playing) {
+    document.getElementById('btnPlay').innerHTML = playing
+        ? '<svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>'
+        : '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+}
+function toggleMute() {
+    const v = document.getElementById('playerVideo');
+    v.muted = !v.muted;
+    document.getElementById('volumeSlider').value = v.muted ? 0 : v.volume;
+    updateMuteBtn(v.muted);
+}
+function updateMuteBtn(muted) {
+    document.getElementById('btnMute').innerHTML = muted
+        ? '<svg viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>'
+        : '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
+}
+
+document.getElementById('volumeSlider').addEventListener('input', e => {
+    const v = document.getElementById('playerVideo');
+    v.volume = e.target.value;
+    v.muted = v.volume === 0;
+    updateMuteBtn(v.muted);
+});
+
+function updateProgressUI(current, duration) {
+    if (!duration || !isFinite(duration)) return;
+    const pct = (current / duration) * 100;
+    document.getElementById('progressFilled').style.width = pct + '%';
+    document.getElementById('progressThumb').style.left = pct + '%';
+}
+function updateTimeDisplay(current, duration) {
+    const fmt = t => {
+        if (!t || !isFinite(t)) return '0:00';
+        const m = Math.floor(t / 60), s = Math.floor(t % 60);
+        return `${m}:${s.toString().padStart(2, '0')}`;
+    };
+    document.getElementById('timeDisplay').textContent = `${fmt(current)} / ${fmt(duration)}`;
+}
+
+document.getElementById('progressContainer').addEventListener('click', e => {
+    const v = document.getElementById('playerVideo');
+    if (!v.duration) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    v.currentTime = ((e.clientX - rect.left) / rect.width) * v.duration;
+});
+
+setInterval(() => {
+    const v = document.getElementById('playerVideo');
+    if (v.buffered.length && v.duration) {
+        const pct = (v.buffered.end(v.buffered.length - 1) / v.duration) * 100;
+        document.getElementById('progressBuffered').style.width = pct + '%';
+    }
+}, 1000);
+
+function toggleFullscreen() {
+    const el = document.getElementById('playerModal');
+    if (!document.fullscreenElement) el.requestFullscreen().catch(() => {});
+    else document.exitFullscreen();
+}
+
+function toggleSubtitles() {
+    const video = document.getElementById('playerVideo');
+    const tracks = video.textTracks;
+    if (!tracks.length) return;
+
+    let anyShowing = false;
+    for (let i = 0; i < tracks.length; i++) {
+        if (tracks[i].mode === 'showing') { anyShowing = true; break; }
+    }
+
+    if (anyShowing) {
+        for (let i = 0; i < tracks.length; i++) tracks[i].mode = 'disabled';
+    } else {
+        for (let i = 0; i < tracks.length; i++) {
+            if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
+                tracks[i].mode = 'showing';
+                break;
+            }
+        }
+    }
+    updateCCButton();
+}
+
+function updateCCButton() {
+    const video = document.getElementById('playerVideo');
+    const btn = document.getElementById('btnCC');
+    if (!btn) return;
+    const tracks = video.textTracks;
+    let active = false;
+    for (let i = 0; i < tracks.length; i++) {
+        if (tracks[i].mode === 'showing') { active = true; break; }
+    }
+    btn.classList.toggle('cc-active', active);
+    btn.title = active ? 'Subtitles On (C)' : 'Subtitles Off (C)';
+}
+
+function resetControlsTimer() {
+    const modal = document.getElementById('playerModal');
+    modal.classList.remove('controls-hidden');
+    clearTimeout(controlsTimer);
+    controlsTimer = setTimeout(() => {
+        if (!document.getElementById('playerVideo').paused) {
+            modal.classList.add('controls-hidden');
+        }
+    }, 3000);
+}
+document.getElementById('playerModal').addEventListener('mousemove', resetControlsTimer);
+document.getElementById('playerModal').addEventListener('click', resetControlsTimer);
+
+document.addEventListener('keydown', e => {
+    const modal = document.getElementById('playerModal');
+    if (!modal.classList.contains('active')) return;
+    const v = document.getElementById('playerVideo');
+
+    if (e.shiftKey && e.key.toLowerCase() === 'n') { e.preventDefault(); playNextEpisode(); }
+    if (e.shiftKey && e.key.toLowerCase() === 'p') { e.preventDefault(); playPreviousEpisode(); }
+    if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); v.currentTime = Math.min(v.currentTime + 10, v.duration); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); v.currentTime = Math.max(v.currentTime - 10, 0); }
+    if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFullscreen(); }
+    if (e.key === 'm' || e.key === 'M') { e.preventDefault(); toggleMute(); }
+    if (e.key === 'c' || e.key === 'C') { e.preventDefault(); toggleSubtitles(); }
+    if (e.key === 'Escape') { e.preventDefault(); closePlayer(); }
+});
+
+function playNextEpisode() {
+    if (currentEpisodeIndex < currentSeasonData.episodes.length - 1) openPlayer(currentEpisodeIndex + 1);
+    else closePlayer();
+}
+function playPreviousEpisode() {
+    if (currentEpisodeIndex > 0) openPlayer(currentEpisodeIndex - 1);
+}
+
+function saveProgress(showId, season, episode, time) {
+    let d = JSON.parse(localStorage.getItem("continueWatching") || "[]");
+    d = d.filter(i => i.showId !== showId);
+    d.unshift({ showId, season, episode, time, lastUpdated: Date.now() });
+    if (d.length > 10) d.pop();
+    localStorage.setItem("continueWatching", JSON.stringify(d));
+}
+
+function closeShow() {
+    clearTimeout(previewTimer);
+    const v = document.getElementById('showPreviewVideo');
+    v.pause(); v.src = ''; v.style.display = 'none'; v.classList.remove('visible');
+    document.getElementById('showModal').classList.remove('active');
+    document.body.classList.remove('modal-open');
+    renderContinueWatching();
+    if (lastFocusedElement) lastFocusedElement.focus();
+}
+
+function closePlayer() {
+    const v = document.getElementById('playerVideo');
+    const yt = document.getElementById('playerYoutube');
+    v.ontimeupdate = null; v.pause(); v.src = '';
+    yt.src = '';
+    if (hls) { hls.destroy(); hls = null; }
+    document.getElementById('playerModal').classList.remove('active');
+    document.getElementById('nextEpToast').classList.remove('visible');
+    const ccBtn = document.getElementById('btnCC');
+    if (ccBtn) ccBtn.classList.remove('cc-active');
+    document.body.classList.remove('modal-open');
+    renderContinueWatching();
+}
+function toggleFAQ(item) {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+}
+</script>
 </body>
 </html>
