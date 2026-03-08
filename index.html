@@ -61,6 +61,36 @@
             border-radius: var(--radius);
         }
 
+        /* ═══ ANIMATED LOGO ═══ */
+        @keyframes logoSweep {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        @keyframes logoFadeIn {
+            0% { opacity: 0; transform: translateY(-6px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 28px; letter-spacing: 3px;
+            color: var(--accent);
+            text-transform: uppercase;
+            user-select: none;
+            flex-shrink: 0;
+            position: relative;
+            animation: logoFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            height: 2px;
+            width: 0;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: logoSweep 1s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
         .navbar {
             position: fixed; top: 0; width: 100%; z-index: 50;
             background: linear-gradient(180deg, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.7) 70%, transparent 100%);
@@ -72,14 +102,6 @@
             max-width: 1400px; margin: 0 auto;
             padding: 14px 24px;
             display: flex; align-items: center; gap: 20px;
-        }
-        .logo {
-            font-family: var(--font-display);
-            font-size: 28px; letter-spacing: 3px;
-            color: var(--accent);
-            text-transform: uppercase;
-            user-select: none;
-            flex-shrink: 0;
         }
         .search-box {
             flex: 1; max-width: 400px;
@@ -116,12 +138,14 @@
         }
         .discord-btn:hover { background: #6c78ff; transform: translateY(-1px); }
 
+        /* ═══ PARALLAX HERO ═══ */
         .hero-section { position: relative; width: 100%; height: 85vh; min-height: 500px; max-height: 800px; overflow: hidden; }
         .hero-section.hidden { display: none; }
         .hero-slide {
-            position: absolute; inset: 0;
+            position: absolute; inset: -60px;
             background-size: cover; background-position: center top;
             transition: opacity 1s ease;
+            will-change: transform;
         }
         .hero-slide::after {
             content: ''; position: absolute; inset: 0;
@@ -203,6 +227,39 @@
         }
         .no-hero-padding { padding-top: 100px; }
 
+        /* ═══ GENRE FILTER BAR ═══ */
+        .filter-bar {
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .filter-bar .sort-select {
+            padding: 7px 14px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 100px; color: var(--text-primary);
+            font-family: var(--font-body); font-size: 12px; font-weight: 600;
+            cursor: pointer; transition: all var(--transition);
+            margin-left: auto;
+        }
+        .filter-bar .sort-select:focus { border-color: var(--accent); outline: none; }
+        .genre-tag {
+            padding: 6px 16px;
+            background: var(--glass-light);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-size: 12px; font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            white-space: nowrap;
+        }
+        .genre-tag:hover { border-color: rgba(255,255,255,0.15); color: var(--text-primary); }
+        .genre-tag.active {
+            background: rgba(229, 9, 20, 0.15);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
         .poster-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -238,6 +295,7 @@
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .poster-overlay .meta { font-size: 11px; color: var(--text-secondary); }
+        .poster-overlay .genres-line { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
         .badge-new {
             position: absolute; top: 10px; right: 10px; z-index: 3;
             background: var(--accent); color: #fff;
@@ -367,28 +425,77 @@
             grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
             gap: 14px;
         }
+
+        /* ═══ EPISODE CARD FLIP ═══ */
         .ep-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            overflow: hidden; cursor: pointer;
-            border: 1px solid transparent;
-            transition: all var(--transition);
             position: relative;
+            border-radius: var(--radius-lg);
+            overflow: visible;
+            cursor: pointer;
+            transition: all var(--transition);
+            perspective: 800px;
+            height: auto;
         }
-        .ep-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-        .ep-card img { width: 100%; height: 110px; object-fit: cover; display: block; }
-        .ep-card .ep-info { padding: 10px 12px; }
-        .ep-card .ep-num { font-size: 11px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.5px; }
-        .ep-card .ep-title { font-size: 13px; font-weight: 600; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ep-card-inner {
+            position: relative;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            border-radius: var(--radius-lg);
+        }
+        .ep-card.flipped .ep-card-inner { transform: rotateY(180deg); }
+        .ep-card-front, .ep-card-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid transparent;
+            transition: border-color var(--transition);
+        }
+        .ep-card:hover .ep-card-front,
+        .ep-card:hover .ep-card-back { border-color: var(--accent); }
+        .ep-card-back {
+            position: absolute; inset: 0;
+            transform: rotateY(180deg);
+            display: flex; flex-direction: column;
+            padding: 14px;
+            overflow-y: auto;
+        }
+        .ep-card-back .back-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+        .ep-card-back .back-meta { font-size: 10px; color: var(--accent); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
+        .ep-card-back .back-desc {
+            font-size: 11px; color: var(--text-secondary); line-height: 1.5;
+            flex: 1; overflow: hidden;
+            display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;
+        }
+        .ep-card-back .back-play {
+            margin-top: 10px; padding: 8px 0;
+            background: var(--accent); color: #fff; border: none;
+            border-radius: var(--radius); font-family: var(--font-body);
+            font-size: 12px; font-weight: 700; cursor: pointer;
+            transition: all var(--transition); width: 100%;
+        }
+        .ep-card-back .back-play:hover { background: var(--accent-hover); }
+        .ep-card-back .back-close-btn {
+            position: absolute; top: 6px; right: 6px;
+            width: 22px; height: 22px; border-radius: 50%;
+            background: rgba(255,255,255,0.1); border: none; color: #fff;
+            font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        }
+        .ep-card-front img { width: 100%; height: 110px; object-fit: cover; display: block; }
+        .ep-card-front .ep-info { padding: 10px 12px; }
+        .ep-card-front .ep-num { font-size: 11px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.5px; }
+        .ep-card-front .ep-title { font-size: 13px; font-weight: 600; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .ep-play-icon {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -80%);
+            position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
             width: 40px; height: 40px;
             background: var(--accent); border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             opacity: 0; transition: all var(--transition);
             box-shadow: 0 4px 20px var(--accent-glow);
+            z-index: 2;
         }
-        .ep-card:hover .ep-play-icon { opacity: 1; transform: translate(-50%, -80%) scale(1.1); }
+        .ep-card:not(.flipped):hover .ep-play-icon { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
         .ep-info-btn {
             position: absolute; top: 8px; right: 8px;
             width: 28px; height: 28px;
@@ -396,9 +503,9 @@
             border-radius: 50%; color: #fff; font-size: 14px;
             cursor: pointer; transition: all var(--transition);
             display: flex; align-items: center; justify-content: center;
-            opacity: 0;
+            opacity: 0; z-index: 3;
         }
-        .ep-card:hover .ep-info-btn { opacity: 1; }
+        .ep-card:not(.flipped):hover .ep-info-btn { opacity: 1; }
         .ep-info-btn:hover { background: var(--accent); }
 
         .player-modal {
@@ -475,6 +582,16 @@
             opacity: 0; transition: opacity 0.15s ease;
         }
         .progress-container:hover .progress-thumb { opacity: 1; }
+
+        /* ═══ SKIP INTRO / RECAP MARKERS ON PROGRESS BAR ═══ */
+        .progress-marker {
+            position: absolute; top: 0; height: 100%;
+            background: rgba(255, 215, 0, 0.5);
+            border-radius: 2px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
         .controls-row {
             display: flex; align-items: center; gap: 16px;
         }
@@ -484,6 +601,7 @@
             display: flex; align-items: center; justify-content: center;
             transition: all var(--transition); font-size: 20px;
             opacity: 0.85;
+            position: relative;
         }
         .ctrl-btn:hover { opacity: 1; transform: scale(1.12); }
         .ctrl-btn svg { width: 24px; height: 24px; fill: currentColor; }
@@ -503,6 +621,50 @@
         .ctrl-btn.cc-active { color: var(--accent); opacity: 1; }
         .ctrl-btn#btnCC svg { fill: none; stroke: currentColor; width: 22px; height: 22px; }
         .ctrl-spacer { flex: 1; }
+
+        /* ═══ PLAYBACK SPEED POPUP ═══ */
+        .speed-popup, .quality-popup, .subtitle-popup {
+            position: absolute; bottom: 40px;
+            background: var(--bg-secondary); border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 6px 0; min-width: 130px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+            display: none; z-index: 20;
+        }
+        .speed-popup.visible, .quality-popup.visible, .subtitle-popup.visible { display: block; }
+        .speed-popup { right: 0; }
+        .quality-popup { right: 0; }
+        .subtitle-popup { right: 0; min-width: 220px; }
+        .popup-item {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 8px 16px; font-size: 13px; color: var(--text-secondary);
+            cursor: pointer; transition: all var(--transition);
+            border: none; background: none; width: 100%; text-align: left;
+            font-family: var(--font-body);
+        }
+        .popup-item:hover { background: rgba(255,255,255,0.06); color: var(--text-primary); }
+        .popup-item.active { color: var(--accent); font-weight: 700; }
+        .popup-item.active::after { content: '✓'; margin-left: 8px; }
+        .popup-label {
+            padding: 6px 16px 4px; font-size: 10px; font-weight: 700;
+            color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase;
+        }
+        .popup-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+        /* ═══ SKIP INTRO / RECAP BUTTON ═══ */
+        .skip-btn {
+            position: absolute; bottom: 90px; right: 20px; z-index: 15;
+            padding: 10px 24px;
+            background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: var(--radius); color: #fff;
+            font-family: var(--font-body); font-size: 14px; font-weight: 700;
+            cursor: pointer; transition: all var(--transition);
+            display: none;
+        }
+        .skip-btn.visible { display: block; animation: slideIn 0.3s ease; }
+        .skip-btn:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.5); }
+
         .next-ep-toast {
             position: absolute; bottom: 80px; right: 20px; z-index: 15;
             display: none; align-items: center; gap: 12px;
@@ -604,6 +766,7 @@
         .external-season a:hover { transform: scale(1.05); box-shadow: 0 8px 30px var(--accent-glow); }
         .external-season p { color: var(--text-muted); font-size: 13px; margin-top: 16px; max-width: 400px; }
 
+        /* ═══ SMOOTH FAQ ACCORDION ═══ */
         .faq-section { max-width: 800px; margin: 80px auto; padding: 0 24px; }
         .faq-section h2 {
             font-family: var(--font-display);
@@ -627,15 +790,19 @@
             width: 28px; height: 28px; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
             font-size: 22px; color: var(--text-muted);
-            transition: transform var(--transition);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color var(--transition);
         }
         .faq-item.open .icon { transform: rotate(45deg); color: var(--accent); }
         .faq-answer {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 20px; }
-        .faq-answer p { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+        .faq-item.open .faq-answer { grid-template-rows: 1fr; }
+        .faq-answer-inner {
+            overflow: hidden;
+        }
+        .faq-answer p { color: var(--text-secondary); font-size: 14px; line-height: 1.7; padding-bottom: 20px; }
 
         footer {
             text-align: center; padding: 40px 20px;
@@ -643,6 +810,8 @@
             border-top: 1px solid var(--border);
             max-width: 1400px; margin: 0 auto;
         }
+        footer a { color: var(--text-muted); text-decoration: underline; transition: color var(--transition); }
+        footer a:hover { color: var(--accent); }
 
         @keyframes fadeUp {
             0% { opacity: 0; transform: translateY(16px); }
@@ -667,6 +836,12 @@
         }
         .player-error a:hover { background: #6c78ff; }
 
+        /* ═══ VIEW TRANSITIONS ═══ */
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation-duration: 0.25s;
+        }
+
         @media (max-width: 768px) {
             .hero-section { height: 70vh; min-height: 400px; }
             .hero-content { bottom: 20%; padding: 0 20px; }
@@ -679,6 +854,8 @@
             .logo { font-size: 22px; }
             .discord-btn span { display: none; }
             .volume-slider { display: none; }
+            .filter-bar { gap: 6px; }
+            .genre-tag { padding: 5px 12px; font-size: 11px; }
         }
     </style>
 </head>
@@ -714,6 +891,8 @@
     </div>
 
     <h2 class="section-title">Featured Shows</h2>
+    <!-- Genre filter bar + sort -->
+    <div class="filter-bar" id="filterBar"></div>
     <div class="poster-grid" id="posterGrid"></div>
 </main>
 
@@ -745,6 +924,8 @@
     <div class="player-video-wrap" id="playerVideoWrap">
         <video id="playerVideo"></video>
         <iframe id="playerYoutube" style="display:none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- Skip Intro / Recap button -->
+        <button class="skip-btn" id="skipBtn" onclick="doSkip()">Skip Intro</button>
         <div class="next-ep-toast" id="nextEpToast" onclick="playNextEpisode()">
             <img id="nextEpPreview" src="">
             <div>
@@ -755,7 +936,7 @@
     </div>
     <div class="custom-controls" id="customControls">
         <div class="progress-container" id="progressContainer">
-            <div class="progress-bar">
+            <div class="progress-bar" id="progressBarTrack">
                 <div class="progress-buffered" id="progressBuffered"></div>
                 <div class="progress-filled" id="progressFilled"></div>
                 <div class="progress-thumb" id="progressThumb"></div>
@@ -779,13 +960,29 @@
             </div>
             <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
             <div class="ctrl-spacer"></div>
-            <button class="ctrl-btn" id="btnCC" title="Subtitles (C)" onclick="toggleSubtitles()">
+
+            <!-- Speed control -->
+            <button class="ctrl-btn" id="btnSpeed" title="Playback Speed" onclick="toggleSpeedMenu(event)">
+                <span style="font-size:13px;font-weight:700;font-family:var(--font-body);" id="speedLabel">1×</span>
+                <div class="speed-popup" id="speedPopup"></div>
+            </button>
+
+            <!-- Quality selector -->
+            <button class="ctrl-btn" id="btnQuality" title="Quality" onclick="toggleQualityMenu(event)" style="display:none;">
+                <svg viewBox="0 0 24 24" style="width:22px;height:22px;"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1115.6 12 3.6 3.6 0 0112 15.6z"/></svg>
+                <div class="quality-popup" id="qualityPopup"></div>
+            </button>
+
+            <!-- Subtitle selector (replaces old toggle) -->
+            <button class="ctrl-btn" id="btnCC" title="Subtitles (C)" onclick="toggleSubtitleMenu(event)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="3"/>
                     <path d="M10 9.5a1.5 1.5 0 00-1.5-1.5H7a1.5 1.5 0 00-1.5 1.5v5A1.5 1.5 0 007 16h1.5A1.5 1.5 0 0010 14.5"/>
                     <path d="M19 9.5a1.5 1.5 0 00-1.5-1.5H16a1.5 1.5 0 00-1.5 1.5v5A1.5 1.5 0 0016 16h1.5a1.5 1.5 0 001.5-1.5"/>
                 </svg>
+                <div class="subtitle-popup" id="subtitlePopup"></div>
             </button>
+
             <button class="ctrl-btn" title="Fullscreen" onclick="toggleFullscreen()">
                 <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
             </button>
@@ -831,28 +1028,31 @@
     <h2>FAQ</h2>
     <div class="faq-item" onclick="toggleFAQ(this)">
         <button><span>What is this site?</span><span class="icon">+</span></button>
-        <div class="faq-answer"><p>This site is a website you can stream most LEGO TV shows on.</p></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>This site is a website you can stream most LEGO TV shows on.</p></div></div>
     </div>
     <div class="faq-item" onclick="toggleFAQ(this)">
         <button><span>Where does the video content come from?</span><span class="icon">+</span></button>
-        <div class="faq-answer"><p>Videos are embedded or streamed from official sources.</p></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Videos are embedded or streamed from official sources.</p></div></div>
     </div>
     <div class="faq-item" onclick="toggleFAQ(this)">
         <button><span>Why is some content marked as "Coming Soon"?</span><span class="icon">+</span></button>
-        <div class="faq-answer"><p>Some shows or seasons are still being prepared and will be available at a later date.</p></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Some shows or seasons are still being prepared and will be available at a later date.</p></div></div>
     </div>
     <div class="faq-item" onclick="toggleFAQ(this)">
         <button><span>How do I suggest a new feature?</span><span class="icon">+</span></button>
-        <div class="faq-answer"><p>Join the Discord server to make suggestions.</p></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Join the Discord server to make suggestions.</p></div></div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Litestreaming. All content belongs to its respective owners.</p>
+    <p>&copy; 2026 Litestreaming. All content belongs to its respective owners. &nbsp;|&nbsp; <a href="https://discord.gg/jmeYYbBcsN" target="_blank">Discord</a> &nbsp;</a></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script>
+/* ═══════════════════════════════════════════
+   STATE
+   ═══════════════════════════════════════════ */
 let shows = [];
 let currentShow = null;
 let currentSeasonData = null;
@@ -864,13 +1064,37 @@ let heroData = [];
 let currentHeroIndex = 0;
 let heroInterval = null;
 let controlsTimer = null;
+let activeGenre = 'All';
+let activeSortMode = 'default';
+let currentPlaybackSpeed = parseFloat(localStorage.getItem('lsPlaybackSpeed') || '1');
+let currentSkipTarget = null;
+let translatedTrackCache = {};
 
+const TRANSLATE_LANGS = [
+    { code: 'es', label: 'Spanish (AI)' },
+    { code: 'fr', label: 'French (AI)' },
+    { code: 'fi', label: 'Finnish (AI)' },
+    { code: 'de', label: 'German (AI)' },
+    { code: 'pt', label: 'Portuguese (AI)' },
+    { code: 'ja', label: 'Japanese (AI)' },
+    { code: 'ko', label: 'Korean (AI)' },
+    { code: 'zh', label: 'Chinese (AI)' },
+    { code: 'ar', label: 'Arabic (AI)' },
+    { code: 'hi', label: 'Hindi (AI)' },
+    { code: 'da', label: 'Danish (AI)' },
+];
+
+/* ═══════════════════════════════════════════
+   DATA LOADING + DEEP LINKS
+   ═══════════════════════════════════════════ */
 fetch("data/show.json?v=" + Date.now())
     .then(r => r.json())
     .then(data => {
         shows = data.shows;
+        buildGenreFilter();
         renderPosters();
         renderContinueWatching();
+        handleDeepLink();
     });
 
 fetch("data/hero.json?v=" + Date.now())
@@ -891,15 +1115,125 @@ fetch("data/hero.json?v=" + Date.now())
         document.getElementById('mainContent').classList.add('no-hero-padding');
     });
 
-window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+/* ═══ DEEP LINK HANDLER ═══ */
+function handleDeepLink() {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const params = new URLSearchParams(hash);
+    const showId = params.get('show');
+    if (!showId) return;
+    const idx = shows.findIndex(s => s.id === showId);
+    if (idx < 0) return;
+
+    const seasonParam = parseInt(params.get('s'));
+    const epParam = parseInt(params.get('e'));
+
+    openShow(idx);
+
+    if (!isNaN(seasonParam) && seasonParam > 0) {
+        const playable = shows[idx].seasons.filter(s => s.file);
+        const sIdx = playable.findIndex(s => s.number === seasonParam);
+        if (sIdx >= 0) {
+            const sel = document.getElementById('seasonSelect');
+            sel.value = sIdx;
+            const actual = shows[idx].seasons.indexOf(playable[sIdx]);
+            loadSeason(actual, () => {
+                if (!isNaN(epParam) && epParam > 0 && currentSeasonData && currentSeasonData.episodes) {
+                    const eIdx = currentSeasonData.episodes.findIndex(ep => ep.number === epParam);
+                    if (eIdx >= 0) openPlayer(eIdx);
+                }
+            });
+            return;
+        }
+    }
+}
+
+function setDeepLink(showId, seasonNum, epNum) {
+    let hash = `show=${showId}`;
+    if (seasonNum != null) hash += `&s=${seasonNum}`;
+    if (epNum != null) hash += `&e=${epNum}`;
+    history.replaceState(null, '', '#' + hash);
+}
+
+function clearDeepLink() {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+
+window.addEventListener('hashchange', () => {
+    if (!window.location.hash) return;
+    handleDeepLink();
 });
 
+/* ═══ PARALLAX ═══ */
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50);
+
+    // Parallax on hero
+    const heroSlide = document.querySelector('.hero-slide');
+    if (heroSlide) {
+        const rate = scrollY * 0.35;
+        heroSlide.style.transform = `translate3d(0, ${rate}px, 0)`;
+    }
+});
+
+/* ═══ SEARCH ═══ */
 document.getElementById('searchInput').addEventListener('input', e => {
     const term = e.target.value.toLowerCase();
-    renderPosters(term ? shows.filter(s => s.title.toLowerCase().includes(term)) : shows);
+    applyFilters(term);
 });
 
+/* ═══════════════════════════════════════════
+   GENRE FILTER + SORT
+   ═══════════════════════════════════════════ */
+function buildGenreFilter() {
+    const allGenres = new Set();
+    shows.forEach(s => { if (s.genres) s.genres.forEach(g => allGenres.add(g)); });
+
+    const bar = document.getElementById('filterBar');
+    let html = `<button class="genre-tag active" onclick="setGenre('All',this)">All</button>`;
+    [...allGenres].sort().forEach(g => {
+        html += `<button class="genre-tag" onclick="setGenre('${g}',this)">${g}</button>`;
+    });
+    html += `<select class="sort-select" id="sortSelect" onchange="setSortMode(this.value)">
+        <option value="default">Default Order</option>
+        <option value="az">A–Z</option>
+        <option value="za">Z–A</option>
+        <option value="recent">Recently Added</option>
+    </select>`;
+    bar.innerHTML = html;
+}
+
+function setGenre(genre, btn) {
+    activeGenre = genre;
+    document.querySelectorAll('.genre-tag').forEach(t => t.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    applyFilters();
+}
+
+function setSortMode(mode) {
+    activeSortMode = mode;
+    applyFilters();
+}
+
+function applyFilters(searchTerm) {
+    if (searchTerm === undefined) {
+        searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    }
+    let list = [...shows];
+    if (searchTerm) list = list.filter(s => s.title.toLowerCase().includes(searchTerm));
+    if (activeGenre !== 'All') list = list.filter(s => s.genres && s.genres.includes(activeGenre));
+
+    if (activeSortMode === 'az') list.sort((a, b) => a.title.localeCompare(b.title));
+    else if (activeSortMode === 'za') list.sort((a, b) => b.title.localeCompare(a.title));
+    else if (activeSortMode === 'recent') list.sort((a, b) => (b.dateAdded || '').localeCompare(a.dateAdded || ''));
+
+    renderPosters(list);
+}
+
+/* ═══════════════════════════════════════════
+   HERO CAROUSEL
+   ═══════════════════════════════════════════ */
 function renderHero() {
     const container = document.getElementById('heroContainer');
     const item = heroData[currentHeroIndex];
@@ -920,6 +1254,9 @@ function renderHero() {
         </div>
     `;
     updateHeroDots();
+    // Apply current parallax offset
+    const heroSlide = document.querySelector('.hero-slide');
+    if (heroSlide) heroSlide.style.transform = `translate3d(0, ${window.scrollY * 0.35}px, 0)`;
 }
 
 function renderHeroDots() {
@@ -950,6 +1287,9 @@ function goToHero(i) {
     heroInterval = setInterval(nextHero, 8000);
 }
 
+/* ═══════════════════════════════════════════
+   POSTER GRID
+   ═══════════════════════════════════════════ */
 function renderPosters(list = shows) {
     const grid = document.getElementById('posterGrid');
     if (!list.length) {
@@ -958,6 +1298,7 @@ function renderPosters(list = shows) {
     }
     grid.innerHTML = list.map(show => {
         const idx = shows.indexOf(show);
+        const genresLine = show.genres ? show.genres.join(' · ') : '';
         return `
             <button class="poster-card anim-in" style="animation-delay:${list.indexOf(show) * 0.04}s"
                 onclick="${show.comingSoon ? `openComingSoon(${idx})` : `openShow(${idx})`}">
@@ -967,11 +1308,15 @@ function renderPosters(list = shows) {
                 <div class="poster-overlay">
                     <div class="title">${show.title}</div>
                     <div class="meta">${show.comingSoon ? 'Coming Soon' : 'Watch Now'}</div>
+                    ${genresLine ? `<div class="genres-line">${genresLine}</div>` : ''}
                 </div>
             </button>`;
     }).join('');
 }
 
+/* ═══════════════════════════════════════════
+   CONTINUE WATCHING
+   ═══════════════════════════════════════════ */
 function renderContinueWatching() {
     const watchData = JSON.parse(localStorage.getItem("continueWatching") || "[]");
     const section = document.getElementById('continueSection');
@@ -998,6 +1343,9 @@ function renderContinueWatching() {
     }).filter(Boolean).join('');
 }
 
+/* ═══════════════════════════════════════════
+   COMING SOON MODAL
+   ═══════════════════════════════════════════ */
 function openComingSoon(index) {
     lastFocusedElement = document.activeElement;
     const show = shows[index];
@@ -1014,56 +1362,71 @@ function closeComingSoon() {
     if (lastFocusedElement) lastFocusedElement.focus();
 }
 
+/* ═══════════════════════════════════════════
+   SHOW MODAL (with View Transition)
+   ═══════════════════════════════════════════ */
+function doViewTransition(fn) {
+    if (document.startViewTransition) {
+        document.startViewTransition(fn);
+    } else {
+        fn();
+    }
+}
+
 function openShow(index) {
     lastFocusedElement = document.activeElement;
     currentShow = shows[index];
-    document.body.classList.add('modal-open');
+    setDeepLink(currentShow.id);
 
-    const videoEl = document.getElementById('showPreviewVideo');
-    clearTimeout(previewTimer);
-    videoEl.pause(); videoEl.src = '';
-    videoEl.classList.remove('visible'); videoEl.style.display = 'none';
+    doViewTransition(() => {
+        document.body.classList.add('modal-open');
 
-    document.getElementById('showHero').style.backgroundImage = `url(${currentShow.banner})`;
-    document.getElementById('showLogo').src = currentShow.logo;
-    document.getElementById('showSummary').textContent = currentShow.summary;
+        const videoEl = document.getElementById('showPreviewVideo');
+        clearTimeout(previewTimer);
+        videoEl.pause(); videoEl.src = '';
+        videoEl.classList.remove('visible'); videoEl.style.display = 'none';
 
-    if (currentShow.preview) {
-        previewTimer = setTimeout(() => {
-            videoEl.src = currentShow.preview;
-            videoEl.style.display = 'block';
-            videoEl.play().then(() => videoEl.classList.add('visible')).catch(() => {});
-        }, 5000);
-    }
+        document.getElementById('showHero').style.backgroundImage = `url(${currentShow.banner})`;
+        document.getElementById('showLogo').src = currentShow.logo;
+        document.getElementById('showSummary').textContent = currentShow.summary;
 
-    const csArea = document.getElementById('seasonComingSoon');
-    csArea.innerHTML = '';
-    const csSeasons = currentShow.seasons.filter(s => s.comingSoonText);
-    if (csSeasons.length) {
-        csArea.innerHTML = csSeasons.map(s =>
-            `<span class="coming-soon-tag">${s.comingSoonText}</span>`
-        ).join('');
-    }
+        if (currentShow.preview) {
+            previewTimer = setTimeout(() => {
+                videoEl.src = currentShow.preview;
+                videoEl.style.display = 'block';
+                videoEl.play().then(() => videoEl.classList.add('visible')).catch(() => {});
+            }, 5000);
+        }
 
-    const playable = currentShow.seasons.filter(s => s.file);
-    const sel = document.getElementById('seasonSelect');
-    if (playable.length) {
-        sel.style.display = 'block';
-        sel.innerHTML = playable.map((s, i) => `<option value="${i}">Season ${s.number}</option>`).join('');
-        sel.onchange = () => {
-            const actual = currentShow.seasons.indexOf(playable[sel.value]);
-            loadSeason(actual);
-        };
-        loadSeason(currentShow.seasons.indexOf(playable[0]));
-    } else {
-        sel.style.display = 'none';
-        document.getElementById('episodeGrid').innerHTML = '<p class="empty-msg">No episodes currently available.</p>';
-    }
+        const csArea = document.getElementById('seasonComingSoon');
+        csArea.innerHTML = '';
+        const csSeasons = currentShow.seasons.filter(s => s.comingSoonText);
+        if (csSeasons.length) {
+            csArea.innerHTML = csSeasons.map(s =>
+                `<span class="coming-soon-tag">${s.comingSoonText}</span>`
+            ).join('');
+        }
 
-    document.getElementById('showModal').classList.add('active');
+        const playable = currentShow.seasons.filter(s => s.file);
+        const sel = document.getElementById('seasonSelect');
+        if (playable.length) {
+            sel.style.display = 'block';
+            sel.innerHTML = playable.map((s, i) => `<option value="${i}">Season ${s.number}</option>`).join('');
+            sel.onchange = () => {
+                const actual = currentShow.seasons.indexOf(playable[sel.value]);
+                loadSeason(actual);
+            };
+            loadSeason(currentShow.seasons.indexOf(playable[0]));
+        } else {
+            sel.style.display = 'none';
+            document.getElementById('episodeGrid').innerHTML = '<p class="empty-msg">No episodes currently available.</p>';
+        }
+
+        document.getElementById('showModal').classList.add('active');
+    });
 }
 
-function loadSeason(seasonIndex) {
+function loadSeason(seasonIndex, callback) {
     document.getElementById('episodeGrid').innerHTML = '<p style="color:var(--text-muted);padding:12px;">Loading...</p>';
     fetch(currentShow.seasons[seasonIndex].file + "?v=" + Date.now())
         .then(r => r.json())
@@ -1071,6 +1434,7 @@ function loadSeason(seasonIndex) {
             currentSeasonData = data;
             if (data.type === 'external') renderExternalSeason(data);
             else renderEpisodes();
+            if (callback) callback();
         });
 }
 
@@ -1082,30 +1446,56 @@ function renderExternalSeason(data) {
         </div>`;
 }
 
+/* ═══ EPISODE CARDS WITH FLIP ═══ */
 function renderEpisodes() {
+    const sel = document.getElementById('seasonSelect');
+    const playable = currentShow.seasons.filter(s => s.file);
+    const seasonNum = playable[sel.value] ? playable[sel.value].number : '?';
+
     document.getElementById('episodeGrid').innerHTML = currentSeasonData.episodes.map((ep, i) => `
-        <div class="ep-card anim-in" style="animation-delay:${i * 0.05}s">
-            <button style="all:unset;cursor:pointer;display:block;width:100%;" onclick="openPlayer(${i})">
-                <img src="${ep.thumbnail}" alt="${ep.title}" loading="lazy">
-                <div class="ep-play-icon">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        <div class="ep-card anim-in" style="animation-delay:${i * 0.05}s" id="epCard${i}">
+            <div class="ep-card-inner">
+                <div class="ep-card-front">
+                    <button style="all:unset;cursor:pointer;display:block;width:100%;" onclick="openPlayer(${i})">
+                        <img src="${ep.thumbnail}" alt="${ep.title}" loading="lazy">
+                        <div class="ep-play-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="ep-info">
+                            <div class="ep-num">EP ${ep.number}</div>
+                            <div class="ep-title">${ep.title}</div>
+                        </div>
+                    </button>
+                    <button class="ep-info-btn" onclick="event.stopPropagation();flipCard(${i})" title="More info">i</button>
                 </div>
-                <div class="ep-info">
-                    <div class="ep-num">EP ${ep.number}</div>
-                    <div class="ep-title">${ep.title}</div>
+                <div class="ep-card-back">
+                    <button class="back-close-btn" onclick="event.stopPropagation();unflipCard(${i})">✕</button>
+                    <div class="back-title">${ep.title}</div>
+                    <div class="back-meta">Season ${seasonNum} · Episode ${ep.number}</div>
+                    <div class="back-desc">${ep.description || 'No synopsis available.'}</div>
+                    <button class="back-play" onclick="event.stopPropagation();openPlayer(${i})">▶ Play</button>
                 </div>
-            </button>
-            <button class="ep-info-btn" onclick="event.stopPropagation();openEpisodeInfo(${i})" title="More info">i</button>
+            </div>
         </div>
     `).join('');
 }
 
+function flipCard(idx) {
+    document.getElementById('epCard' + idx).classList.add('flipped');
+}
+function unflipCard(idx) {
+    document.getElementById('epCard' + idx).classList.remove('flipped');
+}
+
+/* ═══ EPISODE INFO MODAL (still available as fallback) ═══ */
 function openEpisodeInfo(idx) {
     const ep = currentSeasonData.episodes[idx];
     document.getElementById('epInfoThumb').src = ep.thumbnail;
     document.getElementById('epInfoTitle').textContent = ep.title;
     document.getElementById('epInfoSynopsis').textContent = ep.description || 'No synopsis available.';
-    document.getElementById('epInfoMeta').textContent = `Season ${currentShow.seasons[document.getElementById('seasonSelect').value].number} · Episode ${ep.number}`;
+    const sel = document.getElementById('seasonSelect');
+    const playable = currentShow.seasons.filter(s => s.file);
+    document.getElementById('epInfoMeta').textContent = `Season ${playable[sel.value].number} · Episode ${ep.number}`;
     document.getElementById('epInfoLength').textContent = 'Calculating...';
     document.getElementById('epInfoPlayBtn').onclick = () => { closeEpInfo(); openPlayer(idx); };
     document.getElementById('epInfoModal').classList.add('active');
@@ -1128,6 +1518,9 @@ function getDuration(url, cb) {
     }
 }
 
+/* ═══════════════════════════════════════════
+   VIDEO PLAYER
+   ═══════════════════════════════════════════ */
 function openPlayer(epIndex) {
     currentEpisodeIndex = epIndex;
     const ep = currentSeasonData.episodes[epIndex];
@@ -1137,14 +1530,31 @@ function openPlayer(epIndex) {
     const controls = document.getElementById('customControls');
     const src = ep.embed;
 
+    // Set deep link
+    const sel = document.getElementById('seasonSelect');
+    const playable = currentShow.seasons.filter(s => s.file);
+    const seasonNum = playable[sel.value] ? playable[sel.value].number : 1;
+    setDeepLink(currentShow.id, seasonNum, ep.number);
+
     wrap.querySelectorAll('.player-error').forEach(e => e.remove());
     video.style.display = 'none'; yt.style.display = 'none';
     video.pause(); video.src = ''; video.load();
     if (hls) { hls.destroy(); hls = null; }
     yt.src = '';
+    currentSkipTarget = null;
+    document.getElementById('skipBtn').classList.remove('visible');
+
+    // Clear progress bar markers
+    document.querySelectorAll('.progress-marker').forEach(m => m.remove());
+
+    // Hide popups
+    closeAllPopups();
 
     document.getElementById('playerShowName').textContent = currentShow.title;
-    document.getElementById('playerEpName').textContent = `S${currentShow.seasons[document.getElementById('seasonSelect').value].number} · E${ep.number} — ${ep.title}`;
+    document.getElementById('playerEpName').textContent = `S${seasonNum} · E${ep.number} — ${ep.title}`;
+
+    // Quality button hidden by default
+    document.getElementById('btnQuality').style.display = 'none';
 
     if (!src || !src.trim()) {
         controls.style.display = 'none';
@@ -1195,18 +1605,38 @@ function setupStandardVideo(video, videoSrc, ep, epIndex) {
 
     while (video.firstChild) video.removeChild(video.firstChild);
 
+    // Load subtitles
     if (ep.subtitles && ep.subtitles.length) {
-        ep.subtitles.forEach(track => {
+        ep.subtitles.forEach((track, ti) => {
             fetch(track.url).then(r => r.blob()).then(blob => {
                 const t = document.createElement('track');
                 t.kind = 'subtitles'; t.label = track.label; t.srclang = track.lang;
                 t.src = URL.createObjectURL(blob);
+                t.dataset.origUrl = track.url;
                 video.appendChild(t);
-                setTimeout(() => { t.track.mode = 'disabled'; }, 100);
+                // Enable English by default
+                setTimeout(() => {
+                    if (track.lang === 'en') {
+                        t.track.mode = 'showing';
+                    } else {
+                        t.track.mode = 'disabled';
+                    }
+                    updateCCButton();
+                }, 100);
             }).catch(() => {});
         });
     }
     updateCCButton();
+
+    // Apply saved playback speed
+    video.playbackRate = currentPlaybackSpeed;
+    document.getElementById('speedLabel').textContent = currentPlaybackSpeed === 1 ? '1×' : currentPlaybackSpeed + '×';
+
+    // Skip intro/recap data
+    const introStart = ep.introStart != null ? ep.introStart : null;
+    const introEnd = ep.introEnd != null ? ep.introEnd : null;
+    const recapStart = ep.recapStart != null ? ep.recapStart : null;
+    const recapEnd = ep.recapEnd != null ? ep.recapEnd : null;
 
     video.ontimeupdate = () => {
         const ct = video.currentTime, dur = video.duration;
@@ -1214,6 +1644,22 @@ function setupStandardVideo(video, videoSrc, ep, epIndex) {
         updateProgressUI(ct, dur);
         updateTimeDisplay(ct, dur);
 
+        // Skip Intro/Recap logic
+        const skipBtn = document.getElementById('skipBtn');
+        if (recapStart != null && recapEnd != null && ct >= recapStart && ct < recapEnd) {
+            skipBtn.textContent = 'Skip Recap ▸';
+            currentSkipTarget = recapEnd;
+            skipBtn.classList.add('visible');
+        } else if (introStart != null && introEnd != null && ct >= introStart && ct < introEnd) {
+            skipBtn.textContent = 'Skip Intro ▸';
+            currentSkipTarget = introEnd;
+            skipBtn.classList.add('visible');
+        } else {
+            skipBtn.classList.remove('visible');
+            currentSkipTarget = null;
+        }
+
+        // Next episode toast
         const toast = document.getElementById('nextEpToast');
         if (dur > 0 && (dur - ct) <= 15 && currentEpisodeIndex < currentSeasonData.episodes.length - 1) {
             const next = currentSeasonData.episodes[currentEpisodeIndex + 1];
@@ -1231,6 +1677,23 @@ function setupStandardVideo(video, videoSrc, ep, epIndex) {
     const onReady = () => {
         if (startTime > 0) video.currentTime = startTime;
         video.play().catch(() => {});
+        video.playbackRate = currentPlaybackSpeed;
+
+        // Add skip markers to progress bar
+        if (video.duration && isFinite(video.duration)) {
+            addProgressMarkers(video.duration, introStart, introEnd, recapStart, recapEnd);
+        } else {
+            video.addEventListener('durationchange', () => {
+                if (video.duration && isFinite(video.duration)) {
+                    addProgressMarkers(video.duration, introStart, introEnd, recapStart, recapEnd);
+                }
+            }, { once: true });
+        }
+
+        // Build quality selector for HLS
+        if (hls && hls.levels && hls.levels.length > 1) {
+            buildQualityMenu();
+        }
     };
 
     if (videoSrc.includes('.m3u8') && Hls.isSupported()) {
@@ -1243,6 +1706,263 @@ function setupStandardVideo(video, videoSrc, ep, epIndex) {
     }
 }
 
+function doSkip() {
+    if (currentSkipTarget != null) {
+        document.getElementById('playerVideo').currentTime = currentSkipTarget;
+    }
+}
+
+function addProgressMarkers(duration, introStart, introEnd, recapStart, recapEnd) {
+    const bar = document.getElementById('progressBarTrack');
+    document.querySelectorAll('.progress-marker').forEach(m => m.remove());
+
+    function addMarker(start, end) {
+        if (start == null || end == null) return;
+        const m = document.createElement('div');
+        m.className = 'progress-marker';
+        m.style.left = ((start / duration) * 100) + '%';
+        m.style.width = (((end - start) / duration) * 100) + '%';
+        bar.appendChild(m);
+    }
+    addMarker(recapStart, recapEnd);
+    addMarker(introStart, introEnd);
+}
+
+/* ═══ PLAYBACK SPEED ═══ */
+function toggleSpeedMenu(e) {
+    e.stopPropagation();
+    closeAllPopups('speed');
+    const popup = document.getElementById('speedPopup');
+    popup.classList.toggle('visible');
+    if (popup.classList.contains('visible')) buildSpeedMenu();
+}
+
+function buildSpeedMenu() {
+    const speeds = [0.5, 0.75, 1, 1.25, 1.5, 2];
+    document.getElementById('speedPopup').innerHTML = speeds.map(s =>
+        `<button class="popup-item${s === currentPlaybackSpeed ? ' active' : ''}" onclick="setSpeed(${s},event)">${s === 1 ? 'Normal' : s + '×'}</button>`
+    ).join('');
+}
+
+function setSpeed(s, e) {
+    e.stopPropagation();
+    currentPlaybackSpeed = s;
+    localStorage.setItem('lsPlaybackSpeed', s);
+    document.getElementById('playerVideo').playbackRate = s;
+    document.getElementById('speedLabel').textContent = s === 1 ? '1×' : s + '×';
+    document.getElementById('speedPopup').classList.remove('visible');
+}
+
+/* ═══ QUALITY SELECTOR (HLS) ═══ */
+function buildQualityMenu() {
+    if (!hls || !hls.levels || hls.levels.length <= 1) return;
+    document.getElementById('btnQuality').style.display = 'flex';
+    const popup = document.getElementById('qualityPopup');
+    let html = `<button class="popup-item${hls.currentLevel === -1 ? ' active' : ''}" onclick="setQuality(-1,event)">Auto</button>`;
+    hls.levels.forEach((lvl, i) => {
+        const label = lvl.height ? lvl.height + 'p' : Math.round(lvl.bitrate / 1000) + 'k';
+        html += `<button class="popup-item${hls.currentLevel === i ? ' active' : ''}" onclick="setQuality(${i},event)">${label}</button>`;
+    });
+    popup.innerHTML = html;
+}
+
+function toggleQualityMenu(e) {
+    e.stopPropagation();
+    closeAllPopups('quality');
+    const popup = document.getElementById('qualityPopup');
+    popup.classList.toggle('visible');
+    if (popup.classList.contains('visible') && hls) buildQualityMenu();
+}
+
+function setQuality(level, e) {
+    e.stopPropagation();
+    if (!hls) return;
+    hls.currentLevel = level;
+    document.getElementById('qualityPopup').classList.remove('visible');
+    // Rebuild after a moment to update active state
+    setTimeout(buildQualityMenu, 500);
+}
+
+/* ═══ SUBTITLE SELECTOR WITH AI TRANSLATION ═══ */
+function toggleSubtitleMenu(e) {
+    e.stopPropagation();
+    closeAllPopups('subtitle');
+    const popup = document.getElementById('subtitlePopup');
+    popup.classList.toggle('visible');
+    if (popup.classList.contains('visible')) buildSubtitleMenu();
+}
+
+function buildSubtitleMenu() {
+    const video = document.getElementById('playerVideo');
+    const tracks = video.textTracks;
+    let html = '<div class="popup-label">Subtitles</div>';
+
+    // "Off" option
+    let allOff = true;
+    for (let i = 0; i < tracks.length; i++) {
+        if (tracks[i].mode === 'showing') { allOff = false; break; }
+    }
+    html += `<button class="popup-item${allOff ? ' active' : ''}" onclick="setSubtitle('off',event)">Off</button>`;
+
+    // Existing tracks
+    for (let i = 0; i < tracks.length; i++) {
+        const t = tracks[i];
+        if (t.label && t.label.startsWith('AI:')) continue; // skip AI tracks in main section
+        html += `<button class="popup-item${t.mode === 'showing' ? ' active' : ''}" onclick="setSubtitle(${i},event)">${t.label || t.language || 'Track ' + (i+1)}</button>`;
+    }
+
+    // AI translated section
+    html += '<div class="popup-divider"></div><div class="popup-label">AI Translated</div>';
+    // Only show if we have at least one source track
+    let hasSourceTrack = false;
+    for (let i = 0; i < tracks.length; i++) {
+        if (!tracks[i].label || !tracks[i].label.startsWith('AI:')) { hasSourceTrack = true; break; }
+    }
+
+    if (hasSourceTrack) {
+        TRANSLATE_LANGS.forEach(lang => {
+            let isActive = false;
+            for (let i = 0; i < tracks.length; i++) {
+                if (tracks[i].label === 'AI: ' + lang.label && tracks[i].mode === 'showing') { isActive = true; break; }
+            }
+            html += `<button class="popup-item${isActive ? ' active' : ''}" onclick="setAISubtitle('${lang.code}','${lang.label}',event)">${lang.label}</button>`;
+        });
+    } else {
+        html += '<div style="padding:8px 16px;font-size:12px;color:var(--text-muted);">No source subtitles available</div>';
+    }
+
+    document.getElementById('subtitlePopup').innerHTML = html;
+}
+
+function setSubtitle(trackIdxOrOff, e) {
+    e.stopPropagation();
+    const video = document.getElementById('playerVideo');
+    const tracks = video.textTracks;
+
+    for (let i = 0; i < tracks.length; i++) tracks[i].mode = 'disabled';
+
+    if (trackIdxOrOff !== 'off' && tracks[trackIdxOrOff]) {
+        tracks[trackIdxOrOff].mode = 'showing';
+    }
+    updateCCButton();
+    document.getElementById('subtitlePopup').classList.remove('visible');
+}
+
+async function setAISubtitle(langCode, langLabel, e) {
+    e.stopPropagation();
+    const video = document.getElementById('playerVideo');
+    const tracks = video.textTracks;
+    const fullLabel = 'AI: ' + langLabel;
+
+    // Check if already created
+    for (let i = 0; i < tracks.length; i++) {
+        if (tracks[i].label === fullLabel) {
+            // Just enable it
+            for (let j = 0; j < tracks.length; j++) tracks[j].mode = 'disabled';
+            tracks[i].mode = 'showing';
+            updateCCButton();
+            document.getElementById('subtitlePopup').classList.remove('visible');
+            return;
+        }
+    }
+
+    // Find first non-AI source track
+    let sourceTrack = null;
+    for (let i = 0; i < tracks.length; i++) {
+        if (!tracks[i].label || !tracks[i].label.startsWith('AI:')) {
+            sourceTrack = tracks[i];
+            break;
+        }
+    }
+    if (!sourceTrack || !sourceTrack.cues || sourceTrack.cues.length === 0) {
+        // Try enabling it briefly to load cues
+        const prevMode = sourceTrack ? sourceTrack.mode : 'disabled';
+        if (sourceTrack) sourceTrack.mode = 'hidden';
+        await new Promise(r => setTimeout(r, 500));
+        if (sourceTrack && (!sourceTrack.cues || sourceTrack.cues.length === 0)) {
+            alert('No subtitle cues available to translate.');
+            if (sourceTrack) sourceTrack.mode = prevMode;
+            return;
+        }
+    }
+
+    // Disable popup during translation
+    document.getElementById('subtitlePopup').classList.remove('visible');
+
+    // Translate cues
+    try {
+        const cues = sourceTrack.cues;
+        const texts = [];
+        for (let i = 0; i < cues.length; i++) texts.push(cues[i].text);
+
+        // Batch translate in chunks of 50
+        const translated = [];
+        const chunkSize = 50;
+        for (let i = 0; i < texts.length; i += chunkSize) {
+            const chunk = texts.slice(i, i + chunkSize);
+            const joined = chunk.join('\n');
+            const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${langCode}&dt=t&q=${encodeURIComponent(joined)}`;
+            const resp = await fetch(url);
+            const data = await resp.json();
+            // data[0] is array of [translatedText, originalText, ...]
+            const result = data[0].map(seg => seg[0]).join('');
+            const lines = result.split('\n');
+            translated.push(...lines);
+        }
+
+        // Build VTT blob
+        let vtt = 'WEBVTT\n\n';
+        for (let i = 0; i < cues.length; i++) {
+            const start = formatVTTTime(cues[i].startTime);
+            const end = formatVTTTime(cues[i].endTime);
+            vtt += `${start} --> ${end}\n${translated[i] || texts[i]}\n\n`;
+        }
+        const blob = new Blob([vtt], { type: 'text/vtt' });
+        const blobUrl = URL.createObjectURL(blob);
+
+        const newTrack = document.createElement('track');
+        newTrack.kind = 'subtitles';
+        newTrack.label = fullLabel;
+        newTrack.srclang = langCode;
+        newTrack.src = blobUrl;
+        video.appendChild(newTrack);
+
+        // Enable it after a moment
+        setTimeout(() => {
+            for (let j = 0; j < video.textTracks.length; j++) video.textTracks[j].mode = 'disabled';
+            newTrack.track.mode = 'showing';
+            updateCCButton();
+        }, 200);
+
+    } catch (err) {
+        console.error('AI translation error:', err);
+        alert('Translation failed. Please check your internet connection and try again.');
+    }
+}
+
+function formatVTTTime(seconds) {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 60);
+    const ms = Math.floor((seconds % 1) * 1000);
+    return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(ms).padStart(3,'0')}`;
+}
+
+/* ═══ CLOSE ALL POPUPS ═══ */
+function closeAllPopups(except) {
+    if (except !== 'speed') document.getElementById('speedPopup').classList.remove('visible');
+    if (except !== 'quality') document.getElementById('qualityPopup').classList.remove('visible');
+    if (except !== 'subtitle') document.getElementById('subtitlePopup').classList.remove('visible');
+}
+
+// Close popups when clicking elsewhere on controls
+document.getElementById('customControls').addEventListener('click', (e) => {
+    if (!e.target.closest('#btnSpeed') && !e.target.closest('#btnQuality') && !e.target.closest('#btnCC')) {
+        closeAllPopups();
+    }
+});
+
+/* ═══ BASIC PLAYER CONTROLS ═══ */
 function togglePlay() {
     const v = document.getElementById('playerVideo');
     v.paused ? v.play() : v.pause();
@@ -1307,29 +2027,6 @@ function toggleFullscreen() {
     else document.exitFullscreen();
 }
 
-function toggleSubtitles() {
-    const video = document.getElementById('playerVideo');
-    const tracks = video.textTracks;
-    if (!tracks.length) return;
-
-    let anyShowing = false;
-    for (let i = 0; i < tracks.length; i++) {
-        if (tracks[i].mode === 'showing') { anyShowing = true; break; }
-    }
-
-    if (anyShowing) {
-        for (let i = 0; i < tracks.length; i++) tracks[i].mode = 'disabled';
-    } else {
-        for (let i = 0; i < tracks.length; i++) {
-            if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') {
-                tracks[i].mode = 'showing';
-                break;
-            }
-        }
-    }
-    updateCCButton();
-}
-
 function updateCCButton() {
     const video = document.getElementById('playerVideo');
     const btn = document.getElementById('btnCC');
@@ -1356,6 +2053,7 @@ function resetControlsTimer() {
 document.getElementById('playerModal').addEventListener('mousemove', resetControlsTimer);
 document.getElementById('playerModal').addEventListener('click', resetControlsTimer);
 
+/* ═══ KEYBOARD SHORTCUTS ═══ */
 document.addEventListener('keydown', e => {
     const modal = document.getElementById('playerModal');
     if (!modal.classList.contains('active')) return;
@@ -1368,7 +2066,21 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); v.currentTime = Math.max(v.currentTime - 10, 0); }
     if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFullscreen(); }
     if (e.key === 'm' || e.key === 'M') { e.preventDefault(); toggleMute(); }
-    if (e.key === 'c' || e.key === 'C') { e.preventDefault(); toggleSubtitles(); }
+    if (e.key === 'c' || e.key === 'C') {
+        e.preventDefault();
+        // Quick toggle: if anything is showing, turn off; otherwise enable first track
+        const tracks = v.textTracks;
+        let anyShowing = false;
+        for (let i = 0; i < tracks.length; i++) { if (tracks[i].mode === 'showing') { anyShowing = true; break; } }
+        if (anyShowing) {
+            for (let i = 0; i < tracks.length; i++) tracks[i].mode = 'disabled';
+        } else {
+            for (let i = 0; i < tracks.length; i++) {
+                if (tracks[i].kind === 'subtitles' || tracks[i].kind === 'captions') { tracks[i].mode = 'showing'; break; }
+            }
+        }
+        updateCCButton();
+    }
     if (e.key === 'Escape') { e.preventDefault(); closePlayer(); }
 });
 
@@ -1388,14 +2100,18 @@ function saveProgress(showId, season, episode, time) {
     localStorage.setItem("continueWatching", JSON.stringify(d));
 }
 
+/* ═══ CLOSE MODALS ═══ */
 function closeShow() {
     clearTimeout(previewTimer);
     const v = document.getElementById('showPreviewVideo');
     v.pause(); v.src = ''; v.style.display = 'none'; v.classList.remove('visible');
-    document.getElementById('showModal').classList.remove('active');
-    document.body.classList.remove('modal-open');
-    renderContinueWatching();
-    if (lastFocusedElement) lastFocusedElement.focus();
+    doViewTransition(() => {
+        document.getElementById('showModal').classList.remove('active');
+        document.body.classList.remove('modal-open');
+        clearDeepLink();
+        renderContinueWatching();
+        if (lastFocusedElement) lastFocusedElement.focus();
+    });
 }
 
 function closePlayer() {
@@ -1406,11 +2122,17 @@ function closePlayer() {
     if (hls) { hls.destroy(); hls = null; }
     document.getElementById('playerModal').classList.remove('active');
     document.getElementById('nextEpToast').classList.remove('visible');
+    document.getElementById('skipBtn').classList.remove('visible');
+    closeAllPopups();
     const ccBtn = document.getElementById('btnCC');
     if (ccBtn) ccBtn.classList.remove('cc-active');
     document.body.classList.remove('modal-open');
+    // Restore deep link to show level
+    if (currentShow) setDeepLink(currentShow.id);
     renderContinueWatching();
 }
+
+/* ═══ SMOOTH FAQ ACCORDION ═══ */
 function toggleFAQ(item) {
     const wasOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
@@ -1418,5 +2140,4 @@ function toggleFAQ(item) {
 }
 </script>
 </body>
-
 </html>
