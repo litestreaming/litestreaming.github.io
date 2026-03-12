@@ -15,7 +15,7 @@
         },
         {
             "number": 2,
-            "title": "The Ritual of Unrooting",
+            "title": "The Lean of a Tree",
             "description": "The young ninja try to leave a paradise, while Lloyd and Jay try to find out, on their own, who they truly are.",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BNGNiOGM1NDMtN2U2OS00MTU3LWI1NjMtYWVlOWRlN2YzOTRlXkEyXkFqcGc@.jpg",
             "embed": "",
@@ -28,7 +28,7 @@
         },
         {
             "number": 3,
-            "title": "Episode 3",
+            "title": "Tonight We Hunt Monsters",
             "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTdmNGNkZDMtOWNkYS00YWUwLWFmYjYtM2YxMjlmZjkxNTEwXkEyXkFqcGc@.jpg",
             "embed": "",
             "subtitles": [{
@@ -123,4 +123,5 @@
             }]
         }
     ]
+
 }
