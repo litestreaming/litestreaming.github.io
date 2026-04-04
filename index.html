@@ -623,7 +623,7 @@
         .ctrl-spacer { flex: 1; }
 
         /* ═══ PLAYBACK SPEED POPUP ═══ */
-        .speed-popup, .quality-popup, .subtitle-popup {
+        .speed-popup, .quality-popup, .subtitle-popup, .download-popup {
             position: absolute; bottom: 40px;
             background: var(--bg-secondary); border: 1px solid var(--border);
             border-radius: var(--radius-lg);
@@ -631,10 +631,11 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.7);
             display: none; z-index: 20;
         }
-        .speed-popup.visible, .quality-popup.visible, .subtitle-popup.visible { display: block; }
+        .speed-popup.visible, .quality-popup.visible, .subtitle-popup.visible, .download-popup.visible { display: block; }
         .speed-popup { right: 0; }
         .quality-popup { right: 0; }
         .subtitle-popup { right: 0; min-width: 220px; }
+        .download-popup { right: 0; min-width: 240px; }
         .popup-item {
             display: flex; align-items: center; justify-content: space-between;
             padding: 8px 16px; font-size: 13px; color: var(--text-secondary);
@@ -650,6 +651,22 @@
             color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase;
         }
         .popup-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+        /* ═══ DOWNLOAD PROGRESS ═══ */
+        .dl-progress-wrap {
+            padding: 10px 16px;
+        }
+        .dl-progress-text {
+            font-size: 11px; color: var(--text-secondary); margin-bottom: 6px;
+        }
+        .dl-progress-bar-outer {
+            width: 100%; height: 4px; background: rgba(255,255,255,0.1);
+            border-radius: 2px; overflow: hidden;
+        }
+        .dl-progress-bar-inner {
+            height: 100%; background: var(--accent); border-radius: 2px;
+            transition: width 0.2s ease; width: 0%;
+        }
 
         /* ═══ SKIP INTRO / RECAP BUTTON ═══ */
         .skip-btn {
@@ -961,6 +978,12 @@
             <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
             <div class="ctrl-spacer"></div>
 
+            <!-- Download button -->
+            <button class="ctrl-btn" id="btnDownload" title="Download (D)" onclick="toggleDownloadMenu(event)">
+                <svg viewBox="0 0 24 24" style="width:22px;height:22px;"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                <div class="download-popup" id="downloadPopup"></div>
+            </button>
+
             <!-- Speed control -->
             <button class="ctrl-btn" id="btnSpeed" title="Playback Speed" onclick="toggleSpeedMenu(event)">
                 <span style="font-size:13px;font-weight:700;font-family:var(--font-body);" id="speedLabel">1×</span>
@@ -1069,6 +1092,7 @@ let activeSortMode = 'default';
 let currentPlaybackSpeed = parseFloat(localStorage.getItem('lsPlaybackSpeed') || '1');
 let currentSkipTarget = null;
 let translatedTrackCache = {};
+let isDownloading = false;
 
 const TRANSLATE_LANGS = [
     { code: 'es', label: 'Spanish (AI)' },
@@ -1556,8 +1580,13 @@ function openPlayer(epIndex) {
     // Quality button hidden by default
     document.getElementById('btnQuality').style.display = 'none';
 
+    // Show/hide download button based on content type
+    const dlBtn = document.getElementById('btnDownload');
+    dlBtn.style.display = 'flex';
+
     if (!src || !src.trim()) {
         controls.style.display = 'none';
+        dlBtn.style.display = 'none';
         showPlayerError(wrap);
         document.getElementById('playerModal').classList.add('active');
         return;
@@ -1573,6 +1602,8 @@ function openPlayer(epIndex) {
             finalUrl = `https://www.youtube.com/embed/${id}`;
         }
         yt.src = `${finalUrl}${finalUrl.includes('?') ? '&' : '?'}autoplay=1&modestbranding=1&rel=0`;
+        // Hide download for YouTube embeds (can't download those)
+        dlBtn.style.display = 'none';
     } else {
         controls.style.display = 'block';
         video.style.display = 'block';
@@ -1783,7 +1814,9 @@ function setQuality(level, e) {
     setTimeout(buildQualityMenu, 500);
 }
 
-/* ═══ SUBTITLE SELECTOR WITH AI TRANSLATION ═══ */
+/* ═══════════════════════════════════════════
+   SUBTITLE SELECTOR WITH AI TRANSLATION (FIXED)
+   ═══════════════════════════════════════════ */
 function toggleSubtitleMenu(e) {
     e.stopPropagation();
     closeAllPopups('subtitle');
@@ -1848,6 +1881,7 @@ function setSubtitle(trackIdxOrOff, e) {
     document.getElementById('subtitlePopup').classList.remove('visible');
 }
 
+/* ═══ FIXED AI TRANSLATION ═══ */
 async function setAISubtitle(langCode, langLabel, e) {
     e.stopPropagation();
     const video = document.getElementById('playerVideo');
@@ -1857,7 +1891,6 @@ async function setAISubtitle(langCode, langLabel, e) {
     // Check if already created
     for (let i = 0; i < tracks.length; i++) {
         if (tracks[i].label === fullLabel) {
-            // Just enable it
             for (let j = 0; j < tracks.length; j++) tracks[j].mode = 'disabled';
             tracks[i].mode = 'showing';
             updateCCButton();
@@ -1868,55 +1901,92 @@ async function setAISubtitle(langCode, langLabel, e) {
 
     // Find first non-AI source track
     let sourceTrack = null;
+    let sourceTrackIdx = -1;
     for (let i = 0; i < tracks.length; i++) {
         if (!tracks[i].label || !tracks[i].label.startsWith('AI:')) {
             sourceTrack = tracks[i];
+            sourceTrackIdx = i;
             break;
         }
     }
-    if (!sourceTrack || !sourceTrack.cues || sourceTrack.cues.length === 0) {
-        // Try enabling it briefly to load cues
-        const prevMode = sourceTrack ? sourceTrack.mode : 'disabled';
-        if (sourceTrack) sourceTrack.mode = 'hidden';
-        await new Promise(r => setTimeout(r, 500));
-        if (sourceTrack && (!sourceTrack.cues || sourceTrack.cues.length === 0)) {
-            alert('No subtitle cues available to translate.');
-            if (sourceTrack) sourceTrack.mode = prevMode;
-            return;
-        }
+
+    if (!sourceTrack) {
+        alert('No subtitle cues available to translate.');
+        return;
     }
 
-    // Disable popup during translation
+    // Ensure cues are loaded by temporarily enabling the track
+    const prevMode = sourceTrack.mode;
+    if (sourceTrack.mode === 'disabled') {
+        sourceTrack.mode = 'hidden';
+    }
+    // Wait for cues to populate
+    await new Promise(r => setTimeout(r, 800));
+
+    if (!sourceTrack.cues || sourceTrack.cues.length === 0) {
+        alert('No subtitle cues available to translate.');
+        sourceTrack.mode = prevMode;
+        return;
+    }
+
     document.getElementById('subtitlePopup').classList.remove('visible');
 
-    // Translate cues
-    try {
-        const cues = sourceTrack.cues;
-        const texts = [];
-        for (let i = 0; i < cues.length; i++) texts.push(cues[i].text);
+    // Collect all cue data (timing + text) upfront
+    const cueData = [];
+    for (let i = 0; i < sourceTrack.cues.length; i++) {
+        cueData.push({
+            startTime: sourceTrack.cues[i].startTime,
+            endTime: sourceTrack.cues[i].endTime,
+            text: sourceTrack.cues[i].text
+        });
+    }
 
-        // Batch translate in chunks of 50
+    // Restore source track to previous mode
+    sourceTrack.mode = prevMode;
+
+    try {
+        // Use a unique separator that won't be mangled by translation
+        const SEP = ' ||| ';
         const translated = [];
-        const chunkSize = 50;
-        for (let i = 0; i < texts.length; i += chunkSize) {
-            const chunk = texts.slice(i, i + chunkSize);
-            const joined = chunk.join('\n');
+        const chunkSize = 30; // Smaller chunks for better reliability
+
+        for (let i = 0; i < cueData.length; i += chunkSize) {
+            const chunk = cueData.slice(i, i + chunkSize);
+            const textsClean = chunk.map(c => c.text.replace(/\n/g, ' ').replace(/\|\|\|/g, ''));
+            const joined = textsClean.join(SEP);
+
             const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${langCode}&dt=t&q=${encodeURIComponent(joined)}`;
             const resp = await fetch(url);
             const data = await resp.json();
-            // data[0] is array of [translatedText, originalText, ...]
-            const result = data[0].map(seg => seg[0]).join('');
-            const lines = result.split('\n');
-            translated.push(...lines);
+
+            // Reconstruct the full translated string from segments
+            let fullTranslated = '';
+            if (data && data[0]) {
+                fullTranslated = data[0].map(seg => seg[0]).join('');
+            }
+
+            // Split back on separator
+            const parts = fullTranslated.split(/\s*\|\|\|\s*/);
+
+            // Map parts back to cues; if count doesn't match, fall back gracefully
+            for (let j = 0; j < chunk.length; j++) {
+                if (j < parts.length && parts[j].trim()) {
+                    translated.push(parts[j].trim());
+                } else {
+                    // Fallback: keep original text
+                    translated.push(chunk[j].text);
+                }
+            }
         }
 
-        // Build VTT blob
+        // Build VTT with the original precise timings
         let vtt = 'WEBVTT\n\n';
-        for (let i = 0; i < cues.length; i++) {
-            const start = formatVTTTime(cues[i].startTime);
-            const end = formatVTTTime(cues[i].endTime);
-            vtt += `${start} --> ${end}\n${translated[i] || texts[i]}\n\n`;
+        for (let i = 0; i < cueData.length; i++) {
+            const start = formatVTTTime(cueData[i].startTime);
+            const end = formatVTTTime(cueData[i].endTime);
+            vtt += `${start} --> ${end}\n${translated[i] || cueData[i].text}\n\n`;
         }
+
         const blob = new Blob([vtt], { type: 'text/vtt' });
         const blobUrl = URL.createObjectURL(blob);
 
@@ -1927,12 +1997,11 @@ async function setAISubtitle(langCode, langLabel, e) {
         newTrack.src = blobUrl;
         video.appendChild(newTrack);
 
-        // Enable it after a moment
-        setTimeout(() => {
-            for (let j = 0; j < video.textTracks.length; j++) video.textTracks[j].mode = 'disabled';
-            newTrack.track.mode = 'showing';
-            updateCCButton();
-        }, 200);
+        // Wait for track to load, then enable
+        await new Promise(r => setTimeout(r, 300));
+        for (let j = 0; j < video.textTracks.length; j++) video.textTracks[j].mode = 'disabled';
+        newTrack.track.mode = 'showing';
+        updateCCButton();
 
     } catch (err) {
         console.error('AI translation error:', err);
@@ -1948,16 +2017,285 @@ function formatVTTTime(seconds) {
     return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(ms).padStart(3,'0')}`;
 }
 
+/* ═══════════════════════════════════════════
+   DOWNLOAD SYSTEM
+   ═══════════════════════════════════════════ */
+function toggleDownloadMenu(e) {
+    e.stopPropagation();
+    closeAllPopups('download');
+    const popup = document.getElementById('downloadPopup');
+    popup.classList.toggle('visible');
+    if (popup.classList.contains('visible')) buildDownloadMenu();
+}
+
+function buildDownloadMenu() {
+    const popup = document.getElementById('downloadPopup');
+    const ep = currentSeasonData.episodes[currentEpisodeIndex];
+    const src = ep.embed;
+    let html = '<div class="popup-label">Download</div>';
+
+    // Roku option (main: download from embed HLS)
+    const isHLS = src && src.includes('.m3u8');
+    const isDirectVideo = src && !src.includes('youtube') && !src.includes('youtu.be') && !src.includes('embed');
+
+    if (isHLS) {
+        html += `<button class="popup-item" onclick="downloadHLS(event)" id="dlRokuBtn">
+            <span>Roku (Stream)</span>
+            <span style="font-size:10px;color:var(--text-muted);">.mp4</span>
+        </button>`;
+    } else if (isDirectVideo) {
+        html += `<button class="popup-item" onclick="downloadDirect(event)">
+            <span>Roku (Direct)</span>
+            <span style="font-size:10px;color:var(--text-muted);">.mp4</span>
+        </button>`;
+    }
+
+    // Additional download links from the episode JSON
+    if (ep.downloads && ep.downloads.length) {
+        html += '<div class="popup-divider"></div>';
+        html += '<div class="popup-label">Alternative Sources</div>';
+        ep.downloads.forEach((dl, i) => {
+            html += `<a class="popup-item" href="${dl.url}" target="_blank" download style="text-decoration:none;color:var(--text-secondary);">
+                <span>${dl.label}</span>
+                ${dl.size ? `<span style="font-size:10px;color:var(--text-muted);">${dl.size}</span>` : ''}
+            </a>`;
+        });
+    }
+
+    // Download progress area (hidden by default)
+    html += `<div class="dl-progress-wrap" id="dlProgressWrap" style="display:none;">
+        <div class="dl-progress-text" id="dlProgressText">Preparing...</div>
+        <div class="dl-progress-bar-outer"><div class="dl-progress-bar-inner" id="dlProgressBar"></div></div>
+    </div>`;
+
+    popup.innerHTML = html;
+}
+
+/* ═══ HLS DOWNLOAD (stream → MP4) ═══ */
+async function downloadHLS(e) {
+    e.stopPropagation();
+    if (isDownloading) return;
+    isDownloading = true;
+
+    const ep = currentSeasonData.episodes[currentEpisodeIndex];
+    const src = ep.embed;
+    const sel = document.getElementById('seasonSelect');
+    const playable = currentShow.seasons.filter(s => s.file);
+    const seasonNum = playable[sel.value] ? playable[sel.value].number : 1;
+    const filename = `${currentShow.title} - S${seasonNum}E${ep.number} - ${ep.title}.mp4`.replace(/[<>:"/\\|?*]/g, '');
+
+    const progressWrap = document.getElementById('dlProgressWrap');
+    const progressText = document.getElementById('dlProgressText');
+    const progressBar = document.getElementById('dlProgressBar');
+    if (progressWrap) progressWrap.style.display = 'block';
+
+    try {
+        // Step 1: Fetch the m3u8 playlist
+        progressText.textContent = 'Fetching playlist...';
+        progressBar.style.width = '2%';
+
+        const m3u8Resp = await fetch(src);
+        const m3u8Text = await m3u8Resp.text();
+
+        // Determine base URL for relative segment paths
+        const baseUrl = src.substring(0, src.lastIndexOf('/') + 1);
+
+        // Check if this is a master playlist (has other m3u8 references)
+        let segmentPlaylistUrl = src;
+        let segmentPlaylistText = m3u8Text;
+
+        if (m3u8Text.includes('#EXT-X-STREAM-INF')) {
+            // Master playlist: pick the highest quality variant
+            const lines = m3u8Text.split('\n');
+            let bestBandwidth = 0;
+            let bestUrl = '';
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].startsWith('#EXT-X-STREAM-INF')) {
+                    const bwMatch = lines[i].match(/BANDWIDTH=(\d+)/);
+                    const bw = bwMatch ? parseInt(bwMatch[1]) : 0;
+                    const nextLine = lines[i + 1] ? lines[i + 1].trim() : '';
+                    if (bw > bestBandwidth && nextLine && !nextLine.startsWith('#')) {
+                        bestBandwidth = bw;
+                        bestUrl = nextLine;
+                    }
+                }
+            }
+            if (bestUrl) {
+                segmentPlaylistUrl = bestUrl.startsWith('http') ? bestUrl : baseUrl + bestUrl;
+                const resp2 = await fetch(segmentPlaylistUrl);
+                segmentPlaylistText = await resp2.text();
+            }
+        }
+
+        // Step 2: Parse segment URLs from the media playlist
+        const segBaseUrl = segmentPlaylistUrl.substring(0, segmentPlaylistUrl.lastIndexOf('/') + 1);
+        const segLines = segmentPlaylistText.split('\n');
+        const segmentUrls = [];
+        for (const line of segLines) {
+            const trimmed = line.trim();
+            if (trimmed && !trimmed.startsWith('#')) {
+                segmentUrls.push(trimmed.startsWith('http') ? trimmed : segBaseUrl + trimmed);
+            }
+        }
+
+        if (segmentUrls.length === 0) {
+            throw new Error('No segments found in playlist');
+        }
+
+        progressText.textContent = `Downloading 0/${segmentUrls.length} segments...`;
+        progressBar.style.width = '5%';
+
+        // Step 3: Download all segments with concurrency control
+        const CONCURRENCY = 4;
+        const segments = new Array(segmentUrls.length);
+        let completed = 0;
+
+        async function downloadSegment(index) {
+            const resp = await fetch(segmentUrls[index]);
+            const buf = await resp.arrayBuffer();
+            segments[index] = new Uint8Array(buf);
+            completed++;
+            const pct = 5 + Math.round((completed / segmentUrls.length) * 85);
+            progressText.textContent = `Downloading ${completed}/${segmentUrls.length} segments...`;
+            progressBar.style.width = pct + '%';
+        }
+
+        // Process in batches
+        for (let i = 0; i < segmentUrls.length; i += CONCURRENCY) {
+            const batch = [];
+            for (let j = i; j < Math.min(i + CONCURRENCY, segmentUrls.length); j++) {
+                batch.push(downloadSegment(j));
+            }
+            await Promise.all(batch);
+        }
+
+        // Step 4: Concatenate all segments
+        progressText.textContent = 'Combining segments...';
+        progressBar.style.width = '92%';
+
+        let totalSize = 0;
+        for (const seg of segments) totalSize += seg.length;
+
+        const combined = new Uint8Array(totalSize);
+        let offset = 0;
+        for (const seg of segments) {
+            combined.set(seg, offset);
+            offset += seg.length;
+        }
+
+        // Step 5: Create download blob
+        // HLS segments are MPEG-TS; we save as .mp4 extension
+        // (VLC, mpv, and most players handle TS data regardless of extension)
+        progressText.textContent = 'Saving file...';
+        progressBar.style.width = '98%';
+
+        const blob = new Blob([combined], { type: 'video/mp4' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        progressText.textContent = 'Download complete!';
+        progressBar.style.width = '100%';
+
+        setTimeout(() => {
+            if (progressWrap) progressWrap.style.display = 'none';
+        }, 2000);
+
+    } catch (err) {
+        console.error('HLS download error:', err);
+        progressText.textContent = 'Download failed. Try again.';
+        progressBar.style.width = '0%';
+        setTimeout(() => {
+            if (progressWrap) progressWrap.style.display = 'none';
+        }, 3000);
+    }
+
+    isDownloading = false;
+}
+
+/* ═══ DIRECT VIDEO DOWNLOAD ═══ */
+async function downloadDirect(e) {
+    e.stopPropagation();
+    if (isDownloading) return;
+    isDownloading = true;
+
+    const ep = currentSeasonData.episodes[currentEpisodeIndex];
+    const src = ep.embed;
+    const sel = document.getElementById('seasonSelect');
+    const playable = currentShow.seasons.filter(s => s.file);
+    const seasonNum = playable[sel.value] ? playable[sel.value].number : 1;
+    const ext = src.split('.').pop().split('?')[0] || 'mp4';
+    const filename = `${currentShow.title} - S${seasonNum}E${ep.number} - ${ep.title}.${ext}`.replace(/[<>:"/\\|?*]/g, '');
+
+    const progressWrap = document.getElementById('dlProgressWrap');
+    const progressText = document.getElementById('dlProgressText');
+    const progressBar = document.getElementById('dlProgressBar');
+    if (progressWrap) progressWrap.style.display = 'block';
+
+    try {
+        progressText.textContent = 'Downloading...';
+        progressBar.style.width = '10%';
+
+        const resp = await fetch(src);
+        const reader = resp.body.getReader();
+        const contentLength = +resp.headers.get('Content-Length') || 0;
+        let receivedLength = 0;
+        const chunks = [];
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            receivedLength += value.length;
+            if (contentLength > 0) {
+                const pct = Math.round((receivedLength / contentLength) * 90) + 5;
+                progressBar.style.width = pct + '%';
+                const mb = (receivedLength / (1024 * 1024)).toFixed(1);
+                progressText.textContent = `Downloading... ${mb} MB`;
+            }
+        }
+
+        progressText.textContent = 'Saving file...';
+        progressBar.style.width = '98%';
+
+        const blob = new Blob(chunks, { type: 'video/mp4' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        progressText.textContent = 'Download complete!';
+        progressBar.style.width = '100%';
+        setTimeout(() => { if (progressWrap) progressWrap.style.display = 'none'; }, 2000);
+    } catch (err) {
+        console.error('Direct download error:', err);
+        progressText.textContent = 'Download failed. Try again.';
+        setTimeout(() => { if (progressWrap) progressWrap.style.display = 'none'; }, 3000);
+    }
+
+    isDownloading = false;
+}
+
 /* ═══ CLOSE ALL POPUPS ═══ */
 function closeAllPopups(except) {
     if (except !== 'speed') document.getElementById('speedPopup').classList.remove('visible');
     if (except !== 'quality') document.getElementById('qualityPopup').classList.remove('visible');
     if (except !== 'subtitle') document.getElementById('subtitlePopup').classList.remove('visible');
+    if (except !== 'download') document.getElementById('downloadPopup').classList.remove('visible');
 }
 
 // Close popups when clicking elsewhere on controls
 document.getElementById('customControls').addEventListener('click', (e) => {
-    if (!e.target.closest('#btnSpeed') && !e.target.closest('#btnQuality') && !e.target.closest('#btnCC')) {
+    if (!e.target.closest('#btnSpeed') && !e.target.closest('#btnQuality') && !e.target.closest('#btnCC') && !e.target.closest('#btnDownload')) {
         closeAllPopups();
     }
 });
@@ -2066,6 +2404,10 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); v.currentTime = Math.max(v.currentTime - 10, 0); }
     if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFullscreen(); }
     if (e.key === 'm' || e.key === 'M') { e.preventDefault(); toggleMute(); }
+    if (e.key === 'd' || e.key === 'D') {
+        e.preventDefault();
+        toggleDownloadMenu(e);
+    }
     if (e.key === 'c' || e.key === 'C') {
         e.preventDefault();
         // Quick toggle: if anything is showing, turn off; otherwise enable first track
