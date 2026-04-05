@@ -1,8 +1,134 @@
 {
-  "type": "external",
-  "button": {
-    "label": "Download",
-    "url": "https://gofile.io/d/Xc0jNf"
-  },
-  "note": "Season 4 is not possible to stream. I made a drive so download it here."
+    "season": 4,
+    "episodes": [{
+            "number": 1,
+            "title": "The Whispering Wood",
+            "description": "Scattered across unknown realms, the Ninja face new challenges. Lloyd and Arin battle monsters in the Whispering Wood and uncover a shocking truth. Elsewhere, peace feels suspicious, while Jay opens up to Nya and Kai in a distant cave.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/85/4f/938486b16cb282e1404ba14bb0b0e83e.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/f4/cd/10777144/s10777144.m3u8",
+            "subtitles": [{
+                "url": "",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 2,
+            "title": "The Lean of a Tree",
+            "description": "In the Whispering Wood, Lloyd uncovers secrets of the Green Ninja and questions his path. Elsewhere, the young Ninja are drawn in by a mysterious land, while Jay, Nya, and Kai face danger - and Jay decides to confront his past.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/96/e8/5d6300c77565f39aa1540677226e6c36.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/44/8b/10777145/s10777145.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5f/35/feef8749007416e3e29e160b40652feb.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 3,
+            "title": "Tonight We Hunt Monsters",
+            "description": "The young Ninja must protect bumbling explorers from a dangerous monster as they try to return home. Nya and Kai help Jay unlock his memories, leading to the Administration, while the Whispering Wood faces attack and a hunt begins.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/d4/26/16cdbde2d6b250791d10e503f4384e2d.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/7d/e5/10777146/s10777146.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/5d/a2/6b09c42951e4f2a2aea0f27b3711ed6b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 4,
+            "title": "A Wonder of the Merged Lands",
+            "description": "Jay, Nya, and Kai near restoring Jay’s memories in the Administration. In the Whispering Wood, Lloyd follows his instincts to the Temple of the Green Ninja as doubts grow. Elsewhere, Sora and the others face fallout from a monster attack.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c5/06/aae93767cb672ae0807971db0360adcf.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/99/d6/10777147/s10777147.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/df/8d/04c5b6ebac51af12db34172164c71683.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 5,
+            "title": "Seed and Soil",
+            "description": "Lloyd enters the Temple of the Green Ninja and faces a shocking, deadly trial. Meanwhile, Sora, Frak, and Wyldfyre are attacked in Umbrasylvis with a friend’s life at risk, as the Loyalists near their goal and reveal their leader.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/87/e2/3a75b02e25863ba00d1fb6b98d23c3a7.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/df/c0/10777148/s10777148.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f3/d4/084b35222c3703e9a673aeca954b48e9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 6,
+            "title": "Just Under the Surface",
+            "description": "Escaping the Administration, Nya, Kai, and Jay uncover a Loyalist plot. Arin and the others defend the Whispering Wood as Lloyd finishes his trial. In Ninjago, Cole investigates an attack, while Sora’s team is held captive in Umbrasylvis.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/32/45/1f6ac27ab3a12ee7c1f21d6c69b7f81f.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/dc/6c/10777149/s10777149.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/2b/59/13ddcf88c528f35c4dd60a78361cc841.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 7,
+            "title": "The Grand Inquisition",
+            "description": "To clear their names, Sora and Frak must unmask a Loyalist in the Explorer’s Club, but Frak’s past clouds him. As the Whispering Wood’s protector fades, Lloyd races against time, guided inside the temple to face his destiny.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/65/d2/7929da6bc19aff74935a65661515ac98.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/48/3c/10777150/s10777150.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/ec/1c/7aceb371d27650e5dc61dc27ec0fe2f9.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 8,
+            "title": "Dying to Live",
+            "description": "Cole infiltrates Loyalist headquarters and uncovers their ultimate goal, but his solo mission has consequences for his powers. Meanwhile, Lloyd faces his final test as the fate of the Whispering Wood and the Merged Lands hangs in the balance.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/0b/b9/a69fdcba68ba29176d1cd107a8ee5502.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/9c/7a/10777151/s10777151.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/f7/c0/486ea64d3fd8010de960c6f1bb00783f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 9,
+            "title": "The Heartbeat of All Realms",
+            "description": "The Loyalists march from Ninjago with the Weapon of Desolation, raising an army of Elemental Monsters too strong for the reunited Ninja. Lloyd returns with new powers, but his duty to the Whispering Wood may cost the Merged Lands.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/14/05/bc0886174945840f382b539b74fd8d55.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/16/46/10777152/s10777152.m3u8",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/4b/ad/5747a71f01e2924c631fd1499a97cc0f.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        },
+        {
+            "number": 10,
+            "title": "Birthright",
+            "description": "The Loyalists unleash their Elemental Monster army in the streets, overwhelming the Ninja. A last-minute ally brings hope, but without the Source Dragons, the Ninja must rely on each other to save the Merged Lands.",
+            "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7e/e0/3f4f609902e05d685c431fa2e43cbaab.jpg",
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/e2/ad/4289746e0d2dd801989e259ea4b95474.mp4",
+            "subtitles": [{
+                "url": "https://cdn1.futuretodayinc.com/files/a8wn4hw/cc/16/3f/d477fe651ccf80fe7294a16e5a9d263b.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
+        }
+    ]
 }
