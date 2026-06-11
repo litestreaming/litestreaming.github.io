@@ -5,7 +5,10 @@
             "title": "Awakening",
             "description": "When Mateo’s comic creation, Z-Blob, follows him from a dream back to Brooklyn, Mateo and his sister realize the Dream World is real, and in danger!",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/37/7f/a472bb25545ae221762f9711c1a7a2d4.jpg",
-            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/c7/10510357/s10510357.m3u8"
+            "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/81/c7/10510357/s10510357.m3u8",
+                  "sources": [
+        { "label": "LEGO.com", "url": "https://videoprocessingpipeline.services.lego.com/assets/0792f9d7-0899-4fc8-99e2-578d0e061c5e/ac31f3b8-19df-4aa2-a45d-afef006e0dd6/1080p.mp4" }        
+      ]
         },
         {
             "number": 2,

@@ -2,6 +2,12 @@
     "shows": [{
             "id": "ninjago",
             "title": "LEGO Ninjago: Masters of Spinjitzu",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Fantasy"],
+            "rating": "TV-Y7",
+            "years": "2011 – 2022",
+            "creator": "Dan & Kevin Hageman",
+            "starring": ["Vincent Tong", "Michael Adamthwaite", "Kirby Morrow", "Brent Miller", "Kelly Metzger", "Jillian Michaels", "Paul Dobson"],
             "poster": "https://image.tmdb.org/t/p/original/beKgqwruOGmVAvRwRvfuOcXwl2Z.jpg",
             "banner": "https://image.tmdb.org/t/p/original/RUBG86JQ81CV6DMm0RKdGln2Kr.jpg",
             "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
@@ -75,8 +81,12 @@
         {
             "id": "ninjagodr",
             "title": "LEGO Ninjago: Dragons Rising",
-            "newEpisodes": true,
-            "poster": "https://static.wikia.nocookie.net/ninjago/images/d/d0/DRS4MainPoster.jpg",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Fantasy"],
+            "rating": "TV-Y7",
+            "years": "2023 – Present",
+            "newEpisodes": false,
+            "poster": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/iptv/a8/e8/4a6ee375eedd3de888a1c303829aa0c5.jpg",
             "banner": "https://m.media-amazon.com/images/S/pv-target-images/013d4f514ad5ed51b9fbdb09a5ec24911f45ab3405c3e23923025287fcf8bc3b.jpg",
             "logo": "https://image.tmdb.org/t/p/original/syIS6UQl4UhELTtu1ZWQcMSgR91.png",
             "summary": "Many legendary realms have suddenly combined into one, but their union is unstable. A Spinjitzu Ninja Master must train a new generation of heroes to help find Elemental Dragons who can save the planet before the forces of evil use the same dragon energy to destroy this new world.",
@@ -92,27 +102,18 @@
                     "number": 3,
                     "file": "data/seasons/dr_s3.json"
                 },
-                                {
+                {
                     "number": 4,
                     "file": "data/seasons/dr_s4.json"
                 }
             ]
         },
         {
-            "id": "ninjagoshorts",
-            "title": "LEGO Ninjago: Shorts",
-            "poster": "https://image.tmdb.org/t/p/original/wcmb846ZOXi0FRO6XcdkT1RkCOe.jpg",
-            "banner": "https://ovp.itv.com/v2/images/programme/vc9ktbw/itv_hub/01_Hero_DesktopCTV/16x9?distributionPartner=itv_hub&fallback=standard",
-            "logo": "https://image.tmdb.org/t/p/original/8W6yO0MAh4Pl7OFIoLoKfwQWIBz.png",
-            "summary": "Every LEGO Ninjago: Masters of Spinjitzu mini-series and short. Wyldfyre shorts will be added soon. Legends is listed separately.",
-            "seasons": [{
-                "number": 1,
-                "file": "data/seasons/shorts.json"
-            }]
-        },
-        {
             "id": "ninjagomonstrosity",
-            "title": "LEGO Ninjago: Legends",
+            "title": "LEGO Ninjago Legends: Monstrosity",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Fantasy"],
+            "rating": "TV-Y7",
             "poster": "https://m.media-amazon.com/images/M/MV5BMDZjNzEyYTQtZWZlYS00MWUyLTg1MjEtZmUzMmNlMDYwZGRkXkEyXkFqcGc@._V1_.jpg",
             "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/fe/fd/869a4ea8be974e6094f9a1df0396de7a.jpg",
             "logo": "https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/4660cfec-ee29-4ef2-b15e-9966aa101eac/4c39771b-aa52-11f0-abb1-0afffd029469?host=wbd-images.prod-vod.h264.io&partner=beamcom",
@@ -125,10 +126,14 @@
         {
             "id": "dreamzzz",
             "title": "LEGO DREAMZzz",
+            "type": "show",
+            "genres": ["Animation", "Fantasy", "Kids"],
+            "rating": "TV-Y7",
+            "years": "2023 – 2025",
             "poster": "https://image.tmdb.org/t/p/original/bksnhr6slfT2mIcCTglGYD3pI9A.jpg",
             "banner": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
             "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
-            "summary": "A group of kids join a secret agency where they learn to use the power of imagination to journey into the Dream World and create fantastic creations in order to help sleeping children being terrorized by the evil Nightmare King who is bent on conquering the Dream World and invading the Waking World.",
+            "summary": "A group of kids joins a secret agency and enter the Dream World to combat nightmares and use the power of imagination to save dreamers in distress.",
             "seasons": [{
                     "number": 1,
                     "file": "data/seasons/dz_s1.json"
@@ -146,6 +151,10 @@
         {
             "id": "chima",
             "title": "LEGO LEGENDS OF CHIMA",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Fantasy"],
+            "rating": "TV-Y7",
+            "years": "2013 – 2014",
             "poster": "https://image.tmdb.org/t/p/original/rn1Bnam0yBolJPMhR4VJAeCxM0Y.jpg",
             "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/fd/f3/f48479a2142f68b8f625407e8af6ca28.jpg",
             "logo": "https://image.tmdb.org/t/p/original/xTXGm0PSCbtEsKG7KzAqXLBJMXQ.png",
@@ -167,6 +176,10 @@
         {
             "id": "nexo",
             "title": "LEGO NEXO Knights",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Sci-Fi"],
+            "rating": "TV-Y7",
+            "years": "2015 – 2017",
             "poster": "https://image.tmdb.org/t/p/original/d0e5dJ2FQhlwEhFX4cB0ijp5SMd.jpg",
             "banner": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/cf/1b/41a37321c4e4a272ea2b6416776372b7.jpg",
             "logo": "https://occ-0-1500-1501.1.nflxso.net/dnm/api/v6/beuYL-MTCxPyt5oTOhVnWNGfZug/AAAABdIb8htG1RzUAKeNB5peevMi4_IFBFjCm_4wJ8hhYevIyp_i4ccKlqTUHOfOW2SrlCt1uebXaiJs0f-u7GY6l1annSd9FHz20gRT5amZKio.webp?r=d63",
@@ -192,6 +205,11 @@
         {
             "id": "dotd",
             "title": "LEGO Ninjago: Day of the Departed",
+            "type": "movie",
+            "genres": ["Action & Adventure", "Animation", "Fantasy"],
+            "rating": "TV-Y7",
+            "years": "2016",
+            "runtime": "44m",
             "poster": "https://image.tmdb.org/t/p/original/dZM1tYuARngZdZMHSYPdU6zuA5N.jpg",
             "banner": "https://image.tmdb.org/t/p/original/5Mx9bOqNN1aXokwwzKam2qiw2cY.jpg",
             "logo": "https://image.tmdb.org/t/p/original/xiXPiWwAuI4JGUDFWiUzx73oaBW.png",
@@ -204,6 +222,10 @@
         {
             "id": "lmk",
             "title": "LEGO Monkie Kid",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Comedy"],
+            "rating": "TV-Y7",
+            "years": "2020 – 2023",
             "poster": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/a0/96/f01ea63d0855f1d9b5b44d00ee634bac.jpg",
             "banner": "https://image.tmdb.org/t/p/original/9XdI3OWp1O5AYMV5e7J1mmNNNsp.jpg",
             "logo": "https://image.tmdb.org/t/p/original/6xrbLNUSisGPHYfpGMI2VNKuEhe.png",
@@ -219,28 +241,115 @@
                 {
                     "number": 5,
                     "file": "data/seasons/lmk_s5.json"
-                },
-                {
-                    "comingSoonText": "Season 1 and 2 coming soon"
                 }
             ]
         },
         {
-            "id": "dreamzzzshorts",
-            "title": "LEGO DREAMZzz Shorts",
-            "poster": "https://image.tmdb.org/t/p/original/uhu2i400KaFTSGif5zdHIwMKGu4.jpg",
-            "banner": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
-            "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
+            "id": "thelegoninjagomovie",
             "comingSoon": true,
-            "comingSoonText": "Coming Soon",
-            "comingSoonNote": "This series will be added soon.",
-            "summary": "A group of kids join a secret agency where they learn to use the power of imagination to journey into the Dream World and create fantastic creations in order to help sleeping children being terrorized by the evil Nightmare King who is bent on conquering the Dream World and invading the Waking World.",
+            "title": "The LEGO Ninjago Movie",
+            "type": "movie",
+            "genres": ["Action & Adventure", "Animation", "Comedy"],
+            "rating": "PG",
+            "years": "2017",
+            "runtime": "1h 41m",
+            "poster": "https://image.tmdb.org/t/p/original/oNzOqGZfiwSB1GGdyX7QG4OdxUL.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/6BQis8u6Q8U5J4EHqdyRRIE0njI.jpg",
+            "logo": "https://image.tmdb.org/t/p/original/kt3Jae5UE5RXunwkspaAM2x0yD1.png",
+            "summary": "Six young ninjas are tasked with defending their island home of Ninjago. By night, they’re gifted warriors using their skill and awesome fleet of vehicles to fight villains and monsters. By day, they’re ordinary teens struggling against their greatest enemy....high school.",
             "seasons": [{
                 "number": 1,
-                "file": "data/seasons/dz_shorts.json"
+                "file": "data/seasons/thelegoninjagomovie.json"
+            }]
+        },
+                {
+            "id": "thelegomovie",
+            "comingSoon": true,
+            "title": "The LEGO Movie",
+            "type": "movie",
+            "genres": ["Animation"],
+            "rating": "K-7",
+            "years": "2014",
+            "runtime": "1h 40m",
+            "poster": "https://image.tmdb.org/t/p/original/bU3eFOHvzTrXBjzPJu9LZFRNQ11.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/tpGQywkbnWItRPJbLVApMFTAABy.jpg",
+            "logo": "https://image.tmdb.org/t/p/original/2kTDt0uOb4xQzvw1h8ZRufoXNCX.png",
+            "summary": "An ordinary Lego mini-figure, mistakenly thought to be the extraordinary MasterBuilder, is recruited to join a quest to stop an evil Lego tyrant from conquering the universe.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/thelegomovie.json"
+            }]
+        },
+                        {
+            "id": "thelegobatmanmovie",
+            "comingSoon": true,
+            "title": "The LEGO Batman Movie",
+            "type": "movie",
+            "genres": ["Animation"],
+            "rating": "7",
+            "years": "2017",
+            "runtime": "1h 44m",
+            "poster": "https://image.tmdb.org/t/p/original/4FKZ90sJcwrOVPR1436AnnN52Kl.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/5sqGN93VLMDOoa0JrwAVFNYMBrx.jpg",
+            "logo": "https://image.tmdb.org/t/p/original/l1ly31zDxwiLMWWTcjyOyV93dRe.png",
+            "summary": "A cooler-than-ever Bruce Wayne must deal with the usual suspects as they plan to rule Gotham City, while discovering that he has accidentally adopted a teenage orphan who wishes to become his sidekick.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/thelegobatmanmovie.json"
+            }]
+        },
+                                {
+            "id": "thelegomovie2",
+            "comingSoon": true,
+            "title": "The LEGO Movie 2: The Second Part",
+            "type": "movie",
+            "genres": ["Animation"],
+            "rating": "K-7",
+            "years": "2019",
+            "runtime": "1h 47m",
+            "poster": "https://image.tmdb.org/t/p/original/QTESAsBVZwjtGJNDP7utiGV37z.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/2gglZmi9FvFT0ze21PQdZdt0d1i.jpg",
+            "logo": "https://image.tmdb.org/t/p/original/oVtzvWiS4DHaQuMeeXpXQDLaK6r.png",
+            "summary": "It's been five years since everything was awesome and the citizens are facing a huge new threat: LEGO DUPLO® invaders from outer space, wrecking everything faster than they can rebuild.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/thelegomovie2.json"
+            }]
+        },
+                                {
+            "id": "legotheadventuresofclutchpowers",
+            "comingSoon": true,
+            "title": "LEGO: The Adventures of Clutch Powers",
+            "type": "movie",
+            "genres": ["Animation"],
+            "rating": "G",
+            "years": "2010",
+            "runtime": "1h 21m",
+            "poster": "https://image.tmdb.org/t/p/original/sa9UQfzagl6VjSwkoknZcqfeWQE.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/yrpxgtij5ozwNUAQ9oAAJSqvzpm.jpg",
+            "logo": "",
+            "summary": "Clutch Powers ventures on a mission assigned to him by his boss to solve the chaos that occurred on the Space Police prison planet.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/legotheadventuresofclutchpowers.json"
+            }]
+        },
+        {
+            "id": "ninjagoduskfall",
+            "title": "LEGO Ninjago: Legends - Duskfall",
+            "type": "show",
+            "comingSoon": true,
+            "genres": ["Action & Adventure", "Animation", "Fantasy"],
+            "rating": "TV-Y7",
+            "years": "2026",
+            "poster": "https://image.tmdb.org/t/p/original/kNRubZxsiV0MnvWxV5n5xvNXtW8.jpg",
+            "banner": "https://image.tmdb.org/t/p/original/z7a571k6eo1u5WARmTgnaJonURP.jpg",
+            "logo": "",
+            "summary": "As time moves forward, a mysterious glimpse into the future of NINJAGO begins to unfold.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/duskfall_s1.json"
             }]
         }
     ]
-
 }
-
