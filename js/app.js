@@ -43,7 +43,6 @@ const SUB_BGS = [
 const TV_RE = /(smart-?tv|tizen|web0s|webos|netcast|nettv|viera|aquos|bravia|roku|dtv|playstation|xbox|crkey|googletv|google tv|hbbtv|vidaa|hisense|sony.?tv)/i;
 const PLAY_SVG = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
 
-/* ---------------------- Helpers ---------------------- */
 const $ = (id) => document.getElementById(id);
 const $$ = (sel, scope) => Array.from((scope || document).querySelectorAll(sel));
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -55,7 +54,6 @@ const fmtClock = (t) => {
     return h > 0 ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${m}:${String(s).padStart(2, '0')}`;
 };
 
-/* ---------------------- State ---------------------- */
 const cacheBust = '?v=' + Date.now();
 const state = {
     shows: [], heroData: [], heroIdx: 0, heroTimer: null,
@@ -79,6 +77,13 @@ let tvActive = false;
 const getShow = (id) => state.shows.find(s => s.id === id);
 const playableSeasons = (show) => (show && show.seasons ? show.seasons.filter(s => s.file) : []);
 const isMovie = (show) => show && show.type === 'movie';
+
+function epStatus(ep) {
+    const s = String(ep.status || '').toLowerCase().trim();
+    if (s === 'upcoming' || s === 'soon' || s === 'coming-soon' || s === 'comingsoon') return { id: 'upcoming', label: ep.statusText || 'Upcoming' };
+    if (s === 'unavailable') return { id: 'unavailable', label: ep.statusText || 'Unavailable' };
+    return null;
+}
 
 function toast(msg) {
     const stack = $('toastStack');
@@ -161,9 +166,7 @@ function refreshAvatarUI() {
     if (nameEl) nameEl.textContent = profile.name || 'Profile';
 }
 
-/* ============================================================
-   Theme / appearance / TV mode
-   ============================================================ */
+
 function applyAccent(hex) {
     if (!/^#[0-9A-Fa-f]{6}$/.test(hex)) return;
     const r = parseInt(hex.slice(1, 3), 16), g = parseInt(hex.slice(3, 5), 16), b = parseInt(hex.slice(5, 7), 16);
@@ -224,9 +227,7 @@ function initThemeUI() {
     applyTvMode();
 }
 
-/* ============================================================
-   My List
-   ============================================================ */
+
 const getMyList = () => readJSON('myList', []);
 const isInMyList = (id) => getMyList().includes(id);
 function toggleMyList(id, ev) {
@@ -257,9 +258,7 @@ function updateListButtons(id) {
     }
 }
 
-/* ============================================================
-   Season data fetching
-   ============================================================ */
+
 function fetchSeason(file) {
     if (state.seasonCache.has(file)) return state.seasonCache.get(file);
     const p = fetch(file + cacheBust).then(r => { if (!r.ok) throw new Error('season fetch failed'); return r.json(); });
@@ -267,10 +266,6 @@ function fetchSeason(file) {
     p.catch(() => state.seasonCache.delete(file));
     return p;
 }
-
-/* ============================================================
-   Durations (lazy, cached)
-   ============================================================ */
 let durCache = readJSON('lsDurCache', {});
 let durSaveTimer = null;
 const durQueue = [];
@@ -324,9 +319,7 @@ function fmtEpDuration(val) {
     return String(val);
 }
 
-/* ============================================================
-   Sources
-   ============================================================ */
+
 function sourceKindOf(url, declared) {
     if (declared === 'tab' || declared === 'iframe' || declared === 'direct') return declared;
     if (!url || !url.trim()) return 'none';
@@ -340,6 +333,7 @@ function srcTypeTag(src) {
     return src.url.toLowerCase().includes('.m3u8') ? 'HLS' : 'MP4';
 }
 function episodeSources(ep) {
+    if (epStatus(ep)) return [];
     const list = [];
     if (ep.embed && ep.embed.trim()) list.push({ label: 'Default', url: ep.embed.trim(), type: sourceKindOf(ep.embed), def: true });
     (ep.sources || []).forEach((s, i) => {
@@ -714,7 +708,8 @@ function findResumeTarget(show) {
     if (latest) return { s: latest.s, e: latest.e, resume: true, p: latest.p };
     const playable = playableSeasons(show);
     if (!playable.length) return null;
-    return { s: playable[0].number, e: null, resume: false };
+    // s:null lets playEpisodeByRef walk seasons for the first playable episode
+    return { s: null, e: null, resume: false };
 }
 function renderDetails(id) {
     const show = getShow(id);
@@ -871,18 +866,21 @@ function renderExternalSeason(data) {
     </div>`;
 }
 function epRowHtml(show, seasonNumber, ep, i) {
-    const p = getProgress(show.id, seasonNumber, ep.number);
-    const dur = fmtEpDuration(ep.duration) || durCache[ep.embed] || '';
-    return `<a class="ep-row" href="#/details/${encodeURIComponent(show.id)}/${seasonNumber}/${ep.number}" data-ep="${i}" draggable="false">
+    const st = epStatus(ep);
+    const p = st ? null : getProgress(show.id, seasonNumber, ep.number);
+    const dur = st ? '' : (fmtEpDuration(ep.duration) || durCache[ep.embed] || '');
+    return `<a class="ep-row${st ? ' is-status' : ''}" href="#/details/${encodeURIComponent(show.id)}/${seasonNumber}/${ep.number}" data-ep="${i}" draggable="false">
         <div class="ep-num">${esc(String(ep.number))}</div>
         <div class="ep-thumb">
             <img src="${esc(ep.thumbnail || '')}" alt="" loading="lazy" decoding="async" draggable="false">
-            <button class="ep-playbtn" type="button" data-play-ep="${i}" aria-label="Play ${esc(ep.title || 'episode')}"><span>${PLAY_SVG}</span></button>
-            ${isWatched(p) ? '<div class="ep-watched">✓</div>' : ''}
-            ${isInProgress(p) ? `<div class="ep-prog"><div class="ep-prog-fill" style="width:${progPct(p).toFixed(1)}%"></div></div>` : ''}
+            ${st
+                ? `<div class="ep-status"><span>${esc(st.label)}</span></div>`
+                : `<button class="ep-playbtn" type="button" data-play-ep="${i}" aria-label="Play ${esc(ep.title || 'episode')}"><span>${PLAY_SVG}</span></button>
+                   ${isWatched(p) ? '<div class="ep-watched">✓</div>' : ''}
+                   ${isInProgress(p) ? `<div class="ep-prog"><div class="ep-prog-fill" style="width:${progPct(p).toFixed(1)}%"></div></div>` : ''}`}
         </div>
         <div class="ep-info">
-            <div class="ep-title-row"><h4 class="ep-title">${esc(ep.title || '')}</h4><span class="ep-dur" data-dur-url="${esc(ep.embed || '')}">${esc(dur)}</span></div>
+            <div class="ep-title-row"><h4 class="ep-title">${esc(ep.title || '')}</h4>${st ? '' : `<span class="ep-dur" data-dur-url="${esc(ep.embed || '')}">${esc(dur)}</span>`}</div>
             <p class="ep-desc">${esc(ep.description || '')}</p>
         </div>
     </a>`;
@@ -939,9 +937,10 @@ function renderEpisodePageContent(show, seasonNumber, data, idx) {
     const view = $('view');
     const eps = data.episodes;
     const ep = eps[idx];
-    const p = getProgress(show.id, seasonNumber, ep.number);
+    const st = epStatus(ep);
+    const p = st ? null : getProgress(show.id, seasonNumber, ep.number);
     const watched = isWatched(p), inProg = isInProgress(p);
-    const dur = fmtEpDuration(ep.duration) || durCache[ep.embed] || '';
+    const dur = st ? '' : (fmtEpDuration(ep.duration) || durCache[ep.embed] || '');
     const prevEp = idx > 0 ? eps[idx - 1] : null;
     const nextEp = idx < eps.length - 1 ? eps[idx + 1] : null;
     const sources = episodeSources(ep);
@@ -955,24 +954,29 @@ function renderEpisodePageContent(show, seasonNumber, data, idx) {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
                 ${esc(show.title)}</a>
             <div class="ep-page-grid">
-                <div class="ep-page-thumb">
+                <div class="ep-page-thumb${st ? ' is-status' : ''}">
                     <img src="${esc(ep.thumbnail || show.banner || '')}" alt="" decoding="async">
+                    ${st ? `<div class="ep-status"><span>${esc(st.label)}</span></div>` : ''}
                     ${inProg ? `<div class="ep-prog"><div class="ep-prog-fill" style="width:${progPct(p).toFixed(1)}%"></div></div>` : ''}
                 </div>
                 <div>
                     <div class="ep-page-kicker">${isMovie(show) ? 'Movie' : `Season ${seasonNumber} · Episode ${ep.number}`}</div>
                     <h1 class="ep-page-title">${esc(ep.title || 'Episode ' + ep.number)}</h1>
                     <div class="meta-row">
-                        ${dur ? `<span class="meta-text" data-dur-url="${esc(ep.embed || '')}">${esc(dur)}</span>` : (ep.embed ? `<span class="meta-text" data-dur-url="${esc(ep.embed)}" id="epPageDur"></span>` : '')}
+                        ${st ? `<span class="meta-badge status-badge">${esc(st.label)}</span>` : ''}
+                        ${dur ? `<span class="meta-text">${esc(dur)}</span>` : (ep.embed && !st ? `<span class="meta-text" id="epPageDur"></span>` : '')}
                         ${watched ? '<span class="meta-badge" style="color:var(--success);border-color:var(--success)">✓ Watched</span>' : ''}
                         ${show.rating ? `<span class="meta-badge">${esc(show.rating)}</span>` : ''}
                     </div>
                     <p class="ep-page-desc">${esc(ep.description || 'No description available for this episode.')}</p>
                     <div class="action-row">
-                        ${canPlay ? `<button class="btn-primary" id="epPlayBtn" type="button">${PLAY_SVG} ${playLabel}</button>` : '<button class="btn-primary" disabled type="button">Unavailable</button>'}
+                        ${canPlay
+                            ? `<button class="btn-primary" id="epPlayBtn" type="button">${PLAY_SVG} ${playLabel}</button>`
+                            : `<button class="btn-primary" disabled type="button">${st ? esc(st.label) : 'Unavailable'}</button>`}
                         ${prevEp ? `<a class="btn-secondary" href="#/details/${encodeURIComponent(show.id)}/${seasonNumber}/${prevEp.number}">‹ E${prevEp.number}</a>` : ''}
                         ${nextEp ? `<a class="btn-secondary" href="#/details/${encodeURIComponent(show.id)}/${seasonNumber}/${nextEp.number}">E${nextEp.number} ›</a>` : ''}
                     </div>
+                    ${st && st.id === 'upcoming' ? '<p class="resume-note">This episode isn\'t out yet — check back later.</p>' : ''}
                     ${inProg ? `<p class="resume-note">You're ${Math.round(progPct(p))}% through — playback resumes from ${fmtClock(p.t)}.</p>` : ''}
                 </div>
             </div>
@@ -987,10 +991,12 @@ function renderEpisodePageContent(show, seasonNumber, data, idx) {
     if (durEl) queueDuration(ep.embed, durEl);
     if (eps.length > 1) {
         $('epMiniRow').innerHTML = eps.map((e2, i2) => {
-            const p2 = getProgress(show.id, seasonNumber, e2.number);
-            return `<a class="ep-mini${i2 === idx ? ' current' : ''}" href="#/details/${encodeURIComponent(show.id)}/${seasonNumber}/${e2.number}" draggable="false">
+            const st2 = epStatus(e2);
+            const p2 = st2 ? null : getProgress(show.id, seasonNumber, e2.number);
+            return `<a class="ep-mini${i2 === idx ? ' current' : ''}${st2 ? ' is-status' : ''}" href="#/details/${encodeURIComponent(show.id)}/${seasonNumber}/${e2.number}" draggable="false">
                 <div class="ep-mini-thumb">
                     <img src="${esc(e2.thumbnail || '')}" alt="" loading="lazy" decoding="async" draggable="false">
+                    ${st2 ? `<div class="ep-status"><span>${esc(st2.label)}</span></div>` : ''}
                     ${isInProgress(p2) ? `<div class="ep-prog"><div class="ep-prog-fill" style="width:${progPct(p2).toFixed(1)}%"></div></div>` : ''}
                     ${isWatched(p2) ? '<div class="ep-watched">✓</div>' : ''}
                 </div>
@@ -1008,21 +1014,36 @@ function smartPlayShow(show) {
     if (!target) { location.hash = '#/details/' + encodeURIComponent(show.id); return; }
     playEpisodeByRef(show.id, target.s, target.e);
 }
-function playEpisodeByRef(showId, sNum, eNum) {
+async function playEpisodeByRef(showId, sNum, eNum) {
     const show = getShow(showId);
     if (!show) return;
     const playable = playableSeasons(show);
-    const ref = sNum != null ? playable.find(x => x.number === sNum) : playable[0];
-    if (!ref) { location.hash = '#/details/' + encodeURIComponent(showId); return; }
-    fetchSeason(ref.file).then(data => {
-        if (data.type === 'external' || !data.episodes || !data.episodes.length) {
-            location.hash = '#/details/' + encodeURIComponent(showId);
+    // explicit season requested → just that one; otherwise walk seasons until
+    // we find something playable (skips external-only and upcoming seasons)
+    const tryList = sNum != null ? playable.filter(x => x.number === sNum) : playable;
+    if (!tryList.length) { location.hash = '#/details/' + encodeURIComponent(showId); return; }
+    for (const ref of tryList) {
+        let data;
+        try { data = await fetchSeason(ref.file); } catch { continue; }
+        if (data.type === 'external' || !data.episodes || !data.episodes.length) continue;
+        const eps = data.episodes;
+        if (eNum != null) {
+            const idx = eps.findIndex(x => x.number === eNum);
+            if (idx < 0) continue;
+            if (!episodeSources(eps[idx]).length) {
+                location.hash = `#/details/${encodeURIComponent(showId)}/${ref.number}/${eNum}`;
+                return;
+            }
+            openPlayer(show, ref.number, data, idx);
             return;
         }
-        let idx = eNum != null ? data.episodes.findIndex(x => x.number === eNum) : 0;
-        if (idx < 0) idx = 0;
+        const idx = eps.findIndex(x => episodeSources(x).length);
+        if (idx < 0) continue;
         openPlayer(show, ref.number, data, idx);
-    }).catch(() => toast('Failed to load episodes.'));
+        return;
+    }
+    location.hash = '#/details/' + encodeURIComponent(showId);
+    toast('No streamable episodes available yet.');
 }
 
 const playerEl = () => $('player');
@@ -1168,8 +1189,9 @@ function setupVideo(video, videoSrc, ep) {
             sb.textContent = 'Skip Intro ▸'; state.currentSkipTarget = introE; sb.classList.add('show');
         } else { sb.classList.remove('show'); state.currentSkipTarget = null; }
         const nt = $('nextToast');
-        if (dur > 0 && isFinite(dur) && (dur - ct) <= 15 && state.play.epIdx < state.play.seasonData.episodes.length - 1) {
-            const next = state.play.seasonData.episodes[state.play.epIdx + 1];
+        const ni = nextPlayableIdx(state.play.epIdx, 1);
+        if (dur > 0 && isFinite(dur) && (dur - ct) <= 15 && ni >= 0) {
+            const next = state.play.seasonData.episodes[ni];
             $('nextThumb').src = next.thumbnail || '';
             $('nextName').textContent = next.title || '';
             nt.classList.add('show');
@@ -1191,7 +1213,19 @@ function setupVideo(video, videoSrc, ep) {
 
     const onReady = () => {
         $('pLoader').classList.remove('show');
-        if (startTime > 0 && isFinite(video.duration) && startTime < video.duration - 10) video.currentTime = startTime;
+        // HLS: duration is unknown at MANIFEST_PARSED — defer the resume seek
+        // until metadata arrives, otherwise it would be silently skipped
+        let resumed = false;
+        const applyResume = () => {
+            if (resumed || !isFinite(video.duration)) return;
+            resumed = true;
+            if (startTime > 0 && startTime < video.duration - 10) video.currentTime = startTime;
+        };
+        applyResume();
+        if (!resumed) {
+            video.addEventListener('loadedmetadata', applyResume, { once: true });
+            video.addEventListener('durationchange', applyResume, { once: true });
+        }
         video.play().catch(() => {});
         video.playbackRate = state.playbackSpeed;
         const addMarkers = () => { if (video.duration && isFinite(video.duration)) addProgressMarkers(video.duration, introS, introE, recapS, recapE); };
@@ -1491,11 +1525,44 @@ function addProgressMarkers(dur, iS, iE, rS, rE) {
     };
     add(rS, rE); add(iS, iE);
 }
+function isFullscreen() {
+    return !!(document.fullscreenElement || document.webkitFullscreenElement);
+}
+function lockLandscape() {
+    try { if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(() => {}); } catch {}
+}
+function videoNativeFS() {
+    // iPhone Safari: no element fullscreen — use the video's native fullscreen
+    const v = $('pVideo');
+    if (state.play.kind === 'direct' && v.webkitEnterFullscreen) { try { v.webkitEnterFullscreen(); } catch {} }
+}
 function toggleFS() {
     const el = playerEl();
-    if (!document.fullscreenElement) { if (el.requestFullscreen) el.requestFullscreen().catch(() => {}); }
-    else document.exitFullscreen().catch(() => {});
+    if (isFullscreen()) {
+        try {
+            if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        } catch {}
+        return;
+    }
+    if (el.requestFullscreen) el.requestFullscreen().then(lockLandscape).catch(videoNativeFS);
+    else if (el.webkitRequestFullscreen) { el.webkitRequestFullscreen(); lockLandscape(); }
+    else videoNativeFS();
 }
+function updateFsIcon() {
+    $('fsBtn').innerHTML = isFullscreen()
+        ? '<svg viewBox="0 0 24 24"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>'
+        : '<svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>';
+}
+['fullscreenchange', 'webkitfullscreenchange'].forEach(ev => document.addEventListener(ev, updateFsIcon));
+// While in iOS native fullscreen the custom overlay is hidden, so hand the
+// active subtitle track to the native renderer and take it back afterwards.
+$('pVideo').addEventListener('webkitbeginfullscreen', () => {
+    if (state.play.cueTrack) try { state.play.cueTrack.mode = 'showing'; } catch {}
+});
+$('pVideo').addEventListener('webkitendfullscreen', () => {
+    if (state.play.cueTrack) try { state.play.cueTrack.mode = 'hidden'; } catch {}
+});
 function resetCtrlTimer() {
     const m = playerEl();
     m.classList.remove('hide-ui');
@@ -1508,13 +1575,21 @@ function flashSeek(side) {
     const el = $(side === 'left' ? 'seekLeft' : 'seekRight');
     el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
 }
+function nextPlayableIdx(from, dirn) {
+    const eps = (state.play.seasonData && state.play.seasonData.episodes) || [];
+    for (let i = from + dirn; i >= 0 && i < eps.length; i += dirn) {
+        if (episodeSources(eps[i]).length) return i;
+    }
+    return -1;
+}
 function playNext() {
-    if (state.play.epIdx < state.play.seasonData.episodes.length - 1) {
-        openPlayer(state.play.show, state.play.seasonNumber, state.play.seasonData, state.play.epIdx + 1);
-    } else requestClosePlayer();
+    const ni = nextPlayableIdx(state.play.epIdx, 1);
+    if (ni >= 0) openPlayer(state.play.show, state.play.seasonNumber, state.play.seasonData, ni);
+    else requestClosePlayer();
 }
 function playPrev() {
-    if (state.play.epIdx > 0) openPlayer(state.play.show, state.play.seasonNumber, state.play.seasonData, state.play.epIdx - 1);
+    const pi = nextPlayableIdx(state.play.epIdx, -1);
+    if (pi >= 0) openPlayer(state.play.show, state.play.seasonNumber, state.play.seasonData, pi);
 }
 function requestClosePlayer() {
     if (state.play.pushed) { state.play.pushed = false; history.back(); }
@@ -1729,12 +1804,31 @@ $('volSlider').addEventListener('input', (e) => {
     v.muted = v.volume === 0;
     updateMuteIcon(v.muted);
 });
-$('progressWrap').addEventListener('click', (e) => {
-    const v = $('pVideo');
-    if (!v.duration || !isFinite(v.duration)) return;
-    const r = e.currentTarget.getBoundingClientRect();
-    v.currentTime = ((e.clientX - r.left) / r.width) * v.duration;
-});
+// Pointer-based seeking: tap or drag anywhere on the bar (mouse + touch)
+(() => {
+    const wrap = $('progressWrap');
+    let dragging = false;
+    const seekTo = (clientX) => {
+        const v = $('pVideo');
+        if (!v.duration || !isFinite(v.duration)) return;
+        const r = wrap.getBoundingClientRect();
+        const pct = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
+        v.currentTime = pct * v.duration;
+        updateProgressUI(v.currentTime, v.duration);
+        updateTime(v.currentTime, v.duration);
+    };
+    wrap.addEventListener('pointerdown', (e) => {
+        if (state.play.kind !== 'direct') return;
+        dragging = true;
+        try { wrap.setPointerCapture(e.pointerId); } catch {}
+        seekTo(e.clientX);
+        resetCtrlTimer();
+    });
+    wrap.addEventListener('pointermove', (e) => { if (dragging) { seekTo(e.clientX); resetCtrlTimer(); } });
+    const end = () => { dragging = false; };
+    wrap.addEventListener('pointerup', end);
+    wrap.addEventListener('pointercancel', end);
+})();
 let bufferInterval = setInterval(() => {
     if (!playerOpen()) return;
     const v = $('pVideo');
@@ -1758,12 +1852,22 @@ $('pVideoArea').addEventListener('touchend', function (e) {
         if (x < w / 2) { v.currentTime = Math.max(0, v.currentTime - 10); flashSeek('left'); }
         else { v.currentTime = Math.min(v.duration, v.currentTime + 10); flashSeek('right'); }
         lastTapTime = 0;
-    } else { lastTapTime = now; lastTapX = x; }
-    resetCtrlTimer();
+        resetCtrlTimer();
+    } else {
+        lastTapTime = now; lastTapX = x;
+        // single tap toggles the controls instead of pausing
+        const m = playerEl();
+        if (state.play.kind === 'direct' && !m.classList.contains('hide-ui') && !$('pVideo').paused) {
+            m.classList.add('hide-ui');
+            closeAllPopups();
+        } else {
+            resetCtrlTimer();
+        }
+    }
 });
 $('pVideoArea').addEventListener('click', (e) => {
+    if (Date.now() - state.lastTouch < 700) return; // touch taps handled above
     resetCtrlTimer();
-    if (Date.now() - state.lastTouch < 700) return;
     if (e.target.closest('button, a, .controls-bar, .player-top, .next-toast, .skip-btn, .player-error, .popup')) return;
     togglePlay();
 });
@@ -1844,7 +1948,7 @@ document.addEventListener('click', (e) => {
     if (trigger) closeModal(trigger.dataset.close);
 });
 
-/* Profile modal */
+
 function renderAvatarPreview() {
     $('avatarPreview').innerHTML = avatarInner();
 }
@@ -1906,7 +2010,7 @@ $('clearHistoryBtn').addEventListener('click', () => {
 $('sideProfileBtn').addEventListener('click', openProfile);
 $('bnProfileBtn').addEventListener('click', openProfile);
 
-/* Settings modal */
+
 function openSettings() {
     buildThemeSwatches();
     applyTvMode();
@@ -1935,6 +2039,7 @@ function modalScope() {
 }
 function visibleFocusables(scope) {
     return $$('a[href], button:not(:disabled), input, select, [tabindex="0"]', scope || document).filter(el => {
+        if (el.classList.contains('skip-link')) return false;
         if (el.closest('.player-overlay') && !playerOpen()) return false;
         if (!scope && el.closest('.modal-overlay')) return false;
         if (el.tabIndex < 0) return false;
@@ -1948,7 +2053,10 @@ function spatialMove(dir) {
     if (!els.length) return;
     const cur = document.activeElement;
     if (!cur || cur === document.body || !els.includes(cur)) {
-        const inView = els.find(el => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.top < innerHeight * 0.9; }) || els[0];
+        // nothing focused yet — land on page content first, not the sidebar
+        const viewEls = els.filter(el => el.closest('#view'));
+        const pool = viewEls.length ? viewEls : els;
+        const inView = pool.find(el => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.top < innerHeight * 0.9; }) || pool[0];
         inView.focus({ preventScroll: true });
         inView.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'smooth' });
         return;
