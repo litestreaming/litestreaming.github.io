@@ -3,37 +3,67 @@
     "episodes": [{
             "number": 1,
             "title": "Croc-Star",
-            "description": "In episode 1 of Dream Guardians Unleashed, Logan and Zoey stumble upon a strange glowing crystal in the forest, only to be confronted by the Nightmare King and his menacing scorpion. But what’s hidden inside this mysterious crystal could change everything.",
-            "thumbnail": "https://image.tmdb.org/t/p/original/aUaBAHmAujS50pUKLY1orH7h5rN.jpg",
-            "embed": "https://pomf2.lain.la/f/hiub9p9d.mp4"
+            "description": "Logan and Zoey stumble upon a strange glowing crystal in the forest, only to be confronted by the Nightmare King and his menacing scorpion.",
+            "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/blt5bda60a2d3df0602/1/aid263gl7cf0957c_lego_dreamzzz_streaming_thumbnail_v2.jpg",
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/62bc7976-ee75-42fd-8acf-3b486d0eef51/5db6cacd-7c06-44f0-bde5-b3590181a9e7/1080p.mp4",
+            "subtitles": [{
+                "url": "https://videoprocessingpipeline.services.lego.com/assets/62bc7976-ee75-42fd-8acf-3b486d0eef51/5db6cacd-7c06-44f0-bde5-b3590181a9e7/en-us_AID263GL7cf0957c_DreamGuardiansUnleashed_E101_CrocStar.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 2,
             "title": "Outfoxed",
-            "description": "In episode 2 of Dream Guardians Unleashed, the Nightmare King uncovers a strange glowing crystal! Mateo creates a distraction while Izzie goes for it, but things go wrong and the Nightmare King’s forces close in. When the crystal breaks, it hatches a critter that is then dream crafted into a mighty FOX GUARDIAN MECH! How will this change everything?",
-            "thumbnail": "https://image.tmdb.org/t/p/original/gphk2ARqqpWGQ71JEquWHM14ULX.jpg",
-            "embed": "https://pomf2.lain.la/f/q5lxi5y0.mp4"
+            "description": "The Nightmare King uncovers a strange glowing crystal! Mateo creates a distraction while Izzie goes for it, but things go wrong and the Nightmare King’s forces close in.",
+            "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/bltb7664badd23b3530/1/aid263glba21c7c1_lego_dreamzzz_streaming_thumbnail_v3.jpg",
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/2013c599-5186-4cec-9c6c-646dc29f0962/1b39a2f5-e40c-4eb5-a211-b3590187e4e6/1080p.mp4",
+            "subtitles": [{
+                "url": "https://videoprocessingpipeline.services.lego.com/assets/2013c599-5186-4cec-9c6c-646dc29f0962/1b39a2f5-e40c-4eb5-a211-b3590187e4e6/en-us_AID263GLba21c7c1_DreamGuardiansUnleashed_E102_Outfoxed.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 3,
             "title": "Dino Dash",
-            "description": "In episode 3 of Dream Guardians Unleashed, Cooper gets a warning from Logan on his Dreamie Screamie that the Nightmare King is coming and must protect a strange glowing egg. When the egg hatches, a critter emerges, and Cooper dream crafts a DINO JET. How will this change everything?",
-            "thumbnail": "https://image.tmdb.org/t/p/original/ukSnxRzeXHLiSUjCK0ngR8SnBwX.jpg",
-            "embed": "https://pomf2.lain.la/f/tnegh27p.mp4"
+            "description": "Cooper gets a warning from Logan on his Dreamie Screamie that the Nightmare King is coming and must protect a strange glowing egg.",
+            "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/blt130a803e604bfcd3/1/aid263gl9a7c33ba_lego_dreamzzz_streaming_thumbnail_v2.jpg",
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/b3deab94-50f1-4657-a2c2-d350456906cf/4c740715-9d24-414f-8b60-b359018b00f1/1080p.mp4",
+            "subtitles": [{
+                "url": "https://videoprocessingpipeline.services.lego.com/assets/b3deab94-50f1-4657-a2c2-d350456906cf/4c740715-9d24-414f-8b60-b359018b00f1/en-us_AID263GL9a7c33ba_DreamGuardiansUnleashed_E103_DinoDash.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 4,
-            "title": "Mr Sharkytank",
-            "description": "In episode 4 of Dream Guardians Unleashed, Mateo and Izzie follow a critter to a faintly glowing crystal, but the Nightmare King and his minions are close behind. When the crystal hatches, a new critter inspires Izzie to dream craft a mighty Tiger Shark Tank. How will this play out in battle?",
-            "thumbnail": "https://image.tmdb.org/t/p/original/soIJrcIEMZ8XsJ8WGPoPBHtHt8h.jpg",
-            "embed": "https://pomf2.lain.la/f/mnm1zsm7.mp4"
+            "title": "Mr. Sharkytank",
+            "description": "Mateo and Izzie follow a critter to a faintly glowing crystal, but the Nightmare King and his minions are close behind.",
+            "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/bltceae027a57308d3d/1/aid263gl8c78b08f_lego_dreamzzz_streaming_thumbnail.jpg",
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/191141c6-c22d-4917-ba85-f12a595bd0b6/bb3c537e-ceaa-4656-9abb-b35a000310b9/1080p.mp4",
+            "subtitles": [{
+                "url": "https://videoprocessingpipeline.services.lego.com/assets/191141c6-c22d-4917-ba85-f12a595bd0b6/bb3c537e-ceaa-4656-9abb-b35a000310b9/en-us_AID263GL8c78b08f_DreamGuardiansUnleashed_E104_MrSharkyTank.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         },
         {
             "number": 5,
-            "title": "Goodnight Nightmare King",
-            "description": "In episode 5 of Dream Guardians Unleashed, the dream chasers unite, summoned by the roar of Izzie’s Tiger Shark Tank. They dream craft their guardians, including the Fox Guardian Mech, Dino Jet, Crocodile Submarine, and Nightmare Scorpion Digger, to stop the Nightmare King from claiming any more eggs. Can they finally say goodnight to him once and for all?",
-            "thumbnail": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
-            "embed": "https://pomf2.lain.la/f/mtkn4q0.mp4"
+            "title": "Goodnight, Nightmare King!",
+            "description": "The dream chasers unite and dream craft their guardians to stop the Nightmare King from claiming any more eggs. Can they finally say goodnight to him once and for all?",
+            "thumbnail": "https://www.lego.com/cdn/cs/catalog/assets/blt5a98b6bd6a172810/1/aid263gl58584d1f_lego_dreamzzz_streaming_thumbnail_v2.jpg",
+            "embed": "https://videoprocessingpipeline.services.lego.com/assets/2a70599b-095f-40e1-8833-56985c707e99/6eda48f5-9fce-4227-afaa-b35a000c20e1/1080p.mp4",
+            "subtitles": [{
+                "url": "https://videoprocessingpipeline.services.lego.com/assets/2a70599b-095f-40e1-8833-56985c707e99/6eda48f5-9fce-4227-afaa-b35a000c20e1/en-us_AID263GL58584d1f_DreamGuardiansUnleashed_E105_GoodNightNightmareKing.vtt",
+                "lang": "en",
+                "label": "English",
+                "default": true
+            }]
         }
     ]
 }

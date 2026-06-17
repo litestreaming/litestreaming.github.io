@@ -3,6 +3,7 @@
     "episodes": [{
             "number": 1,
             "title": "Legacy",
+            "description": "While backing up his memories of past adventures to the Samurai X Cave computer with Nya's help, Zane encounters a mysterious puzzle buried within his code.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/32/b3/a20b84f518fb3e293085982616914f58.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/8f/20/10367449/s10367449.m3u8",
             "subtitles": [{
@@ -14,7 +15,8 @@
         },
         {
             "number": 2,
-            "title": "Vehicles And Mechs",
+            "title": "Vehicles and Mechs",
+            "description": "Nya digitizes Jay and uploads him into Zane's mind to review memories of the Ninja's various motorcycles, mechs and planes in order to solve the vehicle-themed puzzle.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/8c/9e/1c1fcf26b2fab2bba2ceb41df9b00272.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/19/e4/10367450/s10367450.m3u8",
             "subtitles": [{
@@ -27,6 +29,7 @@
         {
             "number": 3,
             "title": "Legendary Places",
+            "description": "Jay and Zane are joined by Cole in the Nindroid to reflect on some of Ninjago's distinctive destinations, and solve a mysterious puzzle.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/31/70/2fe0e54317f1bdba9a5a1230d2169ef9.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/fe/a7/10367451/s10367451.m3u8",
             "subtitles": [{
@@ -39,6 +42,7 @@
         {
             "number": 4,
             "title": "Ninjago's Most Wanted",
+            "description": "Kai enters Zane's mind and suggests they take a break from solving puzzle in order to work out which villain is attempting to hack their friend.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/c6/84/5beba31f2b6c0e20e8c2b79d1f885f24.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/a4/17/10367452/s10367452.m3u8",
             "subtitles": [{
@@ -50,7 +54,8 @@
         },
         {
             "number": 5,
-            "title": "The Digiverse And Beyond",
+            "title": "The Digiverse and Beyond",
+            "description": "While the dangerous threat to Zane grows larger by the second, the team take on a difficult puzzle about technology in Ninjago.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/d4/f3/77d16649762e9e9d9117b68ef437fb69.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/c0/28/10367453/s10367453.m3u8",
             "subtitles": [{
@@ -63,6 +68,7 @@
         {
             "number": 6,
             "title": "The Elemental Masters",
+            "description": "A confusing riddle forces the Ninja to consider the history and powers of the Elemental Masters. Plus, Nya tries desperately to keep the power on in the Samurai X Cave.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/7f/47/878a569b4477f8db535d02751c05758b.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/33/59/10367454/s10367454.m3u8",
             "subtitles": [{
@@ -74,7 +80,8 @@
         },
         {
             "number": 7,
-            "title": "Beasts And Dragons",
+            "title": "Beasts and Dragons",
+            "description": "Jay, Kai, and Zane remember some of Ninjago’s most fearsome creatures in order to help Cole defend the cave from an unidentified monster.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/48/34/b14156efb13801b21743fe772deedc08.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b8/00/10367455/s10367455.m3u8",
             "subtitles": [{
@@ -86,7 +93,8 @@
         },
         {
             "number": 8,
-            "title": "Rise Of Garmadon",
+            "title": "Rise of Garmadon",
+            "description": "The Ninja confront memories of their greatest villain and ally, Garmadon, before the threat to Zane, controls him completely.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/ed/15/f724169ba27c023315c113834e4c94f0.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/cf/00/10367456/s10367456.m3u8",
             "subtitles": [{
@@ -98,7 +106,8 @@
         },
         {
             "number": 9,
-            "title": "Prophecy Of The Green Ninja",
+            "title": "Prophecy of the Green Ninja",
+            "description": "The final puzzle forces each ninja to question the true meaning of the Green Ninja Prophecy, but success is not what it seems.",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/29/34/7ae5230c300a61e46661b19ccc0ea10a.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/63/6b/10367457/s10367457.m3u8",
             "subtitles": [{
@@ -111,6 +120,7 @@
         {
             "number": 10,
             "title": "Greatest Battles",
+            "description": "Solving the puzzles releases a new peril for the Ninja to face. Will memories of their greatest victories be enough to defeat it?",
             "thumbnail": "https://cdn1.futuretodayinc.com/files/a8wn4hw/im/62/f0/ec7294b24fb7a1c286ed5dae434f4b61.jpg",
             "embed": "https://cdn1.futuretodayinc.com/files/a8wn4hw/vi/b4/80/10367458/s10367458.m3u8",
             "subtitles": [{
