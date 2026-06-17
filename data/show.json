@@ -129,7 +129,7 @@
             "type": "show",
             "genres": ["Animation", "Fantasy", "Kids"],
             "rating": "TV-Y7",
-            "years": "2023 – 2025",
+            "years": "2023 – 2026",
             "poster": "https://image.tmdb.org/t/p/original/bksnhr6slfT2mIcCTglGYD3pI9A.jpg",
             "banner": "https://image.tmdb.org/t/p/original/i9TAaBxTqbRMbY6gWuTdtX9fzCr.jpg",
             "logo": "https://image.tmdb.org/t/p/original/pFRxWD5a3gDNtbMt0tytEh9OIFv.png",
@@ -145,6 +145,10 @@
                 {
                     "number": 3,
                     "file": "data/seasons/dz_s3.json"
+                },
+                {
+                    "number": 4,
+                    "file": "data/seasons/dz_s4.json"
                 }
             ]
         },
@@ -262,7 +266,7 @@
                 "file": "data/seasons/thelegoninjagomovie.json"
             }]
         },
-                {
+        {
             "id": "thelegomovie",
             "comingSoon": true,
             "title": "The LEGO Movie",
@@ -280,7 +284,7 @@
                 "file": "data/seasons/thelegomovie.json"
             }]
         },
-                        {
+        {
             "id": "thelegobatmanmovie",
             "comingSoon": true,
             "title": "The LEGO Batman Movie",
@@ -298,7 +302,7 @@
                 "file": "data/seasons/thelegobatmanmovie.json"
             }]
         },
-                                {
+        {
             "id": "thelegomovie2",
             "comingSoon": true,
             "title": "The LEGO Movie 2: The Second Part",
@@ -316,7 +320,7 @@
                 "file": "data/seasons/thelegomovie2.json"
             }]
         },
-                                {
+        {
             "id": "legotheadventuresofclutchpowers",
             "comingSoon": true,
             "title": "LEGO: The Adventures of Clutch Powers",
@@ -349,6 +353,22 @@
             "seasons": [{
                 "number": 1,
                 "file": "data/seasons/duskfall_s1.json"
+            }]
+        },
+        {
+            "id": "ninjagodecoded",
+            "title": "LEGO Ninjago: Decoded",
+            "type": "show",
+            "genres": ["Action & Adventure", "Animation", "Comedy"],
+            "rating": "TV-Y7",
+            "years": "2017",
+            "poster": "https://m.media-amazon.com/images/M/MV5BY2RkZmNjMjQtYWQ0Zi00YTM3LWIzZjItNThlZDA4YTFjNTdiXkEyXkFqcGc@.jpg",
+            "banner": "https://m.media-amazon.com/images/S/pv-target-images/2c83190d3a8363a069b415a72e7f13df2d99a9256ae7ab206100f0cfbf5031dd.jpg",
+            "logo": "https://ovp.itv.com/v2/images/programme/vc9ktbw/itv_hub/09_TitleLogo/default?distributionPartner=&fallback=none&treatment=none",
+            "summary": "Nya helps Zane backup memories of their adventures to the Samurai X Cave computer, but Zane encounters a mysterious puzzle buried deep within his code.",
+            "seasons": [{
+                "number": 1,
+                "file": "data/seasons/decoded_reals1.json"
             }]
         }
     ]
